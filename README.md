@@ -1,2 +1,2 @@
-# themes
-Themes
+# Laurel
+Drupal 8+ theme
