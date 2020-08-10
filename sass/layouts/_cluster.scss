@@ -1,0 +1,11 @@
+cluster-l > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: calc(var(--s0) / 2 * -1);
+}
+
+cluster-l > * > * {
+  margin: calc(var(--s-2) / 2);
+}

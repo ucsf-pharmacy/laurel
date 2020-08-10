@@ -1,0 +1,48 @@
+/*
+Reminders:
+
+#43 in Typewolf’s Flawless Typography Checklist: Links within sentences should contrast sufficiently with the surrounding text
+
+Lord Vader’s Handle Formerly Anakin
+http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
+
+
+
+----------------------------------------------------------------------
+*/
+#main{
+  a{
+    color: inherit;
+    text-decoration-skip-ink: auto;
+    &:link{
+      text-decoration: none;
+      border-bottom: 1px solid #f5f1f2;
+      box-shadow: inset 0 -4px 0 #f5f1f2;
+      transition: background 0.3s ease-out;
+      text-decoration-skip-ink: auto;
+    }
+    &:visited{
+    }
+    &:hover{
+      background: #f5f1f2;
+    }
+    &:focus{
+    }
+    &:active{
+    }
+  }
+  .template{
+    a{
+      &:link{
+      }
+      &:visited{
+      }
+      &:hover{
+      }
+      &:focus{
+      }
+      &:active{
+      }
+    }
+  }
+}

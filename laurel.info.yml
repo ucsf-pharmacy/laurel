@@ -1,0 +1,8 @@
+name: Laurel
+type: theme
+base theme: classy
+description: 'The primary School of Pharmacy theme based on the theme called Classy.'
+core: 8.x
+
+libraries:
+  - laurel/global-styling

@@ -1,0 +1,82 @@
+/*
+Text crop
+
+https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce
+
+http://text-crop.eightshapes.com/
+*/
+
+
+
+
+
+/*
+
+
+
+----------------------------------------------------------------------
+Typography features
+*/
+body{
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+.small-caps{ // #37 in Typewolf’s Flawless Typography Checklist: Use small caps when available and avoid pseudo small caps
+  -moz-font-feature-settings: "c2sc", "smcp";
+  -ms-font-feature-settings: "c2sc", "smcp";
+  -webkit-font-feature-settings: "c2sc", "smcp";
+  font-feature-settings: "c2sc", "smcp";
+  letter-spacing: 0.05em;
+}
+.lining-figures
+,html
+{ // #41 in Typewolf’s Flawless Typography Checklist: Use oldstyle figures in running text
+  -moz-font-feature-settings: "lnum";
+  -ms-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
+}
+.oldstyle-figures
+,article
+{ // #41 in Typewolf’s Flawless Typography Checklist: Use oldstyle figures in running text
+  -moz-font-feature-settings: "onum";
+  -ms-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum";
+}
+.tabular-figures
+,table
+{ // #40 in Typewolf’s Flawless Typography Checklist: Use tabular figures (or a monospaced font) with flush right alignment when setting numbers in tables
+  -moz-font-feature-settings: "tnum";
+  -ms-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+}
+.headline{ // #91 in Typewolf’s Flawless Typography Checklist: Use discretionary ligatures and swashes in headlines
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
+  font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
+}
+code,kbd,pre,samp{
+  -moz-font-feature-settings: initial;
+  -ms-font-feature-settings: initial;
+  -webkit-font-feature-settings: initial;
+  font-feature-settings: initial;
+}
+/*
+
+
+
+----------------------------------------------------------------------
+other declarations related to typography
+*/
+sub
+,sup
+{
+  line-height: 0;
+}

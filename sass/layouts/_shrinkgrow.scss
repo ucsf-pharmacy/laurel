@@ -1,0 +1,12 @@
+shrink-grow {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+shrink-grow .test {
+  display: inline-block;
+}

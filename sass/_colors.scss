@@ -1,0 +1,85 @@
+/*
+Reminders:
+
+Avoid $color-black for text unless very small font size.
+
+Prefer $color-black-77 for most text.
+
+Prefer $color-gray over $color-grey. The former is lighter than the latter.
+
+Prefer $color-gray-40 over $color-black-10.
+*/
+$color-link-blue:                 #0071ad;
+
+$color-white:                     #ffffff;
+
+$color-black:                     #000000;
+$color-black-77:                  #3b3b3b;
+$color-black-70:                  #4d4d4d;
+$color-black-65:                  #595959; // not in UCSF palette, used for h4 because #4d4d4d was too dark and #999999 was too light, this is the lightest gray that meets a11y for AAA for normal text on a white background
+$color-black-55:                  #737373;
+$color-black-54:                  #767676; // not in UCSF palette, this is the lightest gray that meets a11y for AA for normal text on a white background, used for alt nav and image credits and for the footer disclaimer on calpoison, see http://uxmovement.com/content/why-your-gray-text-should-never-exceed-46-brightness/ and http://jxnblk.com/grays/
+$color-black-40:                  #999999;
+$color-black-10:                  #e5e5e5; // we prefer $gray-40 over $black-10
+
+$color-gray:                      #d1d3d3; // we prefer $color-gray over $color-grey
+$color-gray-70:                   #dfe0e0;
+$color-gray-40:                   #ededee; // we prefer $gray-40 over $black-10
+$color-gray-10:                   #fafbfb;
+
+$color-grey:                      #b4b9bf;
+$color-grey-70:                   #cbced2;
+$color-grey-40:                   #e1e3e6;
+$color-grey-10:                   #f8f8f9;
+
+$color-dark-navy:                 #052049;
+$color-dark-navy-70:              #506380;
+$color-dark-navy-40:              #9ba6b6;
+$color-dark-navy-10:              #e6e9ed;
+
+$color-teal-iactive:              #058488;
+$color-teal:                      #18a3ac;
+$color-teal-70:                   #5dbfc5;
+$color-teal-40:                   #a3dade;
+$color-teal-10:                   #e8f6f7;
+
+$color-green-iactive:             #6ea400;
+$color-green:                     #90bd31;
+$color-green-70:                  #b1d16f;
+$color-green-40:                  #d3e4ad;
+$color-green-10:                  #f4f8ea;
+
+$color-blue-iactive:              #007cbe;
+$color-blue:                      #178ccb;
+$color-blue-70:                   #5dafdb;
+$color-blue-40:                   #a2d1ea;
+$color-blue-10:                   #e8f4fa;
+
+$color-orange-iactive:            #f26d04;
+$color-orange:                    #f48024;
+$color-orange-70:                 #f7a665;
+$color-orange-40:                 #fbcca7;
+$color-orange-10:                 #fef2e9;
+
+$color-purple:                    #716fb2;
+$color-purple-70:                 #9c9ac9;
+$color-purple-40:                 #c6c5e0;
+$color-purple-10:                 #f1f1f7;
+
+$color-red-iactive:               #eb093c;
+$color-red:                       #ec1848;
+$color-red-70:                    #f25d7f;
+$color-red-40:                    #f7a3b6;
+$color-red-10:                    #fde8ed;
+
+$color-yellow:                    #ffdd00;
+$color-yellow-70:                 #ffe74d;
+$color-yellow-40:                 #fff199;
+$color-yellow-10:                 #fffce6;
+
+$color-focus:                     $color-orange-iactive;
+
+::selection {
+  color: #000;
+  background-color: $color-yellow-10;
+}

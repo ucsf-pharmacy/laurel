@@ -1,0 +1,70 @@
+/*
+This file is used to specify what elements are set to what fonts. It contains:
+- custom font family definitions
+- custom properties for font declarations
+- font sizing
+- element declarations
+
+Reminders:
+
+Design body text first. (#55 in Typewolf’s Flawless Typography Checklist: Begin with your body text and build your entire layout around it)
+
+As font-size increases, line-height should decrease.
+
+When choosing fonts, look for these features:
+- small caps
+- tabular figures
+- ligatures
+
+
+
+/*
+
+
+
+----------------------------------------------------------------------
+custom font family definitions
+*/
+
+/*
+
+
+
+----------------------------------------------------------------------
+webfont definitions
+*/
+
+/*
+
+
+
+----------------------------------------------------------------------
+font family declarations
+*/
+:root{
+  font-family: $font-system; // fallback
+}
+body{
+  font-family: $font-sans-serify;
+}
+code,kbd,pre,samp{
+  font-family: $font-mono;
+}
+input,button,textarea,select{
+  font-family: inherit;
+}
+/*
+
+
+
+----------------------------------------------------------------------
+font sizing
+
+(For font line-heights and other font spacing declarations, see _spacing.scss.)
+*/
+body{
+  font-size: $fluid0;
+}
+code,kbd,pre,samp{
+  font-size: 1em; // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
+}

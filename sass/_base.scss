@@ -1,0 +1,64 @@
+/*
+In this file:
+
+adapted from:
+
+2019.1001 CSS reset
+https://hankchizljaw.com/wrote/a-modern-css-reset/
+
+2019.0913 visually hidden
+https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+visually hidden yet still accessible to screen readers
+
+2018.0316 Scharnagl snippets
+https://twitter.com/justmarkup/status/974573989497593856
+*/
+
+html{   
+  box-sizing: border-box; 
+} 
+*, 
+*:before, 
+*:after{
+ box-sizing: inherit;
+}
+body
+,h1
+,h2
+,h3
+,h4
+,p
+,ul
+,ol
+,li
+,figure
+,figcaption
+,blockquote
+,dl
+,dd{
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: $line-spacing;
+}
+.visually-hidden{
+  clip-path: inset(100%);
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0); 
+  height: 1px;
+  width: 1px; 
+  margin: -1px;
+  padding: 0;
+  border: 0; 
+  white-space: nowrap;
+}
+.clearfix:after{   
+  content: '';   
+  display: table;   
+  clear: both; 
+}
