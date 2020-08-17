@@ -41,14 +41,11 @@ webfont definitions
 ----------------------------------------------------------------------
 font family declarations
 */
-:root{
-  font-family: $font-system; // fallback
-}
 body{
-  font-family: $font-sans-serify;
+  font-family: var(--font-sans-serify);
 }
 code,kbd,pre,samp{
-  font-family: $font-mono;
+  font-family: var(--font-mono);
 }
 input,button,textarea,select{
   font-family: inherit;
@@ -63,7 +60,7 @@ font sizing
 (For font line-heights and other font spacing declarations, see _spacing.scss.)
 */
 body{
-  font-size: $fluid0;
+  font-size: var(--fluid0);
 }
 code,kbd,pre,samp{
   font-size: 1em; // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/

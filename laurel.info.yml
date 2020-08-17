@@ -6,3 +6,17 @@ core: 8.x
 
 libraries:
   - laurel/global-styling
+  - laurel/global-js
+
+regions:
+  header: 'Header'
+  primary_menu: 'Menu 1'
+  announcements: 'Announcements'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  breadcrumb: 'Breadcrumb'
+  content: 'Main'
+  sidebar_first: 'Related'
+  footer: 'Footer'
+  secondary_menu: 'Menu 2'
+  copyright: 'Copyright'

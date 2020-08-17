@@ -1,14 +1,14 @@
 #main{
   h1{ // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
-    line-height: calc( $line-spacing * ( 2 / 3 ) );
+    line-height: calc( var(--line-spacing) * ( 2 / 3 ) );
   }
   article > * + *
   ,p + p
   {
-    margin-top: $paragraph-spacing;
+    margin-top: var(--paragraph-spacing);
   }
   li + li{
-    margin-top: $list-item-spacing;
+    margin-top: var(--list-item-spacing);
   }
   *:first-child{
     margin-top: 0;

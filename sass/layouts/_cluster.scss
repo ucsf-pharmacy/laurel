@@ -1,4 +1,4 @@
-cluster-l > * {
+.cluster-l > * {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -6,6 +6,6 @@ cluster-l > * {
   margin: calc(var(--s0) / 2 * -1);
 }
 
-cluster-l > * > * {
+.cluster-l > * > * {
   margin: calc(var(--s-2) / 2);
 }

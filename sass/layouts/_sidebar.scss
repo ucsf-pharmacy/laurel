@@ -1,8 +1,29 @@
-sidebar-l > * {
-  display: flex;
-  flex-wrap: wrap;
-}
+// https://every-layout.dev/layouts/sidebar/
 
-sidebar-l > * > * {
-  flex-grow: 1;
+.sidebar-left
+,.sidebar-right
+{
+  overflow: hidden;
+  & > * { // this targets the intermediary wrapper required for the negative margin hack
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--s4) / 2 * -1);
+  }
+  & > * > * {
+    flex-basis: 30rem;
+    flex-basis: 40ch;
+    flex-grow: 1;
+    margin: calc(var(--s4) / 2);
+  }
+}
+.sidebar-left > * > :last-child
+,.sidebar-right > * > :first-child
+{
+  flex-basis: 0;
+  flex-grow: 999;
+}
+.sidebar-left > * > :last-child
+,.sidebar-right > * > :first-child
+{
+  min-width: calc(50% - var(--s4));
 }

@@ -1,4 +1,8 @@
 global-styling:
   css:
-    component:
+    theme:
       css/style.css: {}
+global-js:
+  js:
+    js/custom.js: {}
+

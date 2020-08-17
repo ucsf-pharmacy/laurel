@@ -20,7 +20,7 @@ html{
 *, 
 *:before, 
 *:after{
- box-sizing: inherit;
+  box-sizing: inherit;
 }
 body
 ,h1
@@ -43,7 +43,7 @@ body{
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: $line-spacing;
+  line-height: var(--line-spacing);
 }
 .visually-hidden{
   clip-path: inset(100%);

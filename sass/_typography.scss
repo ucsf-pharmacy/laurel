@@ -75,6 +75,23 @@ code,kbd,pre,samp{
 ----------------------------------------------------------------------
 other declarations related to typography
 */
+// start - https://every-layout.dev/rudiments/axioms/
+main#content {
+  & * {
+    max-width: var(--measure);
+  }
+  div
+  ,header
+  ,nav
+  ,main
+  ,section
+  ,footer
+  {
+    max-width: none;
+  }
+}
+
+// end - https://every-layout.dev/rudiments/axioms/
 sub
 ,sup
 {

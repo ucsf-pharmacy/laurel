@@ -1,13 +1,13 @@
 @media print{
   :root{
-    font-size: $s-5;
+    font-size: var(--s-5);
   }
   .hide-from-print{
     display: none;
   }
   h1,h2,h3,h4{
-    margin: $space-stack-default;
-    margin-top: $space-l;
+    margin: var(--space-stack-default);
+    margin-top: var(--space-l);
   }
   a{
     text-decoration: none;
@@ -24,19 +24,19 @@
     padding-left: 0.1em;
     font-style: normal;
     font-weight: normal;
-    line-height: $s0;
+    line-height: var(--s0);
     letter-spacing: .05em;
-    font-size: $s-2;
+    font-size: var(--s-2);
   }
   #LinkContainer{
     overflow-wrap: break-word;
   }
   #LinkContainer #LinkList li{
     font-family: Helvetica,Arial,sans-serif;
-    line-height: $s0;
+    line-height: var(--s0);
     letter-spacing: .05em;
-    font-size: $s-2;
-    margin: $space-stack-xxs;
+    font-size: var(--s-2);
+    margin: var(--space-stack-xxs);
   }
   sup.footnote,
   #LinkContainer

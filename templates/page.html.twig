@@ -1,0 +1,88 @@
+{#
+page regions defined in laurel.info.yml:
+  header: 'Header'
+  primary_menu: 'Menu 1'
+  announcements: 'Announcements'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  breadcrumb: 'Breadcrumb'
+  content: 'Main'
+  sidebar_first: 'Related'
+  footer: 'Footer'
+  secondary_menu: 'Menu 2'
+  copyright: 'Copyright'
+
+markup based loosely on
+https://codepen.io/aardrian/pen/BgQqrQ
+with larger discussion at
+https://css-tricks.com/how-to-section-your-html/
+and specifically
+https://css-tricks.com/how-to-section-your-html/#sectioning-content
+and
+https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png?resize=1024%2C656&ssl=1
+#}
+<header>
+  <div id="header">
+    {{ page.header }}
+  </div>
+  <nav id="primary">
+    {{ page.primary_menu }}
+  </nav>
+  {% if page.announcements %}
+  <div id="announcements">
+    {{ page.announcements }}
+  </div>
+  {% endif %}
+  {% if page.highlighted %}
+  <div id="highlighted">
+    {{ page.highlighted }}
+  </div>
+  {% endif %}
+  {% if page.help %}
+  <div id="help">
+    {{ page.help }}
+  </div>
+  {% endif %}
+  {% if page.breadcrumb %}
+  <nav id="breadcrumb">
+    {{ page.breadcrumb }}
+  </nav>
+  {% endif %}
+</header>
+<div class="sidebar-right">
+  <div id="body"> {# intermediary wrapper #}
+    <main id="content">
+      <a id="main-content" tabindex="-1"></a>
+      {{ page.content }}
+    </main>
+    {% if page.sidebar_first %}
+    <aside>
+      {{ page.sidebar_first }}
+    </aside>
+    {% endif %}
+  </div>
+</div>
+<footer>
+  {#
+    “typically the <footer> element often has a list of links that don't need to be in a <nav> element.”
+
+    source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav#Usage_notes
+
+    so within <footer> we use <div> instead of <nav> for lists of links
+  #}
+  {% if page.footer %}
+  <div id="footer">
+    {{ page.footer }}
+  </div>
+  {% endif %}
+  {% if page.secondary_menu %}
+  <div id="nav-secondary">
+    {{ page.secondary_menu }}
+  </div>
+  {% endif %}
+  {% if page.copyright %}
+  <div id="copyright">
+    {{ page.copyright }}
+  </div>
+  {% endif %}
+</footer>

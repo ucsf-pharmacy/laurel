@@ -1,8 +1,8 @@
-image-l {
+.image-l {
   display: block;
 }
 
-image-l::after {
+.image-l::after {
   content: '';
   display: block;
   border: var(--border-thin) solid var(--color-dark);

@@ -1,15 +1,15 @@
-text-l {
+.text-l {
   display: block;
 }
 
-text-l span {
+.text-l span {
   display: inline-block;
   color: transparent;
   position: relative;
   pointer-events: none;
 }
 
-text-l span::before {
+.text-l span::before {
   content: '';
   position: absolute;
   left: 0;
