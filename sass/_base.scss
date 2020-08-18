@@ -8,7 +8,7 @@ https://hankchizljaw.com/wrote/a-modern-css-reset/
 
 2019.0913 visually hidden
 https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
-visually hidden yet still accessible to screen readers
+visually hidden yet still accessible to screen readers, perhaps slightly better than the version of this that comes with classy theme in D8
 
 2018.0316 Scharnagl snippets
 https://twitter.com/justmarkup/status/974573989497593856
@@ -45,7 +45,7 @@ body{
   text-rendering: optimizeSpeed;
   line-height: var(--line-spacing);
 }
-.visually-hidden{
+.visually-hidden{ // see note above
   clip-path: inset(100%);
   position: absolute; 
   overflow: hidden; 

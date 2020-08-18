@@ -2,6 +2,10 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+layout-styling:
+  css:
+    theme:
+      css/layout.css: {}
 global-js:
   js:
     js/custom.js: {}

@@ -6,6 +6,7 @@ core: 8.x
 
 libraries:
   - laurel/global-styling
+  - laurel/layout-styling
   - laurel/global-js
 
 regions:

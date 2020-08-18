@@ -1,20 +1,20 @@
 @import "_custom-properties.scss"; // contains various categories, needs to come first
 
 // start - Every Layout Components
-// @import "layouts/_image.scss";
-// @import "layouts/_text.scss";
-// @import "layouts/_words.scss";
-// @import "layouts/_shrinkgrow.scss";
-// @import "layouts/_switcher.scss";
-// @import "layouts/_center.scss";
-// @import "layouts/_cover.scss";
-@import "layouts/_stack.scss";
-// @import "layouts/_box.scss";
-// @import "layouts/_grid.scss";
-@import "layouts/_sidebar.scss";
-// @import "layouts/_cluster.scss";
-// @import "layouts/_frame.scss";
-// @import "layouts/_reel.scss";
+// @import "every-layout/_image.scss";
+// @import "every-layout/_text.scss";
+// @import "every-layout/_words.scss";
+// @import "every-layout/_shrinkgrow.scss";
+// @import "every-layout/_switcher.scss";
+// @import "every-layout/_center.scss";
+// @import "every-layout/_cover.scss";
+@import "every-layout/_stack.scss";
+// @import "every-layout/_box.scss";
+// @import "every-layout/_grid.scss";
+@import "every-layout/_sidebar.scss";
+// @import "every-layout/_cluster.scss";
+// @import "every-layout/_frame.scss";
+// @import "every-layout/_reel.scss";
 // end - Every Layout Components
 
 @import "_colors.scss";
