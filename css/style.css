@@ -37,6 +37,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --inset-l: 32px 32px 32px 32px;
   --inset-xl: 64px 64px 64px 64px;
   --inset-squish-default:  8px 16px  8px 16px;
+  --inset-squish-xs:  2px  4px  2px  4px;
   --inset-squish-s:  4px  8px  4px  8px;
   --inset-squish-m:  8px 16px  8px 16px;
   --inset-squish-l: 16px 32px 16px 32px;
@@ -56,6 +57,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --inline-l: 0 32px 0 0;
   --inline-xl: 0 64px 0 0;
   --space-default: 16px;
+  --space-xxs:  2px;
   --space-xs:  4px;
   --space-s:  8px;
   --space-m: 16px;
@@ -79,7 +81,7 @@ Usage:
 p { font-size: var(--s0); }
 
 */
-/* line 84, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
+/* line 86, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
 :root {
   --ratio: 1.2;
   --s-5: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
@@ -113,14 +115,14 @@ How this works:
 1. We set the font-size and line-height of the body element.
 
   body{
-    font-size: var(--fluid0); // this is set in 002-fonts.scss
-    line-height: var(--fluid1); // this is set below in "Set core body defaults"
+    font-size: var(--fluid0); // this is set in _fonts.scss
+    line-height: var(--fluid1); // this is set below
   }
 
 2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
 
 */
-/* line 123, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
+/* line 125, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1440;
@@ -133,46 +135,36 @@ How this works:
 }
 
 @media screen and (min-width: 1440) {
-  /* line 136, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
+  /* line 138, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
   :root {
     --fluid-screen: calc(var(--fluid-max-width) * 1px);
   }
 }
 
-/* line 141, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
+/* line 143, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
 :root {
   --fluid-min-scale0: var(--fluid-min-ratio);
-  --fluid-min-scale-1: var(--fluid-min-scale0) / var(--fluid-min-ratio);
-  --fluid-min-scale-2: var(--fluid-min-scale-1) / var(--fluid-min-ratio);
   --fluid-min-scale1: var(--fluid-min-scale0) * var(--fluid-min-ratio);
   --fluid-min-scale2: var(--fluid-min-scale1) * var(--fluid-min-ratio);
   --fluid-max-scale0: var(--fluid-max-ratio);
-  --fluid-max-scale-1: var(--fluid-max-scale0) / var(--fluid-max-ratio);
-  --fluid-max-scale-2: var(--fluid-max-scale-1) / var(--fluid-max-ratio);
   --fluid-max-scale1: var(--fluid-max-scale0) * var(--fluid-max-ratio);
   --fluid-max-scale2: var(--fluid-max-scale1) * var(--fluid-max-ratio);
   --fluid-min-size0: (var(--fluid-min-size)) / 16;
-  --fluid-min-size-1: (var(--fluid-min-size) / var(--fluid-min-scale0)) / 16;
-  --fluid-min-size-2: (var(--fluid-min-size) / var(--fluid-min-scale-1)) / 16;
   --fluid-min-size1: (var(--fluid-min-size) * var(--fluid-min-scale0)) / 16;
   --fluid-min-size2: (var(--fluid-min-size) * var(--fluid-min-scale1)) / 16;
   --fluid-max-size0: (var(--fluid-max-size)) / 16;
-  --fluid-max-size-1: (var(--fluid-max-size) / var(--fluid-max-scale0)) / 16;
-  --fluid-max-size-2: (var(--fluid-max-size) / var(--fluid-max-scale-1)) / 16;
   --fluid-max-size1: (var(--fluid-max-size) * var(--fluid-max-scale0)) / 16;
   --fluid-max-size2: (var(--fluid-max-size) * var(--fluid-max-scale1)) / 16;
   --fluid0: calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
-  --fluid-1: calc(((var(--fluid-min-size1) / 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) / var(--fluid-bp)));
-  --fluid-2: calc(((var(--fluid-min-size2) / 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) / var(--fluid-bp)));
   --fluid1: calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
   --fluid2: calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
   --measure: 60ch;
-  --line-height: var(--ratio);
+  --line-height: var(--fluid1);
   --line-height-small: calc(0.8 * var(--ratio));
   --line-height-large: calc(1.2 * var(--ratio));
-  --line-spacing: var(--fluid1);
-  --paragraph-spacing: calc(var(--line-spacing) * var(--fluid0));
-  --list-item-spacing: calc( ( var(--line-spacing) * var(--fluid0) ) / 2 );
+  --line-spacing: 1.4em;
+  --paragraph-spacing: var(--fluid0);
+  --list-item-spacing: calc( var(--fluid0) / 2 );
   --border-thin: var(--s-5);
   --border-thick: var(--s-2);
 }
@@ -185,7 +177,7 @@ How this works:
 Other custom property declarations
 
 */
-/* line 193, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
+/* line 185, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_custom-properties.scss */
 :root {
   --color-dark: hsl(0, 0%,  2%);
   --color-darkish: hsl(0, 0%, 25%);
@@ -521,22 +513,12 @@ code, kbd, pre, samp {
 ----------------------------------------------------------------------
 other declarations related to typography
 */
-/* line 80, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_typography.scss */
-main#content * {
-  max-width: var(--measure);
+/* line 79, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_typography.scss */
+#body {
+  color: #3b3b3b;
 }
 
-/* line 83, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_typography.scss */
-main#content div
-, main#content header
-, main#content nav
-, main#content main
-, main#content section
-, main#content footer {
-  max-width: none;
-}
-
-/* line 95, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_typography.scss */
+/* line 96, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_typography.scss */
 sub
 , sup {
   line-height: 0;
@@ -600,32 +582,116 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
 
 ----------------------------------------------------------------------
 */
-/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
-#main a {
-  color: inherit;
-  text-decoration-skip-ink: auto;
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+.menu-item {
+  display: inline;
+  padding: 0;
 }
 
 /* line 17, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
-#main a:link {
-  text-decoration: none;
-  border-bottom: 1px solid #f5f1f2;
-  box-shadow: inset 0 -4px 0 #f5f1f2;
-  transition: background 0.3s ease-out;
+ul.menu {
+  margin: 0;
+}
+
+/* line 20, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body a
+, #body a:link {
+  color: inherit;
+  padding: inherit;
+  line-height: inherit;
   text-decoration-skip-ink: auto;
 }
 
-/* line 26, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
-#main a:hover {
-  background: #f5f1f2;
+/* line 28, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+header a
+, footer a
+, #body nav.tabs a {
+  text-decoration: none;
+  color: #3b3b3b;
+  background-color: transparent;
+  padding: var(--inset-squish-m);
+  line-height: calc( var(--line-spacing) + var(--space-m));
 }
 
-/* Remove default padding */
-/* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_lists.scss */
+/* line 37, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+header a:hover
+, footer a:hover
+, #body nav.tabs a:hover {
+  background-color: #ededee;
+}
+
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+header a:focus
+, footer a:focus
+, #body nav.tabs a:focus {
+  color: #ffffff;
+  background-color: #0071ad;
+  outline: none;
+}
+
+/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+ul.menu a.is-active:focus {
+  color: #ffffff;
+}
+
+/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body a {
+  background-color: none;
+}
+
+/* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body a:link {
+  background-color: none;
+  text-decoration: none;
+  border-bottom: 1px solid #0071ad;
+  padding-bottom: 0.0625em;
+}
+
+/* line 59, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body a:hover {
+  color: #052049;
+  border-bottom: 1px solid #f26d04;
+}
+
+/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body a:focus {
+  color: #ffffff;
+  background-color: #0071ad;
+  outline: none;
+}
+
+/* line 86, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body nav.tabs ul {
+  border-bottom: 5px solid #ededee;
+}
+
+/* line 89, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body nav.tabs a {
+  line-height: 1em;
+  border: none;
+  position: relative;
+  top: 5px;
+}
+
+/* line 95, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body nav.tabs a.is-active {
+  border-bottom: 5px solid #3b3b3b;
+}
+
+/* line 98, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_links.scss */
+#body nav.tabs a:hover {
+  border-bottom: 5px solid #0071ad;
+}
+
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_lists.scss */
 ul
 , ol {
-  padding: 0;
-  list-style: none;
+  padding: 0 0 0 1.2rem;
+}
+
+/* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_lists.scss */
+ul {
+  list-style-type: square;
 }
 
 /*
@@ -666,34 +732,41 @@ https://codepen.io/sdthornton/pen/wBZdXq
  * }
  *
  */
-/* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
-#main h1 {
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
+h1 {
   line-height: calc( var(--line-spacing) * ( 2 / 3 ));
 }
 
 /* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
-#main article > * + *
-, #main p + p {
-  margin-top: var(--paragraph-spacing);
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: var(--fluid0);
 }
 
 /* line 10, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
-#main li + li {
+article > * + *
+, * + p
+, * + ul
+, * + ol {
+  margin-top: var(--paragraph-spacing);
+}
+
+/* line 17, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
+li + li {
   margin-top: var(--list-item-spacing);
 }
 
-/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
-#main *:first-child {
+/* line 21, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
+.block *:first-child {
   margin-top: 0;
 }
 
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
-#main *:last-child {
+/* line 24, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
+.block *:last-child {
   margin-bottom: 0;
 }
 
-/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
-#main .keep-together {
+/* line 28, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_spacing.scss */
+.keep-together {
   white-space: nowrap;
 }
 

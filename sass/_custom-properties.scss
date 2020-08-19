@@ -36,6 +36,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --inset-xl     : 64px 64px 64px 64px;
 
   --inset-squish-default:  8px 16px  8px 16px;
+  --inset-squish-xs     :  2px  4px  2px  4px;
   --inset-squish-s      :  4px  8px  4px  8px;
   --inset-squish-m      :  8px 16px  8px 16px;
   --inset-squish-l      : 16px 32px 16px 32px;
@@ -59,6 +60,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --inline-xl     : 0 64px 0 0;
 
   --space-default: 16px;
+  --space-xxs    :  2px;
   --space-xs     :  4px;
   --space-s      :  8px;
   --space-m      : 16px;
@@ -113,8 +115,8 @@ How this works:
 1. We set the font-size and line-height of the body element.
 
   body{
-    font-size: var(--fluid0); // this is set in 002-fonts.scss
-    line-height: var(--fluid1); // this is set below in "Set core body defaults"
+    font-size: var(--fluid0); // this is set in _fonts.scss
+    line-height: var(--fluid1); // this is set below
   }
 
 2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
@@ -140,44 +142,34 @@ How this works:
 
 :root{
   --fluid-min-scale0 : var(--fluid-min-ratio);
-  --fluid-min-scale-1: var(--fluid-min-scale0) / var(--fluid-min-ratio);
-  --fluid-min-scale-2: var(--fluid-min-scale-1) / var(--fluid-min-ratio);
   --fluid-min-scale1 : var(--fluid-min-scale0) * var(--fluid-min-ratio);
   --fluid-min-scale2 : var(--fluid-min-scale1) * var(--fluid-min-ratio);
 
   --fluid-max-scale0 : var(--fluid-max-ratio);
-  --fluid-max-scale-1: var(--fluid-max-scale0) / var(--fluid-max-ratio);
-  --fluid-max-scale-2: var(--fluid-max-scale-1) / var(--fluid-max-ratio);
   --fluid-max-scale1 : var(--fluid-max-scale0) * var(--fluid-max-ratio);
   --fluid-max-scale2 : var(--fluid-max-scale1) * var(--fluid-max-ratio);
 
   --fluid-min-size0 : (var(--fluid-min-size)) / 16;
-  --fluid-min-size-1: (var(--fluid-min-size) / var(--fluid-min-scale0)) / 16;
-  --fluid-min-size-2: (var(--fluid-min-size) / var(--fluid-min-scale-1)) / 16;
   --fluid-min-size1 : (var(--fluid-min-size) * var(--fluid-min-scale0)) / 16;
   --fluid-min-size2 : (var(--fluid-min-size) * var(--fluid-min-scale1)) / 16;
 
   --fluid-max-size0 : (var(--fluid-max-size)) / 16;
-  --fluid-max-size-1: (var(--fluid-max-size) / var(--fluid-max-scale0)) / 16;
-  --fluid-max-size-2: (var(--fluid-max-size) / var(--fluid-max-scale-1)) / 16;
   --fluid-max-size1 : (var(--fluid-max-size) * var(--fluid-max-scale0)) / 16;
   --fluid-max-size2 : (var(--fluid-max-size) * var(--fluid-max-scale1)) / 16;
 
   --fluid0 : calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
-  --fluid-1: calc(((var(--fluid-min-size1) / 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) / var(--fluid-bp)));
-  --fluid-2: calc(((var(--fluid-min-size2) / 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) / var(--fluid-bp)));
   --fluid1 : calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
   --fluid2 : calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
 
   --measure: 60ch;
 
-  --line-height      : var(--ratio);
+  --line-height      : var(--fluid1);
   --line-height-small: calc(0.8 * var(--ratio));
   --line-height-large: calc(1.2 * var(--ratio));
 
-  --line-spacing     : var(--fluid1);
-  --paragraph-spacing: calc(var(--line-spacing) * var(--fluid0));
-  --list-item-spacing: calc( ( var(--line-spacing) * var(--fluid0) ) / 2 );
+  --line-spacing     : 1.4em;
+  --paragraph-spacing: var(--fluid0);
+  --list-item-spacing: calc( var(--fluid0) / 2 );
 
   --border-thin : var(--s-5);
   --border-thick: var(--s-2);

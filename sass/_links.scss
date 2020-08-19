@@ -10,39 +10,93 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
 
 ----------------------------------------------------------------------
 */
-#main{
+.menu-item{
+  display: inline;
+  padding: 0;
+}
+ul.menu{
+  margin: 0;
+}
+#body a
+,#body a:link
+{
+  color: inherit;
+  padding: inherit;
+  line-height: inherit;
+  text-decoration-skip-ink: auto;
+}
+header a
+,footer a
+,#body nav.tabs a
+{
+  text-decoration: none;
+  color: $color-black-77;
+  background-color: transparent;
+  padding: var(--inset-squish-m);
+  line-height: calc( var(--line-spacing) + var(--space-m) );
+  &:hover{
+    background-color: $color-gray-40;
+  }
+  &:focus{
+    color: $color-white;
+    background-color: $color-link-blue;
+    outline: none;
+  }
+}
+ul.menu a.is-active:focus{
+  color: $color-white;
+}
+#body a{
+  background-color: none;
+  &:link{
+    background-color: none;
+    text-decoration: none;
+    border-bottom: 1px solid $color-link-blue;
+    padding-bottom: 0.0625em;
+  }
+  &:visited{
+  }
+  &:hover{
+    color: $color-dark-navy;
+    border-bottom: 1px solid $color-orange-iactive;
+  }
+  &:focus{
+    color: $color-white;
+    background-color: $color-link-blue;
+    outline: none;
+  }
+  &:active{
+  }
+  }
+  .template{
   a{
-    color: inherit;
-    text-decoration-skip-ink: auto;
     &:link{
-      text-decoration: none;
-      border-bottom: 1px solid #f5f1f2;
-      box-shadow: inset 0 -4px 0 #f5f1f2;
-      transition: background 0.3s ease-out;
-      text-decoration-skip-ink: auto;
     }
     &:visited{
     }
     &:hover{
-      background: #f5f1f2;
     }
     &:focus{
     }
     &:active{
     }
   }
-  .template{
-    a{
-      &:link{
-      }
-      &:visited{
-      }
-      &:hover{
-      }
-      &:focus{
-      }
-      &:active{
-      }
+}
+#body nav.tabs{
+  ul{
+    border-bottom: 5px solid $color-gray-40;
+  }
+  a{
+    line-height: 1em;
+    border: none;
+    position: relative;
+    top: 5px;
+    // border-bottom: 5px solid transparent;
+    &.is-active{
+      border-bottom: 5px solid $color-black-77;
+    }
+    &:hover{
+      border-bottom: 5px solid $color-link-blue;
     }
   }
 }

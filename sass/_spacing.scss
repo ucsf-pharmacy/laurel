@@ -1,22 +1,30 @@
-#main{
-  h1{ // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
-    line-height: calc( var(--line-spacing) * ( 2 / 3 ) );
-  }
-  article > * + *
-  ,p + p
+h1{ // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
+  line-height: calc( var(--line-spacing) * ( 2 / 3 ) );
+}
+*{
+  & + h1,& + h2,& + h3,& + h4,& + h5,& + h6
   {
-    margin-top: var(--paragraph-spacing);
+    margin-top: var(--fluid0);
   }
-  li + li{
-    margin-top: var(--list-item-spacing);
-  }
+}
+article > * + *
+,* + p
+,* + ul
+,* + ol
+{
+  margin-top: var(--paragraph-spacing);
+}
+li + li{
+  margin-top: var(--list-item-spacing);
+}
+.block{
   *:first-child{
     margin-top: 0;
   }
   *:last-child{
     margin-bottom: 0;
   }
-  .keep-together{
-    white-space: nowrap;
-  }
+}
+.keep-together{
+  white-space: nowrap;
 }

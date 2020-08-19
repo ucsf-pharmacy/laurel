@@ -76,9 +76,10 @@ code,kbd,pre,samp{
 other declarations related to typography
 */
 // start - https://every-layout.dev/rudiments/axioms/
-main#content {
+#body {
+  color: $color-black-77;
   & * {
-    max-width: var(--measure);
+    // max-width: var(--measure);
   }
   div
   ,header
@@ -87,7 +88,7 @@ main#content {
   ,section
   ,footer
   {
-    max-width: none;
+    // max-width: none;
   }
 }
 
