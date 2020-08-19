@@ -1,0 +1,8 @@
+.messages{
+  background-position-y: center;
+}
+.simple-styleguide{
+  & > div {
+    margin-top: 3em;
+  }
+}

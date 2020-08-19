@@ -35,7 +35,6 @@ header a
   padding: var(--inset-squish-m);
   line-height: calc( var(--line-spacing) + var(--space-m) );
   &:hover{
-    background-color: $color-gray-40;
   }
   &:focus{
     color: $color-white;
@@ -84,19 +83,30 @@ ul.menu a.is-active:focus{
 }
 #body nav.tabs{
   ul{
-    border-bottom: 5px solid $color-gray-40;
+    border-bottom: 1px solid $color-black-54;
   }
+  li:first-child{
+    margin-left: .3em;
+    }
   a{
     line-height: 1em;
     border: none;
+    border: 1px solid $color-black-54;
+    border-width: 1px 1px 0 1px;
     position: relative;
-    top: 5px;
-    // border-bottom: 5px solid transparent;
-    &.is-active{
-      border-bottom: 5px solid $color-black-77;
+    top: 1px;
+    padding-top: 9px;
+    &:not(.is-active):hover{
+      border-top: 5px solid $color-link-blue;
+      padding-top: 5px;
     }
-    &:hover{
-      border-bottom: 5px solid $color-link-blue;
+    &.is-active{
+      border-top: 5px solid $color-black-77;
+      border-bottom: 1px solid $color-white;
+      padding-top: 5px;
+      &:hover{
+        cursor: default;
+      }
     }
   }
 }

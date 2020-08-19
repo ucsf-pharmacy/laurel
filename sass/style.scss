@@ -1,6 +1,5 @@
 @import "_custom-properties.scss"; // contains various categories, needs to come first
 
-// start - Every Layout Components
 // @import "every-layout/_image.scss";
 // @import "every-layout/_text.scss";
 // @import "every-layout/_words.scss";
@@ -15,8 +14,9 @@
 // @import "every-layout/_cluster.scss";
 // @import "every-layout/_frame.scss";
 // @import "every-layout/_reel.scss";
-// end - Every Layout Components
 
+@import "_admin.scss";
+@import "_layout.scss";
 @import "_colors.scss";
 @import "_base.scss";
 @import "_a11y.scss";
@@ -24,8 +24,9 @@
 @import "_typography.scss";
 @import "_code.scss";
 @import "_images.scss";
-@import "_links.scss";
+@import "_links_and_menus.scss";
 @import "_lists.scss";
+@import "_tables.scss";
 @import "_box-shadows.scss";
 @import "_spacing.scss";
 @import "_print.scss";

@@ -1,8 +1,12 @@
-ul
-,ol
-{
-  padding: 0 0 0 1.2rem;
-}
 ul{
+  padding: 0 0 0 1.05em;
   list-style-type: square;
+}
+ol{
+  padding: 0 0 0 2.25em;
+}
+ul,ol{
+  ul,ol{
+    margin-top: .5em;
+  }
 }
