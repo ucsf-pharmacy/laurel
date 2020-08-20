@@ -12,37 +12,40 @@ libraries:
 regions:
 
   # the Header region includes the UCSF banner (which is basically a menu) and the search box
-  header:         'Header'
+  header:            'Header'
 
   # Menu 1 is the primary menu or main menu for navigation.
-  primary_menu:   'Menu 1'
+  primary_menu:      'Menu 1'
 
   # Announcements is for any kind of special notice. Examples: forest fires, DACA threats, pandemics, questionnaires for website feedback.
-  announcements:  'Announcements'
+  announcements:     'Announcements'
 
   # Highlighted came with Classy by default. I‘m not sure what it‘s for.
-  highlighted:    'Highlighted'
+  highlighted:       'Highlighted'
 
   # Help came with Classy by default. It’s for some kind of help messages.
-  help:           'Help'
+  help:              'Help'
 
   # Breadcrumb is for navigation indicating the hierarchy of pages above your current page.
-  breadcrumb:     'Breadcrumb'
+  breadcrumb:        'Breadcrumb'
+
+  # Content Metadata is for our custom info about each page: assigned owner, frequency of review, last reviewed date, etc.
+  content_metadata:  'Content Metadata'
 
   # the Main region is where the info that is the main focus of the page goes.
-  content:        'Main'
+  main:              'Main'
 
-  # this is called sidebar_first only because that was the name in Classy. the Related region is intended for sidebar-like content that is related to the Main region, such as related stories, more kinds of things like in Main, links to archives of Main. it is also intended for traditionally sidebar content -- info that is tangential to the Main region.
-  sidebar_first:  'Related'
+  # the Related region is intended for sidebar-like content that is related to the Main region, such as related stories, more kinds of things like in Main, links to archives of Main. it is also intended for traditionally sidebar content -- info that is tangential to the Main region.
+  related:           'Related'
 
   # endnotes is for things like grouped image credits, third party copyright notices, footnotes -- anything that needs to come fully after the Main and Related regions.
-  endnotes:       'Endnotes'        
+  endnotes:          'Endnotes'        
 
   # Footer contains make a gift and the vision statement
-  footer:         'Footer'
+  footer:            'Footer'
 
   # Menu 2 contains two menus that go in the footer. One is social media links. The other is other footer links.
-  secondary_menu: 'Menu 2'
+  secondary_menu:    'Menu 2'
 
   # Copyright is the copyright notice
-  copyright:      'Copyright'
+  copyright:         'Copyright'

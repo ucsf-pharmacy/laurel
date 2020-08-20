@@ -6,8 +6,9 @@ page regions defined in laurel.info.yml:
   highlighted      : 'Highlighted'
   help             : 'Help'
   breadcrumb       : 'Breadcrumb'
-  content          : 'Main'
-  sidebar_first    : 'Related'
+  content_metadata : 'Content Metadata'
+  main             : 'Main'
+  related          : 'Related'
   endnotes         : 'Endnotes'
   footer           : 'Footer'
   secondary_menu   : 'Menu 2'
@@ -49,16 +50,21 @@ https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png
     {{ page.breadcrumb }}
   </nav>
   {% endif %}
+  {% if page.content_metadata %}
+  <nav id="content-metadata">
+    {{ page.content_metadata }}
+  </nav>
+  {% endif %}
 </header>
 <div class="sidebar-right"><!-- every layout, sidebar layout, sidebar on the right -->
   <div id="body"> {# intermediary wrapper #}
-    <main id="content">
+    <main>
       <a id="main-content" tabindex="-1"></a>
-      {{ page.content }}
+      {{ page.main }}
     </main>
-    {% if page.sidebar_first %}
+    {% if page.related %}
     <aside>
-      {{ page.sidebar_first }}
+      {{ page.related }}
     </aside>
     {% endif %}
   </div>
