@@ -1,16 +1,17 @@
 {#
 page regions defined in laurel.info.yml:
-  header: 'Header'
-  primary_menu: 'Menu 1'
-  announcements: 'Announcements'
-  highlighted: 'Highlighted'
-  help: 'Help'
-  breadcrumb: 'Breadcrumb'
-  content: 'Main'
-  sidebar_first: 'Related'
-  footer: 'Footer'
-  secondary_menu: 'Menu 2'
-  copyright: 'Copyright'
+  header           : 'Header'
+  primary_menu     : 'Menu 1'
+  announcements    : 'Announcements'
+  highlighted      : 'Highlighted'
+  help             : 'Help'
+  breadcrumb       : 'Breadcrumb'
+  content          : 'Main'
+  sidebar_first    : 'Related'
+  endnotes         : 'Endnotes'
+  footer           : 'Footer'
+  secondary_menu   : 'Menu 2'
+  copyright        : 'Copyright'
 
 markup based loosely on
 https://codepen.io/aardrian/pen/BgQqrQ
@@ -62,6 +63,11 @@ https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png
     {% endif %}
   </div>
 </div>
+{% if page.endnotes %}
+<div id="endnotes">
+  {{ page.endnotes }}
+</div>
+{% endif %}
 <footer>
   {#
     “typically the <footer> element often has a list of links that don't need to be in a <nav> element.”
