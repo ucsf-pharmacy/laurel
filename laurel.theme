@@ -1,0 +1,19 @@
+<?php
+/*
+example from
+https://www.drupal.org/docs/8/theming-drupal-8/creating-advanced-theme-settings
+
+function laurel_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['laurel_example'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Widget'),
+    '#default_value' => theme_get_setting('laurel_example'),
+    '#description'   => t("Place this text in the widget spot on your site."),
+  );
+}
+*/
