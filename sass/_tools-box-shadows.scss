@@ -26,9 +26,9 @@ https://codepen.io/sdthornton/pen/wBZdXq
  *     -webkit-transition: all 250ms;
  *     -moz-transition: all 250ms;
  *     transition: all 250ms;
- *     @include BoxShadowHelper(1);
+ *     @include boxshadowhelper(1); // <---------
  *     &:hover{
- *         @include BoxShadowHelper(3);
+ *         @include boxshadowhelper(3); // <---------
  *         -webkit-transform: translateY(-5px);
  *         -moz-transform: translateY(-5px);
  *         transform: translateY(-5px);

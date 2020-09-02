@@ -1,0 +1,70 @@
+/*
+Fluid modular type scales
+
+https://utopia.fyi/blog
+https://utopia.fyi/blog/designing-with-fluid-type-scales/
+https://utopia.fyi/blog/css-modular-scales/
+https://utopia.fyi/blog/fluid-custom-properties/
+https://v6.robweychert.com/blog/2019/12/a-modern-typographic-scale/
+
+How this works:
+
+1. We set the font-size and line-height of the body element.
+
+  body{
+    font-size: var(--fluid0); // this is set in _design-tokens-fonts.scss
+    line-height: var(--fluid1); // this is set below
+  }
+
+2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
+
+*/
+:root{
+  --fluid-min-width: 320;
+  --fluid-max-width: 1440; // if this value changes, you must change the media query below as well.
+  --fluid-min-size : 17;
+  --fluid-max-size : 20;
+  --fluid-min-ratio: 1.2;
+  --fluid-max-ratio: 1.33;
+
+  --fluid-screen: 100vw;
+  --fluid-bp    : calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16))); // fluid-bp = fluid breakpoint
+}
+
+@media screen and (min-width: 1440){ // (we cannot use custom properties here, so the min-width is hardcoded. if this value changes, you must change the --fluid-max-width value above as well.)
+  :root{
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root{
+  --fluid-min-scale0 : var(--fluid-min-ratio);
+  --fluid-min-scale1 : var(--fluid-min-scale0) * var(--fluid-min-ratio);
+  --fluid-min-scale2 : var(--fluid-min-scale1) * var(--fluid-min-ratio);
+
+  --fluid-max-scale0 : var(--fluid-max-ratio);
+  --fluid-max-scale1 : var(--fluid-max-scale0) * var(--fluid-max-ratio);
+  --fluid-max-scale2 : var(--fluid-max-scale1) * var(--fluid-max-ratio);
+
+  --fluid-min-size0 : (var(--fluid-min-size)) / 16;
+  --fluid-min-size1 : (var(--fluid-min-size) * var(--fluid-min-scale0)) / 16;
+  --fluid-min-size2 : (var(--fluid-min-size) * var(--fluid-min-scale1)) / 16;
+
+  --fluid-max-size0 : (var(--fluid-max-size)) / 16;
+  --fluid-max-size1 : (var(--fluid-max-size) * var(--fluid-max-scale0)) / 16;
+  --fluid-max-size2 : (var(--fluid-max-size) * var(--fluid-max-scale1)) / 16;
+
+  --fluid0 : calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
+  --fluid1 : calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
+  --fluid2 : calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
+
+  --measure: 60ch;
+
+  --line-height      : var(--fluid1);
+  --line-height-small: calc(0.8 * var(--ratio));
+  --line-height-large: calc(1.2 * var(--ratio));
+
+  --line-spacing     : 1.4em;
+  --paragraph-spacing: var(--fluid0);
+  --list-item-spacing: calc( var(--fluid0) / 2 );
+}

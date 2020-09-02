@@ -27,7 +27,7 @@ $color-gray-70:                   #dfe0e0;
 $color-gray-40:                   #ededee; // we prefer $gray-40 over $black-10
 $color-gray-10:                   #fafbfb;
 
-$color-grey:                      #b4b9bf;
+$color-grey:                      #b4b9bf; // we prefer $color-gray over $color-grey
 $color-grey-70:                   #cbced2;
 $color-grey-40:                   #e1e3e6;
 $color-grey-10:                   #f8f8f9;
@@ -78,8 +78,3 @@ $color-yellow-40:                 #fff199;
 $color-yellow-10:                 #fffce6;
 
 $color-focus:                     $color-orange-iactive;
-
-::selection {
-  color: #000;
-  background-color: $color-yellow-10;
-}

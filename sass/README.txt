@@ -1,1 +1,1 @@
-To understand how these files are organized, start with style.scss, which specifies the order in which the files are processed. _custom-properties.scss is first, and it contains custom properties which act like variables. We want them to be universally available, and so these variable definitions come first. _custom-properties.scss contains various categories of things, so, for example, color variables are stored in it rather than in _colors.scss.
+See pharmacy.scss.
