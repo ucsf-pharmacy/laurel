@@ -1,7 +1,6 @@
 /* 
-Based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
+start - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
-
 code {
   font-family: var(--font-mono);
   font-size: 0.85em; /* fonts are weird, so not in the modular scale */
@@ -32,3 +31,6 @@ pre[class*='language-'] {
   hyphens: none;
   overflow-x: auto;
 }
+/* 
+end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
+*/

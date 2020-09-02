@@ -1,0 +1,138 @@
+/*
+adapted from:
+
+2019.1001 CSS reset
+https://hankchizljaw.com/wrote/a-modern-css-reset/
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: var(--line-spacing);
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images and video easier to work with */
+img, video
+{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + *
+,* + p
+{
+  margin-top: var(--paragraph-spacing);
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
+@media screen,print {
+  sup.footnote{
+    padding-left: 0.1em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: var(--s0);
+    letter-spacing: .05em;
+    font-size: var(--s-2);
+  }
+  #LinkContainer{
+    overflow-wrap: break-word;
+  }
+  #LinkContainer #LinkList li{
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: var(--s0);
+    letter-spacing: .05em;
+    font-size: var(--s-2);
+    margin: var(--space-stack-xxs);
+  }
+  sup.footnote,
+  #LinkContainer
+  {
+    display: none;
+  }
+}
+@media print {
+  #LinkContainer {
+    display: block;
+  }
+  sup.footnote {
+    display: inline;
+  }
+}
+@media screen and (min-width: 68em), print and (min-width: 6in) {
+  #LinkContainer ol {
+    column-count: 2;
+    column-gap: 4em;
+  }
+}
+@media all and (min-width: 80em), print and (min-width: 9in) {
+  #LinkContainer ol {
+    column-count: 3;
+    column-gap: 4em;
+  }
+}
+/* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */

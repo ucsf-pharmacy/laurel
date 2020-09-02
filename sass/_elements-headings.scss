@@ -7,21 +7,3 @@ h1{ // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line heig
     margin-top: var(--fluid0);
   }
 }
-article > * + *
-,* + p
-,* + ul
-,* + ol
-{
-  margin-top: var(--paragraph-spacing);
-}
-li + li{
-  margin-top: var(--list-item-spacing);
-}
-.block{
-  *:last-child{
-    margin-bottom: 0;
-  }
-}
-.keep-together{
-  white-space: nowrap;
-}

@@ -1,3 +1,8 @@
+.block{
+  *:last-child{
+    margin-bottom: 0;
+  }
+}
 .messages{
   background-position-y: center;
 }

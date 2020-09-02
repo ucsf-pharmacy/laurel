@@ -1,0 +1,48 @@
+/*
+These stylesheets are loosely structured based on Harry Roberts’ ITCSS:
+https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+and Mathias Ott’s interpretations of ITCSS:
+https://matthiasott.com/notes/how-i-structure-my-css
+
+See also:
+https://youtu.be/1OKZOV-iLj4
+*/
+
+// the settings section contains anything that needs to be global.
+// declarations in settings should have the greatest reach and the least specificity.
+@import "_settings-spacing.scss";
+@import "_settings-fixed-type-scales.scss";
+@import "_settings-fluid-modular-type-scales.scss";
+@import "_settings-other.scss";
+
+@import "_design-tokens-color-definitions.scss";
+@import "_design-tokens-color-declarations.scss";
+@import "_design-tokens-fonts.scss";
+@import "_design-tokens-typography.scss";
+
+// sass functions and mixins
+@import "_tools-box-shadows.scss";
+@import "_tools-other.scss";
+
+@import "_reset-and-normalize.scss";
+
+// unclassed html elements only
+@import "_elements-headings.scss";
+@import "_elements-links.scss";
+@import "_elements-lists.scss";
+@import "_elements-forms.scss";
+@import "_elements-other.scss";
+
+//------------------------------------- // below this line use only classes
+
+@import "_skeleton-every-layout.scss";  // layouts, wrappers, containers, grids
+
+@import "_objects.scss";                // things with classes that aren't full components
+
+// accordion, card, hero, etc.
+@import "_components-menu-tabs.scss";
+@import "_components-other.scss";
+
+@import "_overrides.scss";
+
+@import "_print.scss";
