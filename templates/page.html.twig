@@ -7,7 +7,7 @@ page regions defined in laurel.info.yml:
   help             : 'Help'
   breadcrumb       : 'Breadcrumb'
   content_metadata : 'Content Metadata'
-  main             : 'Main'
+  content          : 'Main'
   related          : 'Related'
   endnotes         : 'Endnotes'
   footer           : 'Footer'
@@ -60,7 +60,7 @@ https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png
   <div id="body"> {# intermediary wrapper #}
     <main>
       <a id="main-content" tabindex="-1"></a>
-      {{ page.main }}
+      {{ page.content }}
     </main>
     {% if page.related %}
     <aside>

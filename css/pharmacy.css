@@ -572,6 +572,11 @@ h1 {
   margin-top: var(--fluid0);
 }
 
+/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-headings.scss */
+h2 + div.contextual + div.field {
+  margin-top: var(--fluid0);
+}
+
 /*
 Reminders:
 
@@ -741,8 +746,8 @@ ul.menu {
 }
 
 /* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-header a
-, footer a
+header ul.menu a
+, footer ul.menu a
 , #body nav.tabs a {
   text-decoration: none;
   color: #3b3b3b;
@@ -752,8 +757,8 @@ header a
 }
 
 /* line 27, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-header a:focus
-, footer a:focus
+header ul.menu a:focus
+, footer ul.menu a:focus
 , #body nav.tabs a:focus {
   color: #ffffff;
   background-color: #0071ad;

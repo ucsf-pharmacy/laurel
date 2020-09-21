@@ -1,0 +1,26 @@
+table{
+  column-span: all;
+}
+th,td{
+  text-align: left;
+  padding: var(--inset-squish-m);
+  &:first-child{
+    padding-left: 0;
+  }
+  &:last-child{
+    padding-right: 0;
+  }
+}
+th{
+  vertical-align: bottom;
+  border-bottom: 3px solid $color-light-green-hex;
+}
+td{
+  vertical-align: baseline;
+  border-bottom: 1px solid $color-light-border;
+}
+tr:last-child{
+  th,td{
+    border-bottom: 3px solid $color-light-green-hex;
+  }
+}

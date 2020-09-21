@@ -32,8 +32,8 @@ regions:
   # Content Metadata is for our custom info about each page: assigned owner, frequency of review, last reviewed date, etc.
   content_metadata:  'Content Metadata'
 
-  # the Main region is where the info that is the main focus of the page goes.
-  main:              'Main'
+  # the Main region is where the info that is the main focus of the page goes. (A region called "content" is required by Drupal.)
+  content:           'Main'
 
   # the Related region is intended for sidebar-like content that is related to the Main region, such as related stories, more kinds of things like in Main, links to archives of Main. it is also intended for traditionally sidebar content -- info that is tangential to the Main region.
   related:           'Related'

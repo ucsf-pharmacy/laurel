@@ -11,3 +11,11 @@
     margin-top: 3em;
   }
 }
+table.span
+{
+  column-span: all;
+}
+table.no-span
+{
+  column-span: none;
+}

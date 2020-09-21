@@ -4,5 +4,4 @@ global-styling:
       css/pharmacy.css: {}
 global-js:
   js:
-    js/custom.js: {}
-
+    js/pharmacy.js: {}

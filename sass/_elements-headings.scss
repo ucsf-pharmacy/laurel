@@ -7,3 +7,8 @@ h1{ // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line heig
     margin-top: var(--fluid0);
   }
 }
+h2{
+  & + div.contextual + div.field{
+    margin-top: var(--fluid0);
+  }
+}
