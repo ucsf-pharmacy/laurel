@@ -13,7 +13,7 @@ th,td{
 }
 th{
   vertical-align: bottom;
-  border-bottom: 3px solid $color-light-green-hex;
+  border-bottom: 3px solid $color-green-iactive;
 }
 td{
   vertical-align: baseline;
@@ -21,6 +21,6 @@ td{
 }
 tr:last-child{
   th,td{
-    border-bottom: 3px solid $color-light-green-hex;
+    border-bottom: 3px solid $color-green-iactive;
   }
 }
