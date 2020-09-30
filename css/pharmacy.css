@@ -785,18 +785,17 @@ ul.menu {
 }
 
 /* line 8, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body a
-, #body a:link {
+.region-content a
+, .region-content a:link {
   color: inherit;
-  padding: inherit;
   line-height: inherit;
   text-decoration-skip-ink: auto;
 }
 
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+/* line 15, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 header ul.menu a
 , footer ul.menu a
-, #body nav.tabs a {
+, .region-content nav.tabs a {
   text-decoration: none;
   color: #3b3b3b;
   background-color: transparent;
@@ -804,58 +803,58 @@ header ul.menu a
   line-height: calc( var(--line-spacing) + var(--space-m));
 }
 
-/* line 27, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+/* line 26, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 header ul.menu a:focus
 , footer ul.menu a:focus
-, #body nav.tabs a:focus {
+, .region-content nav.tabs a:focus {
   color: #ffffff;
   background-color: #0071ad;
   outline: none;
 }
 
-/* line 33, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+/* line 32, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 ul.menu a.is-active:focus {
   color: #ffffff;
 }
 
-/* line 36, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body a {
+/* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content a {
   background-color: none;
 }
 
-/* line 38, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body a:link {
+/* line 37, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content a:link {
   background-color: none;
   text-decoration: none;
   border-bottom: 1px solid #0071ad;
   padding-bottom: 0.0625em;
 }
 
-/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body a:hover {
+/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content a:hover {
   color: #052049;
   border-bottom: 1px solid #f26d04;
 }
 
-/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body a:focus {
+/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content a:focus {
   color: #ffffff;
   background-color: #0071ad;
   outline: none;
 }
 
-/* line 73, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body nav.tabs ul {
+/* line 72, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content nav.tabs ul {
   border-bottom: 1px solid #767676;
 }
 
-/* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body nav.tabs li:first-child {
+/* line 75, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content nav.tabs li:first-child {
   margin-left: .3em;
 }
 
-/* line 79, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body nav.tabs a {
+/* line 78, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content nav.tabs a {
   line-height: 1em;
   border: none;
   border: 1px solid #767676;
@@ -865,21 +864,21 @@ ul.menu a.is-active:focus {
   padding-top: 9px;
 }
 
-/* line 87, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body nav.tabs a:not(.is-active):hover {
+/* line 86, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content nav.tabs a:not(.is-active):hover {
   border-top: 5px solid #0071ad;
   padding-top: 5px;
 }
 
-/* line 91, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body nav.tabs a.is-active {
+/* line 90, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content nav.tabs a.is-active {
   border-top: 5px solid #3b3b3b;
   border-bottom: 1px solid #ffffff;
   padding-top: 5px;
 }
 
-/* line 95, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
-#body nav.tabs a.is-active:hover {
+/* line 94, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content nav.tabs a.is-active:hover {
   cursor: default;
 }
 

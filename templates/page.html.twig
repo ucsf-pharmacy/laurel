@@ -24,53 +24,53 @@ and
 https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png?resize=1024%2C656&ssl=1
 #}
 <header>
-  <div id="header">
+  <div class="region-header">
     {{ page.header }}
   </div>
-  <nav id="primary">
+  <nav class="region-primary">
     {{ page.primary_menu }}
   </nav>
   {% if page.announcements %}
-  <div id="announcements">
+  <div class="region-announcements">
     {{ page.announcements }}
   </div>
   {% endif %}
   {% if page.highlighted %}
-  <div id="highlighted">
+  <div class="region-highlighted">
     {{ page.highlighted }}
   </div>
   {% endif %}
   {% if page.help %}
-  <div id="help">
+  <div class="region-help">
     {{ page.help }}
   </div>
   {% endif %}
   {% if page.breadcrumb %}
-  <nav id="breadcrumb">
+  <nav class="region-breadcrumb">
     {{ page.breadcrumb }}
   </nav>
   {% endif %}
   {% if page.content_metadata %}
-  <nav id="content-metadata">
+  <nav class="region-content-metadata">
     {{ page.content_metadata }}
   </nav>
   {% endif %}
 </header>
-<div class="sidebar-right">{# every layout, sidebar layout, sidebar on the right #}
-  <div id="body"> {# intermediary wrapper #}
+<div class="sidebar-right region-content">{# every layout, sidebar layout, sidebar on the right #}
+  <div class="region-body"> {# intermediary wrapper #}
     <main>
-      <a id="main-content" tabindex="-1"></a>
+      <a class="region-main-content" tabindex="-1"></a>
       {{ page.content }}
     </main>
     {% if page.related %}
-    <aside>
+    <aside class="region-aside-content">
       {{ page.related }}
     </aside>
     {% endif %}
   </div>
 </div>
 {% if page.endnotes %}
-<div id="endnotes">
+<div class="region-endnotes">
   {{ page.endnotes }}
 </div>
 {% endif %}
@@ -83,17 +83,17 @@ https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png
     so within <footer> we use <div> instead of <nav> for lists of links
   #}
   {% if page.footer %}
-  <div id="footer">
+  <div class="region-footer">
     {{ page.footer }}
   </div>
   {% endif %}
   {% if page.secondary_menu %}
-  <div id="nav-secondary">
+  <div class="region-nav-secondary">
     {{ page.secondary_menu }}
   </div>
   {% endif %}
   {% if page.copyright %}
-  <div id="copyright">
+  <div class="region-copyright">
     {{ page.copyright }}
   </div>
   {% endif %}

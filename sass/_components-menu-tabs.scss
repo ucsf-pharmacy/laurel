@@ -5,17 +5,16 @@
 ul.menu{
   margin: 0;
 }
-#body a
-,#body a:link
+.region-content a
+,.region-content a:link
 {
   color: inherit;
-  padding: inherit;
   line-height: inherit;
   text-decoration-skip-ink: auto;
 }
 header ul.menu a
 ,footer ul.menu a
-,#body nav.tabs a
+,.region-content nav.tabs a
 {
   text-decoration: none;
   color: $color-black-77;
@@ -33,7 +32,7 @@ header ul.menu a
 ul.menu a.is-active:focus{
   color: $color-white;
 }
-#body a{
+.region-content a{
   background-color: none;
   &:link{
     background-color: none;
@@ -69,7 +68,7 @@ ul.menu a.is-active:focus{
     }
   }
 }
-#body nav.tabs{
+.region-content nav.tabs{
   ul{
     border-bottom: 1px solid $color-black-54;
   }
