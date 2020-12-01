@@ -1,0 +1,13 @@
+.field--name-field-gallery-items{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: left;
+  .field__item{
+    margin-right: var(--space-xs);
+    margin-bottom: var(--space-xs);
+  }
+}
+.media-library-item__attributes{
+  margin-top: var(--space-xxs);
+}
