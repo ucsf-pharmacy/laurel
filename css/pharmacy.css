@@ -28,6 +28,7 @@ Use display:block or display:inline or other display attributes appropriately.
 You never or rarely need to set margin-top or margin-left. Instead of margin-top, set margin-bottom on the element that comes before it or set inset on its parent. Instead of margin-left, set margin-right on the element that comes before it or set inset on its parent.
 
 */
+/* line 21, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_settings-spacing.scss */
 :root {
   --inset-default: 16px 16px 16px 16px;
   --inset-xs:  4px  4px  4px  4px;
@@ -63,6 +64,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-l: 32px;
   --space-xl: 64px;
   --space-xxl:128px;
+  --gutter: var(--space-l);
 }
 
 /*
@@ -76,6 +78,7 @@ Usage:
 p { font-size: var(--s0); }
 
 */
+/* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_settings-fixed-type-scales.scss */
 :root {
   --ratio: 1.2;
   --s-5: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
@@ -112,6 +115,7 @@ How this works:
 2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
 
 */
+/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_settings-fluid-modular-type-scales.scss */
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1440;
@@ -124,11 +128,13 @@ How this works:
 }
 
 @media screen and (min-width: 1440) {
+  /* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_settings-fluid-modular-type-scales.scss */
   :root {
     --fluid-screen: calc(var(--fluid-max-width) * 1px);
   }
 }
 
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_settings-fluid-modular-type-scales.scss */
 :root {
   --fluid-min-scale0: var(--fluid-min-ratio);
   --fluid-min-scale1: var(--fluid-min-scale0) * var(--fluid-min-ratio);
@@ -146,14 +152,16 @@ How this works:
   --fluid1: calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
   --fluid2: calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
   --measure: 60ch;
-  --line-height: var(--fluid1);
+  --heading-spacing: 1em;
+  --line-height: 1.5;
   --line-height-small: calc(0.8 * var(--ratio));
   --line-height-large: calc(1.2 * var(--ratio));
-  --line-spacing: 1.4em;
+  --line-spacing: 1.5;
   --paragraph-spacing: var(--fluid0);
-  --list-item-spacing: calc( var(--fluid0) / 2 );
+  --list-item-spacing: calc( var(--fluid0) / 2.5 );
 }
 
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_settings-other.scss */
 :root {
   --border-thin: var(--s-5);
   --border-thick: var(--s-2);
@@ -189,11 +197,13 @@ Prefer $color-gray over $color-grey. The former is lighter than the latter.
 
 Prefer $color-gray-40 over $color-black-10.
 */
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-color-declarations.scss */
 ::selection {
   color: #000000;
   background-color: #fffce6;
 }
 
+/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-color-declarations.scss */
 #body {
   color: #3b3b3b;
 }
@@ -239,14 +249,17 @@ webfont definitions
 ----------------------------------------------------------------------
 font family declarations
 */
+/* line 44, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-fonts.scss */
 body {
   font-family: var(--font-sans-serify);
 }
 
+/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-fonts.scss */
 code, kbd, pre, samp {
   font-family: var(--font-mono);
 }
 
+/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-fonts.scss */
 input, button, textarea, select {
   font-family: inherit;
 }
@@ -259,10 +272,12 @@ input, button, textarea, select {
 font sizing
 
 */
+/* line 61, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-fonts.scss */
 body {
   font-size: var(--fluid0);
 }
 
+/* line 64, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-fonts.scss */
 code, kbd, pre, samp {
   font-size: 1em;
 }
@@ -281,6 +296,7 @@ http://text-crop.eightshapes.com/
 ----------------------------------------------------------------------
 Typography features
 */
+/* line 20, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 body {
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -289,6 +305,7 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
+/* line 27, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 .small-caps {
   -moz-font-feature-settings: "c2sc", "smcp";
   -ms-font-feature-settings: "c2sc", "smcp";
@@ -297,6 +314,7 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* line 34, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 .lining-figures
 , html {
   -moz-font-feature-settings: "lnum";
@@ -305,6 +323,7 @@ body {
   font-feature-settings: "lnum";
 }
 
+/* line 42, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 .oldstyle-figures
 , article {
   -moz-font-feature-settings: "onum";
@@ -313,6 +332,7 @@ body {
   font-feature-settings: "onum";
 }
 
+/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 .tabular-figures
 , table {
   -moz-font-feature-settings: "tnum";
@@ -321,6 +341,7 @@ body {
   font-feature-settings: "tnum";
 }
 
+/* line 58, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 .headline {
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
@@ -329,6 +350,7 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
 }
 
+/* line 65, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 code, kbd, pre, samp {
   -moz-font-feature-settings: initial;
   -ms-font-feature-settings: initial;
@@ -343,6 +365,7 @@ code, kbd, pre, samp {
 ----------------------------------------------------------------------
 other declarations related to typography
 */
+/* line 95, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_design-tokens-typography.scss */
 sub
 , sup {
   line-height: 0;
@@ -393,6 +416,7 @@ adapted from:
 https://hankchizljaw.com/wrote/a-modern-css-reset/
 */
 /* Box sizing rules */
+/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 *,
 *::before,
 *::after {
@@ -400,12 +424,14 @@ https://hankchizljaw.com/wrote/a-modern-css-reset/
 }
 
 /* Remove default padding */
+/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 ul[class],
 ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
+/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 body,
 h1,
 h2,
@@ -424,6 +450,7 @@ dd {
 }
 
 /* Set core body defaults */
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -432,17 +459,20 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 ul[class],
 ol[class] {
   list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
+/* line 54, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
 /* Make images and video easier to work with */
+/* line 59, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 img, video {
   max-width: 100%;
   height: auto;
@@ -450,12 +480,14 @@ img, video {
 }
 
 /* Natural flow and rhythm in articles by default */
+/* line 67, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 article > * + *
 , * + p {
   margin-top: var(--paragraph-spacing);
 }
 
 /* Inherit fonts for inputs and buttons */
+/* line 74, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
 input,
 button,
 textarea,
@@ -465,6 +497,7 @@ select {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
+  /* line 83, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -475,6 +508,7 @@ select {
 
 /* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
 @media screen, print {
+  /* line 94, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     padding-left: 0.1em;
     font-style: normal;
@@ -483,9 +517,11 @@ select {
     letter-spacing: .05em;
     font-size: var(--s-2);
   }
+  /* line 102, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     overflow-wrap: break-word;
   }
+  /* line 105, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer #LinkList li {
     font-family: Helvetica,Arial,sans-serif;
     line-height: var(--s0);
@@ -493,6 +529,7 @@ select {
     font-size: var(--s-2);
     margin: var(--space-stack-xxs);
   }
+  /* line 112, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   sup.footnote,
   #LinkContainer {
     display: none;
@@ -500,15 +537,18 @@ select {
 }
 
 @media print {
+  /* line 119, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     display: block;
   }
+  /* line 122, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     display: inline;
   }
 }
 
 @media screen and (min-width: 68em), print and (min-width: 6in) {
+  /* line 127, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 2;
     column-gap: 4em;
@@ -516,6 +556,7 @@ select {
 }
 
 @media all and (min-width: 80em), print and (min-width: 9in) {
+  /* line 133, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 3;
     column-gap: 4em;
@@ -523,14 +564,29 @@ select {
 }
 
 /* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
-h1 {
-  line-height: calc( var(--line-spacing) * ( 2 / 3 ));
+/* line 140, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_reset-and-normalize.scss */
+*:last-child {
+  margin-bottom: 0;
 }
 
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-headings.scss */
+h1 {
+  line-height: calc( var(--line-spacing) * ( 2 / 3 ));
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
+/* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-headings.scss */
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+  margin-bottom: var(--heading-spacing);
+}
+
+/* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-headings.scss */
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
   margin-top: var(--fluid0);
 }
 
+/* line 18, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-headings.scss */
 h2 + div.contextual + div.field {
   margin-top: var(--fluid0);
 }
@@ -548,54 +604,66 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
 ----------------------------------------------------------------------
 */
 /* lists but not lists of menu items */
+/* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-lists.scss */
 * + ul, * + ol {
   margin-top: var(--paragraph-spacing);
 }
 
-li + li {
+/* line 10, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-lists.scss */
+p + ul, p + ol {
   margin-top: var(--list-item-spacing);
 }
 
+/* line 15, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-lists.scss */
 ul {
   padding: 0 0 0 1.05em;
   list-style-type: square;
 }
 
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-lists.scss */
 ol {
   padding: 0 0 0 2.25em;
 }
 
+/* line 23, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-lists.scss */
 ul ul, ul ol, ol ul, ol ol {
   margin-top: .5em;
 }
 
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-tables.scss */
 table {
   column-span: all;
 }
 
+/* line 4, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-tables.scss */
 th, td {
   text-align: left;
   padding: var(--inset-squish-m);
 }
 
+/* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-tables.scss */
 th:first-child, td:first-child {
   padding-left: 0;
 }
 
+/* line 10, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-tables.scss */
 th:last-child, td:last-child {
   padding-right: 0;
 }
 
+/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-tables.scss */
 th {
   vertical-align: bottom;
   border-bottom: 3px solid #6ea400;
 }
 
+/* line 18, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-tables.scss */
 td {
   vertical-align: baseline;
   border-bottom: 1px solid #dddddd;
 }
 
+/* line 23, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-tables.scss */
 tr:last-child th, tr:last-child td {
   border-bottom: 3px solid #6ea400;
 }
@@ -603,12 +671,14 @@ tr:last-child th, tr:last-child td {
 /* 
 start - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
+/* line 4, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-other.scss */
 code {
   font-family: var(--font-mono);
   font-size: 0.85em;
   /* fonts are weird, so not in the modular scale */
 }
 
+/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-other.scss */
 pre code {
   color: var(--color-light);
   background-color: var(--color-dark);
@@ -617,6 +687,7 @@ pre code {
   overflow-x: auto;
 }
 
+/* line 17, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_elements-other.scss */
 pre[class*='language-'] {
   color: var(--color-light);
   text-align: left;
@@ -638,11 +709,13 @@ pre[class*='language-'] {
 /* 
 end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
+/* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/every-layout/_sidebar.scss */
 .sidebar-left
 , .sidebar-right {
   overflow: hidden;
 }
 
+/* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/every-layout/_sidebar.scss */
 .sidebar-left
 >
 *, .sidebar-right > * {
@@ -651,6 +724,7 @@ end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
   margin: calc(var(--s4) / 2 * -1);
 }
 
+/* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/every-layout/_sidebar.scss */
 .sidebar-left
 >
 * > *, .sidebar-right > * > * {
@@ -660,49 +734,143 @@ end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
   margin: calc(var(--s4) / 2);
 }
 
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/every-layout/_sidebar.scss */
 .sidebar-left > * > :last-child
 , .sidebar-right > * > :first-child {
   flex-basis: 0;
   flex-grow: 999;
 }
 
+/* line 25, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/every-layout/_sidebar.scss */
 .sidebar-left > * > :last-child
 , .sidebar-right > * > :first-child {
   min-width: calc(50% - var(--s4));
 }
 
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_skeleton-every-layout.scss */
 header > * {
   border: 1px solid green;
 }
 
+/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_skeleton-every-layout.scss */
 #body > * {
   border: 1px solid orange;
 }
 
+/* line 25, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_skeleton-every-layout.scss */
 footer > * {
   border: 1px solid green;
 }
 
-.block *:last-child {
-  margin-bottom: 0;
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_objects.scss */
+.node li:not(:last-child) {
+  margin-bottom: var(--list-item-spacing);
 }
 
+/* line 4, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_objects.scss */
+.field:not(:last-child) {
+  margin-bottom: var(--space-m);
+}
+
+/* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_objects.scss */
 .messages {
   background-position-y: center;
 }
 
+/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_objects.scss */
 .simple-styleguide > div {
   margin-top: 3em;
 }
 
+/* line 15, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_objects.scss */
 table.span {
   column-span: all;
 }
 
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_objects.scss */
 table.no-span {
   column-span: none;
 }
 
+/* line 23, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_objects.scss */
+.field--name-field-subtitle {
+  font-size: 1.5em;
+  line-height: 1.25;
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
+/* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 100ch) {
+  /* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+  .page-node-type-event fieldset.wrapper .fieldset-wrapper {
+    display: flex;
+  }
+}
+
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-event-moreinfo
+.field__items, .page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__items {
+  padding: 0 0 0 1.05em;
+  list-style-type: square;
+}
+
+/* line 17, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-event-moreinfo
+.field__item, .page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__item {
+  display: list-item;
+}
+
+/* line 20, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-event-moreinfo
+.field__item:not(:last-child), .page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__item:not(:last-child) {
+  margin-bottom: var(--list-item-spacing);
+}
+
+/* line 25, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:first-child > * {
+  margin-left: var(--gutter);
+}
+
+/* line 29, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:first-child
+, .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:last-child {
+  flex: 0 0 26%;
+}
+
+/* line 34, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:first-child
+, .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:nth-child(2) {
+  margin-right: var(--gutter);
+}
+
+/* line 41, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:nth-child(2) .fieldset-wrapper div * {
+  max-width: 66ch;
+}
+
+/* line 44, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:nth-child(2) .fieldset-wrapper div table {
+  max-width: 100%;
+}
+
+/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:last-child > *:not(.field--name-field-featured-media) {
+  margin-right: var(--gutter);
+}
+
+/* line 54, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper div {
+  display: block;
+}
+
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-gallery.scss */
 .field--name-field-gallery-items {
   display: flex;
   flex-wrap: wrap;
@@ -710,24 +878,29 @@ table.no-span {
   justify-content: left;
 }
 
+/* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-gallery.scss */
 .field--name-field-gallery-items .field__item {
   margin-right: var(--space-xs);
   margin-bottom: var(--space-xs);
 }
 
+/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-gallery.scss */
 .media-library-item__attributes {
   margin-top: var(--space-xxs);
 }
 
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .menu-item {
   display: inline;
   padding: 0;
 }
 
+/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 ul.menu {
   margin: 0;
 }
 
+/* line 8, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content a
 , .region-content a:link {
   color: inherit;
@@ -735,6 +908,7 @@ ul.menu {
   text-decoration-skip-ink: auto;
 }
 
+/* line 15, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 header ul.menu a
 , footer ul.menu a
 , .region-content nav.tabs a {
@@ -745,6 +919,7 @@ header ul.menu a
   line-height: calc( var(--line-spacing) + var(--space-m));
 }
 
+/* line 26, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 header ul.menu a:focus
 , footer ul.menu a:focus
 , .region-content nav.tabs a:focus {
@@ -753,14 +928,17 @@ header ul.menu a:focus
   outline: none;
 }
 
+/* line 32, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 ul.menu a.is-active:focus {
   color: #ffffff;
 }
 
+/* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content a {
   background-color: none;
 }
 
+/* line 37, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content a:link {
   background-color: none;
   text-decoration: none;
@@ -768,25 +946,35 @@ ul.menu a.is-active:focus {
   padding-bottom: 0.0625em;
 }
 
+/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content a:hover {
   color: #052049;
   border-bottom: 1px solid #f26d04;
 }
 
+/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content a:focus {
   color: #ffffff;
   background-color: #0071ad;
   outline: none;
 }
 
+/* line 72, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs ul {
   border-bottom: 1px solid #767676;
 }
 
+/* line 75, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs li:first-child {
-  margin-left: .3em;
+  margin-left: var(--gutter);
 }
 
+/* line 78, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
+.region-content nav.tabs li:last-child {
+  margin-right: var(--gutter);
+}
+
+/* line 81, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs a {
   line-height: 1em;
   border: none;
@@ -797,17 +985,20 @@ ul.menu a.is-active:focus {
   padding-top: 9px;
 }
 
+/* line 89, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs a:not(.is-active):hover {
   border-top: 5px solid #0071ad;
   padding-top: 5px;
 }
 
+/* line 93, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs a.is-active {
   border-top: 5px solid #3b3b3b;
   border-bottom: 1px solid #ffffff;
   padding-top: 5px;
 }
 
+/* line 97, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs a.is-active:hover {
   cursor: default;
 }
@@ -822,6 +1013,7 @@ visually hidden yet still accessible to screen readers, perhaps slightly better 
 2018.0316 Scharnagl snippets
 https://twitter.com/justmarkup/status/974573989497593856
 */
+/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_overrides.scss */
 .visually-hidden {
   clip-path: inset(100%);
   position: absolute;
@@ -835,29 +1027,37 @@ https://twitter.com/justmarkup/status/974573989497593856
   white-space: nowrap;
 }
 
+/* line 23, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_overrides.scss */
 .clearfix:after {
   content: '';
   display: table;
   clear: both;
 }
 
+/* line 28, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_overrides.scss */
 .keep-together {
   white-space: nowrap;
 }
 
 @media print {
+  /* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_print.scss */
   :root {
     font-size: var(--s-5);
   }
+  /* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_print.scss */
   .hide-from-print {
     display: none;
   }
+  /* line 8, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_print.scss */
   h1, h2, h3, h4 {
     margin: var(--space-stack-default);
     margin-top: var(--space-l);
   }
+  /* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_print.scss */
   a {
     text-decoration: none;
     border-bottom: none;
   }
 }
+
+/*# sourceMappingURL=pharmacy.css.map */

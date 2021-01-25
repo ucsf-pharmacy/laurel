@@ -58,4 +58,6 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-l      : 32px;
   --space-xl     : 64px;
   --space-xxl    :128px;
+
+  --gutter       : var(--space-l);
 }

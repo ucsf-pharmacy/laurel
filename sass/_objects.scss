@@ -1,7 +1,8 @@
-.block{
-  *:last-child{
-    margin-bottom: 0;
-  }
+.node li:not(:last-child){
+  margin-bottom: var(--list-item-spacing);
+}
+.field:not(:last-child){
+  margin-bottom: var(--space-m);
 }
 .messages{
   background-position-y: center;
@@ -18,4 +19,11 @@ table.span
 table.no-span
 {
   column-span: none;
+}
+.field--name-field-subtitle
+{
+  font-size: 1.5em;
+  line-height: 1.25;
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
 }

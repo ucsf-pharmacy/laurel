@@ -73,8 +73,11 @@ ul.menu a.is-active:focus{
     border-bottom: 1px solid $color-black-54;
   }
   li:first-child{
-    margin-left: .3em;
-    }
+    margin-left: var(--gutter);
+  }
+  li:last-child{
+    margin-right: var(--gutter);
+  }
   a{
     line-height: 1em;
     border: none;

@@ -60,11 +60,13 @@ How this works:
 
   --measure: 60ch;
 
-  --line-height      : var(--fluid1);
+  --heading-spacing  : 1em;
+  
+  --line-height      : 1.5;
   --line-height-small: calc(0.8 * var(--ratio));
   --line-height-large: calc(1.2 * var(--ratio));
 
-  --line-spacing     : 1.4em;
+  --line-spacing     : 1.5;
   --paragraph-spacing: var(--fluid0);
-  --list-item-spacing: calc( var(--fluid0) / 2 );
+  --list-item-spacing: calc( var(--fluid0) / 2.5 );
 }
