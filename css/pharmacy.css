@@ -709,6 +709,14 @@ pre[class*='language-'] {
 /* 
 end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/every-layout/_grid.scss */
+.grid-l {
+  display: grid;
+  grid-gap: 1px;
+  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
 /* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/every-layout/_sidebar.scss */
 .sidebar-left
 , .sidebar-right {
@@ -868,25 +876,6 @@ table.no-span {
 /* line 54, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper div {
   display: block;
-}
-
-/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-gallery.scss */
-.field--name-field-gallery-items {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: left;
-}
-
-/* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-gallery.scss */
-.field--name-field-gallery-items .field__item {
-  margin-right: var(--space-xs);
-  margin-bottom: var(--space-xs);
-}
-
-/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-gallery.scss */
-.media-library-item__attributes {
-  margin-top: var(--space-xxs);
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/laurel/sass/_components-menu-tabs.scss */
