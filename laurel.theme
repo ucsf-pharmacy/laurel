@@ -1,0 +1,9 @@
+<?php
+/**
+ * Implements hook_preprocess_block().
+ */
+function laurel_preprocess_block(array &$variables) {
+  // start - reveal plugin_id values needed in block style plugins config
+  // print '<pre>' . $variables['plugin_id'] . '</pre>';
+  // end - reveal plugin_id values needed in block style plugins config
+}

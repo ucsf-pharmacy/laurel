@@ -1,0 +1,14 @@
+.field--name-field-gallery-items
+,.multiple-rows .field--name-field-gallery-items
+{
+  // by default, gallery items are displayed 200px wide in multiple rows with no space between, expanding columns to take available space to fit the container
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  article > * + *{
+    margin-top: 0;
+  }
+}
+.one-row .field--name-field-gallery-items{
+  display: flex;
+  flex-wrap: nowrap;
+}

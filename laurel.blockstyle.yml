@@ -1,0 +1,45 @@
+# checkbox_with_exclude:
+#   label: 'Checkbox with Exclude'
+#   class: '\Drupal\block_style_plugins_test\Plugin\BlockStyle\CheckboxWithExclude'
+#   exclude:
+#     - 'system_powered_by_block'
+#     - 'basic'
+
+gallery_type:
+  label: 'Gallery type'
+  include:
+    - 'field_delta_block:node:page:field_gallery'
+  form:
+    'Type':
+      '#type': 'select'
+      '#title': 'Choose a type'
+      '#options':
+        'one-row': 'One row'
+        'multiple-rows': 'Multiple rows'
+
+# template_set_with_yaml:
+#   label: 'Template Set by Yaml'
+#   template: 'block__test_custom'
+#   exclude:
+#     - 'field_delta_block:node:page:field_gallery'
+#   form:
+#     'test_field':
+#       '#type': 'textfield'
+#       '#title': 'Template Title'
+
+
+
+# sample_block_style:
+#   label: 'Sample Block Style'
+#   form:
+#     field_name:
+#       '#type': 'textfield'
+#       '#title': 'Add a custom css class'
+#       '#default_value': 'my-class'
+# another_block_style:
+#   label: 'Another Block Style'
+#   form:
+#     field_name:
+#       '#type': 'textfield'
+#       '#title': 'Add another custom css class'
+#       '#default_value': 'my-class-2'

@@ -1,0 +1,47 @@
+// start - block styles plugin, layout builder, off-canvas dialog
+#drupal-off-canvas{
+  label
+  ,.description
+  ,.form-item .description
+  ,.details-description
+  ,.form-select
+  ,.form-text
+  ,.form-tel
+  ,.form-email
+  ,.form-url
+  ,.form-search
+  ,.form-number
+  ,.form-color
+  ,.form-file
+  ,.form-textarea
+  ,.form-date
+  ,.form-time
+  ,.form-item
+  {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "liberation sans", sans-serif;
+    font-size: 1rem;
+    margin: 5px 0 10px;
+  }
+  label{
+    display: block;
+    margin: 20px 0 0;
+  }
+  .form-item-settings-admin-label{
+    color: #ddd;
+  }
+  input[type="checkbox"]+label{
+    display: inline;
+    margin-top: 0;
+  }
+  a
+  ,.link
+  {
+    &:focus
+    ,&:hover
+    {
+      cursor: pointer;
+    }
+  }
+}
+// end - block styles plugin, layout builder, off-canvas dialog
+
