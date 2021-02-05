@@ -136,6 +136,6 @@ select {
 }
 /* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
 
-*:last-child{
+.node__content *:last-child{
   margin-bottom: 0;
 }

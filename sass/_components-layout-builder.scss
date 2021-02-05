@@ -42,6 +42,12 @@
       cursor: pointer;
     }
   }
+  .operations{
+    justify-content: flex-end;
+    li{
+      margin-left: 2em;
+    }
+  }
 }
 // end - block styles plugin, layout builder, off-canvas dialog
 

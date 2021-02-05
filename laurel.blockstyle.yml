@@ -1,45 +1,53 @@
-# checkbox_with_exclude:
-#   label: 'Checkbox with Exclude'
-#   class: '\Drupal\block_style_plugins_test\Plugin\BlockStyle\CheckboxWithExclude'
-#   exclude:
-#     - 'system_powered_by_block'
-#     - 'basic'
-
-gallery_type:
+type:
   label: 'Gallery type'
   include:
     - 'field_delta_block:node:page:field_gallery'
   form:
     'Type':
       '#type': 'select'
-      '#title': 'Choose a type'
+      '#title': 'Choose a gallery type'
       '#options':
-        'one-row': 'One row'
-        'multiple-rows': 'Multiple rows'
-
-# template_set_with_yaml:
-#   label: 'Template Set by Yaml'
-#   template: 'block__test_custom'
-#   exclude:
-#     - 'field_delta_block:node:page:field_gallery'
-#   form:
-#     'test_field':
-#       '#type': 'textfield'
-#       '#title': 'Template Title'
-
-
-
-# sample_block_style:
-#   label: 'Sample Block Style'
-#   form:
-#     field_name:
-#       '#type': 'textfield'
-#       '#title': 'Add a custom css class'
-#       '#default_value': 'my-class'
-# another_block_style:
-#   label: 'Another Block Style'
-#   form:
-#     field_name:
-#       '#type': 'textfield'
-#       '#title': 'Add another custom css class'
-#       '#default_value': 'my-class-2'
+        'all-on-one-row': 'All on one row'
+        '': 'Multiple rows'
+        'one-per-row image-caption': 'One per row, image, caption'
+        'one-per-row caption-image': 'One per row, caption, image'
+        'slideshow': 'Slideshow'
+thumbnail_size:
+  label: 'Thumbnail size'
+  include:
+    - 'field_delta_block:node:page:field_gallery'
+  form:
+    'Thumbnail size':
+      '#type': 'select'
+      '#title': 'Choose a thumbnail size'
+      '#options':
+        'thumb-size-xl': 'X-Large'
+        'thumb-size-l': 'Large'
+        'thumb-size-m': 'Medium'
+        '': 'Small'
+thumbnail_gap_size:
+  label: 'Thumbnail gap size'
+  include:
+    - 'field_delta_block:node:page:field_gallery'
+  form:
+    'Thumbnail gap':
+      '#type': 'select'
+      '#title': 'Choose a thumbnail gap size'
+      '#options':
+        'thumb-gap-xl': 'X-Large'
+        'thumb-gap-l': 'Large'
+        'thumb-gap-m': 'Medium'
+        'thumb-gap-s': 'Small'
+        '': 'One pixel'
+thumbnail_border_color:
+  label: 'Thumbnail border color'
+  include:
+    - 'field_delta_block:node:page:field_gallery'
+  form:
+    'Thumbnail border color':
+      '#type': 'select'
+      '#title': 'Choose a thumbnail border color'
+      '#options':
+        '': 'None'
+        'thumb-border-light-gray': 'Light gray'
+        'thumb-border-dark-gray': 'Dark gray'

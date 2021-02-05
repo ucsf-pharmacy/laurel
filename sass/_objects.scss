@@ -1,9 +1,6 @@
 .node li:not(:last-child){
   margin-bottom: var(--list-item-spacing);
 }
-.field:not(:last-child){
-  margin-bottom: var(--space-m);
-}
 .messages{
   background-position-y: center;
 }
