@@ -874,6 +874,7 @@ table.no-span {
 
 /* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas label
+, #drupal-off-canvas ul li
 , #drupal-off-canvas .description
 , #drupal-off-canvas .form-item .description
 , #drupal-off-canvas .details-description
@@ -895,36 +896,36 @@ table.no-span {
   margin: 5px 0 10px;
 }
 
-/* line 25, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+/* line 26, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas label {
   display: block;
   margin: 20px 0 0;
 }
 
-/* line 29, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+/* line 30, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas .form-item-settings-admin-label {
   color: #ddd;
 }
 
-/* line 32, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+/* line 33, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas input[type="checkbox"] + label {
   display: inline;
   margin-top: 0;
 }
 
-/* line 39, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas a:focus
 , #drupal-off-canvas a:hover
 , #drupal-off-canvas .link:focus, #drupal-off-canvas .link:hover {
   cursor: pointer;
 }
 
-/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas .operations {
   justify-content: flex-end;
 }
 
-/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas .operations li {
   margin-left: 2em;
 }
