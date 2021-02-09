@@ -49,5 +49,32 @@ thumbnail_border_color:
       '#title': 'Choose a thumbnail border color'
       '#options':
         '': 'None'
-        'thumb-border-light-gray': 'Light gray'
-        'thumb-border-dark-gray': 'Dark gray'
+        'thumb-border light-gray': 'Light gray'
+        'thumb-border dark-gray': 'Dark gray'
+shape:
+  label: 'Shape'
+  include:
+    - 'field_delta_block:node:page:field_gallery'
+  form:
+    'Shape':
+      '#type': 'select'
+      '#title': 'Choose a shape'
+      '#options':
+        '': 'Rectangle or square'
+        'shape ellipse-circle': 'Ellipse or circle'
+        'shape parallelogram': 'Parallelogram'
+        'shape diamond': 'Diamond'
+        'shape hexagon': 'Hexagon'
+corner_style:
+  label: 'Corner style'
+  include:
+    - 'field_delta_block:node:page:field_gallery'
+  form:
+    'Corner style':
+      '#type': 'select'
+      '#title': 'Choose a corner style'
+      '#options':
+        '': 'Straight'
+        'corner rounded-2': 'Rounded 2'
+        'corner rounded-4': 'Rounded 4'
+        'corner beveled': 'Beveled'
