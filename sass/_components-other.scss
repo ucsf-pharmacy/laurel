@@ -7,3 +7,18 @@
     background-color: $color-gray-40;
   }
 }
+.node--type-article{
+  .field{
+    display: grid;
+    grid-template-columns: 17ch auto;
+    a{
+      display: inline-block;
+      word-break: break-word;
+    }
+  }
+}
+.node__content{
+  & > div{
+    margin-bottom: var(--paragraph-spacing);
+  }
+}

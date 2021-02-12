@@ -64,7 +64,15 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-l: 32px;
   --space-xl: 64px;
   --space-xxl:128px;
+  --line-height: 1.45;
+  --line-spacing: var(--line-height);
+  --line-height-small: calc(0.8 * var(--ratio));
+  --line-height-large: calc(1.2 * var(--ratio));
+  --measure: 60ch;
   --gutter: var(--space-l);
+  --heading-spacing: var(--space-l);
+  --paragraph-spacing: var(--fluid0);
+  --list-item-spacing: calc( var(--fluid0) / 2.5 );
 }
 
 /*
@@ -151,14 +159,6 @@ How this works:
   --fluid0: calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
   --fluid1: calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
   --fluid2: calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
-  --measure: 60ch;
-  --heading-spacing: 1em;
-  --line-height: 1.5;
-  --line-height-small: calc(0.8 * var(--ratio));
-  --line-height-large: calc(1.2 * var(--ratio));
-  --line-spacing: 1.5;
-  --paragraph-spacing: var(--fluid0);
-  --list-item-spacing: calc( var(--fluid0) / 2.5 );
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-other.scss */
@@ -480,7 +480,7 @@ img, video {
 
 /* Natural flow and rhythm in articles by default */
 /* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-article > * + *
+article > *:not(.contextual) + *
 , * + p {
   margin-top: var(--paragraph-spacing);
 }
@@ -571,21 +571,19 @@ select {
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h1 {
   line-height: calc( var(--line-spacing) * ( 2 / 3 ));
-  margin-left: var(--gutter);
-  margin-right: var(--gutter);
 }
 
-/* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
   margin-bottom: var(--heading-spacing);
 }
 
-/* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
-* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+/* line 10, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+* + h2, * + h3, * + h4, * + h5, * + h6 {
   margin-top: var(--fluid0);
 }
 
-/* line 18, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + div.contextual + div.field {
   margin-top: var(--fluid0);
 }
@@ -708,6 +706,17 @@ pre[class*='language-'] {
 /* 
 end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
+/* line 38, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+main {
+  padding: var(--space-l) var(--gutter);
+  line-height: var(--line-height);
+}
+
+/* line 42, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+nav.tabs {
+  margin: var(--heading-spacing) -32px;
+}
+
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/every-layout/_grid.scss */
 .grid-l {
   display: grid;
@@ -1270,6 +1279,23 @@ ul.menu a.is-active:focus {
 /* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
 .drimage2.img-wrap {
   background-color: #ededee;
+}
+
+/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.node--type-article .field {
+  display: grid;
+  grid-template-columns: 17ch auto;
+}
+
+/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.node--type-article .field a {
+  display: inline-block;
+  word-break: break-word;
+}
+
+/* line 21, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.node__content > div {
+  margin-bottom: var(--paragraph-spacing);
 }
 
 /*

@@ -63,7 +63,7 @@ img, video
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + *
+article > *:not(.contextual) + *
 ,* + p
 {
   margin-top: var(--paragraph-spacing);

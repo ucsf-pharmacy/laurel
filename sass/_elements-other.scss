@@ -34,3 +34,11 @@ pre[class*='language-'] {
 /* 
 end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
+
+main{
+  padding: var(--space-l) var(--gutter);
+  line-height: var(--line-height);
+}
+nav.tabs{
+  margin: var(--heading-spacing) -32px;
+}

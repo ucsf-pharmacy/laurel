@@ -59,5 +59,16 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-xl     : 64px;
   --space-xxl    :128px;
 
-  --gutter       : var(--space-l);
+  --line-height      : 1.45;
+  --line-spacing     : var(--line-height);
+
+  --line-height-small: calc(0.8 * var(--ratio));
+  --line-height-large: calc(1.2 * var(--ratio));
+
+  --measure          : 60ch;
+  --gutter           : var(--space-l);
+
+  --heading-spacing  : var(--space-l);
+  --paragraph-spacing: var(--fluid0);
+  --list-item-spacing: calc( var(--fluid0) / 2.5 );
 }

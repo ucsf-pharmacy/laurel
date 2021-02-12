@@ -1,7 +1,5 @@
 h1{ // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
   line-height: calc( var(--line-spacing) * ( 2 / 3 ) );
-  margin-left: var(--gutter);
-  margin-right: var(--gutter);
 }
 h1,h2,h3,h4,h5,h6{
   &:last-child{
@@ -9,7 +7,7 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 *{
-  & + h1,& + h2,& + h3,& + h4,& + h5,& + h6
+  & + h2,& + h3,& + h4,& + h5,& + h6
   {
     margin-top: var(--fluid0);
   }
