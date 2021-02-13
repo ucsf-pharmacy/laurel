@@ -2,11 +2,6 @@
   font-size: inherit;
   padding: .5em 1em .75em;
 }
-.drimage2{
-  &.img-wrap {
-    background-color: $color-gray-40;
-  }
-}
 .node--type-article{
   .field{
     display: grid;
@@ -21,4 +16,11 @@
   & > div{
     margin-bottom: var(--paragraph-spacing);
   }
+}
+
+// media
+.field--name-field-caption{
+  background-color: #ededee;
+  padding: .125em .25em;
+  margin: 2px 0 0;
 }

@@ -1,19 +1,15 @@
-h1{ // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
-  line-height: calc( var(--line-spacing) * ( 2 / 3 ) );
+h1{ // this is the parent of the h1. we act on the parent rather than the h1 for better control.
+  margin-bottom: var(--space-m);
 }
-h1,h2,h3,h4,h5,h6{
-  &:last-child{
-    margin-bottom: var(--heading-spacing);
-  }
-}
+
 *{
   & + h2,& + h3,& + h4,& + h5,& + h6
   {
-    margin-top: var(--fluid0);
+    margin-top: var(--space-l);
   }
 }
 h2{
   & + div.contextual + div.field{
-    margin-top: var(--fluid0);
+    margin-top: var(--space-l);
   }
 }

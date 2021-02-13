@@ -8,11 +8,12 @@ See also:
 https://youtu.be/1OKZOV-iLj4
 */
 
+@import "_reset-and-normalize.scss";
+
 // the settings section contains anything that needs to be global.
 // declarations in settings should have the greatest reach and the least specificity.
 @import "_settings-spacing.scss";
 @import "_settings-fixed-type-scales.scss";
-@import "_settings-fluid-modular-type-scales.scss";
 @import "_settings-other.scss";
 
 @import "_design-tokens-color-definitions.scss";
@@ -23,8 +24,6 @@ https://youtu.be/1OKZOV-iLj4
 // sass functions and mixins
 @import "_tools-box-shadows.scss";
 @import "_tools-other.scss";
-
-@import "_reset-and-normalize.scss";
 
 // unclassed html elements only
 @import "_elements-headings.scss";
@@ -41,6 +40,7 @@ https://youtu.be/1OKZOV-iLj4
 @import "_objects.scss";                // things with classes that aren't full components
 
 @import "_content-type-event.scss";
+@import "_content-type-post.scss";
 
 // accordion, card, hero, etc.
 @import "_components-layout-builder.scss";

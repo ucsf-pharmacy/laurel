@@ -9,6 +9,161 @@ See also:
 https://youtu.be/1OKZOV-iLj4
 */
 /*
+adapted from:
+
+2019.1001 CSS reset
+https://hankchizljaw.com/wrote/a-modern-css-reset/
+*/
+/* Box sizing rules */
+/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+body {
+  font-size: 1em;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* line 54, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images and video easier to work with */
+/* line 59, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* line 67, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+, *:not(h2):not(h3):not(h4) + p {
+  margin-top: var(--paragraph-spacing);
+}
+
+/* Inherit fonts for inputs and buttons */
+/* line 74, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  /* line 83, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
+@media screen, print {
+  /* line 94, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  sup.footnote {
+    padding-left: 0.1em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: var(--s0);
+    letter-spacing: .05em;
+    font-size: var(--s-2);
+  }
+  /* line 102, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  #LinkContainer {
+    overflow-wrap: break-word;
+  }
+  /* line 105, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  #LinkContainer #LinkList li {
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: var(--s0);
+    letter-spacing: .05em;
+    font-size: var(--s-2);
+    margin: var(--space-stack-xxs);
+  }
+  /* line 112, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  sup.footnote,
+  #LinkContainer {
+    display: none;
+  }
+}
+
+@media print {
+  /* line 119, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  #LinkContainer {
+    display: block;
+  }
+  /* line 122, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  sup.footnote {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 68em), print and (min-width: 6in) {
+  /* line 127, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  #LinkContainer ol {
+    column-count: 2;
+    column-gap: 4em;
+  }
+}
+
+@media all and (min-width: 80em), print and (min-width: 9in) {
+  /* line 133, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  #LinkContainer ol {
+    column-count: 3;
+    column-gap: 4em;
+  }
+}
+
+/* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
+/*
 Space in Design Systems
 
 https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
@@ -66,13 +221,15 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-xxl:128px;
   --line-height: 1.45;
   --line-spacing: var(--line-height);
-  --line-height-small: calc(0.8 * var(--ratio));
+  --line-height-small: calc(0.9 * var(--ratio));
   --line-height-large: calc(1.2 * var(--ratio));
   --measure: 60ch;
   --gutter: var(--space-l);
+  --wrapped-image-side-margin: var(--space-m);
+  --wrapped-image-bottom-margin: var(--space-s);
   --heading-spacing: var(--space-l);
-  --paragraph-spacing: var(--fluid0);
-  --list-item-spacing: calc( var(--fluid0) / 2.5 );
+  --paragraph-spacing: var(--space-m);
+  --list-item-spacing: calc( var(--paragraph-spacing) * .8 );
 }
 
 /*
@@ -100,65 +257,6 @@ p { font-size: var(--s0); }
   --s3: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio));
   --s4: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
   --s5: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
-}
-
-/*
-Fluid modular type scales
-
-https://utopia.fyi/blog
-https://utopia.fyi/blog/designing-with-fluid-type-scales/
-https://utopia.fyi/blog/css-modular-scales/
-https://utopia.fyi/blog/fluid-custom-properties/
-https://v6.robweychert.com/blog/2019/12/a-modern-typographic-scale/
-
-How this works:
-
-1. We set the font-size and line-height of the body element.
-
-  body{
-    font-size: var(--fluid0); // this is set in _design-tokens-fonts.scss
-    line-height: var(--fluid1); // this is set below
-  }
-
-2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
-
-*/
-/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
-:root {
-  --fluid-min-width: 320;
-  --fluid-max-width: 1440;
-  --fluid-min-size: 17;
-  --fluid-max-size: 20;
-  --fluid-min-ratio: 1.2;
-  --fluid-max-ratio: 1.33;
-  --fluid-screen: 100vw;
-  --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
-}
-
-@media screen and (min-width: 1440) {
-  /* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
-  :root {
-    --fluid-screen: calc(var(--fluid-max-width) * 1px);
-  }
-}
-
-/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
-:root {
-  --fluid-min-scale0: var(--fluid-min-ratio);
-  --fluid-min-scale1: var(--fluid-min-scale0) * var(--fluid-min-ratio);
-  --fluid-min-scale2: var(--fluid-min-scale1) * var(--fluid-min-ratio);
-  --fluid-max-scale0: var(--fluid-max-ratio);
-  --fluid-max-scale1: var(--fluid-max-scale0) * var(--fluid-max-ratio);
-  --fluid-max-scale2: var(--fluid-max-scale1) * var(--fluid-max-ratio);
-  --fluid-min-size0: (var(--fluid-min-size)) / 16;
-  --fluid-min-size1: (var(--fluid-min-size) * var(--fluid-min-scale0)) / 16;
-  --fluid-min-size2: (var(--fluid-min-size) * var(--fluid-min-scale1)) / 16;
-  --fluid-max-size0: (var(--fluid-max-size)) / 16;
-  --fluid-max-size1: (var(--fluid-max-size) * var(--fluid-max-scale0)) / 16;
-  --fluid-max-size2: (var(--fluid-max-size) * var(--fluid-max-scale1)) / 16;
-  --fluid0: calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
-  --fluid1: calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
-  --fluid2: calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-other.scss */
@@ -213,7 +311,9 @@ This file is used to specify what elements are set to what fonts. It contains:
 - custom font family definitions
 - custom properties for font declarations
 - font sizing
-- element declarations
+- element declarations, including:
+  - any attribute with "font" in the name: font-size, font-weight, font-family, etc.
+  - all line-height attributes
 
 Reminders:
 
@@ -249,17 +349,17 @@ webfont definitions
 ----------------------------------------------------------------------
 font family declarations
 */
-/* line 44, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
 body {
   font-family: var(--font-sans-serify);
 }
 
-/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
 code, kbd, pre, samp {
   font-family: var(--font-mono);
 }
 
-/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 52, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
 input, button, textarea, select {
   font-family: inherit;
 }
@@ -272,12 +372,25 @@ input, button, textarea, select {
 font sizing
 
 */
-/* line 61, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
 body {
-  font-size: var(--fluid0);
+  font-size: clamp(1em, 2vw, 1.375em);
 }
 
-/* line 64, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+  line-height: var(--line-height-small);
+}
+
+/* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+.field--name-field-subtitle {
+  font-size: 1.5em;
+  line-height: var(--line-height-small);
+}
+
+/* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
 code, kbd, pre, samp {
   font-size: 1em;
 }
@@ -409,183 +522,19 @@ https://codepen.io/sdthornton/pen/wBZdXq
  * }
  *
  */
-/*
-adapted from:
-
-2019.1001 CSS reset
-https://hankchizljaw.com/wrote/a-modern-css-reset/
-*/
-/* Box sizing rules */
-/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default padding */
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Remove default margin */
-/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Set core body defaults */
-/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-}
-
-/* Remove list styles on ul, ol elements with a class attribute */
-/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-/* A elements that don't have a class get default styles */
-/* line 53, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images and video easier to work with */
-/* line 58, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Natural flow and rhythm in articles by default */
-/* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-article > *:not(.contextual) + *
-, * + p {
-  margin-top: var(--paragraph-spacing);
-}
-
-/* Inherit fonts for inputs and buttons */
-/* line 73, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  /* line 82, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
-@media screen, print {
-  /* line 93, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  sup.footnote {
-    padding-left: 0.1em;
-    font-style: normal;
-    font-weight: normal;
-    line-height: var(--s0);
-    letter-spacing: .05em;
-    font-size: var(--s-2);
-  }
-  /* line 101, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  #LinkContainer {
-    overflow-wrap: break-word;
-  }
-  /* line 104, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  #LinkContainer #LinkList li {
-    font-family: Helvetica,Arial,sans-serif;
-    line-height: var(--s0);
-    letter-spacing: .05em;
-    font-size: var(--s-2);
-    margin: var(--space-stack-xxs);
-  }
-  /* line 111, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  sup.footnote,
-  #LinkContainer {
-    display: none;
-  }
-}
-
-@media print {
-  /* line 118, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  #LinkContainer {
-    display: block;
-  }
-  /* line 121, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  sup.footnote {
-    display: inline;
-  }
-}
-
-@media screen and (min-width: 68em), print and (min-width: 6in) {
-  /* line 126, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  #LinkContainer ol {
-    column-count: 2;
-    column-gap: 4em;
-  }
-}
-
-@media all and (min-width: 80em), print and (min-width: 9in) {
-  /* line 132, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-  #LinkContainer ol {
-    column-count: 3;
-    column-gap: 4em;
-  }
-}
-
-/* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
-/* line 139, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-.node__content *:last-child {
-  margin-bottom: 0;
-}
-
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h1 {
-  line-height: calc( var(--line-spacing) * ( 2 / 3 ));
+  margin-bottom: var(--space-m);
 }
 
-/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
-h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
-  margin-bottom: var(--heading-spacing);
-}
-
-/* line 10, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 * + h2, * + h3, * + h4, * + h5, * + h6 {
-  margin-top: var(--fluid0);
+  margin-top: var(--space-l);
 }
 
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + div.contextual + div.field {
-  margin-top: var(--fluid0);
+  margin-top: var(--space-l);
 }
 
 /*
@@ -706,15 +655,15 @@ pre[class*='language-'] {
 /* 
 end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
-/* line 38, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+/* line 39, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 main {
   padding: var(--space-l) var(--gutter);
   line-height: var(--line-height);
 }
 
-/* line 42, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 nav.tabs {
-  margin: var(--heading-spacing) -32px;
+  margin: 0 -32px var(--heading-spacing);
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/every-layout/_grid.scss */
@@ -803,14 +752,6 @@ table.no-span {
   column-span: none;
 }
 
-/* line 20, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_objects.scss */
-.field--name-field-subtitle {
-  font-size: 1.5em;
-  line-height: 1.25;
-  margin-left: var(--gutter);
-  margin-right: var(--gutter);
-}
-
 /* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset {
   border: none;
@@ -879,6 +820,62 @@ table.no-span {
 /* line 54, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper div {
   display: block;
+}
+
+/* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.block-field-blocknodepostfield-post-type {
+  margin-bottom: var(--space-l);
+}
+
+/* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.block-field-blocknodepostfield-post-type .field__item {
+  display: inline;
+}
+
+/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.block-field-blocknodepostfield-post-type .field__item:after {
+  content: ' \2192 ';
+}
+
+/* line 8, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.block-field-blocknodepostfield-post-type .field__item:last-child:after {
+  content: '';
+}
+
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.block-field-blocknodepostfield-media {
+  float: right;
+  margin-top: var(--space-l);
+}
+
+@media all and (min-width: 800px) {
+  /* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+  .block-field-blocknodepostfield-media {
+    margin: var(--space-l) 0 var(--space-m) var(--space-l);
+    max-width: 50%;
+  }
+}
+
+/* line 21, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.block-field-blocknodepostbody {
+  margin-top: var(--space-l);
+}
+
+/* line 24, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.layout-builder {
+  word-break: break-word;
+}
+
+/* line 26, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.layout-builder .block-field-blocknodepostfield-media {
+  float: none;
+}
+
+@media all and (min-width: 800px) {
+  /* line 26, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+  .layout-builder .block-field-blocknodepostfield-media {
+    margin: 0;
+  }
 }
 
 /* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
@@ -1277,25 +1274,27 @@ ul.menu a.is-active:focus {
 }
 
 /* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
-.drimage2.img-wrap {
-  background-color: #ededee;
-}
-
-/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
 .node--type-article .field {
   display: grid;
   grid-template-columns: 17ch auto;
 }
 
-/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
 .node--type-article .field a {
   display: inline-block;
   word-break: break-word;
 }
 
-/* line 21, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
 .node__content > div {
   margin-bottom: var(--paragraph-spacing);
+}
+
+/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.field--name-field-caption {
+  background-color: #ededee;
+  padding: .125em .25em;
+  margin: 2px 0 0;
 }
 
 /*

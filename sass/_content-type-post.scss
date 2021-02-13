@@ -1,0 +1,32 @@
+.block-field-blocknodepostfield-post-type{
+  margin-bottom: var(--space-l);
+  .field__item{
+    display: inline;
+    &:after{
+      content: ' \2192 '; // right arrow
+    }
+    &:last-child:after{
+      content: '';
+    }
+  }
+}
+.block-field-blocknodepostfield-media{
+  float: right;
+  margin-top: var(--space-l);
+  @media all and (min-width: 800px){
+    margin: var(--space-l) 0 var(--space-m) var(--space-l);
+    max-width: 50%;
+  }
+}
+.block-field-blocknodepostbody{
+  margin-top: var(--space-l);
+}
+.layout-builder{
+  word-break: break-word;
+  .block-field-blocknodepostfield-media{
+    float: none;
+    @media all and (min-width: 800px){
+      margin: 0;
+    }
+  }
+}

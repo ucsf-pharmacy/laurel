@@ -8,7 +8,6 @@ page regions defined in laurel.info.yml:
   breadcrumb       : 'Breadcrumb'
   content_metadata : 'Content Metadata'
   content          : 'Main'
-  related          : 'Related'
   endnotes         : 'Endnotes'
   footer           : 'Footer'
   secondary_menu   : 'Menu 2'
@@ -51,24 +50,15 @@ https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png
   </nav>
   {% endif %}
   {% if page.content_metadata %}
-  <nav class="region-content-metadata">
+  <div class="region-content-metadata">
     {{ page.content_metadata }}
-  </nav>
+  </div>
   {% endif %}
 </header>
-<div class="sidebar-right region-content">{# every layout, sidebar layout, sidebar on the right #}
-  <div class="region-body"> {# intermediary wrapper #}
-    <main>
-      <a class="region-main-content" tabindex="-1"></a>
-      {{ page.content }}
-    </main>
-    {% if page.related %}
-    <aside class="region-aside-content">
-      {{ page.related }}
-    </aside>
-    {% endif %}
-  </div>
-</div>
+<main class="region-body">
+  <a class="region-main-content" tabindex="-1"></a>
+  {{ page.content }}
+</main>
 {% if page.endnotes %}
 <div class="region-endnotes">
   {{ page.endnotes }}

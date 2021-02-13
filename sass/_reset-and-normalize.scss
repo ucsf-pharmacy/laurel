@@ -38,6 +38,7 @@ dd {
 
 /* Set core body defaults */
 body {
+  font-size: 1em; // fallback
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -63,8 +64,8 @@ img, video
 }
 
 /* Natural flow and rhythm in articles by default */
-article > *:not(.contextual) + *
-,* + p
+article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+,*:not(h2):not(h3):not(h4) + p
 {
   margin-top: var(--paragraph-spacing);
 }
@@ -135,7 +136,3 @@ select {
   }
 }
 /* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
-
-.node__content *:last-child{
-  margin-bottom: 0;
-}
