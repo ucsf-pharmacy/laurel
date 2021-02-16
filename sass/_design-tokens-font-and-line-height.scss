@@ -61,7 +61,7 @@ font sizing
 
 */
 body{
-  font-size: clamp(1em, 2vw, 1.375em); // variation of https://css-tricks.com/simplified-fluid-typography/
+  font-size: var(--fluid0);
 }
 h1{
   font-size: 2em;

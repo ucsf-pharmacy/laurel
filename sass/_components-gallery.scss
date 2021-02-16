@@ -58,6 +58,13 @@ see also:
       flex-direction: row-reverse;
     }
   }
+  .one-per-row.alternating .field--name-field-gallery-items{
+    & > div:nth-child(even){
+      .media--type-image{
+        flex-direction: row-reverse;
+      }
+    }
+  }
 
 // type and thumbnail size for one per row
   .one-per-row.thumb-size-xl .field--name-field-gallery-items{

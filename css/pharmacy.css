@@ -259,6 +259,73 @@ p { font-size: var(--s0); }
   --s5: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
 }
 
+/*
+Fluid modular type scales
+
+https://utopia.fyi/blog
+https://utopia.fyi/blog/designing-with-fluid-type-scales/
+https://utopia.fyi/blog/css-modular-scales/
+https://utopia.fyi/blog/fluid-custom-properties/
+https://v6.robweychert.com/blog/2019/12/a-modern-typographic-scale/
+
+How this works:
+
+1. We set the font-size and line-height of the body element.
+
+  body{
+    font-size: var(--fluid0); // this is set in _design-tokens-fonts.scss
+    line-height: var(--fluid1); // this is set below
+  }
+
+2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
+
+*/
+/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1440;
+  --fluid-min-size: 17;
+  --fluid-max-size: 20;
+  --fluid-min-ratio: 1.2;
+  --fluid-max-ratio: 1.33;
+  --fluid-screen: 100vw;
+  --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
+}
+
+@media screen and (min-width: 1440) {
+  /* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
+:root {
+  --fluid-min-scale0: var(--fluid-min-ratio);
+  --fluid-min-scale1: var(--fluid-min-scale0) * var(--fluid-min-ratio);
+  --fluid-min-scale2: var(--fluid-min-scale1) * var(--fluid-min-ratio);
+  --fluid-max-scale0: var(--fluid-max-ratio);
+  --fluid-max-scale1: var(--fluid-max-scale0) * var(--fluid-max-ratio);
+  --fluid-max-scale2: var(--fluid-max-scale1) * var(--fluid-max-ratio);
+  --fluid-min-size0: (var(--fluid-min-size)) / 16;
+  --fluid-min-size1: (var(--fluid-min-size) * var(--fluid-min-scale0)) / 16;
+  --fluid-min-size2: (var(--fluid-min-size) * var(--fluid-min-scale1)) / 16;
+  --fluid-max-size0: (var(--fluid-max-size)) / 16;
+  --fluid-max-size1: (var(--fluid-max-size) * var(--fluid-max-scale0)) / 16;
+  --fluid-max-size2: (var(--fluid-max-size) * var(--fluid-max-scale1)) / 16;
+  --fluid0: calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
+  --fluid1: calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
+  --fluid2: calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
+  --measure: 60ch;
+  --heading-spacing: 1em;
+  --line-height: 1.5;
+  --line-height-small: calc(0.8 * var(--ratio));
+  --line-height-large: calc(1.2 * var(--ratio));
+  --line-spacing: 1.5;
+  --paragraph-spacing: var(--fluid0);
+  --list-item-spacing: calc( var(--fluid0) / 2.5 );
+}
+
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-other.scss */
 :root {
   --border-thin: var(--s-5);
@@ -349,17 +416,17 @@ webfont definitions
 ----------------------------------------------------------------------
 font family declarations
 */
-/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 body {
   font-family: var(--font-sans-serify);
 }
 
-/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 code, kbd, pre, samp {
   font-family: var(--font-mono);
 }
 
-/* line 52, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 52, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 input, button, textarea, select {
   font-family: inherit;
 }
@@ -372,25 +439,25 @@ input, button, textarea, select {
 font sizing
 
 */
-/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 body {
-  font-size: clamp(1em, 2vw, 1.375em);
+  font-size: var(--fluid0);
 }
 
-/* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 h1 {
   font-size: 2em;
   font-weight: normal;
   line-height: var(--line-height-small);
 }
 
-/* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
   line-height: var(--line-height-small);
 }
 
-/* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-fonts.scss */
+/* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 code, kbd, pre, samp {
   font-size: 1em;
 }
@@ -1007,66 +1074,71 @@ see also:
   flex-direction: row-reverse;
 }
 
-/* line 65, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+.one-per-row.alternating .field--name-field-gallery-items > div:nth-child(even) .media--type-image {
+  flex-direction: row-reverse;
+}
+
+/* line 72, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .one-per-row.thumb-size-xl .field--name-field-gallery-items .media--type-image .field--name-field-media-image {
   flex: 0 1 250px;
   min-width: 250px;
 }
 
-/* line 73, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 80, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .one-per-row.thumb-size-l .field--name-field-gallery-items .media--type-image .field--name-field-media-image {
   flex: 0 1 200px;
   min-width: 200px;
 }
 
-/* line 81, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 88, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .one-per-row.thumb-size-m .field--name-field-gallery-items .media--type-image .field--name-field-media-image {
   flex: 0 1 150px;
   min-width: 150px;
 }
 
-/* line 90, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 97, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-xl .field--name-field-gallery-items {
   grid-template-columns: 1fr;
   display: grid;
 }
 
-/* line 94, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 101, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-xl.thumb-gap-xl .field--name-field-gallery-items > .field__item {
   margin-bottom: 40px;
 }
 
-/* line 97, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 104, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-xl.thumb-gap-l .field--name-field-gallery-items > .field__item {
   margin-bottom: 20px;
 }
 
-/* line 100, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 107, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-xl.thumb-gap-m .field--name-field-gallery-items > .field__item {
   margin-bottom: 10px;
 }
 
-/* line 103, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 110, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-xl.thumb-gap-s .field--name-field-gallery-items > .field__item {
   margin-bottom: 5px;
 }
 
-/* line 106, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 113, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-xl .field--name-field-gallery-items > .field__item {
   margin-bottom: 1px;
 }
 
-/* line 110, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 117, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-l .field--name-field-gallery-items {
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
-/* line 113, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 120, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-size-m .field--name-field-gallery-items {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* line 118, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 125, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-gap-xl .field--name-field-gallery-items {
   grid-row-gap: 40px;
   row-gap: 40px;
@@ -1074,7 +1146,7 @@ see also:
   column-gap: 40px;
 }
 
-/* line 124, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 131, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-gap-l .field--name-field-gallery-items {
   grid-row-gap: 20px;
   row-gap: 20px;
@@ -1082,7 +1154,7 @@ see also:
   column-gap: 20px;
 }
 
-/* line 130, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 137, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-gap-m .field--name-field-gallery-items {
   grid-row-gap: 10px;
   row-gap: 10px;
@@ -1090,7 +1162,7 @@ see also:
   column-gap: 10px;
 }
 
-/* line 136, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 143, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-gap-s .field--name-field-gallery-items {
   grid-row-gap: 5px;
   row-gap: 5px;
@@ -1098,57 +1170,57 @@ see also:
   column-gap: 5px;
 }
 
-/* line 146, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 153, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-border.light-gray .field--name-field-gallery-items img {
   border: 1px solid #ededee;
 }
 
-/* line 151, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 158, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .thumb-border.dark-gray .field--name-field-gallery-items img {
   border: 1px solid #dfe0e0;
 }
 
-/* line 159, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 166, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .shape .drimage2.img-wrap {
   background-color: transparent;
 }
 
-/* line 163, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 170, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .shape.ellipse-circle .field--name-field-gallery-items img {
   border-radius: 50%;
 }
 
-/* line 168, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 175, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .shape.parallelogram .field--name-field-gallery-items img {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
-/* line 173, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 180, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .shape.diamond .field--name-field-gallery-items img {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-/* line 178, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 185, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .shape.hexagon .field--name-field-gallery-items img {
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 }
 
-/* line 186, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 193, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .corner .drimage2.img-wrap {
   background-color: transparent;
 }
 
-/* line 190, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 197, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .corner.rounded-2 .field--name-field-gallery-items img {
   border-radius: 5px 60px;
 }
 
-/* line 195, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 202, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .corner.rounded-4 .field--name-field-gallery-items img {
   border-radius: 30px;
 }
 
-/* line 200, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
+/* line 207, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-gallery.scss */
 .corner.beveled .field--name-field-gallery-items img {
   clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
 }

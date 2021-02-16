@@ -14,11 +14,12 @@ https://youtu.be/1OKZOV-iLj4
 // declarations in settings should have the greatest reach and the least specificity.
 @import "_settings-spacing.scss";
 @import "_settings-fixed-type-scales.scss";
+@import "_settings-fluid-modular-type-scales.scss";
 @import "_settings-other.scss";
 
 @import "_design-tokens-color-definitions.scss";
 @import "_design-tokens-color-declarations.scss";
-@import "_design-tokens-fonts.scss";
+@import "_design-tokens-font-and-line-height.scss";
 @import "_design-tokens-typography.scss";
 
 // sass functions and mixins

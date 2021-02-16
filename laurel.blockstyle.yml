@@ -11,6 +11,7 @@ type:
         '': 'Multiple rows'
         'one-per-row image-caption': 'One per row, image, caption'
         'one-per-row caption-image': 'One per row, caption, image'
+        'one-per-row image-caption alternating': 'One per row, alternating'
         'slideshow': 'Slideshow'
 thumbnail_size:
   label: 'Thumbnail size'
