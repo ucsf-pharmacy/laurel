@@ -12,11 +12,11 @@ How this works:
 1. We set the font-size and line-height of the body element.
 
   body{
-    font-size: var(--fluid0); // this is set in _design-tokens-fonts.scss
+    font-size: var(--fluid0); // this is set below
     line-height: var(--fluid1); // this is set below
   }
 
-2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
+2. Then, when setting font-size or line-height for any other element -- see _design-tokens-font-and-line-height.scss -- we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value. 
 
 */
 :root{
@@ -57,16 +57,9 @@ How this works:
   --fluid0 : calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
   --fluid1 : calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
   --fluid2 : calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
+}
 
-  --measure: 60ch;
-
-  --heading-spacing  : 1em;
-  
-  --line-height      : 1.5;
-  --line-height-small: calc(0.8 * var(--ratio));
-  --line-height-large: calc(1.2 * var(--ratio));
-
-  --line-spacing     : 1.5;
-  --paragraph-spacing: var(--fluid0);
-  --list-item-spacing: calc( var(--fluid0) / 2.5 );
+body{
+  font-size: var(--fluid0);
+  line-height: var(--fluid1);
 }

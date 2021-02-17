@@ -273,11 +273,11 @@ How this works:
 1. We set the font-size and line-height of the body element.
 
   body{
-    font-size: var(--fluid0); // this is set in _design-tokens-fonts.scss
+    font-size: var(--fluid0); // this is set below
     line-height: var(--fluid1); // this is set below
   }
 
-2. Then, when setting font-size or line-height for any other element, we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
+2. Then, when setting font-size or line-height for any other element -- see _design-tokens-font-and-line-height.scss -- we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value. 
 
 */
 /* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
@@ -316,14 +316,12 @@ How this works:
   --fluid0: calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
   --fluid1: calc(((var(--fluid-min-size1) * 1rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
   --fluid2: calc(((var(--fluid-min-size2) * 1rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
-  --measure: 60ch;
-  --heading-spacing: 1em;
-  --line-height: 1.5;
-  --line-height-small: calc(0.8 * var(--ratio));
-  --line-height-large: calc(1.2 * var(--ratio));
-  --line-spacing: 1.5;
-  --paragraph-spacing: var(--fluid0);
-  --list-item-spacing: calc( var(--fluid0) / 2.5 );
+}
+
+/* line 62, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
+body {
+  font-size: var(--fluid0);
+  line-height: var(--fluid1);
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-other.scss */
@@ -415,18 +413,15 @@ webfont definitions
 
 ----------------------------------------------------------------------
 font family declarations
+
+see also: _design-tokens-typography.scss
 */
-/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 body {
   font-family: var(--font-sans-serify);
 }
 
-/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
-code, kbd, pre, samp {
-  font-family: var(--font-mono);
-}
-
-/* line 52, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 input, button, textarea, select {
   font-family: inherit;
 }
@@ -439,27 +434,17 @@ input, button, textarea, select {
 font sizing
 
 */
-/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
-body {
-  font-size: var(--fluid0);
-}
-
-/* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 62, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 h1 {
   font-size: 2em;
   font-weight: normal;
   line-height: var(--line-height-small);
 }
 
-/* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 67, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
   line-height: var(--line-height-small);
-}
-
-/* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
-code, kbd, pre, samp {
-  font-size: 1em;
 }
 
 /*
@@ -531,7 +516,9 @@ body {
 }
 
 /* line 65, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
-code, kbd, pre, samp {
+code, kbd, pre, samp, tt {
+  font-family: monospace,monospace;
+  font-size: 1em;
   -moz-font-feature-settings: initial;
   -ms-font-feature-settings: initial;
   -webkit-font-feature-settings: initial;
@@ -545,7 +532,7 @@ code, kbd, pre, samp {
 ----------------------------------------------------------------------
 other declarations related to typography
 */
-/* line 95, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+/* line 99, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
 sub
 , sup {
   line-height: 0;
@@ -725,10 +712,9 @@ end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
 /* line 39, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 main {
   padding: var(--space-l) var(--gutter);
-  line-height: var(--line-height);
 }
 
-/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+/* line 44, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 nav.tabs {
   margin: 0 -32px var(--heading-spacing);
 }

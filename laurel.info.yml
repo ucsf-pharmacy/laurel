@@ -9,6 +9,9 @@ libraries:
   - laurel/layout-styling
   - laurel/global-js
 
+ckeditor_stylesheets:
+  - css/laurel-ckeditor.css
+
 regions:
 
   # the Header region includes the UCSF banner (which is basically a menu) and the search box

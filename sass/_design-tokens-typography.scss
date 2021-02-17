@@ -62,7 +62,11 @@ body{
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
   font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
 }
-code,kbd,pre,samp{
+code,kbd,pre,samp,tt{
+  // start - http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
+  font-family: monospace,monospace;
+  font-size: 1em;
+  // end - http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
   -moz-font-feature-settings: initial;
   -ms-font-feature-settings: initial;
   -webkit-font-feature-settings: initial;

@@ -42,12 +42,11 @@ webfont definitions
 
 ----------------------------------------------------------------------
 font family declarations
+
+see also: _design-tokens-typography.scss
 */
 body{
   font-family: var(--font-sans-serify);
-}
-code,kbd,pre,samp{
-  font-family: var(--font-mono);
 }
 input,button,textarea,select{
   font-family: inherit;
@@ -60,9 +59,6 @@ input,button,textarea,select{
 font sizing
 
 */
-body{
-  font-size: var(--fluid0);
-}
 h1{
   font-size: 2em;
   font-weight: normal;
@@ -72,7 +68,4 @@ h1{
 {
   font-size: 1.5em;
   line-height: var(--line-height-small);
-}
-code,kbd,pre,samp{
-  font-size: 1em; // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
 }
