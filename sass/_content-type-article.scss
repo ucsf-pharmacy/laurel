@@ -1,0 +1,19 @@
+@media screen and (min-width: 40em){
+  .node--type-article .layout__region--second{
+    .field:not(.field--name-field-article-image){
+      display: grid;
+      grid-template-columns: 17ch minmax( 34ch, auto );
+      .field__item{
+        max-width: var(--measure);
+      }
+    }
+  }
+}
+.node--type-article .layout__region--second{
+  .field:not(.field--name-field-article-image){
+    a{
+      display: inline-block;
+      word-break: break-all;
+    }
+  }
+}

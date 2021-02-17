@@ -2,20 +2,8 @@
   font-size: inherit;
   padding: .5em 1em .75em;
 }
-.node--type-article{
-  .field{
-    display: grid;
-    grid-template-columns: 17ch auto;
-    a{
-      display: inline-block;
-      word-break: break-word;
-    }
-  }
-}
-.node__content{
-  & > div{
-    margin-bottom: var(--paragraph-spacing);
-  }
+.field{
+  margin-bottom: var(--paragraph-spacing);
 }
 
 // media

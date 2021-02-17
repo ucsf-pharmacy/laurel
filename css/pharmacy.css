@@ -671,14 +671,7 @@ tr:last-child th, tr:last-child td {
 /* 
 start - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
-/* line 4, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
-code {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  /* fonts are weird, so not in the modular scale */
-}
-
-/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 pre code {
   color: var(--color-light);
   background-color: var(--color-dark);
@@ -687,7 +680,7 @@ pre code {
   overflow-x: auto;
 }
 
-/* line 17, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 pre[class*='language-'] {
   color: var(--color-light);
   text-align: left;
@@ -709,12 +702,12 @@ pre[class*='language-'] {
 /* 
 end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
-/* line 39, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+/* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 main {
   padding: var(--space-l) var(--gutter);
 }
 
-/* line 44, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 nav.tabs {
   margin: 0 -32px var(--heading-spacing);
 }
@@ -803,6 +796,24 @@ table.span {
 /* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_objects.scss */
 table.no-span {
   column-span: none;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+  .node--type-article .layout__region--second .field:not(.field--name-field-article-image) {
+    display: grid;
+    grid-template-columns: 17ch minmax(34ch, auto);
+  }
+  /* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+  .node--type-article .layout__region--second .field:not(.field--name-field-article-image) .field__item {
+    max-width: var(--measure);
+  }
+}
+
+/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+.node--type-article .layout__region--second .field:not(.field--name-field-article-image) a {
+  display: inline-block;
+  word-break: break-all;
 }
 
 /* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
@@ -987,6 +998,38 @@ table.no-span {
 /* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
 #drupal-off-canvas .operations li {
   margin-left: 2em;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+  .layout--twocol-section {
+    gap: var(--gutter);
+  }
+  /* line 61, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+  .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
+    flex: 1 1 calc( 50% - ( var(--gutter) / 2 ));
+  }
+  /* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
+    flex: 1 1 calc( 33% - ( var(--gutter) / 2 ));
+  }
+  /* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--second,
+  .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--first {
+    flex: 1 1 calc( 67% - ( var(--gutter) / 2 ));
+  }
+  /* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+  .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--second {
+    flex: 1 1 calc( 25% - ( var(--gutter) / 2 ));
+  }
+  /* line 81, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
+  .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--second,
+  .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--first {
+    flex: 1 1 calc( 75% - ( var(--gutter) / 2 ));
+  }
 }
 
 /*
@@ -1331,24 +1374,12 @@ ul.menu a.is-active:focus {
   padding: .5em 1em .75em;
 }
 
-/* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
-.node--type-article .field {
-  display: grid;
-  grid-template-columns: 17ch auto;
-}
-
-/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
-.node--type-article .field a {
-  display: inline-block;
-  word-break: break-word;
-}
-
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
-.node__content > div {
+/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.field {
   margin-bottom: var(--paragraph-spacing);
 }
 
-/* line 22, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+/* line 10, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
 .field--name-field-caption {
   background-color: #ededee;
   padding: .125em .25em;

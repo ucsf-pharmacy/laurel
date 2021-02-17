@@ -1,10 +1,6 @@
 /* 
 start - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
-code {
-  font-family: var(--font-mono);
-  font-size: 0.85em; /* fonts are weird, so not in the modular scale */
-}
 
 pre code {
   color: var(--color-light);
