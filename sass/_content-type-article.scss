@@ -1,5 +1,5 @@
 @media screen and (min-width: 40em){
-  .node--type-article .layout__region--second{
+  .node--type-article.node--view-mode-full .layout__region--second{
     .field:not(.field--name-field-article-image){
       display: grid;
       grid-template-columns: 17ch minmax( 34ch, auto );

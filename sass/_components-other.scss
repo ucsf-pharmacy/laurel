@@ -12,3 +12,10 @@
   padding: .125em .25em;
   margin: 2px 0 0;
 }
+.node--type-in-the-news{
+  .field--name-title
+  ,.field--name-body
+  {
+    max-width: var(--measure);
+  }
+}

@@ -79,6 +79,12 @@ code,kbd,pre,samp,tt{
 ----------------------------------------------------------------------
 other declarations related to typography
 */
+
+// limit line length to a reasonable value
+.placeholder{ 
+  max-width: var(--measure);
+}
+
 // start - https://every-layout.dev/rudiments/axioms/
 #body {
   & * {

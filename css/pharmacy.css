@@ -532,7 +532,12 @@ code, kbd, pre, samp, tt {
 ----------------------------------------------------------------------
 other declarations related to typography
 */
-/* line 99, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+/* line 84, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+.placeholder {
+  max-width: var(--measure);
+}
+
+/* line 105, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
 sub
 , sup {
   line-height: 0;
@@ -800,12 +805,12 @@ table.no-span {
 
 @media screen and (min-width: 40em) {
   /* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
-  .node--type-article .layout__region--second .field:not(.field--name-field-article-image) {
+  .node--type-article.node--view-mode-full .layout__region--second .field:not(.field--name-field-article-image) {
     display: grid;
     grid-template-columns: 17ch minmax(34ch, auto);
   }
   /* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
-  .node--type-article .layout__region--second .field:not(.field--name-field-article-image) .field__item {
+  .node--type-article.node--view-mode-full .layout__region--second .field:not(.field--name-field-article-image) .field__item {
     max-width: var(--measure);
   }
 }
@@ -1384,6 +1389,12 @@ ul.menu a.is-active:focus {
   background-color: #ededee;
   padding: .125em .25em;
   margin: 2px 0 0;
+}
+
+/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.node--type-in-the-news .field--name-title
+, .node--type-in-the-news .field--name-body {
+  max-width: var(--measure);
 }
 
 /*
