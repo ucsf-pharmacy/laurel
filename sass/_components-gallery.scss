@@ -50,6 +50,7 @@ see also:
       }
       .field--name-field-caption{
         flex: 1 0 auto;
+        margin-top: 0;
       }
     }
   }
@@ -88,6 +89,7 @@ see also:
       .field--name-field-media-image{
         flex: 0 1 150px;
         min-width: 150px;
+        margin-bottom: 0;
       }
     }
   }
