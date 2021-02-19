@@ -228,7 +228,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --line-spacing: var(--line-height);
   --line-height-small: calc(0.9 * var(--ratio));
   --line-height-large: calc(1.2 * var(--ratio));
-  --measure: 60ch;
+  --measure: 66ch;
   --gutter: var(--space-l);
   --wrapped-image-side-margin: var(--space-m);
   --wrapped-image-bottom-margin: var(--space-s);
@@ -808,21 +808,33 @@ table.no-span {
   column-span: none;
 }
 
+/* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+.node--type-article a {
+  display: inline-block;
+  word-break: break-all;
+}
+
+/* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+.node--type-article h1
+, .node--type-article.node--view-mode-full .layout__region--second
+.field:not(.field--name-field-article-image)
+.field__item {
+  max-width: var(--measure);
+}
+
 @media screen and (min-width: 40em) {
-  /* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
-  .node--type-article.node--view-mode-full .layout__region--second .field:not(.field--name-field-article-image) {
+  /* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+  body:not(.toolbar-tray-open.toolbar-vertical) .node--type-article.node--view-mode-full .layout__region--second .field:not(.field--name-field-article-image) {
     display: grid;
     grid-template-columns: 17ch minmax(34ch, auto);
   }
-  /* line 6, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
-  .node--type-article.node--view-mode-full .layout__region--second .field:not(.field--name-field-article-image) .field__item {
-    max-width: var(--measure);
-  }
 }
 
-/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
-.node--type-article .layout__region--second .field:not(.field--name-field-article-image) a {
-  display: inline-block;
+@media screen and (min-width: 40em) and (min-width: 870px) {
+  /* line 26, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+  body:not(.toolbar-tray-open.toolbar-vertical) .layout__region--first {
+    order: 2;
+  }
 }
 
 /* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
