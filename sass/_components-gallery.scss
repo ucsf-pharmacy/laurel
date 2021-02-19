@@ -23,8 +23,13 @@ see also:
   grid-column-gap: 1px; // for older browsers
   column-gap: 1px;
 
-  article > * + *{
+  article > * + *
+  ,.field
+  ,.media
+  {
     margin-top: 0;
+    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
