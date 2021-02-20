@@ -62,7 +62,10 @@ font sizing
 h1{
   font-size: 2em;
   font-weight: normal;
-  line-height: var(--line-height-small); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
+  line-height: var(--line-height-xs); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
+}
+h2{
+  line-height: var(--line-height-m); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
 }
 .field--name-field-subtitle
 {

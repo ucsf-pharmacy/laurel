@@ -59,14 +59,21 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-xl     : 64px;
   --space-xxl    :128px;
 
-  --line-height      : 1.45;
   --line-spacing     : var(--line-height);
 
-  --line-height-small: calc(0.9 * var(--ratio));
-  --line-height-large: calc(1.2 * var(--ratio));
+  --line-height      : 1.45;
+  --line-height-xs   : calc(0.9 * var(--ratio));
+  --line-height-s    : calc(0.95 * var(--ratio));
+  --line-height-m    : calc(1.05 * var(--ratio));
+  --line-height-l    : calc(1.1 * var(--ratio));
 
-  --measure                     : 66ch;
-  --gutter                      : var(--space-l);
+  --measure    : 66ch;
+  --gutter     : var(--space-l);
+  // --gutter-s   : calc( .5 * var(--space-l) );
+  // --gutter-m   : calc( .333333333 * var(--space-l) );
+  // --gutter-l   : calc( .666666666 * var(--space-l) );
+  // --gutter-xl  : calc( .75 * var(--space-l) );
+
   --wrapped-image-side-margin   : var(--space-m);
   --wrapped-image-bottom-margin : var(--space-s);
 

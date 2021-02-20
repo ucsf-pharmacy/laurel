@@ -1,0 +1,32 @@
+.columns-xxs
+,.columns-xs
+,.columns-s
+,.columns-m
+,.columns-l
+,.columns-xl
+,.columns-xxl
+{
+  column-gap: var(--gutter);
+}
+
+.columns-xxs{
+  column-width: 5ch;
+}
+.columns-xs{
+  column-width: 10ch;
+}
+.columns-s{
+  column-width: 15ch;
+}
+.columns-m{
+  column-width: 20ch;
+}
+.columns-l{
+  column-width: 25ch;
+}
+.columns-xl{
+  column-width: 30ch;
+}
+.columns-xxl{
+  column-width: 35ch;
+}

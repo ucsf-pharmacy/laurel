@@ -84,3 +84,9 @@
   }
 }
 // end - default styles don't account for the need of a gutter between columns, so override it
+
+body.toolbar-tray-open.toolbar-vertical{
+  .layout--twocol-section{
+    display: block;
+  }
+}
