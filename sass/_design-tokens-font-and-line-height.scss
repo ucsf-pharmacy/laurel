@@ -28,6 +28,43 @@ When choosing fonts, look for these features:
 custom font family definitions
 */
 
+    @font-face{
+      font-family: 'Granjon';
+      src:url('../webfonts/granjon/GranjonLTStd.eot');
+      src:url('../webfonts/granjon/GranjonLTStd.eot?#iefix') format('embedded-opentype'),
+      url('../webfonts/granjon/GranjonLTStd.woff') format('woff'),
+      url('../webfonts/granjon/GranjonLTStd.ttf') format('truetype');
+    }
+
+    // @import url("//hello.myfonts.net/count/32cee0"); // for helv neue family
+
+    /*
+    Below, Helv Neue comes in eight combinations of 4 weights and 2 types:
+    [light, roman, medium, bold] and [roman, italic]
+    L = light
+    R = roman
+    M = medium
+    B = bold
+    I = italic
+
+    The numbers 45 through 76 correspond to what you see on http://www.myfonts.com/fonts/linotype/neue-helvetica/
+    */
+    @font-face {font-family: 'HelvNeue45LR';src: url('../webfonts/helv-neue/32CEE0_1_0.eot');src: url('../webfonts/helv-neue/32CEE0_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_1_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_1_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_1_0.ttf') format('truetype');}
+
+//    @font-face {font-family: 'HelvNeue46LI';src: url('../webfonts/helv-neue/32CEE0_0_0.eot');src: url('../webfonts/helv-neue/32CEE0_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_0_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_0_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_0_0.ttf') format('truetype');}
+
+    @font-face {font-family: 'HelvNeue55RR';src: url('../webfonts/helv-neue/32CEE0_4_0.eot');src: url('../webfonts/helv-neue/32CEE0_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_4_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_4_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_4_0.ttf') format('truetype');}
+
+//    @font-face {font-family: 'HelvNeue56RI';src: url('../webfonts/helv-neue/32CEE0_5_0.eot');src: url('../webfonts/helv-neue/32CEE0_5_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_5_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_5_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_5_0.ttf') format('truetype');}
+
+//    @font-face {font-family: 'HelvNeue65MR';src: url('../webfonts/helv-neue/32CEE0_3_0.eot');src: url('../webfonts/helv-neue/32CEE0_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_3_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_3_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_3_0.ttf') format('truetype');}
+
+//    @font-face {font-family: 'HelvNeue66MI';src: url('../webfonts/helv-neue/32CEE0_2_0.eot');src: url('../webfonts/helv-neue/32CEE0_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_2_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_2_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_2_0.ttf') format('truetype');}
+
+//    @font-face {font-family: 'HelvNeue75BR';src: url('../webfonts/helv-neue/32CEE0_6_0.eot');src: url('../webfonts/helv-neue/32CEE0_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_6_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_6_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_6_0.ttf') format('truetype');}
+
+//    @font-face {font-family: 'HelvNeue76BI';src: url('../webfonts/helv-neue/32CEE0_7_0.eot');src: url('../webfonts/helv-neue/32CEE0_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_7_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_7_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_7_0.ttf') format('truetype');}
+
 /*
 
 
@@ -35,7 +72,24 @@ custom font family definitions
 ----------------------------------------------------------------------
 webfont definitions
 */
+:root{
+  // start - we probably don't need these
+  --font-system: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-serify: Constantia,"Lucida Bright",Lucidabright,"Lucida Serif",Lucida,"DejaVu Serif","Bitstream Vera Serif","Liberation Serif",Georgia,serif;
+  --font-sans-serify: "Helvetica Neue",Helvetica,Arial,Frutiger,"Frutiger Linotype",Univers,Calibri,"Gill Sans","Gill Sans MT","Myriad Pro",Myriad,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,sans-serif;
+  --font-special: ltc-goudy-oldstyle-pro,"Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
+  --font-plain  : Helvetica Neue, Helvetica, Arial, sans-serif;
+  // end - we probably don't need these
 
+  --font-mono: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Menlo,Monaco,"Courier New",Courier,monospace;
+  --font-granjon: Granjon, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  --font-helv-neue-light: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelvNeue45LR", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
+  --font-helv-neue-roman: HelveticaNeue, HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, "HelvNeue55RR", "Helvetica Neue", Arial, Geneva, sans-serif;
+  // --font-helv-neue-medium: "Helvetica Neue Medium", "HelvNeue65RR", HelveticaNeue, "Helvetica Neue", HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
+  // --font-helv-neue-bold: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelvNeue75RR", HelveticaNeue, "Helvetica Neue", HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
+
+  font-family: var(--font-system); // fallback
+}
 /*
 
 
@@ -46,7 +100,18 @@ font family declarations
 see also: _design-tokens-typography.scss
 */
 body{
-  font-family: var(--font-sans-serify);
+  font-family: var(--font-helv-neue-roman);
+}
+h1,h2{
+  font-family: var(--font-granjon);
+}
+h3
+,.block-field-blocknodepostfield-subtitle
+{
+  font-family: var(--font-helv-neue-light);
+}
+code,kbd,pre,samp,tt{
+  font-family: var(--font-mono);
 }
 input,button,textarea,select{
   font-family: inherit;
@@ -56,19 +121,27 @@ input,button,textarea,select{
 
 
 ----------------------------------------------------------------------
-font sizing
+font sizes and line-heights
 
 */
 h1{
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: normal;
   line-height: var(--line-height-xs); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
 }
 h2{
+  font-size: 2em;
   line-height: var(--line-height-m); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
 }
-.field--name-field-subtitle
-{
+.field--name-field-subtitle{
   font-size: 1.5em;
   line-height: var(--line-height-small);
+}
+sub
+,sup
+{
+  line-height: 0;
+}
+code,kbd,pre,samp,tt{
+  font-size: 1em;
 }

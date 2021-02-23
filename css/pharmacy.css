@@ -347,13 +347,6 @@ body {
   /* red */
   --color-focus-light: hsl(0, 100%, 90%);
   /* pink */
-  --font-system: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  --font-serify: Constantia,"Lucida Bright",Lucidabright,"Lucida Serif",Lucida,"DejaVu Serif","Bitstream Vera Serif","Liberation Serif",Georgia,serif;
-  --font-sans-serify: "Helvetica Neue",Helvetica,Arial,Frutiger,"Frutiger Linotype",Univers,Calibri,"Gill Sans","Gill Sans MT","Myriad Pro",Myriad,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,sans-serif;
-  --font-mono: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Menlo,Monaco,"Courier New",Courier,monospace;
-  --font-special: ltc-goudy-oldstyle-pro,"Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
-  --font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-family: var(--font-system);
 }
 
 /*
@@ -407,6 +400,35 @@ When choosing fonts, look for these features:
 ----------------------------------------------------------------------
 custom font family definitions
 */
+@font-face {
+  font-family: 'Granjon';
+  src: url("../webfonts/granjon/GranjonLTStd.eot");
+  src: url("../webfonts/granjon/GranjonLTStd.eot?#iefix") format("embedded-opentype"), url("../webfonts/granjon/GranjonLTStd.woff") format("woff"), url("../webfonts/granjon/GranjonLTStd.ttf") format("truetype");
+}
+
+/*
+    Below, Helv Neue comes in eight combinations of 4 weights and 2 types:
+    [light, roman, medium, bold] and [roman, italic]
+    L = light
+    R = roman
+    M = medium
+    B = bold
+    I = italic
+
+    The numbers 45 through 76 correspond to what you see on http://www.myfonts.com/fonts/linotype/neue-helvetica/
+    */
+@font-face {
+  font-family: 'HelvNeue45LR';
+  src: url("../webfonts/helv-neue/32CEE0_1_0.eot");
+  src: url("../webfonts/helv-neue/32CEE0_1_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/helv-neue/32CEE0_1_0.woff2") format("woff2"), url("../webfonts/helv-neue/32CEE0_1_0.woff") format("woff"), url("../webfonts/helv-neue/32CEE0_1_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'HelvNeue55RR';
+  src: url("../webfonts/helv-neue/32CEE0_4_0.eot");
+  src: url("../webfonts/helv-neue/32CEE0_4_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/helv-neue/32CEE0_4_0.woff2") format("woff2"), url("../webfonts/helv-neue/32CEE0_4_0.woff") format("woff"), url("../webfonts/helv-neue/32CEE0_4_0.ttf") format("truetype");
+}
+
 /*
 
 
@@ -414,6 +436,20 @@ custom font family definitions
 ----------------------------------------------------------------------
 webfont definitions
 */
+/* line 75, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+:root {
+  --font-system: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-serify: Constantia,"Lucida Bright",Lucidabright,"Lucida Serif",Lucida,"DejaVu Serif","Bitstream Vera Serif","Liberation Serif",Georgia,serif;
+  --font-sans-serify: "Helvetica Neue",Helvetica,Arial,Frutiger,"Frutiger Linotype",Univers,Calibri,"Gill Sans","Gill Sans MT","Myriad Pro",Myriad,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,sans-serif;
+  --font-special: ltc-goudy-oldstyle-pro,"Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
+  --font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-mono: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Menlo,Monaco,"Courier New",Courier,monospace;
+  --font-granjon: Granjon, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  --font-helv-neue-light: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelvNeue45LR", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
+  --font-helv-neue-roman: HelveticaNeue, HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, "HelvNeue55RR", "Helvetica Neue", Arial, Geneva, sans-serif;
+  font-family: var(--font-system);
+}
+
 /*
 
 
@@ -423,12 +459,28 @@ font family declarations
 
 see also: _design-tokens-typography.scss
 */
-/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 102, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 body {
-  font-family: var(--font-sans-serify);
+  font-family: var(--font-helv-neue-roman);
 }
 
-/* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 105, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+h1, h2 {
+  font-family: var(--font-granjon);
+}
+
+/* line 108, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+h3
+, .block-field-blocknodepostfield-subtitle {
+  font-family: var(--font-helv-neue-light);
+}
+
+/* line 113, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+code, kbd, pre, samp, tt {
+  font-family: var(--font-mono);
+}
+
+/* line 116, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 input, button, textarea, select {
   font-family: inherit;
 }
@@ -438,25 +490,37 @@ input, button, textarea, select {
 
 
 ----------------------------------------------------------------------
-font sizing
+font sizes and line-heights
 
 */
-/* line 62, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 127, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: normal;
   line-height: var(--line-height-xs);
 }
 
-/* line 67, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 132, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 h2 {
+  font-size: 2em;
   line-height: var(--line-height-m);
 }
 
-/* line 70, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 136, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
   line-height: var(--line-height-small);
+}
+
+/* line 140, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+sub
+, sup {
+  line-height: 0;
+}
+
+/* line 145, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+code, kbd, pre, samp, tt {
+  font-size: 1em;
 }
 
 /*
@@ -483,7 +547,17 @@ body {
 }
 
 /* line 27, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
-.small-caps {
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* line 30, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 33, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+.smallcaps {
   -moz-font-feature-settings: "c2sc", "smcp";
   -ms-font-feature-settings: "c2sc", "smcp";
   -webkit-font-feature-settings: "c2sc", "smcp";
@@ -491,7 +565,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* line 34, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
 .lining-figures
 , html {
   -moz-font-feature-settings: "lnum";
@@ -500,7 +574,7 @@ body {
   font-feature-settings: "lnum";
 }
 
-/* line 42, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
 .oldstyle-figures
 , article {
   -moz-font-feature-settings: "onum";
@@ -509,7 +583,7 @@ body {
   font-feature-settings: "onum";
 }
 
-/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+/* line 56, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
 .tabular-figures
 , table {
   -moz-font-feature-settings: "tnum";
@@ -518,8 +592,9 @@ body {
   font-feature-settings: "tnum";
 }
 
-/* line 58, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
-.headline {
+/* line 64, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+h1
+, .headline {
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
@@ -527,10 +602,8 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
 }
 
-/* line 65, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+/* line 73, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
 code, kbd, pre, samp, tt {
-  font-family: monospace,monospace;
-  font-size: 1em;
   -moz-font-feature-settings: initial;
   -ms-font-feature-settings: initial;
   -webkit-font-feature-settings: initial;
@@ -544,15 +617,9 @@ code, kbd, pre, samp, tt {
 ----------------------------------------------------------------------
 other declarations related to typography
 */
-/* line 84, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+/* line 88, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
 .placeholder {
   max-width: var(--measure);
-}
-
-/* line 105, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
-sub
-, sup {
-  line-height: 0;
 }
 
 /*

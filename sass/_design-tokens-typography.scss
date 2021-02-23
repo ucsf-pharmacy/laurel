@@ -24,7 +24,13 @@ body{
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-.small-caps{ // #37 in Typewolf’s Flawless Typography Checklist: Use small caps when available and avoid pseudo small caps
+.lowercase{
+  text-transform: lowercase;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.smallcaps{ // #37 in Typewolf’s Flawless Typography Checklist: Use small caps when available and avoid pseudo small caps
   -moz-font-feature-settings: "c2sc", "smcp";
   -ms-font-feature-settings: "c2sc", "smcp";
   -webkit-font-feature-settings: "c2sc", "smcp";
@@ -55,7 +61,9 @@ body{
   -webkit-font-feature-settings: "tnum";
   font-feature-settings: "tnum";
 }
-.headline{ // #91 in Typewolf’s Flawless Typography Checklist: Use discretionary ligatures and swashes in headlines
+h1
+,.headline
+{ // #91 in Typewolf’s Flawless Typography Checklist: Use discretionary ligatures and swashes in headlines
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
@@ -63,10 +71,6 @@ body{
   font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
 }
 code,kbd,pre,samp,tt{
-  // start - http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
-  font-family: monospace,monospace;
-  font-size: 1em;
-  // end - http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
   -moz-font-feature-settings: initial;
   -ms-font-feature-settings: initial;
   -webkit-font-feature-settings: initial;
@@ -102,8 +106,3 @@ other declarations related to typography
 }
 
 // end - https://every-layout.dev/rudiments/axioms/
-sub
-,sup
-{
-  line-height: 0;
-}
