@@ -10,7 +10,7 @@ libraries:
   - laurel/global-js
 
 ckeditor_stylesheets:
-  - css/pharmacy.css
+  # - css/pharmacy.css
   - css/laurel-ckeditor.css
 
 regions:
