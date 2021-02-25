@@ -102,7 +102,9 @@ see also: _design-tokens-typography.scss
 body{
   font-family: var(--font-helv-neue-roman);
 }
-h1,h2{
+h1,h2
+,.block-field-blocknodeposttitle
+{
   font-family: var(--font-granjon);
 }
 h3
@@ -127,11 +129,12 @@ font sizes and line-heights
 h1{
   font-size: 2.5em;
   font-weight: normal;
-  line-height: var(--line-height-xs); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
 }
 h2{
   font-size: 2em;
-  line-height: var(--line-height-m); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
+}
+h1,h2{
+  line-height: var(--line-height-xs); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
 }
 .field--name-field-subtitle{
   font-size: 1.5em;
@@ -144,4 +147,7 @@ sub
 }
 code,kbd,pre,samp,tt{
   font-size: 1em;
+}
+.block-field-blocknodepostfield-subtitle{
+  line-height: var(--line-height-m);
 }

@@ -36,10 +36,10 @@
           grid-template-columns: 17ch minmax( 34ch, auto );
         }
       }
-    }
-    @media screen and (min-width: 870px ){
-      .layout__region--first{
-        order: 2;
+      @media screen and (min-width: 870px ){
+        .layout__region--first:not(.layout-builder__region){
+          order: 2;
+        }
       }
     }
   }

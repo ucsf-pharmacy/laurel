@@ -10,14 +10,6 @@
     }
   }
 }
-.block-field-blocknodepostfield-media{
-  float: right;
-  margin-top: var(--space-l);
-  @media all and (min-width: 800px){
-    margin: var(--space-l) 0 var(--space-m) var(--space-l);
-    max-width: 50%;
-  }
-}
 .block-field-blocknodepostbody{
   margin-top: var(--space-l);
 }

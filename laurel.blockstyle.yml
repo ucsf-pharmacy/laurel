@@ -1,4 +1,34 @@
-type:
+# config:
+# see https://www.drupal.org/docs/8/modules/block-style-plugins/setup-and-usage
+# and function laurel_preprocess_block() in laurel.theme
+image-size:
+  label: 'Image size (container width)'
+  include:
+    - 'field_block:node:post:field_media'
+  form:
+    'Type':
+      '#type': 'select'
+      '#title': 'Choose a size'
+      '#options':
+        'width-100': '100%'
+        'width-75': '75%'
+        'width-67': '67%'
+        'width-50': '50%'
+        'width-33': '33%'
+        'width-25': '25%'
+float:
+  label: 'Float'
+  include:
+    - 'field_block:node:post:field_media'
+  form:
+    'Type':
+      '#type': 'select'
+      '#title': 'Choose a float option'
+      '#options':
+        'float-left': 'Left'
+        'float-right': 'Right'
+        'float-none': 'None'
+gallery-type:
   label: 'Gallery type'
   include:
     - 'field_delta_block:node:page:field_gallery'

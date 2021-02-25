@@ -79,5 +79,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
 
   --heading-spacing  : var(--space-l);
   --paragraph-spacing: var(--space-m);
+  --paragraph-spacing-half: calc( var(--paragraph-spacing) * .5 );
+  --paragraph-spacing-three-quarters: calc( var(--paragraph-spacing) * .75 );
   --list-item-spacing: calc( var(--paragraph-spacing) * .8 );
 }

@@ -5,10 +5,11 @@ h1{ // this is the parent of the h1. we act on the parent rather than the h1 for
 *{
   & + h2,& + h3,& + h4,& + h5,& + h6
   {
-    margin-top: var(--space-l);
+    margin-top: var(--space-xl);
   }
 }
 h2{
+  margin-bottom: var(--paragraph-spacing-three-quarters);
   & + div.contextual + div.field{
     margin-top: var(--space-l);
   }
