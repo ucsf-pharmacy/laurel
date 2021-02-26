@@ -5,8 +5,10 @@
 .field{
   margin-bottom: var(--paragraph-spacing);
 }
-
 // media
+.media{
+  margin-bottom: 0;
+}
 .field--name-field-caption{
   background-color: #ededee;
   padding: .125em .25em;
@@ -19,45 +21,3 @@
     max-width: var(--measure);
   }
 }
-.block-field-blocknodepostfield-media{
-  &.float-left{
-    float: left;
-    margin: 0 var(--gutter) var(--gutter) 0;
-  }
-  &.float-right{
-    float: right;
-    margin: 0 0 var(--gutter) var(--gutter);
-  }
-  &.float-none{
-    float: none;
-    margin: var(--paragraph-spacing) 0;
-  }
-  &.width-100{
-    width: 100%;
-  }
-  &.width-75{
-    width: 75%;
-  }
-  &.width-67{
-    width: 67%;
-  }
-  &.width-50{
-    width: 50%;
-  }
-  &.width-33{
-    width: 33%;
-  }
-  &.width-25{
-    width: 25%;
-  }
-}
-// start - when editing the layout template, don't apply the attributes above
-.entity-view-display-layout-builder-form+.layout-builder{
-  .block-field-blocknodepostfield-media{
-    float: none;
-    margin: 0;
-    width: 100%;
-  }
-}
-// end - when editing the layout template, don't apply the attributes above
-

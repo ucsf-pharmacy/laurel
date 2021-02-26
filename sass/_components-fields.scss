@@ -1,0 +1,44 @@
+.field--name-field-articles.field--type-entity-reference > div:first-child{
+  margin-top: 0;
+}
+.field--name-field-articles{
+  .node--type-article{
+    &.node--view-mode-teaser{
+      border: 1px solid $color-black-77;
+      padding: var(--gutter);
+    }
+  }
+}
+.field--name-field-credit{
+  // position: absolute;
+  // top: 0;
+
+  *{
+    display: inline;
+  }
+  .clearfix:after{
+    display: unset;
+  }
+  .field--label-inline .field__label
+  ,.field--label-inline > .field__item
+  ,.field--label-inline .field__items
+  {
+    padding-right: 0;
+  }
+  & > .field__item{
+    &:after{
+      content: ', ';
+    }
+    &:last-child:after{
+      content: '';
+    }
+  }
+}
+
+/*
+    transform-origin: 100% 0;
+    transform: rotate(
+270deg
+);
+    text-align: right;
+*/

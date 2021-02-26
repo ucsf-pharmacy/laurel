@@ -13,13 +13,18 @@
   {
     max-width: var(--measure);
   }
-  @media screen and (min-width: 40em){
+  // @media screen and (min-width: 40em){
     &.node--view-mode-teaser{
-      .layout__region--first{
-        order: 2;
+      .layout--twocol-section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--gutter);
+        .layout__region--first{
+          // order: 2;
+        }
       }
     }
-  }
+  // }
 }
 .field--name-field-articles.field--type-entity-reference > div{
   margin-top: var(--gutter);

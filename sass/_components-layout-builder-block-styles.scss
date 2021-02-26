@@ -9,29 +9,11 @@ default options:
   Corner style           = Straight
 
 see also:
-  - "2021.0201 gallery styles.xlsx" at
+  - "2021.0201 layout builder styles.xlsx" at
     https://ucsfonline.sharepoint.com/:x:/s/SOPCommunications/Ee1B1oxeuPtFv7vdZ55EiO0BHRw_oIUB8ScZdDtCU7vrVA?e=7zvdbn
   - laurel.blockstyle.yml in the laurel theme folder root
 
 */
-
-.field--name-field-gallery-items{
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
-  grid-row-gap: 1px; // for older browsers
-  row-gap: 1px;
-  grid-column-gap: 1px; // for older browsers
-  column-gap: 1px;
-
-  article > * + *
-  ,.field
-  ,.media
-  {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-block-end: 0;
-  }
-}
 
 // type
   .all-on-one-row .field--name-field-gallery-items{
@@ -216,3 +198,37 @@ see also:
       }
     }
   }
+
+// media
+.block-field-blocknodepostfield-media{
+  &.float-left{
+    float: left;
+    margin: 0 var(--gutter) var(--gutter) 0;
+  }
+  &.float-right{
+    float: right;
+    margin: 0 0 var(--gutter) var(--gutter);
+  }
+  &.float-none{
+    float: none;
+    margin: var(--paragraph-spacing) 0;
+  }
+  &.width-100{
+    width: 100%;
+  }
+  &.width-75{
+    width: 75%;
+  }
+  &.width-67{
+    width: 67%;
+  }
+  &.width-50{
+    width: 50%;
+  }
+  &.width-33{
+    width: 33%;
+  }
+  &.width-25{
+    width: 25%;
+  }
+}

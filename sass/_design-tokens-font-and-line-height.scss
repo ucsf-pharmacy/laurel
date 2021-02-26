@@ -103,12 +103,12 @@ body{
   font-family: var(--font-helv-neue-roman);
 }
 h1,h2
-,.block-field-blocknodeposttitle
+,.field--name-title
 {
   font-family: var(--font-granjon);
 }
 h3
-,.block-field-blocknodepostfield-subtitle
+,.field--name-field-subtitle
 {
   font-family: var(--font-helv-neue-light);
 }
@@ -138,7 +138,7 @@ h1,h2{
 }
 .field--name-field-subtitle{
   font-size: 1.5em;
-  line-height: var(--line-height-small);
+  line-height: var(--line-height-s);
 }
 sub
 ,sup

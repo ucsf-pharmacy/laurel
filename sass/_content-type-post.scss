@@ -10,15 +10,3 @@
     }
   }
 }
-.block-field-blocknodepostbody{
-  margin-top: var(--space-l);
-}
-.layout-builder{
-  word-break: break-word;
-  .block-field-blocknodepostfield-media{
-    float: none;
-    @media all and (min-width: 800px){
-      margin: 0;
-    }
-  }
-}
