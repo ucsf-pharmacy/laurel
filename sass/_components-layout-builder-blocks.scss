@@ -10,16 +10,20 @@
 .block-field-blocknodeexternal-postfield-post-type{
   margin-bottom: var(--space-l);
 }
-.block-field-blocknodeposttitle:last-child
+.block-field-blocknodeeventtitle:last-child
+,.block-field-blocknodeposttitle:last-child
 ,.block-field-blocknodeexternal-posttitle:last-child
+,.block-field-blocknodeeventtitle+.block-field-blocknodeeventfield-subtitle
 ,.block-field-blocknodeposttitle+.block-field-blocknodepostfield-subtitle
 ,.block-field-blocknodeexternal-posttitle+.block-field-blocknodeexternal-postfield-subtitle
 {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-between-title-group-and-body);
 }
 // start - when editing the layout template, don't apply the attributes above
 .entity-view-display-layout-builder-form+.layout-builder{
-  .block-field-blocknodepostfield-media{
+  .block-field-blocknodeeventfield-featured-media
+  ,.block-field-blocknodepostfield-media
+  {
     float: none;
     margin: 0;
     width: 100%;

@@ -18,7 +18,7 @@
       .layout--twocol-section{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: var(--gutter);
+        gap: var(--space-between-related-entities);
         .layout__region--first{
           // order: 2;
         }
@@ -27,7 +27,7 @@
   // }
 }
 .field--name-field-articles.field--type-entity-reference > div{
-  margin-top: var(--gutter);
+  margin-top: var(--space-between-separate-entities);
   h2 a{
     display: inline-block;
   }

@@ -5,19 +5,17 @@
 .field{
   margin-bottom: var(--paragraph-spacing);
 }
-// media
-.media{
-  margin-bottom: 0;
-}
-.field--name-field-caption{
-  background-color: #ededee;
-  padding: .125em .25em;
-  margin: 2px 0 0;
-}
 .node--type-in-the-news{
   .field--name-title
   ,.field--name-body
   {
     max-width: var(--measure);
   }
+}
+
+// media
+.field--name-field-caption{
+  background-color: #ededee;
+  padding: .125em .25em;
+  margin: 2px 0 0;
 }

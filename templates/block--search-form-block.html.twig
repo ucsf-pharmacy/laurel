@@ -36,6 +36,7 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
+    {# add class visually-hidden to keep h2 for screen reader visitors but not present it onscreen for sighted visitors #}
     <h2 class="visually-hidden"{{ title_attributes }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}

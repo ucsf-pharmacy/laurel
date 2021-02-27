@@ -5,7 +5,7 @@
   .node--type-article{
     &.node--view-mode-teaser{
       border: 1px solid $color-black-77;
-      padding: var(--gutter);
+      padding: var(--space-around-embedded-entities);
     }
   }
 }

@@ -33,10 +33,10 @@ end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
 
 // regions
 main{
-  padding: var(--space-l) var(--gutter);
+  padding: var(--space-l) var(--space-from-page-edge);
 }
 
 // nav
 nav.tabs{
-  margin: 0 -32px var(--heading-spacing);
+  margin: 0 calc( -1 * var(--nav-tabs-margin-adjustment ) ) var(--heading-spacing);
 }

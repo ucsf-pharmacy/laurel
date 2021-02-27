@@ -69,10 +69,16 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
 
   --measure    : 66ch;
   --gutter     : var(--space-l);
-  // --gutter-s   : calc( .5 * var(--space-l) );
-  // --gutter-m   : calc( .333333333 * var(--space-l) );
-  // --gutter-l   : calc( .666666666 * var(--space-l) );
-  // --gutter-xl  : calc( .75 * var(--space-l) );
+
+  --space-around-floated-images       : var(--space-m);
+  --space-around-embedded-entities    : var(--space-m);
+  --space-between-layout-columns      : var(--space-l);
+  --space-between-related-entities    : var(--space-m);
+  --space-between-separate-entities   : var(--space-l);
+  --space-between-content-multicolumns: var(--space-m);
+  --space-between-title-group-and-body: var(--space-xl);
+  --space-from-page-edge              : var(--space-m);
+  --nav-tabs-margin-adjustment        : var(--space-l);
 
   --wrapped-image-side-margin   : var(--space-m);
   --wrapped-image-bottom-margin : var(--space-s);

@@ -1,12 +1,14 @@
 /*
 
 default options:
-  Type                   = Multiple rows
+  Gallery type           = Multiple rows
   Thumbnail size         = Small
   Thumbnail gap          = One pixel
   Thumbnail border color = None
   Shape                  = Rectangle or square
   Corner style           = Straight
+  Float                  = None
+  Width                  = 100%
 
 see also:
   - "2021.0201 layout builder styles.xlsx" at
@@ -15,7 +17,7 @@ see also:
 
 */
 
-// type
+// gallery type
   .all-on-one-row .field--name-field-gallery-items{
     display: flex;
     flex-wrap: nowrap;
@@ -199,20 +201,24 @@ see also:
     }
   }
 
-// media
-.block-field-blocknodepostfield-media{
+.block-field-blocknodepostfield-media
+,.block-field-blocknodeeventfield-featured-media
+{
+  // float
   &.float-left{
     float: left;
-    margin: 0 var(--gutter) var(--gutter) 0;
+    margin: 0 var(--space-around-floated-images) var(--space-around-floated-images) 0;
   }
   &.float-right{
     float: right;
-    margin: 0 0 var(--gutter) var(--gutter);
+    margin: 0 0 var(--space-around-floated-images) var(--space-around-floated-images);
   }
   &.float-none{
     float: none;
     margin: var(--paragraph-spacing) 0;
   }
+
+  // width
   &.width-100{
     width: 100%;
   }

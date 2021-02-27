@@ -86,6 +86,7 @@ width:
   label: 'Width'
   include:
     - 'field_block:node:post:field_media'
+    - 'field_block:node:event:field_featured_media'
   form:
     'Type':
       '#type': 'select'
@@ -101,6 +102,7 @@ float:
   label: 'Float'
   include:
     - 'field_block:node:post:field_media'
+    - 'field_block:node:event:field_featured_media'
   form:
     'Type':
       '#type': 'select'
