@@ -1,7 +1,3 @@
-.block-field-blocknodeeventfield-featured-media{
-  margin-bottom: var(--space-between-title-group-and-body);
-}
-
 .layout-builder{
   word-break: break-word;
   .block-field-blocknodepostfield-media{
@@ -14,14 +10,15 @@
 .block-field-blocknodeexternal-postfield-post-type{
   margin-bottom: var(--space-l);
 }
-.block-field-blocknodeeventtitle:last-child
+.block-field-blocknodeeventfield-featured-media
+,.block-field-blocknodeeventtitle:last-child
 ,.block-field-blocknodeposttitle:last-child
 ,.block-field-blocknodeexternal-posttitle:last-child
 ,.block-field-blocknodeeventtitle+.block-field-blocknodeeventfield-subtitle
 ,.block-field-blocknodeposttitle+.block-field-blocknodepostfield-subtitle
 ,.block-field-blocknodeexternal-posttitle+.block-field-blocknodeexternal-postfield-subtitle
 {
-  margin-bottom: var(--space-between-blocks);
+  margin-bottom: var(--space-between-title-group-and-body);
 }
 #layout-builder:not(.layout-builder--content-preview-disabled){
   .layout-builder-block{

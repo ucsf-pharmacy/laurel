@@ -240,7 +240,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-separate-entities: var(--space-l);
   --space-between-content-multicolumns: var(--space-l);
   --space-between-title-group-and-body: var(--space-xl);
-  --space-between-blocks: var(--space-xl);
+  --space-between-blocks: var(--space-l);
   --space-from-page-edge: var(--space-m);
   --nav-tabs-margin-adjustment: var(--space-l);
   --wrapped-image-side-margin: var(--space-m);
@@ -526,7 +526,7 @@ h1, h2 {
 /* line 139, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
-  line-height: var(--line-height-s);
+  line-height: var(--line-height-m);
 }
 
 /* line 143, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
@@ -1041,8 +1041,55 @@ table.no-span {
 .page-node-type-event .field--name-field-event-datetime
 , .page-node-type-event .field--name-field-event-audience
 , .page-node-type-event .field--name-field-event-location {
-  display: grid;
-  grid-template-columns: 11ch auto;
+  /*
+    display: flex;
+    flex-wrap: wrap;
+    & > :nth-child(1){
+      flex: 0 11ch;
+    }
+    & > :nth-child(2){
+      flex: 1 15ch;
+    }
+*/
+  /*
+    display: grid;
+    grid-template-columns: minmax(min-content, 11ch) minmax(200px, 1fr);
+    grid-template-columns: 11ch minmax(200px, 1fr);
+*/
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 84, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .field--name-field-event-datetime
+>
+*, .page-node-type-event .field--name-field-event-audience
+>
+*, .page-node-type-event .field--name-field-event-location > * {
+  flex-basis: calc( ( 33ch - 100% ) * 999);
+}
+
+/* line 87, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .field--name-field-event-datetime
+>
+:nth-child(1), .page-node-type-event .field--name-field-event-audience
+>
+:nth-child(1), .page-node-type-event .field--name-field-event-location > :nth-child(1) {
+  min-width: 11ch;
+}
+
+/* line 90, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .field--name-field-event-datetime
+>
+:nth-child(2), .page-node-type-event .field--name-field-event-audience
+>
+:nth-child(2), .page-node-type-event .field--name-field-event-location > :nth-child(2) {
+  flex-grow: 1;
+}
+
+/* line 95, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .block-field-blocknodeeventfield-event-location {
+  margin-bottom: var(--space-between-blocks);
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-gallery.scss */
@@ -1560,53 +1607,49 @@ see also:
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
-.block-field-blocknodeeventfield-featured-media {
-  margin-bottom: var(--space-between-title-group-and-body);
-}
-
-/* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .layout-builder {
   word-break: break-word;
 }
 
-/* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .layout-builder .block-field-blocknodepostfield-media {
   float: none;
 }
 
 @media all and (min-width: 800px) {
-  /* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+  /* line 3, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
   .layout-builder .block-field-blocknodepostfield-media {
     margin: 0;
   }
 }
 
-/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 10, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodeexternal-postfield-post-type {
   margin-bottom: var(--space-l);
 }
 
-/* line 17, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
-.block-field-blocknodeeventtitle:last-child
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+.block-field-blocknodeeventfield-featured-media
+, .block-field-blocknodeeventtitle:last-child
 , .block-field-blocknodeposttitle:last-child
 , .block-field-blocknodeexternal-posttitle:last-child
 , .block-field-blocknodeeventtitle + .block-field-blocknodeeventfield-subtitle
 , .block-field-blocknodeposttitle + .block-field-blocknodepostfield-subtitle
 , .block-field-blocknodeexternal-posttitle + .block-field-blocknodeexternal-postfield-subtitle {
-  margin-bottom: var(--space-between-blocks);
+  margin-bottom: var(--space-between-title-group-and-body);
 }
 
-/* line 27, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 24, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 #layout-builder:not(.layout-builder--content-preview-disabled) .layout-builder-block {
   padding: 0;
 }
 
-/* line 34, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 31, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .layout-builder--content-preview-disabled .columns {
   column-width: initial;
 }
 
-/* line 37, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 34, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .layout-builder--content-preview-disabled .block-field-blocknodeeventfield-featured-media
 , .layout-builder--content-preview-disabled .block-field-blocknodepostfield-media {
   float: none;
@@ -1614,24 +1657,24 @@ see also:
   width: 100%;
 }
 
-/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodepostfield-media .field {
   margin-bottom: 0;
 }
 
-/* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodepostfield-media.float-left, .block-field-blocknodepostfield-media.float-right {
   margin-top: .5em;
 }
 
-/* line 55, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 52, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodepostfield-media.float-left article > *:not(.contextual):not(h2):not(h3):not(h4) + *
 , .block-field-blocknodepostfield-media.float-left *:not(h2):not(h3):not(h4) + p, .block-field-blocknodepostfield-media.float-right article > *:not(.contextual):not(h2):not(h3):not(h4) + *
 , .block-field-blocknodepostfield-media.float-right *:not(h2):not(h3):not(h4) + p {
   margin: 0;
 }
 
-/* line 62, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 59, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodepostfield-media.float-right .field--name-field-credit {
   font-size: .8em;
   line-height: var(--line-height-s);
