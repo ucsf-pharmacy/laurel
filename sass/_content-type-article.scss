@@ -1,3 +1,14 @@
+.field--name-field-articles.field--type-entity-reference > div:first-child{
+  margin-top: 0;
+}
+.field--name-field-articles{
+  .node--type-article{
+    &.node--view-mode-teaser{
+      border: 1px solid $color-black-77;
+      padding: var(--space-around-embedded-entities);
+    }
+  }
+}
 .node--type-article{
   .field--name-field-url{
     a{

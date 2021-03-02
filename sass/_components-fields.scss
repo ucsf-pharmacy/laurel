@@ -1,14 +1,5 @@
-.field--name-field-articles.field--type-entity-reference > div:first-child{
-  margin-top: 0;
-}
-.field--name-field-articles{
-  .node--type-article{
-    &.node--view-mode-teaser{
-      border: 1px solid $color-black-77;
-      padding: var(--space-around-embedded-entities);
-    }
-  }
-}
+// this file is for fields that are not specific to any content type
+
 .field--name-field-event-audience{
   .field__item{
     display: inline;
@@ -21,9 +12,6 @@
   }
 }
 .field--name-field-credit{
-  // position: absolute;
-  // top: 0;
-
   *{
     display: inline;
   }
