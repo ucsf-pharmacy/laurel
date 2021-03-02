@@ -1,3 +1,7 @@
+.block-field-blocknodeeventfield-featured-media{
+  margin-bottom: var(--space-between-title-group-and-body);
+}
+
 .layout-builder{
   word-break: break-word;
   .block-field-blocknodepostfield-media{
@@ -17,10 +21,19 @@
 ,.block-field-blocknodeposttitle+.block-field-blocknodepostfield-subtitle
 ,.block-field-blocknodeexternal-posttitle+.block-field-blocknodeexternal-postfield-subtitle
 {
-  margin-bottom: var(--space-between-title-group-and-body);
+  margin-bottom: var(--space-between-blocks);
 }
-// start - when editing the layout template, don't apply the attributes above
-.entity-view-display-layout-builder-form+.layout-builder{
+#layout-builder:not(.layout-builder--content-preview-disabled){
+  .layout-builder-block{
+    padding: 0;
+  }
+}
+
+// start - when editing the layout template, don't apply these attributes
+.layout-builder--content-preview-disabled{
+  .columns{
+    column-width: initial;
+  }
   .block-field-blocknodeeventfield-featured-media
   ,.block-field-blocknodepostfield-media
   {
@@ -29,7 +42,8 @@
     width: 100%;
   }
 }
-// end - when editing the layout template, don't apply the attributes above
+// end - when editing the layout template, don't apply these attributes
+
 .block-field-blocknodepostfield-media{
   .field{
     margin-bottom: 0;

@@ -31,7 +31,7 @@ How this works:
   --fluid-bp    : calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16))); // fluid-bp = fluid breakpoint
 }
 
-@media screen and (min-width: 1440){ // (we cannot use custom properties here, so the min-width is hardcoded. if this value changes, you must change the --fluid-max-width value above as well.)
+@media screen and (min-width: 1440px){ // (we cannot use custom properties here, so the min-width is hardcoded. if this value changes, you must change the --fluid-max-width value above as well.)
   :root{
     --fluid-screen: calc(var(--fluid-max-width) * 1px);
   }

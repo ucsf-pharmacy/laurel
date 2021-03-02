@@ -1,6 +1,26 @@
 # config:
 # see https://www.drupal.org/docs/8/modules/block-style-plugins/setup-and-usage
+# and _components-columns.scss
+# and _components-layout-builder-block-styles.scss
 # and function laurel_preprocess_block() in laurel.theme
+columns:
+  label: 'Columns'
+  include:
+    - 'field_block:node:event:body'
+  form:
+    'Type':
+      '#type': 'select'
+      '#title': 'Choose a column size'
+      '#options':
+        'columns auto': 'Automatic'
+        'columns xxl': 'XX-Large'
+        'columns xl': 'X-Large'
+        'columns l': 'Large'
+        'columns m': 'Medium'
+        'columns s': 'Small'
+        'columns xs': 'X-Small'
+        'columns xxs': 'XX-Small'
+        '': 'None'
 gallery_type:
   label: 'Gallery type'
   include:

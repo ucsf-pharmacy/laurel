@@ -1,32 +1,34 @@
-.columns-xxs
-,.columns-xs
-,.columns-s
-,.columns-m
-,.columns-l
-,.columns-xl
-,.columns-xxl
+.columns
 {
   column-gap: var(--space-between-content-multicolumns);
+  &.auto{
+    column-width: 26ch;
+  }
 }
-
-.columns-xxs{
-  column-width: 5ch;
-}
-.columns-xs{
-  column-width: 10ch;
-}
-.columns-s{
-  column-width: 15ch;
-}
-.columns-m{
-  column-width: 20ch;
-}
-.columns-l{
-  column-width: 25ch;
-}
-.columns-xl{
-  column-width: 30ch;
-}
-.columns-xxl{
-  column-width: 35ch;
+@media screen and (min-width: 640px) and (max-width: 1023px){
+  .columns
+  {
+    column-gap: var(--space-between-content-multicolumns);
+    &.xxs{
+      column-width: 5ch;
+    }
+    &.xs{
+      column-width: 10ch;
+    }
+    &.s{
+      column-width: 15ch;
+    }
+    &.m{
+      column-width: 20ch;
+    }
+    &.l{
+      column-width: 25ch;
+    }
+    &.xl{
+      column-width: 30ch;
+    }
+    &.xxl{
+      column-width: 35ch;
+    }
+  }
 }

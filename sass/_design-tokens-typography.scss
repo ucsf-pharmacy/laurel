@@ -79,6 +79,9 @@ code,kbd,pre,samp,tt{
   -webkit-font-feature-settings: initial;
   font-feature-settings: initial;
 }
+main{
+  hyphens: auto;
+}
 /*
 
 
@@ -88,8 +91,11 @@ other declarations related to typography
 */
 
 // limit line length to a reasonable value
-.placeholder{ 
+h1
+,.field--name-field-subtitle
+{ 
   max-width: var(--measure);
+  hyphens: none;
 }
 
 // start - https://every-layout.dev/rudiments/axioms/
