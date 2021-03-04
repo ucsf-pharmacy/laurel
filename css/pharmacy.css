@@ -694,6 +694,11 @@ https://codepen.io/sdthornton/pen/wBZdXq
  * }
  *
  */
+/* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_tools-other.scss */
+pre.sf-dump, pre.sf-dump .sf-dump-default {
+  z-index: initial !important;
+}
+
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h1 {
   margin-bottom: var(--space-m);

@@ -6,4 +6,73 @@ function laurel_preprocess_block(array &$variables) {
   // start - reveal plugin_id values needed in block style plugins config
   // print '<pre>' . $variables['plugin_id'] . '</pre>';
   // end - reveal plugin_id values needed in block style plugins config
+
+  // start - when using kint(), uncomment these lines to keep it from providing too much data  
+  // kint_require();
+  // Kint::$maxLevels = 6;
+  // end - when using kint(), uncomment these lines to keep it from providing too much data  
+
+/*
+
+frankfarm - we probably don't need this if 
+  // start - process event datetime fields to provide human-friendly output
+  if ( $variables['plugin_id'] == 'field_block:node:event:field_event_datetime'){
+    if( $variables['content']['#is_multiple'] ){
+      // multiple datetime ranges
+// TO DO
+    } else {
+      // start - a single datetime range
+
+      // get values
+      $start_datetime = $variables['elements']['content']['#items']->getValue()[0]['value'];
+      $end_datetime = $variables['elements']['content']['#items']->getValue()[0]['end_value'];
+
+      // are dates identical?
+      if (
+        date_format( $start_datetime , 'M d Y')
+        ==
+        date_format( $end_datetime , 'M d Y')
+      ){
+        $start_end_dates_identical = 1;
+      } else {
+        $start_end_dates_identical = 0;
+      }
+
+      // are time meridiems identical?
+      if (
+        date_format( $start_datetime , 'a')
+        ==
+        date_format( $end_datetime , 'a')
+      ){
+        $start_end_time_meridiems_identical = 1;
+      } else {
+        // start and end dates are different
+        $start_end_time_meridiems_identical = 0;
+      }
+
+      if ( $start_end_dates_identical ){
+        // store the day, month, date, and year
+        $output = date_format( $start_datetime , 'D M j, Y' );
+        $output .= ' - ';
+        // store the time
+        if ( $start_end_time_meridiems_identical ){
+          $output .= date_format( $start_datetime , 'g:i' );
+          $output .= ' to ';
+          $output .= date_format( $end_datetime , 'g:i' );
+          $output .= ' ';
+          $output .= str_replace( array('am','pm') , array('a.m.','p.m.') , date_format( $end_datetime , 'a' ) );
+        } else {
+          // start and end time meridiems are different
+          $output .= str_replace( array('am','pm') , array('a.m.','p.m.') , date_format( $start_datetime , 'g:i a' ) );
+          $output .= ' to ';
+          $output .= str_replace( array('am','pm') , array('a.m.','p.m.') , date_format( $end_datetime , 'g:i a' ) );
+        }
+      } else {
+        // start and end dates are different
+// TO DO        
+      }
+    } // end - a single datetime range
+  } // end - field_block
+  // end - process event datetime fields to provide human-friendly output
+  */
 }

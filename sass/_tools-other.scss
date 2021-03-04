@@ -1,0 +1,4 @@
+// override twig vardumper, which seems to have dump panes set to z-index: 99999
+pre.sf-dump, pre.sf-dump .sf-dump-default{
+  z-index: initial !important;
+}
