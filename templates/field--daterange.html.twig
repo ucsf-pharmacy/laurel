@@ -79,7 +79,10 @@
     {% for item in items %}
       <li{{ item.attributes.addClass('field__item') }}>{{
       item.content['#plain_text']
-        | preg_replace(['/-(\\d)/','/(.*?)am(.*?)am/','/(.*?)pm(.*?)pm/','/am/','/pm/'], [' to $1','$1$2am','$1$2pm','a.m.','p.m.'])
+        | preg_replace(
+           ['/m-/' ,'/-(\\d)/','/(.*?)am(.*?)am/','/(.*?)pm(.*?)pm/','/am/','/pm/']
+          ,['m to ',' to $1'  ,'$1$2am'          ,'$1$2pm'          ,'a.m.','p.m.']
+        )
       }}</li>
     {% endfor %}
     {% if multiple %}

@@ -380,7 +380,7 @@ Prefer $color-gray-40 over $color-black-10.
 }
 
 /* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-color-declarations.scss */
-#body {
+main {
   color: #3b3b3b;
 }
 
