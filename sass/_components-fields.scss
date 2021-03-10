@@ -48,3 +48,11 @@
     margin-top: var(--space-xl);
   }
 }
+.field--name-field-post-type{
+  .field__item{
+    display: inline;
+    &:not(:last-child):after{
+      content: ' → ';
+    }
+  }
+}

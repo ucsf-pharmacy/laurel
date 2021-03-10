@@ -80,8 +80,17 @@
 }
 // end - default styles don't provide enough space between layout columns, so override it
 
+.layout--twocol-section{
+  & > .layout__region{
+    min-width: 250px;
+  }
+}
 body.toolbar-tray-open.toolbar-vertical{
   .layout--twocol-section{
     display: block;
   }
+}
+
+.layout__region:empty{
+  display: none;
 }
