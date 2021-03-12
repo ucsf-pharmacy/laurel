@@ -235,7 +235,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --gutter: var(--space-l);
   --space-around-floated-images: var(--space-m);
   --space-around-embedded-entities: var(--space-m);
-  --space-between-layout-columns: var(--space-l);
+  --space-between-layout-columns: var(--space-xl);
   --space-between-related-entities: var(--space-m);
   --space-between-separate-entities: var(--space-l);
   --space-between-content-multicolumns: var(--space-l);
@@ -1305,7 +1305,7 @@ body.page-type-node-article .node--type-article.node--view-mode-teaser .layout--
 @media screen and (min-width: 640px) {
   /* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
   .layout--twocol-section {
-    gap: var(--space-between-blocks);
+    gap: var(--space-between-layout-columns);
   }
   /* line 60, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder.scss */
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
@@ -1688,7 +1688,7 @@ see also:
 
 /* line 59, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodepostfield-media.float-right .field--name-field-credit {
-  font-size: .8em;
+  font-size: .7em;
   line-height: var(--line-height-s);
   transform-origin: 100% 0;
   transform: rotate(270deg);

@@ -55,7 +55,7 @@
 // start - default styles don't provide enough space between layout columns, so override it
 @media screen and (min-width: 640px) {
   .layout--twocol-section{
-    gap: var(--space-between-blocks);
+    gap: var(--space-between-layout-columns);
   }
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
