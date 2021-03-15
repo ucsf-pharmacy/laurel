@@ -22,7 +22,7 @@ How this works:
 :root{
   --fluid-min-width: 320;
   --fluid-max-width: 1440; // if this value changes, you must change the media query below as well.
-  --fluid-min-size : 17;
+  --fluid-min-size : 16;
   --fluid-max-size : 20;
   --fluid-min-ratio: 1.2;
   --fluid-max-ratio: 1.33;

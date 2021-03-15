@@ -75,4 +75,13 @@
   .block-field-blocknodeeventfield-event-location{
     margin-bottom: var(--space-between-blocks);
   }
+  .layout__region--first{
+    margin-bottom: var(--space-between-blocks);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1031px){
+  .field--name-field-featured-media{
+    width: 45ch;
+  }
 }

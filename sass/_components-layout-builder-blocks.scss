@@ -7,11 +7,16 @@
     }
   }
 }
+.block-layout-builder{
+  // margin-bottom: var(--space-between-blocks);
+  h2:first-child{
+    margin-top: calc( var(--space-xl) - var(--space-between-blocks) );
+  }
+}
 .block-field-blocknodeexternal-postfield-post-type{
   margin-bottom: var(--space-l);
 }
-.block-field-blocknodeeventfield-featured-media
-,.block-field-blocknodeeventtitle:last-child
+.block-field-blocknodeeventtitle:last-child
 ,.block-field-blocknodeposttitle:last-child
 ,.block-field-blocknodeexternal-posttitle:last-child
 ,.block-field-blocknodeeventtitle+.block-field-blocknodeeventfield-subtitle
