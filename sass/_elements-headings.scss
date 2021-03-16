@@ -1,16 +1,30 @@
-h1{ // this is the parent of the h1. we act on the parent rather than the h1 for better control.
+h1{
   margin-bottom: var(--space-m);
 }
 
 *{
+  & + h2
+  { margin-top: var(--space-xl); }
+  & + h3
+  { margin-top: var(--space-l); }
+  & + h4
+  { margin-top: var(--space-s); }
+  & + h5
+  { margin-top: var(--space-xs); }
+  & + h6
+  { margin-top: var(--space-xs); }
   & + h2,& + h3,& + h4,& + h5,& + h6
-  {
-    margin-top: var(--space-xl);
-  }
+  { margin-bottom: var(--space-xs); }
 }
+
 h2{
-  margin-bottom: var(--paragraph-spacing-three-quarters);
   & + div.contextual + div.field{
     margin-top: var(--space-l);
+  }
+}
+
+h2,h3,h4,h5,h6{
+  &+h3,&+h4,&+h5,&+h6{
+    margin-top: var(--space-m);
   }
 }

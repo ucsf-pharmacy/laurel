@@ -58,6 +58,7 @@
   }
   .field--name-field-date-tbd
   ,.field--name-field-event-datetime
+  ,.field--name-field-organization
   ,.field--name-field-event-audience
   ,.field--name-field-event-location
   {
@@ -78,6 +79,11 @@
   }
   .layout__region--first{
     margin-bottom: var(--space-between-blocks);
+  }
+  .field--name-field-organization{
+    a{
+      display: inline-block;
+    }
   }
 }
 

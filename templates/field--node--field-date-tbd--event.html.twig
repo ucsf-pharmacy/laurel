@@ -52,27 +52,31 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-
+{#
+alter this field to only show
+label = Date
+value = To be determined
+#}
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>To be determined</div>
+        <div{{ item.attributes.addClass('field__item') }}>{{ "To be determined"|t }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item') }}>To be determined</div>
+      <div{{ attributes.addClass(classes, 'field__item') }}>{{ "To be determined"|t }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>Date</div>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ "Date"|t }}</div>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>To be determined</div>
+      <div{{ item.attributes.addClass('field__item') }}>{{ "To be determined"|t }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
