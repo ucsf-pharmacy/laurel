@@ -1057,15 +1057,18 @@ body.page-type-node-article .node--type-article.node--view-mode-teaser .layout--
 }
 
 /* line 59, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-datetime
+.page-node-type-event .field--name-field-date-tbd
+, .page-node-type-event .field--name-field-event-datetime
 , .page-node-type-event .field--name-field-event-audience
 , .page-node-type-event .field--name-field-event-location {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* line 65, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-datetime
+/* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .field--name-field-date-tbd
+>
+*, .page-node-type-event .field--name-field-event-datetime
 >
 *, .page-node-type-event .field--name-field-event-audience
 >
@@ -1073,8 +1076,10 @@ body.page-type-node-article .node--type-article.node--view-mode-teaser .layout--
   flex-basis: calc( ( 33ch - 100% ) * 999);
 }
 
-/* line 68, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-datetime
+/* line 69, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .field--name-field-date-tbd
+>
+:nth-child(1), .page-node-type-event .field--name-field-event-datetime
 >
 :nth-child(1), .page-node-type-event .field--name-field-event-audience
 >
@@ -1082,8 +1087,10 @@ body.page-type-node-article .node--type-article.node--view-mode-teaser .layout--
   min-width: 11ch;
 }
 
-/* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-datetime
+/* line 72, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .field--name-field-date-tbd
+>
+:nth-child(2), .page-node-type-event .field--name-field-event-datetime
 >
 :nth-child(2), .page-node-type-event .field--name-field-event-audience
 >
@@ -1091,18 +1098,18 @@ body.page-type-node-article .node--type-article.node--view-mode-teaser .layout--
   flex-grow: 1;
 }
 
-/* line 75, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .block-field-blocknodeeventfield-event-location {
   margin-bottom: var(--space-between-blocks);
 }
 
-/* line 78, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 79, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .layout__region--first {
   margin-bottom: var(--space-between-blocks);
 }
 
 @media screen and (min-width: 500px) and (max-width: 1031px) {
-  /* line 84, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 85, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .field--name-field-featured-media {
     width: 45ch;
   }
