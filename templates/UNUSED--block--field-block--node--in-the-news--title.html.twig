@@ -32,14 +32,16 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-{# change from div to h1 #}
-<h1{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
+    {# change h2 to div #}
+    <div{{ title_attributes }}>{{ label }}</div>
+    }
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {{ content }}
+    {# wrap content with h1 #}
+    <h1>{{ content }}</h1>
   {% endblock %}
-</h1>
+</div>

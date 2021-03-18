@@ -5,17 +5,67 @@
   url('../webfonts/granjon/GranjonLTStd.woff') format('woff'),
   url('../webfonts/granjon/GranjonLTStd.ttf') format('truetype');
 }
+@font-face {font-family: 'HelvNeue45LR';src: url('../webfonts/helv-neue/32CEE0_1_0.eot');src: url('../webfonts/helv-neue/32CEE0_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/helv-neue/32CEE0_1_0.woff2') format('woff2'),url('../webfonts/helv-neue/32CEE0_1_0.woff') format('woff'),url('../webfonts/helv-neue/32CEE0_1_0.ttf') format('truetype');}
 :root{
   --font-granjon: Granjon, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-/*  --font-mono: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Menlo,Monaco,"Courier New",Courier,monospace;
   --font-helv-neue-light: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelvNeue45LR", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
+/*  --font-mono: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Menlo,Monaco,"Courier New",Courier,monospace;
   --font-helv-neue-roman: HelveticaNeue, HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, "HelvNeue55RR", "Helvetica Neue", Arial, Geneva, sans-serif;*/
+  --space-default: 16px;
+  --space-xxs    :  2px;
+  --space-xs     :  4px;
+  --space-s      :  8px;
+  --space-m      : 16px;
+  --space-l      : 32px;
+  --space-xl     : 64px;
+  --space-xxl    :128px;
 }
 body{
   font-size: 1.25em;
   line-height: 1.45;
 }
 h2{
+  font-size: 2em;
   font-family: var(--font-granjon);
+}
+h3{
+  font-size: 1.3em;
+  font-family: var(--font-helv-neue-light);
+  letter-spacing: .5px;
+}
+h2,h3{
   font-weight: normal;
+}
+
+*{
+  & + h2
+  { margin-top: var(--space-l); }
+  & + h3
+  { margin-top: var(--space-m); }
+  & + h4
+  { margin-top: var(--space-s); }
+  & + h5
+  { margin-top: var(--space-xs); }
+  & + h6
+  { margin-top: var(--space-xs); }
+  & + h2,& + h3,& + h4,& + h5,& + h6
+  { margin-bottom: var(--space-xs); }
+}
+
+h2,h3,h4,h5,h6{
+  &+h3,&+h4,&+h5,&+h6{
+    margin-top: var(--space-m);
+  }
+}
+
+p{
+  margin: 0;
+}
+
+table.laurel-hhmmampm
+// good for times like "8:00 am" on https://pharmacy.ucsf.edu/commencement
+{
+  th:nth-child(1), td:nth-child(1) {
+    min-width: 5.5em;
+  }
 }

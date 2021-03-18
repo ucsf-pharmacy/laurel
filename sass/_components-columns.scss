@@ -5,6 +5,7 @@
     column-width: 37ch;
   }
   h2{
+    margin-bottom: var(--space-m);
     column-span: all;
     margin-top: var(--space-xl);
     max-width: var(--measure);

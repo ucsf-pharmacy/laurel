@@ -1,5 +1,3 @@
-// this file is for fields that are not specific to any content type
-
 .field--name-field-event-audience{
   .field__item{
     display: inline;
@@ -54,5 +52,10 @@
     &:not(:last-child):after{
       content: ' → ';
     }
+  }
+}
+.page-node-type-event{
+  .field{
+    margin-bottom: var(--space-below-fields);
   }
 }

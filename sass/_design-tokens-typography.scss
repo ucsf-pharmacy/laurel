@@ -97,6 +97,11 @@ h1
   max-width: var(--measure);
   hyphens: none;
 }
+.layout-builder{
+  h1{
+    max-width: none;
+  }
+}
 
 // start - https://every-layout.dev/rudiments/axioms/
 #body {

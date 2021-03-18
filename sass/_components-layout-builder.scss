@@ -53,10 +53,12 @@
 // end - block styles plugin, layout builder, off-canvas dialog
 
 // start - default styles don't provide enough space between layout columns, so override it
-@media screen and (min-width: 640px) {
+.layout--twocol-section{
+  row-gap: 0; // row-gap doesn't seem to work at very small browser widths, e.g., < 400px
+}
+@media screen and (min-width: 641px) {
   .layout--twocol-section{
     column-gap: var(--space-between-layout-columns);
-    row-gap: var(--space-between-layout-rows);
   }
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
@@ -84,6 +86,7 @@
 .layout--twocol-section{
   & > .layout__region{
     min-width: 250px;
+    margin-bottom: var(--space-between-layout-rows);
   }
 }
 body.toolbar-tray-open.toolbar-vertical{

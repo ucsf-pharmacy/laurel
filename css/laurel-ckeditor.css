@@ -4,24 +4,95 @@
   src: url("../webfonts/granjon/GranjonLTStd.eot?#iefix") format("embedded-opentype"), url("../webfonts/granjon/GranjonLTStd.woff") format("woff"), url("../webfonts/granjon/GranjonLTStd.ttf") format("truetype");
 }
 
-/* line 8, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
-:root {
-  --font-granjon: Granjon, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-  /*  --font-mono: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Menlo,Monaco,"Courier New",Courier,monospace;
-  --font-helv-neue-light: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelvNeue45LR", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
-  --font-helv-neue-roman: HelveticaNeue, HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, "HelvNeue55RR", "Helvetica Neue", Arial, Geneva, sans-serif;*/
+@font-face {
+  font-family: 'HelvNeue45LR';
+  src: url("../webfonts/helv-neue/32CEE0_1_0.eot");
+  src: url("../webfonts/helv-neue/32CEE0_1_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/helv-neue/32CEE0_1_0.woff2") format("woff2"), url("../webfonts/helv-neue/32CEE0_1_0.woff") format("woff"), url("../webfonts/helv-neue/32CEE0_1_0.ttf") format("truetype");
 }
 
-/* line 14, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+:root {
+  --font-granjon: Granjon, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  --font-helv-neue-light: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelvNeue45LR", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
+  /*  --font-mono: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Menlo,Monaco,"Courier New",Courier,monospace;
+  --font-helv-neue-roman: HelveticaNeue, HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, "HelvNeue55RR", "Helvetica Neue", Arial, Geneva, sans-serif;*/
+  --space-default: 16px;
+  --space-xxs:  2px;
+  --space-xs:  4px;
+  --space-s:  8px;
+  --space-m: 16px;
+  --space-l: 32px;
+  --space-xl: 64px;
+  --space-xxl:128px;
+}
+
+/* line 23, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 body {
   font-size: 1.25em;
   line-height: 1.45;
 }
 
-/* line 18, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 27, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h2 {
+  font-size: 2em;
   font-family: var(--font-granjon);
+}
+
+/* line 31, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+h3 {
+  font-size: 1.3em;
+  font-family: var(--font-helv-neue-light);
+  letter-spacing: .5px;
+}
+
+/* line 36, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+h2, h3 {
   font-weight: normal;
+}
+
+/* line 41, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+* + h2 {
+  margin-top: var(--space-l);
+}
+
+/* line 43, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+* + h3 {
+  margin-top: var(--space-m);
+}
+
+/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+* + h4 {
+  margin-top: var(--space-s);
+}
+
+/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+* + h5 {
+  margin-top: var(--space-xs);
+}
+
+/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+* + h6 {
+  margin-top: var(--space-xs);
+}
+
+/* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+* + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-bottom: var(--space-xs);
+}
+
+/* line 56, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+  margin-top: var(--space-m);
+}
+
+/* line 61, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+p {
+  margin: 0;
+}
+
+/* line 68, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+table.laurel-hhmmampm th:nth-child(1), table.laurel-hhmmampm td:nth-child(1) {
+  min-width: 5.5em;
 }
 
 /*# sourceMappingURL=laurel-ckeditor.css.map */

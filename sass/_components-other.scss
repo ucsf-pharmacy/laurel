@@ -4,12 +4,8 @@
 }
 .field{
   margin-bottom: var(--paragraph-spacing);
-}
-.node--type-in-the-news{
-  .field--name-title
-  ,.field--name-body
-  {
-    max-width: var(--measure);
+  &:last-child{
+    // margin-bottom: 0;
   }
 }
 

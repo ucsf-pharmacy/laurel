@@ -40,6 +40,8 @@ https://youtu.be/1OKZOV-iLj4
 
 @import "_objects.scss";                // things with classes that aren't full components
 
+@import "_components-layout-builder-blocks.scss";
+
 @import "_content-type-article.scss";
 @import "_content-type-event.scss";
 @import "_content-type-gallery.scss";
@@ -51,7 +53,6 @@ https://youtu.be/1OKZOV-iLj4
 @import "_components-columns.scss"; // this must come before _components-layout-builder-block-styles
 @import "_components-layout-builder.scss";
 @import "_components-layout-builder-block-styles.scss";
-@import "_components-layout-builder-blocks.scss";
 @import "_components-menu-tabs.scss";
 @import "_components-other.scss";
 
