@@ -233,7 +233,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --line-height-l: calc(1.1 * var(--ratio));
   --measure: 50ch;
   --gutter: var(--space-l);
-  --space-around-floated-images: var(--space-m);
+  --space-around-floated-images: var(--space-l);
   --space-around-embedded-entities: var(--space-m);
   --space-between-layout-columns: var(--space-xl);
   --space-between-layout-rows: var(--space-m);
@@ -242,8 +242,9 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-content-multicolumns: var(--space-l);
   --space-between-title-group-and-body: var(--space-xl);
   --space-between-blocks: var(--space-m);
+  --space-between-image-and-caption: var(--space-xs);
   --space-below-fields: var(--space-m);
-  --space-from-page-edge: var(--space-m);
+  --space-from-page-edge: var(--space-l);
   --nav-tabs-margin-adjustment: var(--space-m);
   --wrapped-image-side-margin: var(--space-m);
   --wrapped-image-bottom-margin: var(--space-s);
@@ -2039,32 +2040,49 @@ table.no-span {
 }
 
 /* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
-.block-field-blocknodepostfield-media .field {
-  margin-bottom: 0;
+.block-entity-viewnode {
+  padding-top: var(--space-xs);
 }
 
-/* line 53, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
-.block-field-blocknodepostfield-media.float-left, .block-field-blocknodepostfield-media.float-right {
-  margin-top: .5em;
+/* line 52, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+.block-entity-viewnode .field--name-field-media
+, .block-entity-viewnode .media {
+  margin-bottom: var(--space-between-image-and-caption);
 }
 
-/* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
-.block-field-blocknodepostfield-media.float-left article > *:not(.contextual):not(h2):not(h3):not(h4) + *
-, .block-field-blocknodepostfield-media.float-left *:not(h2):not(h3):not(h4) + p, .block-field-blocknodepostfield-media.float-right article > *:not(.contextual):not(h2):not(h3):not(h4) + *
-, .block-field-blocknodepostfield-media.float-right *:not(h2):not(h3):not(h4) + p {
+/* line 60, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+.block-entity-viewnode.float-left article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+, .block-entity-viewnode.float-left *:not(h2):not(h3):not(h4) + p, .block-entity-viewnode.float-right article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+, .block-entity-viewnode.float-right *:not(h2):not(h3):not(h4) + p {
   margin: 0;
 }
 
-/* line 64, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
-.block-field-blocknodepostfield-media.float-right .field--name-field-credit {
+/* line 67, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+.block-entity-viewnode.float-right .field--name-field-credit {
   font-size: .7em;
   line-height: var(--line-height-s);
   transform-origin: 100% 0;
-  transform: rotate(270deg);
-  text-align: right;
+  transform: rotate(90deg) translateX(100%) translateY(-1.5em);
   position: absolute;
   right: 0;
   margin-bottom: 0;
+}
+
+/* line 77, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+.block-entity-viewnode img {
+  width: 100%;
+}
+
+/* line 80, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+.block-entity-viewnode + .block-field-blocknodepostbody > div:first-child > :first-child {
+  margin-top: 0;
+}
+
+/* line 83, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+.block-entity-viewnode .field--name-field-caption {
+  background-color: #ededee;
+  padding: .125em .25em;
+  margin: 2px 0 0;
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
@@ -2769,58 +2787,58 @@ see also:
 }
 
 /* line 209, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.float-left
+.node--type-post .block-entity-viewnode.float-left
 , .block-field-blocknodeeventfield-featured-media.float-left {
   float: left;
   margin: 0 var(--space-around-floated-images) var(--space-around-floated-images) 0;
 }
 
 /* line 213, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.float-right
+.node--type-post .block-entity-viewnode.float-right
 , .block-field-blocknodeeventfield-featured-media.float-right {
   float: right;
   margin: 0 0 var(--space-around-floated-images) var(--space-around-floated-images);
 }
 
 /* line 217, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.float-none
+.node--type-post .block-entity-viewnode.float-none
 , .block-field-blocknodeeventfield-featured-media.float-none {
   float: none;
   margin: var(--paragraph-spacing) 0;
 }
 
 /* line 223, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.width-100
+.node--type-post .block-entity-viewnode.width-100
 , .block-field-blocknodeeventfield-featured-media.width-100 {
   width: 100%;
 }
 
 /* line 226, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.width-75
+.node--type-post .block-entity-viewnode.width-75
 , .block-field-blocknodeeventfield-featured-media.width-75 {
   width: 75%;
 }
 
 /* line 229, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.width-67
+.node--type-post .block-entity-viewnode.width-67
 , .block-field-blocknodeeventfield-featured-media.width-67 {
   width: 67%;
 }
 
 /* line 232, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.width-50
+.node--type-post .block-entity-viewnode.width-50
 , .block-field-blocknodeeventfield-featured-media.width-50 {
   width: 50%;
 }
 
 /* line 235, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.width-33
+.node--type-post .block-entity-viewnode.width-33
 , .block-field-blocknodeeventfield-featured-media.width-33 {
   width: 33%;
 }
 
 /* line 238, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-block-styles.scss */
-.block-field-blocknodepostfield-media.width-25
+.node--type-post .block-entity-viewnode.width-25
 , .block-field-blocknodeeventfield-featured-media.width-25 {
   width: 25%;
 }
@@ -2948,13 +2966,6 @@ ul.menu a.is-active:focus {
 /* line 5, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
 .field {
   margin-bottom: var(--paragraph-spacing);
-}
-
-/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
-.field--name-field-caption {
-  background-color: #ededee;
-  padding: .125em .25em;
-  margin: 2px 0 0;
 }
 
 /*

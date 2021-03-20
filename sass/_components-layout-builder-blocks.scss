@@ -46,14 +46,17 @@
 }
 // end - when editing the layout template, don't apply these attributes
 
-.block-field-blocknodepostfield-media{
-  .field{
-    margin-bottom: 0;
+// start - primary media with caption
+.block-entity-viewnode{
+  padding-top: var(--space-xs);
+  .field--name-field-media
+  ,.media
+  {
+    margin-bottom: var(--space-between-image-and-caption);
   }
   &.float-left
   ,&.float-right
   {
-    margin-top: .5em;
     article > *:not(.contextual):not(h2):not(h3):not(h4) + *
     ,*:not(h2):not(h3):not(h4) + p
     {
@@ -65,11 +68,22 @@
       font-size: .7em;
       line-height: var(--line-height-s);
       transform-origin: 100% 0;
-      transform: rotate(270deg);
-      text-align: right;
+      transform: rotate(90deg) translateX(100%) translateY(-1.5em);
       position: absolute;
       right: 0;
       margin-bottom: 0;
     }
   }
+  img{
+    width: 100%;
+  }
+  & + .block-field-blocknodepostbody > div:first-child > :first-child{
+    margin-top: 0;
+  }
+  .field--name-field-caption{
+    background-color: #ededee;
+    padding: .125em .25em;
+    margin: 2px 0 0;
+  }
 }
+// end - primary media with caption

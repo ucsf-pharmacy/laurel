@@ -106,7 +106,7 @@ corner_style:
 width:
   label: 'Width'
   include:
-    - 'field_block:node:post:field_media'
+    - 'entity_view:node'
     - 'field_block:node:event:field_featured_media'
   form:
     'Type':
@@ -122,7 +122,7 @@ width:
 float:
   label: 'Float'
   include:
-    - 'field_block:node:post:field_media'
+    - 'entity_view:node'
     - 'field_block:node:event:field_featured_media'
   form:
     'Type':

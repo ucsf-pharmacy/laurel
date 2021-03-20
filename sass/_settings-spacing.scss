@@ -70,7 +70,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --measure    : 50ch; // https://meyerweb.com/eric/thoughts/2018/06/28/what-is-the-css-ch-unit/ - formula: multiply your desired ch by about .75, we want 66 according to TypeWolf so this becomes 50
   --gutter     : var(--space-l);
 
-  --space-around-floated-images       : var(--space-m);
+  --space-around-floated-images       : var(--space-l);
   --space-around-embedded-entities    : var(--space-m);
   --space-between-layout-columns      : var(--space-xl);
   --space-between-layout-rows         : var(--space-m);
@@ -79,8 +79,9 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-content-multicolumns: var(--space-l);
   --space-between-title-group-and-body: var(--space-xl);
   --space-between-blocks              : var(--space-m);
+  --space-between-image-and-caption   : var(--space-xs);
   --space-below-fields                : var(--space-m);
-  --space-from-page-edge              : var(--space-m);
+  --space-from-page-edge              : var(--space-l);
   --nav-tabs-margin-adjustment        : var(--space-m);
 
   --wrapped-image-side-margin   : var(--space-m);
