@@ -72,9 +72,9 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      {% set url = element['#object'].field_location_url.value %}
+      {% set url = element['#object'].field_url.value.0.uri %}
       {% if url %}
-        <div{{ item.attributes.addClass('field__item') }}><a href="{{ url|url_encode }}">{{ item.content }}</a></div>
+        <div{{ item.attributes.addClass('field__item') }}><a href="{{ url }}">{{ item.content }}</a></div>
       {% else %}
         <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endif %}
