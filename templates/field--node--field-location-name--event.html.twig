@@ -52,12 +52,6 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-
-{% set replace_set = {
-    '{-}' : '{Z}',
-    '{0}' : '{X}'
-} %}
-
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
@@ -72,25 +66,21 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    {% if items|length > 1 %}
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% else %}
-    <div{{ title_attributes.addClass(title_classes) }}>{{ "Date"|t }}</div>
-    {% endif %}
+  {# Change label Location name to Location #}
+    <div{{ title_attributes.addClass(title_classes) }}>{{ "Location"|t }}</div>
     {% if multiple %}
-      <ul class="field__items">
+      <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes.addClass('field__item') }}>{{
-      item.content['#plain_text']
-        | preg_replace(
-           ['/12:00 pm/','/12:00 am/','/m-/' ,'/-(\\d)/','/(.*?)am(.*?)am/','/(.*?)pm(.*?)pm/','/am/','/pm/']
-          ,['noon'      ,'midnight'  ,'m to ',' to $1'  ,'$1$2am'          ,'$1$2pm'          ,'a.m.','p.m.']
-        )
-      }}</li>
+      {% set url = element['#object'].field_location_url.value %}
+      {% if url %}
+        <div{{ item.attributes.addClass('field__item') }}><a href="{{ url|url_encode }}">{{ item.content }}</a></div>
+      {% else %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endif %}
     {% endfor %}
     {% if multiple %}
-      </ul>
+      </div>
     {% endif %}
   </div>
 {% endif %}

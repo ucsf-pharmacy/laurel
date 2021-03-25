@@ -90,10 +90,11 @@ main{
 other declarations related to typography
 */
 
-// limit line length to a reasonable value
+// limit line length to a reasonable value, adjust slug height
 h1
 ,.field--name-field-subtitle
 { 
+  margin-top: -8px;
   max-width: var(--measure);
   hyphens: none;
 }

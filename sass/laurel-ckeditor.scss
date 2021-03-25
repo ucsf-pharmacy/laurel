@@ -1,3 +1,20 @@
+:root{
+  --space-default: 16px;
+  --space-xxs    :  2px;
+  --space-xs     :  4px;
+  --space-s      :  8px;
+  --space-m      : 16px;
+  --space-l      : 32px;
+  --space-xl     : 64px;
+  --space-xxl    :128px;
+}
+
+$color-link-blue:                 #0071ad;
+$color-black-77:                  #3b3b3b;
+$color-gray-70:                   #dfe0e0;
+$color-green-70:                  #b1d16f;
+
+
 @font-face{
   font-family: 'Granjon';
   src:url('../webfonts/granjon/GranjonLTStd.eot');
@@ -36,6 +53,9 @@ h3{
 h2,h3{
   font-weight: normal;
 }
+a{
+  color: $color-link-blue;
+}
 
 *{
   & + h2
@@ -60,6 +80,9 @@ h2,h3,h4,h5,h6{
 
 p{
   margin: 0;
+  & + p{
+    margin-top: var(--space-m);
+  }
 }
 
 table.laurel-hhmmampm
@@ -68,4 +91,89 @@ table.laurel-hhmmampm
   th:nth-child(1), td:nth-child(1) {
     min-width: 5.5em;
   }
+}
+div.laurel-columns
+,p.laurel-columns
+{
+  &:before
+  ,&:after
+  {
+    font-size: .7em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+  }
+}
+div.laurel-columns
+,p.laurel-columns
+{
+  &:before{
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-m);
+    border-bottom: 1px dotted $color-black-77;
+  }
+  &:after{
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-l);
+    border-top: 1px dotted $color-black-77;
+  }
+}
+.cke_combo *{
+  &:before
+  ,&:after
+  {
+    content: none !important;
+  }
+}
+// start - this doesn't work yet
+textarea.cke_source{
+  background: $color-black-77;
+  color: yellow;
+  font-family: Consolas,monospace,ui-monospace;
+  font-size: 1.2em;
+}
+// end - this doesn't work yet
+div.laurel-columns
+{
+  &:before{
+    content: 'start multicolumns div';
+  }
+  &:after{
+    content: 'end multicolumns div';
+  }
+}
+p.laurel-columns
+{
+  &:before{
+    content: 'start multicolumns p';
+  }
+  &:after{
+    content: 'end multicolumns p';
+  }
+}
+
+.cke_show_borders{
+  table.cke_show_border{
+    & > tbody{
+      & > tr{
+        & > th
+        ,& > td
+        {
+          vertical-align: baseline;
+          padding: 12px 8px;
+        }
+      }
+    }
+  }
+}
+
+table{
+  &.laurel-c1w-xxs     { th,td { &:nth-child(1) { width:  5ch; } } }
+  &.laurel-c1w-hhmmampm{ th,td { &:nth-child(1) { width:  9ch; } } }
+  &.laurel-c1w-xs      { th,td { &:nth-child(1) { width: 10ch; } } }
+  &.laurel-c1w-s       { th,td { &:nth-child(1) { width: 15ch; } } }
+  &.laurel-c1w-m       { th,td { &:nth-child(1) { width: 20ch; } } }
+  &.laurel-c1w-l       { th,td { &:nth-child(1) { width: 25ch; } } }
+  &.laurel-c1w-xl      { th,td { &:nth-child(1) { width: 30ch; } } }
+  &.laurel-c1w-xxl     { th,td { &:nth-child(1) { width: 35ch; } } }
 }

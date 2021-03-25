@@ -1,3 +1,12 @@
+.field__label{
+  // margin-bottom: var(--space-below-fields);
+}
+.block + .block > .field{
+  // margin-top: var(--space-between-separate-entities);
+}
+.block + .block{
+  // border: 1px solid red;
+}
 .field--name-field-event-audience{
   .field__item{
     display: inline;
@@ -56,6 +65,18 @@
 }
 .page-node-type-event{
   .field{
-    margin-bottom: var(--space-below-fields);
+    // margin-bottom: var(--space-below-fields);
   }
 }
+.page-node-type-event .field.field--name-field-event-series{
+  margin-bottom: var(--space-between-separate-entities);
+}
+
+// start - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
+.field--name-field-event-series{
+  margin-top: -6px;
+}
+.field--name-title{
+  margin-top: -8px;
+}
+// end - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
