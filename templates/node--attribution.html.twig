@@ -80,18 +80,17 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+{% set credit_url = content['field_url'][0]['#title'] %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
-{# hide title for image credits #}
-{#
+<span{{ attributes.addClass(classes) }}> {# change article to span #}
   {{ title_prefix }}
   {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+    {# <h2{{ title_attributes }}> #} {# remove h2 #}
+      <a href="{{ credit_url }}" rel="bookmark">{{ label }}</a>
+    {# </h2> #} {# remove h2 #}
   {% endif %}
   {{ title_suffix }}
-#}
+  {#
   {% if display_submitted %}
     <footer class="node__meta">
       {{ author_picture }}
@@ -101,9 +100,14 @@
       </div>
     </footer>
   {% endif %}
+  #}
 
+  {# start: remove empty content #}
+  {#
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
   </div>
+  #}
+  {# end: remove empty content #}
 
-</article>
+</span> {# change article to span #}

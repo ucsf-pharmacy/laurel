@@ -2,6 +2,12 @@
   font-size: inherit;
   padding: .5em 1em .75em;
 }
+.contextual{
+  position: absolute; // frankfarm: i'm not sure why we need this, but it resolves a problem in which hovering over something with a contextual menu causes it to translateY 1em, see also docroot/core/themes/stable/css/contextual/contextual.theme.css lines 10 to 14 (???)
+  .trigger{
+    transform: unset; // frankfarm: same as above but for a different reason: why have the flat edge on the opposite side of the menu?
+  }
+}
 .field{
   // margin-bottom: var(--paragraph-spacing);
   &:last-child{

@@ -36,7 +36,7 @@
   .columns{
     column-width: initial;
   }
-  .block-field-blocknodeeventfield-featured-media
+  .block-field-blocknodeeventfield-media
   ,.block-field-blocknodepostfield-media
   {
     float: none;
@@ -46,44 +46,3 @@
 }
 // end - when editing the layout template, don't apply these attributes
 
-// start - primary media with caption
-.block-entity-viewnode{
-  padding-top: var(--space-xs);
-  .field--name-field-media
-  ,.media
-  {
-    margin-bottom: var(--space-between-image-and-caption);
-  }
-  &.float-left
-  ,&.float-right
-  {
-    article > *:not(.contextual):not(h2):not(h3):not(h4) + *
-    ,*:not(h2):not(h3):not(h4) + p
-    {
-      margin: 0;
-    }
-  }
-  &.float-right{
-    .field--name-field-credit{
-      font-size: .7em;
-      line-height: var(--line-height-s);
-      transform-origin: 100% 0;
-      transform: rotate(90deg) translateX(100%) translateY(-1.5em);
-      position: absolute;
-      right: 0;
-      margin-bottom: 0;
-    }
-  }
-  img{
-    width: 100%;
-  }
-  & + .block-field-blocknodepostbody > div:first-child > :first-child{
-    margin-top: 0;
-  }
-  .field--name-field-caption{
-    background-color: #ededee;
-    padding: .125em .25em;
-    margin: 2px 0 0;
-  }
-}
-// end - primary media with caption

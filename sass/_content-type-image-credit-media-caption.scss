@@ -1,0 +1,84 @@
+// start - primary media with caption
+.block-entity-viewnode{
+  padding-top: var(--space-xs);
+  .field--name-field-media
+  ,.media
+  {
+    margin-bottom: var(--space-between-image-and-caption);
+  }
+  &.float-left
+  ,&.float-none
+  {
+    .field--name-field-credit{
+      transform: rotate(90deg) ;
+      transform-origin: 0 0;
+    }
+  }
+  &.float-right{
+    .field--name-field-credit{
+      transform: rotate(90deg) translateX(100%) translateY(-1.5em);
+      transform-origin: 100% 0;
+      right: 0;
+    }
+  }
+  &.float-left
+  ,&.float-none
+  ,&.float-right
+  {
+    article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+    ,*:not(h2):not(h3):not(h4) + p
+    {
+      margin: 0;
+    }
+    .field--name-field-credit{
+      position: absolute;
+      display: inline;
+      font-size: .7em;
+      line-height: var(--line-height-s);
+      margin-bottom: 0;
+      .field__item{
+        position: relative;
+        display: inline-block; // frankfarm: if this is just display: inline then extra space appears after the image credit but within the link
+          // display: inline;
+        &:after{
+          content: ', ';
+        }
+        &:last-child:after{
+          content: '';
+        }
+      }
+      .contextual{
+        // transform-origin: bottom right;
+        // transform-origin: 0 0;
+        // transform: rotate(-90deg) translateX(20px);
+        // right: unset;
+        // left: .5em;
+        transform: rotate(-90deg);
+        .trigger{
+          // transform-origin: center;
+          // transform: rotate(-90deg);
+        }
+        .contextual-links{
+          // transform: none;
+        }
+      }
+      .field__item
+      ,.contextual
+      {
+        // display: inline;
+      }
+    }
+  }
+  img{
+    width: 100%;
+  }
+  & + .block-field-blocknodepostbody > div:first-child > :first-child{
+    margin-top: 0;
+  }
+  .field--name-field-caption{
+    background-color: #ededee;
+    padding: .125em .25em;
+    margin: 2px 0 0;
+  }
+}
+// end - primary media with caption

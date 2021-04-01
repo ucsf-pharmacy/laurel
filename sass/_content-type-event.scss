@@ -103,7 +103,7 @@
   }
 }
 @media screen and (max-width: 500px){
-  .block-field-blocknodeeventfield-featured-media .img-wrap{
+  .block-field-blocknodeeventfield-media .img-wrap{
     height: 200px;
     img{
       max-width: 100%;
@@ -116,7 +116,7 @@
   .layout--twocol-section{
     display: block;
   }
-  .block-field-blocknodeeventfield-featured-media{
+  .block-field-blocknodeeventfield-media{
     width: 40%;
     float: right;
     margin: 5px 0 var(--space-around-floated-images) var(--space-around-floated-images);
