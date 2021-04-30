@@ -10,3 +10,15 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
 
 ----------------------------------------------------------------------
 */
+a{
+  &:link{
+  }
+  &:visited{
+  }
+  &:hover{
+  }
+  &:focus{
+  }
+  &:active{
+  }
+}

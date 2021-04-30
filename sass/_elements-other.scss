@@ -36,7 +36,11 @@ main{
   padding: var(--space-l) var(--space-from-page-edge);
 }
 
-// nav
-nav.tabs{
-  margin: 0 calc( -1 * var(--nav-tabs-margin-adjustment ) ) var(--heading-spacing);
+.field--type-datetime
+,.field--name-field-article-source
+{
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-size: .85em;
+  // margin: 1em 0;
 }
