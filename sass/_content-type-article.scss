@@ -2,10 +2,12 @@
   margin-top: 0;
 }
 .field--name-field-articles{
+  &>.field__item{
+    border: 1px solid $color-black-77;
+    padding: var(--space-around-embedded-entities);
+  }
   .node--type-article{
     &.node--view-mode-for-post-external{
-      border: 1px solid $color-black-77;
-      padding: var(--space-around-embedded-entities);
       .block-field-blocknodearticlefield-article-date
       ,.block-field-blocknodearticlefield-article-source
       {

@@ -60,6 +60,11 @@
   .layout--twocol-section{
     column-gap: var(--space-between-layout-columns);
   }
+  .node--type-article{
+    .layout--twocol-section{
+      column-gap: var(--space-between-related-entities);
+    }
+  }
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
     flex: 1 1 calc( 50% - var(--space-between-layout-columns) );
