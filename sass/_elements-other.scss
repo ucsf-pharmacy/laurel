@@ -42,5 +42,7 @@ main{
   text-transform: uppercase;
   letter-spacing: .02em;
   font-size: .85em;
-  // margin: 1em 0;
+}
+.field--type-datetime{
+  min-width: 17ch;
 }

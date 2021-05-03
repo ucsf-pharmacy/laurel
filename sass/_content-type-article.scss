@@ -1,21 +1,25 @@
-.field--name-field-articles.field--type-entity-reference > div:first-child{
-  margin-top: 0;
-}
-.field--name-field-articles{
-  &>.field__item{
+.field--name-field-article
+,.field--name-field-articles
+{
+  &.field__item
+  ,& > .field__item
+  {
     border: 1px solid $color-black-77;
     padding: var(--space-around-embedded-entities);
   }
   .node--type-article{
-    &.node--view-mode-for-post-external{
-      .block-field-blocknodearticlefield-article-date
-      ,.block-field-blocknodearticlefield-article-source
-      {
-        display: inline;
-        & > div{
-          display: inline;
-        }
+    h2{
+      a{
+        @include block-link;
       }
+    }
+    .field--name-field-url{
+      a{
+        display: inline-block;
+        word-break: break-all;
+      }
+    }
+    &.node--view-mode-teaser{
       .block-field-blocknodearticlefield-article-body{
         margin-top: var(--paragraph-spacing);
       }
@@ -27,30 +31,14 @@
           justify-content: space-between;
         }
       }
-      .layout__region--second{
-        margin-bottom: 0;
-      }
     }
   }
 }
 .node--type-article{
-  .field--name-field-url{
-    a{
-      display: inline-block;
-      word-break: break-all;
-    }
-  }
-  h1
-  ,&.node--view-mode-full
-    .layout__region--second
-      .field:not(.field--name-field-article-image)
-        .field__item
-  {
-    max-width: var(--measure);
-  }
   &.node--view-mode-teaser{
     .layout--twocol-section{
       gap: var(--space-between-related-entities);
+  // border: 5px solid red;
     }
   }
 }
@@ -64,7 +52,7 @@ body.page-type-node-article{
     }
   }
 }
-.field--name-field-articles.field--type-entity-reference > div{
+.field--name-field-articles.field--type-entity-reference > div:not(:first-child){
   margin-top: var(--space-between-separate-entities);
   h2{
     margin-top: 0;
@@ -89,7 +77,7 @@ body.page-type-node-article{
   display: block;
 }
 .node--type-article{
-  &.node--view-mode-for-post-external{
+  &.node--view-mode-teaser{
     h2{
       margin-top: 0;
       margin-bottom: var(--space-m);
