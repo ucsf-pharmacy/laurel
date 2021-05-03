@@ -2279,6 +2279,11 @@ body.page-type-node-article .node--type-article.node--view-mode-teaser .layout--
 }
 
 /* line 69, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+.field--name-field-articles.field--type-entity-reference > div h2 {
+  margin-top: 0;
+}
+
+/* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
 .field--name-field-articles.field--type-entity-reference > div h2 a {
   display: block;
   text-decoration: none;
@@ -2317,19 +2322,19 @@ body.page-type-node-article .node--type-article.node--view-mode-teaser .layout--
 }
 
 @media screen and (min-width: 40em) {
-  /* line 77, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+  /* line 80, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
   body:not(.toolbar-tray-open.toolbar-vertical) .node--type-article.node--view-mode-full .layout__region--second .field:not(.field--name-field-article-image) {
     display: grid;
     grid-template-columns: 17ch minmax(34ch, auto);
   }
 }
 
-/* line 85, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+/* line 88, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
 .block-field-blocknodearticletitle h2 a {
   display: block;
 }
 
-/* line 90, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
+/* line 93, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
 .node--type-article.node--view-mode-for-post-external h2 {
   margin-top: 0;
   margin-bottom: var(--space-m);

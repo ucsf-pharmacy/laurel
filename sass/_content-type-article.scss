@@ -66,8 +66,11 @@ body.page-type-node-article{
 }
 .field--name-field-articles.field--type-entity-reference > div{
   margin-top: var(--space-between-separate-entities);
-  h2 a{
-    @include block-link();
+  h2{
+    margin-top: 0;
+    a{
+      @include block-link();
+    }
   }
 }
 @media screen and (min-width: 40em){
