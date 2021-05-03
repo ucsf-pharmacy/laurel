@@ -36,13 +36,6 @@ main{
   padding: var(--space-l) var(--space-from-page-edge);
 }
 
-.field--type-datetime
-,.field--name-field-article-source
-{
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  font-size: .85em;
-}
 .field--type-datetime{
   min-width: 17ch;
 }

@@ -25,7 +25,7 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
   }
   &:hover{
     color: $color-dark-navy;
-    text-decoration-color: $color-orange-iactive;
+    text-decoration-color: $color-orange;
   }
   &:focus{
     color: $color-white;
@@ -34,7 +34,7 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
   }
   &:active{
     color: $color-white;
-    background-color: $color-orange-iactive;
+    background-color: $color-orange;
   }
   &::selection{
     background-color: $color-orange-40;
@@ -54,7 +54,7 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
   }
   &:hover{
     color: $color-dark-navy;
-    border-bottom: 1px solid $color-orange-iactive;
+    border-bottom: 1px solid $color-orange;
   }
   &:focus{
     color: $color-white;
@@ -64,7 +64,7 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
   }
   &:active{
     color: $color-white;
-    background-color: $color-orange-iactive;
+    background-color: $color-orange;
     border-bottom: 1px solid transparent;
   }
 }

@@ -27,9 +27,9 @@
     'field--label-' ~ label_display,
   ]
 %}
-{# change from span to h2 #}
-<h2{{ attributes.addClass(classes) }}>
+{# change from span to h1 #}
+<h1{{ attributes.addClass(classes) }}>
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
-</h2>
+</h1>

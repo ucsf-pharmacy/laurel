@@ -37,26 +37,25 @@ $color-dark-navy-70:              #506380;
 $color-dark-navy-40:              #9ba6b6;
 $color-dark-navy-10:              #e6e9ed;
 
-$color-teal-iactive:              #058488;
-$color-teal:                      #18a3ac;
+$color-teal:                      #058488;
+$color-teal-alternate:            #18a3ac;
 $color-teal-70:                   #5dbfc5;
 $color-teal-40:                   #a3dade;
 $color-teal-10:                   #e8f6f7;
 
-// $color-green-iactive:             #6ea400;
 $color-green:                     #6ea400;
 $color-green-70:                  #b1d16f;
 $color-green-40:                  #d3e4ad;
 $color-green-10:                  #f4f8ea;
 
-$color-blue-iactive:              #007cbe;
-$color-blue:                      #178ccb;
+$color-blue:                      #007cbe;
+$color-blue-alternate:            #178ccb;
 $color-blue-70:                   #5dafdb;
 $color-blue-40:                   #a2d1ea;
 $color-blue-10:                   #e8f4fa;
 
-$color-orange-iactive:            #f26d04;
-$color-orange:                    #f48024;
+$color-orange:                    #f26d04;
+$color-orange-alternate:          #f48024;
 $color-orange-70:                 #f7a665;
 $color-orange-40:                 #fbcca7;
 $color-orange-10:                 #fef2e9;
@@ -66,8 +65,8 @@ $color-purple-70:                 #9c9ac9;
 $color-purple-40:                 #c6c5e0;
 $color-purple-10:                 #f1f1f7;
 
-$color-red-iactive:               #eb093c;
-$color-red:                       #ec1848;
+$color-red:                       #eb093c;
+$color-red-alternate:             #ec1848;
 $color-red-70:                    #f25d7f;
 $color-red-40:                    #f7a3b6;
 $color-red-10:                    #fde8ed;
@@ -77,5 +76,6 @@ $color-yellow-70:                 #ffe74d;
 $color-yellow-40:                 #fff199;
 $color-yellow-10:                 #fffce6;
 
-$color-focus:                     $color-orange-iactive;
 $color-light-border:              #dddddd;
+$color-focus:                     $color-orange;
+$color-border-default:            $color-black-77;
