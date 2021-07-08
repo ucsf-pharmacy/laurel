@@ -4,6 +4,10 @@
 .messages{
   background-position-y: center;
 }
+.content-type-explanation{
+  max-width: var(--measure);
+  margin-bottom: 1em;
+}
 .simple-styleguide{
   & > div {
     margin-top: 3em;

@@ -1,3 +1,14 @@
+.field {
+  display: table-row;
+}
+.field__label
+,.field__item {
+  display: table-cell;
+  padding-bottom: 1em;
+}
+.field__item {
+  padding-left: 2em;
+}
 .field__label{
   // margin-bottom: var(--space-below-fields);
 }
