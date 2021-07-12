@@ -3,8 +3,8 @@
  * Implements hook_preprocess_block().
  */
 // start - when using kint(), uncomment these lines to keep it from providing too much data
-kint_require();
-Kint::$maxLevels = 8;
+// kint_require();
+// Kint::$maxLevels = 8;
 // end - when using kint(), uncomment these lines to keep it from providing too much data
 
 function laurel_preprocess_block(array &$variables) {
