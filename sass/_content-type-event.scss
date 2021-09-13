@@ -62,7 +62,7 @@
   ,.field--name-field-event-audience
   ,.field--name-field-location-name
   {
-    margin-bottom: var(--space-below-fields);
+    // margin-bottom: var(--space-below-fields);
     display: flex;
     flex-wrap: wrap;
     & > *{
@@ -97,7 +97,7 @@
     column-gap: 1em;
     li{
       @media screen and (min-width: 401px){
-        width: 35ch;
+        // width: 35ch;
       }
     }
   }

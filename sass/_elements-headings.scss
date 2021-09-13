@@ -1,10 +1,13 @@
-h2 { margin-top: var(--space-xl); }
+h2 { margin-top: var(--space-l); }
 h3 { margin-top: var(--space-l); }
 h4 { margin-top: var(--space-s); }
 h5,h6 { margin-top: var(--space-xs); }
 
-h1,h2{
-  margin-bottom: var(--space-m);
+h1{
+  margin-bottom: var(--space-xl);
+}
+h2{
+  margin-bottom: var(--space-s);
 }
 h3,h4,h5,h6{
   margin-bottom: var(--space-xs);
@@ -27,10 +30,20 @@ h2{
 
 h3{
   letter-spacing: .5px;
+  margin-bottom: var(--space-m);
 }
 
 h2,h3,h4,h5,h6{
   &+h3,&+h4,&+h5,&+h6{
     margin-top: var(--space-m);
+  }
+}
+
+h2+.laurel-side-by-side>div{
+  &>h3:first-child{
+    margin-top: 0;
+  }
+  &:last-child>*:last-child{
+    margin-bottom: 0;
   }
 }

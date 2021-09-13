@@ -4,10 +4,7 @@
 .field__label
 ,.field__item {
   display: table-cell;
-  padding-bottom: 1em;
-}
-.field__item {
-  padding-left: 2em;
+  // padding-bottom: 1em;
 }
 .field__label{
   // margin-bottom: var(--space-below-fields);
@@ -76,8 +73,16 @@
   }
 }
 .page-node-type-event{
-  .field{
-    // margin-bottom: var(--space-below-fields);
+  [class*=' block-field-blocknodeeventfield']:not(.block-field-blocknodeeventfield-subtitle)
+  ,[class^='block-field-blocknodeeventfield']:not(.block-field-blocknodeeventfield-subtitle)
+  {
+    margin-bottom: var(--space-below-fields);
+    .field__item {
+      padding-left: 2em;
+    }
+  }
+  .block-field-blocknodeeventfield-subtitle{
+    margin-bottom: var(--space-between-title-group-and-body);
   }
 }
 .page-node-type-event .field.field--name-field-event-series{
@@ -92,3 +97,7 @@
   // margin-top: -8px;
 }
 // end - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
+
+.field--type-datetime{
+  min-width: 17ch;
+}

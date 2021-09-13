@@ -971,7 +971,8 @@ tbody{
 }
 @media screen and (min-width: 401px){
   table{
-    &.laurel-c1w-hhmmampm{ th,td { &:nth-child(1) { width:  9ch; } } }
+    &.laurel-c1w-hhmmampm{ th,td { &:nth-child(1) { width: 10ch; } } }
+    //----------------------------------------------------------------
     &.laurel-c1w-xxs     { th,td { &:nth-child(1) { width:  5ch; } } }
     &.laurel-c1w-xs      { th,td { &:nth-child(1) { width: 10ch; } } }
     &.laurel-c1w-s       { th,td { &:nth-child(1) { width: 15ch; } } }
@@ -992,6 +993,15 @@ tbody{
       }
       &:last-child{
         padding-right: 0;
+      }
+      h2:first-child
+      ,h3:first-child
+      ,h4:first-child
+      {
+        margin-top: 0;
+      }
+      h3:last-child{
+        margin-bottom: 0;
       }
     }
     td{
