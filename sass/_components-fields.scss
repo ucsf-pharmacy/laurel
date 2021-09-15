@@ -1,8 +1,8 @@
 .field {
-  display: table-row;
+  // display: table-row;
 }
 .field__label
-,.field__item {
+,.field__item:not(.field--name-field-media,.field--name-field-caption,.field--name-field-event-series) {
   display: table-cell;
   // padding-bottom: 1em;
 }
@@ -58,12 +58,6 @@
     text-align: right;
 */
 
-.field--name-field-event-moreinfo{
-  h2{
-    font-weight: normal;
-    margin-top: var(--space-xl);
-  }
-}
 .field--name-field-post-type{
   .field__item{
     display: inline;
@@ -72,23 +66,6 @@
     }
   }
 }
-.page-node-type-event{
-  [class*=' block-field-blocknodeeventfield']:not(.block-field-blocknodeeventfield-subtitle)
-  ,[class^='block-field-blocknodeeventfield']:not(.block-field-blocknodeeventfield-subtitle)
-  {
-    margin-bottom: var(--space-below-fields);
-    .field__item {
-      padding-left: 2em;
-    }
-  }
-  .block-field-blocknodeeventfield-subtitle{
-    margin-bottom: var(--space-between-title-group-and-body);
-  }
-}
-.page-node-type-event .field.field--name-field-event-series{
-  margin-bottom: var(--space-between-separate-entities);
-}
-
 // start - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
 .field--name-field-event-series{
   margin-top: -6px;

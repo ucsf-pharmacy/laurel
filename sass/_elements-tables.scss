@@ -969,9 +969,11 @@ tbody{
     padding-bottom: var(--space-l);
   }
 }
+//--------------------------------------------------------------------
 @media screen and (min-width: 401px){
   table{
     &.laurel-c1w-hhmmampm{ th,td { &:nth-child(1) { width: 10ch; } } }
+    &.laurel-c1w-mmmyyyy { th,td { &:nth-child(1) { width: 13ch; } } }
     //----------------------------------------------------------------
     &.laurel-c1w-xxs     { th,td { &:nth-child(1) { width:  5ch; } } }
     &.laurel-c1w-xs      { th,td { &:nth-child(1) { width: 10ch; } } }
@@ -1019,6 +1021,7 @@ tbody{
     }
   }
 }
+//--------------------------------------------------------------------
 @media screen and (max-width: 400px){
   table.laurel-collapse{
     tbody{
@@ -1041,4 +1044,5 @@ tbody{
     }
   }
 }
+//--------------------------------------------------------------------
 

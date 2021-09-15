@@ -56,29 +56,50 @@
       }
     }
   }
-  .field--name-field-date-tbd
-  ,.field--name-field-event-datetime
-  ,.field--name-field-organization
-  ,.field--name-field-event-audience
-  ,.field--name-field-location-name
+  [class^='block-field-blocknodeeventfield-']
+  ,[class*=' block-field-blocknodeeventfield-']
   {
-    // margin-bottom: var(--space-below-fields);
-    display: flex;
-    flex-wrap: wrap;
-    & > *{
-      flex-basis: calc( ( 33ch - 100% ) * 999 );
+    &:not(.block-field-blocknodeeventfield-subtitle){
+      margin-bottom: var(--space-below-fields);
+      .field__item {
+        // padding-left: 2em;
+      }
     }
-    & > :nth-child(1){
-      min-width: 11ch;
+    .field:not(.field--name-field-event-series){
+      // margin-bottom: var(--space-below-fields);
+      display: flex;
+      flex-wrap: wrap;
+      & > *{
+        flex-basis: calc( ( 33ch - 100% ) * 999 );
+      }
+      & > :nth-child(1){
+        min-width: 11ch;
+      }
+      & > :nth-child(2){
+        flex-grow: 1;
+      }
     }
-    & > :nth-child(2){
-      flex-grow: 1;
+    .field--name-field-event-series{
+      margin-bottom: var(--space-below-fields);
+    }
+  }
+  .block-field-blocknodeeventfield-subtitle{
+    margin-bottom: var(--space-between-title-group-and-body);
+  }
+  .field.field--name-field-event-series{
+    margin-bottom: var(--space-between-separate-entities);
+  }
+  .field--name-field-event-moreinfo{
+    h2{
+      font-weight: normal;
+      margin-top: var(--space-xl);
     }
   }
 /*  .block-field-blocknodeeventfield-location-name {
     margin-bottom: var(--space-between-blocks);
   }
-*/  .layout__region--first{
+*/
+  .layout__region--first{
     margin-bottom: var(--space-between-blocks);
   }
   .field--name-field-organization{
