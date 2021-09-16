@@ -2534,44 +2534,38 @@ body.page-type-node-article{
   flex-grow: 1;
 }
 
-/* line 82, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event [class^='block-field-blocknodeeventfield-']
-.field--name-field-event-series, .page-node-type-event [class*=' block-field-blocknodeeventfield-'] .field--name-field-event-series {
-  margin-bottom: var(--space-below-fields);
-}
-
-/* line 86, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 83, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .block-field-blocknodeeventfield-subtitle {
   margin-bottom: var(--space-between-title-group-and-body);
 }
 
-/* line 89, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 86, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field.field--name-field-event-series {
   margin-bottom: var(--space-between-separate-entities);
 }
 
-/* line 93, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 90, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field--name-field-event-moreinfo h2 {
   font-weight: normal;
   margin-top: var(--space-xl);
 }
 
-/* line 102, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 99, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .layout__region--first {
   margin-bottom: var(--space-between-blocks);
 }
 
-/* line 106, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 103, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field--name-field-organization a {
   display: inline-block;
 }
 
-/* line 111, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 108, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .block-field-blocknodeeventbody {
   margin-top: var(--space-between-title-group-and-body);
 }
 
-/* line 115, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 112, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .field--name-field-event-datetime ul {
   display: flex;
   flex-wrap: wrap;
@@ -2579,11 +2573,11 @@ body.page-type-node-article{
 }
 
 @media screen and (max-width: 500px) {
-  /* line 127, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 124, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .block-field-blocknodeeventfield-media .img-wrap {
     height: 200px;
   }
-  /* line 129, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 126, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .block-field-blocknodeeventfield-media .img-wrap img {
     max-width: 100%;
     max-height: 100%;
@@ -2592,11 +2586,11 @@ body.page-type-node-article{
 }
 
 @media screen and (min-width: 501px) and (max-width: 1063px) {
-  /* line 137, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 134, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .layout--twocol-section {
     display: block;
   }
-  /* line 140, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 137, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .block-field-blocknodeeventfield-media {
     width: 40%;
     float: right;
