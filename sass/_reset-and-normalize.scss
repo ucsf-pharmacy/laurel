@@ -43,6 +43,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -69,6 +70,11 @@ article > *:not(.contextual):not(h2):not(h3):not(h4) + *
 ,*:not(h2):not(h3):not(h4) + p
 {
   margin-top: var(--paragraph-spacing);
+}
+
+/* Special for multicol followed by multicol */
+.laurel-columns+.laurel-columns{
+  margin-top: var(--space-between-content-multicolumns);
 }
 
 /* Inherit fonts for inputs and buttons */

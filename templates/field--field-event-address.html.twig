@@ -52,8 +52,6 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-
-<figcaption>
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
@@ -68,16 +66,21 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  {# Change label Map address to Address #}
+    <div{{ title_attributes.addClass(title_classes) }}>{{ "Address"|t }}</div>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% set url = element['#object'].field_url.value.0.uri %}
+      {% if url %}
+        <div{{ item.attributes.addClass('field__item') }}><a href="{{ url }}">{{ item.content }}</a></div>
+      {% else %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endif %}
     {% endfor %}
     {% if multiple %}
       </div>
     {% endif %}
   </div>
 {% endif %}
-</figcaption>

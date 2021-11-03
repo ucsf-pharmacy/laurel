@@ -6,26 +6,25 @@ Reminders:
 Lord Vader’s Handle Formerly Anakin
 http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
 
-
+Not all link styles are defined in this file.
 
 ----------------------------------------------------------------------
 */
 .region-content a{
   color: inherit;
   line-height: inherit;
-  text-decoration-skip-ink: auto;
+  text-decoration: none;
   background-color: none;
-  text-underline-offset: 1px;
-  text-decoration-thickness: 1px;
+  padding-bottom: var(--space-between-text-and-link-underline);
   &:link{
-    text-decoration-color: $color-link-blue;
+    border-bottom: 1px solid $color-link-blue;
   }
   &:visited{
-    text-decoration-color: $color-purple;
+    border-bottom: 1px solid $color-purple;
   }
   &:hover{
     color: $color-dark-navy;
-    text-decoration-color: $color-orange;
+    border-bottom: 1px solid $color-orange;
   }
   &:focus{
     color: $color-white;
