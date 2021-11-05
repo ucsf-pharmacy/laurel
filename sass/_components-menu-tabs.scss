@@ -50,11 +50,25 @@ ul.menu a.is-active:focus{
     }
     &.is-active{
       border-top: 5px solid $color-black-77;
-      border-bottom: 1px solid $color-white;
+      @media all and (min-width: 501px){
+        border-bottom: 1px solid $color-white;
+      }
       padding-top: 5px;
       &:hover{
         cursor: default;
       }
+    }
+  }
+}
+@media all and (max-width: 500px){
+  .region-content nav.tabs{
+    li:first-child{
+      margin-left: 0;
+    }
+    a{
+      border-width: 1px;
+      display: inline-block;
+      margin: .9em 1em;
     }
   }
 }

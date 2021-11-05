@@ -3298,13 +3298,32 @@ ul.menu a.is-active:focus {
 /* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs a.is-active {
   border-top: 5px solid #3b3b3b;
-  border-bottom: 1px solid #ffffff;
   padding-top: 5px;
 }
 
-/* line 55, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+@media all and (min-width: 501px) {
+  /* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  .region-content nav.tabs a.is-active {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+/* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .region-content nav.tabs a.is-active:hover {
   cursor: default;
+}
+
+@media all and (max-width: 500px) {
+  /* line 65, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  .region-content nav.tabs li:first-child {
+    margin-left: 0;
+  }
+  /* line 68, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  .region-content nav.tabs a {
+    border-width: 1px;
+    display: inline-block;
+    margin: .9em 1em;
+  }
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-other.scss */
