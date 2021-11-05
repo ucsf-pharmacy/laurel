@@ -63,23 +63,23 @@
   ,[class*=' block-field-blocknodeeventfield-']
   {
     &:not(.block-field-blocknodeeventfield-subtitle){
-      margin-bottom: var(--space-below-fields);
+      // margin-bottom: var(--space-below-fields);
       .field__item {
         // padding-left: 2em;
       }
     }
     .field:not(.field--name-field-event-series):not(.field--name-field-event-moreinfo){
       // margin-bottom: var(--space-below-fields);
-      display: flex;
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-wrap: wrap;
       & > *{
-        flex-basis: calc( ( 33ch - 100% ) * 999 );
+        // flex-basis: calc( ( 33ch - 100% ) * 999 );
       }
       & > :nth-child(1){
-        min-width: 11ch;
+        // min-width: 11ch;
       }
       & > :nth-child(2){
-        flex-grow: 1;
+        // flex-grow: 1;
       }
     }
   }

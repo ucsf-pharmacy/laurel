@@ -1,8 +1,22 @@
-// start - override field.css
 .field--label-inline{
-  .field__label{
+  display: table-row;
+  .field__label
+  ,.field__item
+  {
+    display: table-cell;
+    padding-bottom: var(--space-m);
+  }
+  .field__label
+  ,.field__items
+  {
     float: none;
+  }
+  .field__label{
     padding-right: var(--space-l);
+    min-width: 12ch;
+    &:after{
+      content: '';
+    }
   }
   & > .field__item
   , & > .field_items
@@ -10,39 +24,50 @@
     padding-right: 0;
   }
 }
-// end - override field.css
-
-.field{
-  &.field--type-uri a{
-    word-break: break-word;
-    display: block;
+.field--name-field-event-moreinfo{
+  .field__label{
+    font-weight: normal;
   }
 }
-.field__label{
+.field--name-field-location-name .field__item a
+,.field--type-uri a
+{
+  word-break: break-word;
+  display: block;
 }
-
 @media all and (max-width: 500px){
   .field{
     .field__item{
-      padding-bottom: var(--space-l);
+      // padding-bottom: var(--space-l);
     }
   }
 }
 @media all and (min-width: 501px){
-  .field {
-    display: table-row;
-  }
-  //.field__item:not(.field--name-field-media,.field--name-field-caption,.field--name-field-event-series)
-  .field__label
-  ,.field__item
+/*
+  .field:not(
+    .field--name-field-event-moreinfo
+    )
   {
-    display: table-cell;
-    padding-bottom: var(--space-m);
+    display: table-row;
+    .field__label
+    // ,.field__item
+    ,& > .field__item:not(
+      .field--name-field-media
+      ,.field--name-field-caption
+      ,.field--name-field-event-series
+  ,.field--name-field-location-name .field__item
+  ,.field--type-uri a
+      )
+    {
+      display: table-cell;
+      padding-bottom: var(--space-m);
+    }
   }
   .field__label{
   }
   .field__item{
   }
+*/
 }
 .field--name-field-event-audience{
   .field__item{
