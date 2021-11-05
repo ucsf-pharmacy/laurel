@@ -14,7 +14,7 @@ Not all link styles are defined in this file.
   color: inherit;
   line-height: inherit;
   text-decoration: none;
-  background-color: none;
+  background-color: transparent;
   padding-bottom: var(--space-between-text-and-link-underline);
   &:link{
     border-bottom: 1px solid $color-link-blue;

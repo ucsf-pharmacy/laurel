@@ -1,19 +1,48 @@
-.field {
-  // display: table-row;
+// start - override field.css
+.field--label-inline{
+  .field__label{
+    float: none;
+    padding-right: var(--space-l);
+  }
+  & > .field__item
+  , & > .field_items
+  {
+    padding-right: 0;
+  }
 }
-.field__label
-,.field__item:not(.field--name-field-media,.field--name-field-caption,.field--name-field-event-series) {
-  // display: table-cell;
-  // padding-bottom: 1em;
+// end - override field.css
+
+.field{
+  &.field--type-uri a{
+    word-break: break-word;
+    display: block;
+  }
 }
 .field__label{
-  // margin-bottom: var(--space-below-fields);
 }
-.block + .block > .field{
-  // margin-top: var(--space-between-separate-entities);
+
+@media all and (max-width: 500px){
+  .field{
+    .field__item{
+      padding-bottom: var(--space-l);
+    }
+  }
 }
-.block + .block{
-  // border: 1px solid red;
+@media all and (min-width: 501px){
+  .field {
+    display: table-row;
+  }
+  //.field__item:not(.field--name-field-media,.field--name-field-caption,.field--name-field-event-series)
+  .field__label
+  ,.field__item
+  {
+    display: table-cell;
+    padding-bottom: var(--space-m);
+  }
+  .field__label{
+  }
+  .field__item{
+  }
 }
 .field--name-field-event-audience{
   .field__item{
