@@ -1,10 +1,13 @@
+[class*=" block-field-"]+[class*=" block-field-"]{
+  margin-top: 1em;
+}
 .field--label-inline{
   display: table-row;
   .field__label
   ,.field__item
   {
     display: table-cell;
-    padding-bottom: var(--space-m);
+    // padding-bottom: var(--space-m);
   }
   .field__label
   ,.field__items
@@ -22,6 +25,26 @@
   , & > .field_items
   {
     padding-right: 0;
+  }
+  &.field--type-smartdate{
+    display: block;
+    .field__label{
+      float: left;
+    }
+    .field__items{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(33ch, 1fr));
+      grid-gap: 0 3em;
+    }
+  }
+  &.field--name-field-event-audience{
+    display: block;
+    .field__label{
+      float: left;
+    }
+    .field__item{
+      display: inline;
+    }
   }
 }
 .field--name-field-event-moreinfo{
@@ -69,6 +92,7 @@
   }
 */
 }
+/*
 .field--name-field-event-audience{
   .field__item{
     display: inline;
@@ -80,6 +104,7 @@
     }
   }
 }
+*/
 /*
 .field--name-field-credit{
   *{
@@ -124,11 +149,4 @@
 .field--name-field-event-series{
   margin-top: -6px;
 }
-.field--name-title{
-  // margin-top: -8px;
-}
 // end - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
-
-.field--type-datetime{
-  min-width: 17ch;
-}

@@ -40,84 +40,85 @@
 
 /* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 body {
-  font-size: 1.25em;
+  font-size: 1.15em;
   line-height: 1.45;
+  color: #3b3b3b;
 }
 
-/* line 44, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h2 {
   font-size: 2em;
   font-family: var(--font-granjon);
 }
 
-/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 49, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h3 {
   font-size: 1.3em;
   font-family: var(--font-helv-neue-light);
   letter-spacing: .5px;
 }
 
-/* line 53, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 54, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h2, h3 {
   font-weight: normal;
 }
 
-/* line 56, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 a {
   color: #0071ad;
 }
 
-/* line 61, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 62, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h2 {
   margin-top: var(--space-l);
 }
 
-/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 64, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h3 {
   margin-top: var(--space-m);
 }
 
-/* line 65, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 66, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h4 {
   margin-top: var(--space-s);
 }
 
-/* line 67, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 68, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h5 {
   margin-top: var(--space-xs);
 }
 
-/* line 69, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 70, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h6 {
   margin-top: var(--space-xs);
 }
 
-/* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 72, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h2, * + h3, * + h4, * + h5, * + h6 {
   margin-bottom: var(--space-xs);
 }
 
-/* line 76, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 77, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   margin-top: var(--space-m);
 }
 
-/* line 81, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 82, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p {
   margin: 0;
 }
 
-/* line 83, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 84, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p + p {
   margin-top: var(--space-m);
 }
 
-/* line 91, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 92, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-hhmmampm th:nth-child(1), table.laurel-hhmmampm td:nth-child(1) {
   min-width: 5.5em;
 }
 
-/* line 98, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 99, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:before
 , div.laurel-columns:after
 , p.laurel-columns:before, p.laurel-columns:after {
@@ -127,7 +128,7 @@ div.laurel-columns:before
   display: block;
 }
 
-/* line 110, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 111, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:before
 , p.laurel-columns:before {
   margin-top: var(--space-l);
@@ -135,7 +136,7 @@ div.laurel-columns:before
   border-bottom: 1px dotted #3b3b3b;
 }
 
-/* line 115, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 116, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:after
 , p.laurel-columns:after {
   margin-top: var(--space-m);
@@ -143,12 +144,12 @@ div.laurel-columns:after
   border-top: 1px dotted #3b3b3b;
 }
 
-/* line 122, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 123, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 .cke_combo *:before, .cke_combo *:after {
   content: none !important;
 }
 
-/* line 129, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 130, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 textarea.cke_source {
   background: #3b3b3b;
   color: yellow;
@@ -156,69 +157,69 @@ textarea.cke_source {
   font-size: 1.2em;
 }
 
-/* line 138, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 139, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:before {
   content: 'start multicolumns div';
 }
 
-/* line 141, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 142, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:after {
   content: 'end multicolumns div';
 }
 
-/* line 147, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 148, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p.laurel-columns:before {
   content: 'start multicolumns p';
 }
 
-/* line 150, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 151, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p.laurel-columns:after {
   content: 'end multicolumns p';
 }
 
-/* line 159, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 160, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 .cke_show_borders table.cke_show_border > tbody > tr > th
 , .cke_show_borders table.cke_show_border > tbody > tr > td {
   vertical-align: baseline;
   padding: 12px 8px;
 }
 
-/* line 171, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 172, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xxs th:nth-child(1), table.laurel-c1w-xxs td:nth-child(1) {
   width: 5ch;
 }
 
-/* line 172, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 173, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-hhmmampm th:nth-child(1), table.laurel-c1w-hhmmampm td:nth-child(1) {
   width: 9ch;
 }
 
-/* line 173, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 174, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xs th:nth-child(1), table.laurel-c1w-xs td:nth-child(1) {
   width: 10ch;
 }
 
-/* line 174, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 175, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-s th:nth-child(1), table.laurel-c1w-s td:nth-child(1) {
   width: 15ch;
 }
 
-/* line 175, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 176, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-m th:nth-child(1), table.laurel-c1w-m td:nth-child(1) {
   width: 20ch;
 }
 
-/* line 176, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 177, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-l th:nth-child(1), table.laurel-c1w-l td:nth-child(1) {
   width: 25ch;
 }
 
-/* line 177, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 178, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xl th:nth-child(1), table.laurel-c1w-xl td:nth-child(1) {
   width: 30ch;
 }
 
-/* line 178, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 179, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xxl th:nth-child(1), table.laurel-c1w-xxl td:nth-child(1) {
   width: 35ch;
 }
