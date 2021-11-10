@@ -957,16 +957,16 @@ table{
 th,td{
   text-align: left;
   vertical-align: baseline;
-  padding: var(--inset-stretch-s);
+  padding: var(--inset-stretch-xs);
 }
 thead{
 }
 tbody{
   th{
-    border-top: 2px solid $color-green-70;
+    // border-top: 2px solid $color-green-70;
   }
   td{
-    padding-bottom: var(--space-l);
+    // padding-bottom: var(--space-l);
   }
 }
 //--------------------------------------------------------------------
