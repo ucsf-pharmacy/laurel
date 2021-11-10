@@ -72,9 +72,11 @@ article > *:not(.contextual):not(h2):not(h3):not(h4) + *
   margin-top: var(--paragraph-spacing);
 }
 
-/* Special for multicol followed by multicol */
-.laurel-columns+.laurel-columns{
-  margin-top: var(--space-between-content-multicolumns);
+/* Special for multicol followed by anything */
+@media all and (min-width: 501px){
+  .laurel-columns+*{
+    margin-top: var(--space-between-content-multicolumns);
+  }
 }
 
 /* Inherit fonts for inputs and buttons */
