@@ -1,5 +1,5 @@
 // start - primary media with caption
-.block-entity-viewnode{
+.node--view-mode-image-with-caption{
   // padding-top: var(--space-xs);
   .field--name-field-media
   ,.media
@@ -8,6 +8,7 @@
   }
   &.float-left
   ,&.float-none
+  ,.field--name-field-media
   {
     .field--name-field-credit{
       transform: rotate(90deg) ;
@@ -24,6 +25,7 @@
   &.float-left
   ,&.float-none
   ,&.float-right
+  ,.field--name-field-media
   {
     article > *:not(.contextual):not(h2):not(h3):not(h4) + *
     ,*:not(h2):not(h3):not(h4) + p

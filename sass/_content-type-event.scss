@@ -123,6 +123,13 @@
     }
   }
 }
+.field--name-field-event-moreinfo a{
+  @include block-link;
+  display: inline-block;
+  &:not(.last-child){
+    margin-bottom: 1em;
+  }
+}
 @media screen and (max-width: 500px){
   .block-field-blocknodeeventfield-media .img-wrap{
     height: 200px;

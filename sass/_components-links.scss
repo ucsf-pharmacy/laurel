@@ -43,7 +43,6 @@ Not all link styles are defined in this file.
 @mixin block-link(){
   display: block;
   text-decoration: none;
-  padding-bottom: var(--space-s);
   border-bottom: 1px solid $color-link-blue;
   &:link{
     border-bottom: 1px solid $color-link-blue;

@@ -116,13 +116,18 @@ select {
 }
 
 /* line 100, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+.node--unpublished {
+  background-color: transparent;
+}
+
+/* line 103, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 h2 {
   font-weight: normal;
 }
 
 /* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
 @media screen, print {
-  /* line 106, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 109, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     padding-left: 0.1em;
     font-style: normal;
@@ -131,11 +136,11 @@ h2 {
     letter-spacing: .05em;
     font-size: var(--s-2);
   }
-  /* line 114, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 117, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     overflow-wrap: break-word;
   }
-  /* line 117, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 120, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer #LinkList li {
     font-family: Helvetica,Arial,sans-serif;
     line-height: var(--s0);
@@ -143,7 +148,7 @@ h2 {
     font-size: var(--s-2);
     margin: var(--space-stack-xxs);
   }
-  /* line 124, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 127, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote,
   #LinkContainer {
     display: none;
@@ -151,18 +156,18 @@ h2 {
 }
 
 @media print {
-  /* line 131, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 134, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     display: block;
   }
-  /* line 134, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 137, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     display: inline;
   }
 }
 
 @media screen and (min-width: 68em), print and (min-width: 6in) {
-  /* line 139, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 142, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 2;
     column-gap: 4em;
@@ -170,7 +175,7 @@ h2 {
 }
 
 @media all and (min-width: 80em), print and (min-width: 9in) {
-  /* line 145, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 148, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 3;
     column-gap: 4em;
@@ -2185,34 +2190,35 @@ Not all link styles are defined in this file.
 }
 
 /* line 4, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode .field--name-field-media
-, .block-entity-viewnode .media {
+.node--view-mode-image-with-caption .field--name-field-media
+, .node--view-mode-image-with-caption .media {
   margin-bottom: var(--space-between-image-and-caption);
 }
 
-/* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-left .field--name-field-credit, .block-entity-viewnode.float-none .field--name-field-credit {
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-left .field--name-field-credit, .node--view-mode-image-with-caption.float-none .field--name-field-credit, .node--view-mode-image-with-caption .field--name-field-media .field--name-field-credit {
   transform: rotate(90deg);
   transform-origin: 0 0;
 }
 
-/* line 18, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-right .field--name-field-credit {
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-right .field--name-field-credit {
   transform: rotate(90deg) translateX(100%) translateY(-1.5em);
   transform-origin: 100% 0;
   right: 0;
 }
 
-/* line 28, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-left article > *:not(.contextual):not(h2):not(h3):not(h4) + *
-, .block-entity-viewnode.float-left *:not(h2):not(h3):not(h4) + p, .block-entity-viewnode.float-none article > *:not(.contextual):not(h2):not(h3):not(h4) + *
-, .block-entity-viewnode.float-none *:not(h2):not(h3):not(h4) + p, .block-entity-viewnode.float-right article > *:not(.contextual):not(h2):not(h3):not(h4) + *
-, .block-entity-viewnode.float-right *:not(h2):not(h3):not(h4) + p {
+/* line 30, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-left article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+, .node--view-mode-image-with-caption.float-left *:not(h2):not(h3):not(h4) + p, .node--view-mode-image-with-caption.float-none article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+, .node--view-mode-image-with-caption.float-none *:not(h2):not(h3):not(h4) + p, .node--view-mode-image-with-caption.float-right article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+, .node--view-mode-image-with-caption.float-right *:not(h2):not(h3):not(h4) + p, .node--view-mode-image-with-caption .field--name-field-media article > *:not(.contextual):not(h2):not(h3):not(h4) + *
+, .node--view-mode-image-with-caption .field--name-field-media *:not(h2):not(h3):not(h4) + p {
   margin: 0;
 }
 
-/* line 33, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-left .field--name-field-credit, .block-entity-viewnode.float-none .field--name-field-credit, .block-entity-viewnode.float-right .field--name-field-credit {
+/* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-left .field--name-field-credit, .node--view-mode-image-with-caption.float-none .field--name-field-credit, .node--view-mode-image-with-caption.float-right .field--name-field-credit, .node--view-mode-image-with-caption .field--name-field-media .field--name-field-credit {
   position: absolute;
   display: inline;
   font-size: .7em;
@@ -2220,39 +2226,39 @@ Not all link styles are defined in this file.
   margin-bottom: 0;
 }
 
-/* line 39, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-left .field--name-field-credit .field__item, .block-entity-viewnode.float-none .field--name-field-credit .field__item, .block-entity-viewnode.float-right .field--name-field-credit .field__item {
+/* line 41, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-left .field--name-field-credit .field__item, .node--view-mode-image-with-caption.float-none .field--name-field-credit .field__item, .node--view-mode-image-with-caption.float-right .field--name-field-credit .field__item, .node--view-mode-image-with-caption .field--name-field-media .field--name-field-credit .field__item {
   position: relative;
   display: inline-block;
 }
 
-/* line 43, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-left .field--name-field-credit .field__item:after, .block-entity-viewnode.float-none .field--name-field-credit .field__item:after, .block-entity-viewnode.float-right .field--name-field-credit .field__item:after {
+/* line 45, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-left .field--name-field-credit .field__item:after, .node--view-mode-image-with-caption.float-none .field--name-field-credit .field__item:after, .node--view-mode-image-with-caption.float-right .field--name-field-credit .field__item:after, .node--view-mode-image-with-caption .field--name-field-media .field--name-field-credit .field__item:after {
   content: ', ';
 }
 
-/* line 46, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-left .field--name-field-credit .field__item:last-child:after, .block-entity-viewnode.float-none .field--name-field-credit .field__item:last-child:after, .block-entity-viewnode.float-right .field--name-field-credit .field__item:last-child:after {
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-left .field--name-field-credit .field__item:last-child:after, .node--view-mode-image-with-caption.float-none .field--name-field-credit .field__item:last-child:after, .node--view-mode-image-with-caption.float-right .field--name-field-credit .field__item:last-child:after, .node--view-mode-image-with-caption .field--name-field-media .field--name-field-credit .field__item:last-child:after {
   content: '';
 }
 
-/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode.float-left .field--name-field-credit .contextual, .block-entity-viewnode.float-none .field--name-field-credit .contextual, .block-entity-viewnode.float-right .field--name-field-credit .contextual {
+/* line 52, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption.float-left .field--name-field-credit .contextual, .node--view-mode-image-with-caption.float-none .field--name-field-credit .contextual, .node--view-mode-image-with-caption.float-right .field--name-field-credit .contextual, .node--view-mode-image-with-caption .field--name-field-media .field--name-field-credit .contextual {
   transform: rotate(-90deg);
 }
 
-/* line 72, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode img {
+/* line 74, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption img {
   width: 100%;
 }
 
-/* line 75, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode + .block-field-blocknodepostbody > div:first-child > :first-child {
+/* line 77, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption + .block-field-blocknodepostbody > div:first-child > :first-child {
   margin-top: 0;
 }
 
-/* line 78, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
-.block-entity-viewnode .field--name-field-caption {
+/* line 80, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-image-credit-media-caption.scss */
+.node--view-mode-image-with-caption .field--name-field-caption {
   background-color: #ededee;
   padding: .125em .25em;
   margin: 2px 0 0;
@@ -2286,30 +2292,29 @@ h2, .field--name-field-articles.field--type-entity-reference h2 {
 h2 a, .field--name-field-articles.field--type-entity-reference h2 a {
   display: block;
   text-decoration: none;
-  padding-bottom: var(--space-s);
   border-bottom: 1px solid #0071ad;
 }
 
-/* line 48, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:link, .field--name-field-articles.field--type-entity-reference h2 a:link {
   border-bottom: 1px solid #0071ad;
 }
 
-/* line 51, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:visited, .field--name-field-articles.field--type-entity-reference h2 a:visited {
   border-bottom: 1px solid #716fb2;
 }
 
-/* line 54, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+/* line 53, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:hover, .field--name-field-articles.field--type-entity-reference h2 a:hover {
   color: #052049;
   border-bottom: 1px solid #f26d04;
 }
 
-/* line 58, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+/* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:focus, .field--name-field-articles.field--type-entity-reference h2 a:focus {
   color: #ffffff;
@@ -2318,7 +2323,7 @@ h2 a:focus, .field--name-field-articles.field--type-entity-reference h2 a:focus 
   outline: none;
 }
 
-/* line 64, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:active, .field--name-field-articles.field--type-entity-reference h2 a:active {
   color: #ffffff;
@@ -2572,12 +2577,56 @@ body.page-type-node-article{
   column-gap: 1em;
 }
 
+/* line 126, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.field--name-field-event-moreinfo a {
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #0071ad;
+  display: inline-block;
+}
+
+/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+.field--name-field-event-moreinfo a:link {
+  border-bottom: 1px solid #0071ad;
+}
+
+/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+.field--name-field-event-moreinfo a:visited {
+  border-bottom: 1px solid #716fb2;
+}
+
+/* line 53, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+.field--name-field-event-moreinfo a:hover {
+  color: #052049;
+  border-bottom: 1px solid #f26d04;
+}
+
+/* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+.field--name-field-event-moreinfo a:focus {
+  color: #ffffff;
+  background-color: #0071ad;
+  border-bottom: 1px solid transparent;
+  outline: none;
+}
+
+/* line 63, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-links.scss */
+.field--name-field-event-moreinfo a:active {
+  color: #ffffff;
+  background-color: #f26d04;
+  border-bottom: 1px solid transparent;
+}
+
+/* line 129, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.field--name-field-event-moreinfo a:not(.last-child) {
+  margin-bottom: 1em;
+}
+
 @media screen and (max-width: 500px) {
-  /* line 127, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 134, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .block-field-blocknodeeventfield-media .img-wrap {
     height: 200px;
   }
-  /* line 129, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 136, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .block-field-blocknodeeventfield-media .img-wrap img {
     max-width: 100%;
     max-height: 100%;
@@ -2586,15 +2635,15 @@ body.page-type-node-article{
 }
 
 @media screen and (min-width: 501px) and (max-width: 1063px) {
-  /* line 137, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 144, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .node--view-mode-image-with-caption {
     max-width: 60%;
   }
-  /* line 140, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 147, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .layout--twocol-section {
     display: block;
   }
-  /* line 143, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 150, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .block-field-blocknodeeventfield-media {
     width: 40%;
     float: right;
@@ -3372,12 +3421,12 @@ https://twitter.com/justmarkup/status/974573989497593856
   white-space: nowrap;
 }
 
-/* line 31, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_overrides.scss */
-*:not(h1):last-child {
+/*
+.node__content *:not(h1):last-child{
   margin-bottom: 0;
   padding-bottom: 0;
 }
-
+*/
 @media print {
   /* line 2, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_print.scss */
   :root {
