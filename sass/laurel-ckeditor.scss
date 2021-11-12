@@ -14,7 +14,6 @@ $color-black-77:                  #3b3b3b;
 $color-gray-70:                   #dfe0e0;
 $color-green-70:                  #b1d16f;
 
-
 @font-face{
   font-family: 'Granjon';
   src:url('../webfonts/granjon/GranjonLTStd.eot');
@@ -125,6 +124,9 @@ div.laurel-columns
   {
     content: none !important;
   }
+}
+.cke_reset{
+  width: auto !important;
 }
 // start - this doesn't work yet
 textarea.cke_source{

@@ -28,3 +28,7 @@ https://twitter.com/justmarkup/status/974573989497593856
 .keep-together{
   white-space: nowrap;
 }
+*:not(h1):last-child{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

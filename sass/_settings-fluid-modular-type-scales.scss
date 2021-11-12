@@ -61,7 +61,8 @@ How this works:
 
 body{
   font-size: var(--fluid0);
-  line-height: var(--fluid1);
+  // line-height: var(--fluid1);
+  line-height: 1.4;
 /*  @media screen and (max-width: 800px){
     line-height: var(--fluid2);
   }*/

@@ -368,7 +368,7 @@ How this works:
 /* line 62, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-fluid-modular-type-scales.scss */
 body {
   font-size: var(--fluid0);
-  line-height: var(--fluid1);
+  line-height: 1.4;
   /*  @media screen and (max-width: 800px){
     line-height: var(--fluid2);
   }*/
@@ -717,12 +717,26 @@ h1
 , .field--name-field-subtitle {
   margin-top: -8px;
   hyphens: none;
+}
+
+/* line 101, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+.layout-builder h1 {
+  max-width: none;
+}
+
+/* line 105, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+h1, h2, h3, h4, h5, h6
+, .field--name-field-event-audience .field__items
+, .field--name-field-event-moreinfo
+, .field--name-field-subtitle {
   max-width: var(--measure);
 }
 
-/* line 102, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
-.layout-builder h1 {
-  max-width: none;
+/* line 116, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+p:not(.laurel-columns)
+, li:not(.laurel-columns)
+, dt:not(.laurel-columns) {
+  max-width: var(--measure);
 }
 
 /*
@@ -2077,17 +2091,12 @@ table.no-span {
   }
 }
 
-/* line 12, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
-.block-layout-builder h2:first-child {
-  margin-top: calc( var(--space-xl) - var(--space-between-blocks));
-}
-
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 17, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodeexternal-postfield-post-type {
   margin-bottom: var(--space-l);
 }
 
-/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 20, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .block-field-blocknodeeventtitle:last-child
 , .block-field-blocknodeposttitle:last-child
 , .block-field-blocknodeexternal-posttitle:last-child
@@ -2097,17 +2106,17 @@ table.no-span {
   margin-bottom: var(--space-between-title-group-and-body);
 }
 
-/* line 29, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 30, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 #layout-builder:not(.layout-builder--content-preview-disabled) .layout-builder-block {
   padding: 0;
 }
 
-/* line 36, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 37, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .layout-builder--content-preview-disabled .columns {
   column-width: initial;
 }
 
-/* line 39, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
+/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
 .layout-builder--content-preview-disabled .block-field-blocknodeeventfield-media
 , .layout-builder--content-preview-disabled .block-field-blocknodepostfield-media {
   float: none;
@@ -2539,7 +2548,6 @@ body.page-type-node-article{
 /* line 93, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field--name-field-event-moreinfo h2 {
   font-weight: normal;
-  margin-top: var(--space-xl);
 }
 
 /* line 102, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
@@ -2638,77 +2646,83 @@ body.page-type-node-article{
   content: '';
 }
 
-/* line 4, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-[class*=" block-field-"] + [class*=" block-field-"] {
+/*
+[class*=" block-field-"]+[class*=" block-field-"]{
   margin-top: 1em;
 }
-
-/* line 7, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+*/
+/* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline {
   display: table-row;
 }
 
+/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.field--label-inline .field__label
+, .field--label-inline .field__item {
+  padding-bottom: var(--space-below-fields);
+}
+
 @media all and (min-width: 501px) {
-  /* line 9, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--label-inline .field__label
 , .field--label-inline .field__item {
     display: table-cell;
   }
 }
 
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline .field__label
 , .field--label-inline .field__items {
   float: none;
 }
 
-/* line 21, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 24, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline .field__label {
   padding-right: var(--space-l);
   min-width: 12ch;
 }
 
-/* line 24, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 27, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline .field__label:after {
   content: '';
 }
 
-/* line 28, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 31, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline > .field__item
 , .field--label-inline > .field_items {
   padding-right: 0;
 }
 
-/* line 33, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 36, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline.field--type-smartdate {
   display: block;
 }
 
 @media all and (min-width: 501px) {
-  /* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 38, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--label-inline.field--type-smartdate .field__label {
     float: left;
   }
 }
 
-/* line 40, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 43, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline.field--type-smartdate .field__items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(33ch, 1fr));
   grid-gap: 0 3em;
 }
 
-/* line 47, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 50, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--label-inline.field--name-field-event-audience .field__item {
   display: inline;
 }
 
-/* line 53, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 56, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-event-moreinfo .field__label {
   font-weight: normal;
 }
 
-/* line 57, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 60, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-location-name .field__item a
 , .field--type-uri a {
   word-break: break-word;
@@ -2716,27 +2730,27 @@ body.page-type-node-article{
 }
 
 @media all and (min-width: 501px) {
-  /* line 68, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 71, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--name-body {
     margin-top: var(--space-between-title-group-and-body);
   }
-  /* line 70, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 73, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--name-body .field__label {
     display: none;
   }
 }
 
-/* line 77, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 80, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-post-type .field__item {
   display: inline;
 }
 
-/* line 79, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 82, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-post-type .field__item:not(:last-child):after {
   content: ' → ';
 }
 
-/* line 85, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 88, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-event-series {
   margin-top: -6px;
 }
@@ -3356,6 +3370,12 @@ https://twitter.com/justmarkup/status/974573989497593856
 /* line 28, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_overrides.scss */
 .keep-together {
   white-space: nowrap;
+}
+
+/* line 31, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_overrides.scss */
+*:not(h1):last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 @media print {

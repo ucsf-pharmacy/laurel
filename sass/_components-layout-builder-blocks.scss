@@ -10,7 +10,8 @@
 .block-layout-builder{
   // margin-bottom: var(--space-between-blocks);
   h2:first-child{
-    margin-top: calc( var(--space-xl) - var(--space-between-blocks) );
+    // border: 1px solid red;
+    // margin-top: calc( var(--space-xl) - var(--space-between-blocks) );
   }
 }
 .block-field-blocknodeexternal-postfield-post-type{

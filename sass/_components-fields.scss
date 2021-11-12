@@ -1,14 +1,17 @@
 .field__label{
   // font-weight: normal; // override default bold
 }
+/*
 [class*=" block-field-"]+[class*=" block-field-"]{
   margin-top: 1em;
 }
+*/
 .field--label-inline{
   display: table-row;
   .field__label
   ,.field__item
   {
+    padding-bottom: var(--space-below-fields);
     @media all and (min-width: 501px){
       display: table-cell;
     }
