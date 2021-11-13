@@ -83,7 +83,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-image-and-caption   : var(--space-xs);
   --space-below-fields                : var(--space-s);
   @media all and (max-width: 500px){
-    --space-from-page-edge            : var(--space-s);
+    --space-from-page-edge            : var(--space-m);
   }
   @media all and (min-width: 501px){
     --space-from-page-edge            : var(--space-l);

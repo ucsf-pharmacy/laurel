@@ -11,8 +11,8 @@
   .field__label
   ,.field__item
   {
-    padding-bottom: var(--space-below-fields);
     @media all and (min-width: 501px){
+      padding-bottom: var(--space-below-fields);
       display: table-cell;
     }
   }

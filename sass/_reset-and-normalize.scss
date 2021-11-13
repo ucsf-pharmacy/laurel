@@ -100,6 +100,11 @@ select {
 .node--unpublished{
   background-color: transparent;
 }
+.node--unpublished:not(.node--view-mode-image-with-caption){
+  padding: 1em;
+  border: 20px dashed $color-orange-40;
+}
+
 h2{
   font-weight: normal;
 }

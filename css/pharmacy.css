@@ -9,6 +9,17 @@ See also:
 https://youtu.be/1OKZOV-iLj4
 */
 /*
+Reminders:
+
+Avoid $color-black for text unless very small font size.
+
+Prefer $color-black-77 for most text.
+
+Prefer $color-gray over $color-grey. The former is lighter than the latter.
+
+Prefer $color-gray-40 over $color-black-10.
+*/
+/*
 adapted from:
 
 2019.1001 CSS reset
@@ -121,13 +132,19 @@ select {
 }
 
 /* line 103, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+.node--unpublished:not(.node--view-mode-image-with-caption) {
+  padding: 1em;
+  border: 20px dashed #fbcca7;
+}
+
+/* line 108, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 h2 {
   font-weight: normal;
 }
 
 /* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
 @media screen, print {
-  /* line 109, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 114, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     padding-left: 0.1em;
     font-style: normal;
@@ -136,11 +153,11 @@ h2 {
     letter-spacing: .05em;
     font-size: var(--s-2);
   }
-  /* line 117, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 122, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     overflow-wrap: break-word;
   }
-  /* line 120, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 125, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer #LinkList li {
     font-family: Helvetica,Arial,sans-serif;
     line-height: var(--s0);
@@ -148,7 +165,7 @@ h2 {
     font-size: var(--s-2);
     margin: var(--space-stack-xxs);
   }
-  /* line 127, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 132, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote,
   #LinkContainer {
     display: none;
@@ -156,18 +173,18 @@ h2 {
 }
 
 @media print {
-  /* line 134, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 139, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     display: block;
   }
-  /* line 137, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 142, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     display: inline;
   }
 }
 
 @media screen and (min-width: 68em), print and (min-width: 6in) {
-  /* line 142, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 147, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 2;
     column-gap: 4em;
@@ -175,7 +192,7 @@ h2 {
 }
 
 @media all and (min-width: 80em), print and (min-width: 9in) {
-  /* line 148, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 153, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 3;
     column-gap: 4em;
@@ -273,7 +290,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
 @media all and (max-width: 500px) {
   /* line 21, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_settings-spacing.scss */
   :root {
-    --space-from-page-edge: var(--space-s);
+    --space-from-page-edge: var(--space-m);
   }
 }
 
@@ -397,17 +414,6 @@ body {
   /* pink */
 }
 
-/*
-Reminders:
-
-Avoid $color-black for text unless very small font size.
-
-Prefer $color-black-77 for most text.
-
-Prefer $color-gray over $color-grey. The former is lighter than the latter.
-
-Prefer $color-gray-40 over $color-black-10.
-*/
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-color-declarations.scss */
 :selection {
   color: #3b3b3b;
@@ -550,7 +556,7 @@ h1 {
 @media screen and (max-width: 500px) {
   /* line 129, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
   h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
 
@@ -1983,7 +1989,7 @@ pre[class*='language-'] {
 end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey 
 */
 /* line 35, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
-main {
+article:not(.node--unpublished):not(.media):not(.node--view-mode-image-with-caption) {
   padding: var(--space-l) var(--space-from-page-edge);
 }
 
@@ -2705,16 +2711,11 @@ body.page-type-node-article{
   display: table-row;
 }
 
-/* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--label-inline .field__label
-, .field--label-inline .field__item {
-  padding-bottom: var(--space-below-fields);
-}
-
 @media all and (min-width: 501px) {
   /* line 11, ../../../../../Users/frankfarm/Documents/Git/d8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--label-inline .field__label
 , .field--label-inline .field__item {
+    padding-bottom: var(--space-below-fields);
     display: table-cell;
   }
 }
