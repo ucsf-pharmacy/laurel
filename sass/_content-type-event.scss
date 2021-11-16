@@ -84,6 +84,7 @@
     }
   }
   .block-field-blocknodeeventfield-subtitle{
+    max-width: calc( var(--measure) * 1.5 );
     margin-bottom: var(--space-between-title-group-and-body);
   }
   .field.field--name-field-event-series{
