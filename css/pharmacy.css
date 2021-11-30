@@ -200,6 +200,11 @@ h2 {
 }
 
 /* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
+/* line 161, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+[id] {
+  scroll-margin-top: 2ex;
+}
+
 /*
 Space in Design Systems
 
