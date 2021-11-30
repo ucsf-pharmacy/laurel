@@ -81,7 +81,6 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-title-group-and-body: var(--space-l);
   --space-between-blocks              : var(--space-m);
   --space-between-image-and-caption   : var(--space-xs);
-  --space-below-fields                : var(--space-s);
   @media all and (max-width: 500px){
     --space-from-page-edge            : var(--space-m);
   }
@@ -98,5 +97,5 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --paragraph-spacing: var(--space-m);
   --paragraph-spacing-half: calc( var(--paragraph-spacing) * .5 );
   --paragraph-spacing-three-quarters: calc( var(--paragraph-spacing) * .75 );
-  --list-item-spacing: calc( var(--paragraph-spacing) * .8 );
+  --list-item-spacing: calc( var(--paragraph-spacing) * .25 );
 }

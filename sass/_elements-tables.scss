@@ -983,12 +983,7 @@ tbody{
     &.laurel-c1w-xl      { th,td { &:nth-child(1) { width: 30ch; } } }
     &.laurel-c1w-xxl     { th,td { &:nth-child(1) { width: 35ch; } } }
   }
-  thead{
-    th{
-      // border-bottom: 3px solid $color-green;
-    }
-  }
-  tbody{
+  thead,tbody{
     th,td{
       &:first-child{
         padding-left: 0;
@@ -996,6 +991,16 @@ tbody{
       &:last-child{
         padding-right: 0;
       }
+    }
+  }
+  thead{
+    th{
+      vertical-align: bottom;
+      // border-bottom: 3px solid $color-green;
+    }
+  }
+  tbody{
+    th,td{
       h2:first-child
       ,h3:first-child
       ,h4:first-child

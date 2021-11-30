@@ -32,7 +32,7 @@ end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
 */
 
 // regions
-article:not(.node--unpublished):not(.media):not(.node--view-mode-image-with-caption){
+article:not(.node--unpublished):not(.media):not(.node--view-mode-image-with-caption):not(.contextual-region){
   padding: var(--space-l) var(--space-from-page-edge);
 }
 

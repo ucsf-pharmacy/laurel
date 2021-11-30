@@ -63,13 +63,13 @@
   ,[class*=' block-field-blocknodeeventfield-']
   {
     &:not(.block-field-blocknodeeventfield-subtitle){
-      // margin-bottom: var(--space-below-fields);
+      // margin-bottom: var(--space-s);
       .field__item {
         // padding-left: 2em;
       }
     }
     .field:not(.field--name-field-event-series):not(.field--name-field-event-moreinfo){
-      // margin-bottom: var(--space-below-fields);
+      // margin-bottom: var(--space-s);
       // display: flex;
       // flex-wrap: wrap;
       & > *{
@@ -96,10 +96,11 @@
       // margin-top: var(--space-xl);
     }
   }
-/*  .block-field-blocknodeeventfield-location-name {
-    margin-bottom: var(--space-between-blocks);
+  .block-field-blocknodeeventfield-location-name {
+    max-width: var(--measure);
+    // margin-bottom: var(--space-between-blocks);
   }
-*/
+
   .layout__region--first{
     margin-bottom: var(--space-between-blocks);
   }

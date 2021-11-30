@@ -1,25 +1,50 @@
-.field__label{
-  // font-weight: normal; // override default bold
+.field--label-inline .field__label
+, .field--label-inline > .field__item
+, .field--label-inline .field__items
+{
+  padding-right: 0; // field.css sets this to .5em, but we don't need it, so override it
 }
-/*
-[class*=" block-field-"]+[class*=" block-field-"]{
-  margin-top: 1em;
+.field--label-above{
+  margin-bottom: var(--space-m);
 }
-*/
+.node--type-ucsfpharmacy-person{
+  .field--label-inline{
+    .field__label{
+      min-width: 25ch;
+    }
+  }
+}
+.node--type-event{
+  .field--label-inline{
+    .field__label{
+      min-width: 12ch;
+    }
+  }
+}
 .field--label-inline{
   display: table-row;
   @media all and (max-width: 500px){
     &.field{
       display: block;
-      padding-bottom: var(--space-below-fields);
+      padding-bottom: var(--space-s);
     }
   }
   @media all and (min-width: 501px){
-    .field__label
+    .field__items
+    ,.field__label
     ,.field__item
     {
-      padding-bottom: var(--space-below-fields);
+      padding-bottom: var(--space-s);
+    }
+    .field__items .field__item{
+      padding-bottom: 0;
+    }
+    .field__label{
       display: table-cell;
+    }
+    .field__item{
+      display: inline-block;
+      vertical-align: top;
     }
   }
   .field__label
@@ -29,9 +54,15 @@
   }
   .field__label{
     padding-right: var(--space-l);
-    min-width: 12ch;
     &:after{
       content: '';
+    }
+  }
+  .field__items{
+    .field__item{
+      &:not(:last-child):after{
+        content: ',';
+      }
     }
   }
   & > .field__item
@@ -69,8 +100,6 @@
   word-break: break-word;
   display: block;
 }
-.field--name-body{
-}
 @media all and (max-width: 500px){
 }
 @media all and (min-width: 501px){
@@ -90,8 +119,20 @@
     }
   }
 }
+.field--name-field-ucsfphps-degrees
+,.field--name-field-ucsfphps-affiliations
+{
+  display: block;
+  .field__items{
+    margin-left: calc( 25ch + var(--space-l) );
+    .field__item{
+      display: block;
+    }
+  }
+}
 // start - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
 .field--name-field-event-series{
   margin-top: -6px;
 }
 // end - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
+
