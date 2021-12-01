@@ -13,3 +13,14 @@ function laurel_preprocess_block(array &$variables) {
   // print '<pre>' . $variables['plugin_id'] . '</pre>';
   // end - reveal plugin_id values needed in block style plugins config
 }
+
+/**
+ * Implements hook_page_attachments_alter() to remove generator metatag.
+ */
+function laurel_page_attachments_alter(array &$attachments) {
+  foreach ($attachments['#attached']['html_head'] as $key => $attachment) {
+    if ($attachment[1] == 'system_meta_generator') {
+      unset($attachments['#attached']['html_head'][$key]);
+    }
+  }
+}
