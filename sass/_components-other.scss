@@ -17,3 +17,6 @@
 .media--type-image{
   background-color: $color-gray-40;
 }
+.audiofield label{
+  display: none; // hide the filename for Name Pronunciation
+}

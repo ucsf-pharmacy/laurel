@@ -3443,6 +3443,11 @@ ul.menu a.is-active:focus {
   background-color: #ededee;
 }
 
+/* line 20, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.audiofield label {
+  display: none;
+}
+
 /*
 adapted from:
 
