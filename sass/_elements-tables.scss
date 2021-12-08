@@ -948,11 +948,11 @@ table td h3:first-child
 */
 
 // new in 2021
-
-
-
 table{
-  column-span: all;
+  margin: var(--paragraph-spacing) 0;
+  .span-columns{
+    column-span: all;
+  }
 }
 th,td{
   text-align: left;
@@ -1001,6 +1001,7 @@ tbody{
   }
   tbody{
     th,td{
+      border-top: 1px solid $color-k3-gray;
       h2:first-child
       ,h3:first-child
       ,h4:first-child
@@ -1012,16 +1013,42 @@ tbody{
       }
     }
     td{
-      border-top: 1px solid $color-gray-70;
     }
     tr:first-child{
       th,td{
-        border-top: 2px solid $color-green-70;
+        border-top: 2px solid $color-e3-chartreuse;
       }
     }
     tr:last-child{
       th,td{
-        border-bottom: 2px solid $color-green-70;
+        border-bottom: 2px solid $color-e3-chartreuse;
+      }
+    }
+  }
+}
+table.laurel-hide-borders{
+  tbody{
+    tr{
+      &:first-child
+      ,&:last-child
+      {
+        th,td{
+          border-top: none;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+table.laurel-hide-row-lines{
+  tbody{
+    tr{
+      &:not(:first-child)
+      ,&:last-child
+      {
+        th,td{
+          border-top: none;
+        }
       }
     }
   }
@@ -1036,12 +1063,12 @@ tbody{
       }
       th:first-child{
         border-top: none;
-        border-left: 2px solid $color-green-70;
-        background-color: $color-green-40;
+        border-left: 2px solid $color-e3-chartreuse;
+        background-color: $color-e6-green;
         padding: var(--inset-squish-m);
       }
       td:first-child{
-        background-color: $color-gray-40;
+        background-color: $color-k3-gray;
       }
       td{
         padding-bottom: var(--space-l);

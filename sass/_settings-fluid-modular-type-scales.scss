@@ -54,7 +54,7 @@ How this works:
   --fluid-max-size1 : (var(--fluid-max-size) * var(--fluid-max-scale0)) / 16;
   --fluid-max-size2 : (var(--fluid-max-size) * var(--fluid-max-scale1)) / 16;
 
-  --fluid0 : calc(((var(--fluid-min-size0) * 1rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
+  --fluid0 : calc(((var(--fluid-min-size0) * .9rem) + (var(--fluid-max-size0) - var(--fluid-min-size0)) * var(--fluid-bp)));
   --fluid1 : calc(((var(--fluid-min-size1) * 1.2rem) + (var(--fluid-max-size1) - var(--fluid-min-size1)) * var(--fluid-bp)));
   --fluid2 : calc(((var(--fluid-min-size2) * 1.4rem) + (var(--fluid-max-size2) - var(--fluid-min-size2)) * var(--fluid-bp)));
 }

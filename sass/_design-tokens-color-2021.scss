@@ -2,110 +2,110 @@
 // ext indicates the extended palette.
 // lean to using primary before resorting to extended.
 
-$ff-white:         #ffffff; // pri
-$00-black:         #000000; // pri
+$color-white:            #ffffff; // pri
+$color-black:            #000000; // pri
 
 // blue gray
-$i2-navy:          #2e405b; //       ext
-$i3-blue-gray:     #506380; // pri
-$i4-navy:          #9ba6b6; //       ext
-$i5-navy:          #e6e9ed; //       ext
-$i6-navy:          #f2f3f4; // pri
+$color-i2-navy:          #2e405b; //       ext
+$color-i3-blue-gray:     #506380; // pri
+$color-i4-navy:          #9ba6b6; //       ext
+$color-i5-navy:          #e6e9ed; //       ext
+$color-i6-navy:          #f2f3f4; // pri
 
 // cool gray
-$j1-cool-gray:     #21272a; //       ext
-$j2-cool-gray:     #878d96; // pri
-$j3-cool-gray:     #b4b9bf; // pri
-$j4-cool-gray:     #caced2; //       ext
-$j5-cool-gray:     #e1e3e5; // pri
-$j6-cool-gray:     #f8f8f9; //       ext
+$color-j1-cool-gray:     #21272a; //       ext
+$color-j2-cool-gray:     #878d96; // pri
+$color-j3-cool-gray:     #b4b9bf; // pri
+$color-j4-cool-gray:     #caced2; //       ext
+$color-j5-cool-gray:     #e1e3e5; // pri
+$color-j6-cool-gray:     #f8f8f9; //       ext
 
 // gray
-$k1-gray:          #4d4d4d; //       ext
-$k2-gray:          #808285; //       ext
-$k3-gray:          #d1d3d3; // pri
-$k4-gray:          #dfe0e0; //       ext
-$k5-gray:          #ededed; //       ext
-$k6-gray:          #f4f4f4; //       ext
+$color-k1-gray:          #4d4d4d; //       ext
+$color-k2-gray:          #808285; //       ext
+$color-k3-gray:          #d1d3d3; // pri
+$color-k4-gray:          #dfe0e0; //       ext
+$color-k5-gray:          #ededed; //       ext
+$color-k6-gray:          #f4f4f4; //       ext
 
 // blue
-$a1-navy:          #052049; // pri
-$a2-blue:          #0f388a; // pri
-$a3-cta-blue:      #006be9; // pri
-$a4-blue:          #4896e8; //       ext
-$a5-blue:          #b9d6f4; //       ext
-$a6-blue:          #e6eef6; //       ext
-$b1-blue:          #064260; //       ext
-$b2-blue:          #086290; //       ext
-$b3-blue:          #178ccb; // pri
-$b4-blue:          #3cb9f0; //       ext
-$b5-blue:          #b8e6fa; // pri
-$b6-blue:          #e2f4fc; // pri
+$color-a1-navy:          #052049; // pri
+$color-a2-blue:          #0f388a; // pri
+$color-a3-cta-blue:      #006be9; // pri
+$color-a4-blue:          #4896e8; //       ext
+$color-a5-blue:          #b9d6f4; //       ext
+$color-a6-blue:          #e6eef6; //       ext
+$color-b1-blue:          #064260; //       ext
+$color-b2-blue:          #086290; //       ext
+$color-b3-blue:          #178ccb; // pri
+$color-b4-blue:          #3cb9f0; //       ext
+$color-b5-blue:          #b8e6fa; // pri
+$color-b6-blue:          #e2f4fc; // pri
 
 // teal
-$c1-teal:          #0e5258; // pri
-$c2-teal:          #14828c; // pri
-$c3-teal:          #16a0ac; // pri
-$c4-teal:          #60d0da; // pri
-$c5-teal:          #b4e2e8; // pri
-$c6-teal:          #e8f6f8; //       ext
+$color-c1-teal:          #0e5258; // pri
+$color-c2-teal:          #14828c; // pri
+$color-c3-teal:          #16a0ac; // pri
+$color-c4-teal:          #60d0da; // pri
+$color-c5-teal:          #b4e2e8; // pri
+$color-c6-teal:          #e8f6f8; //       ext
 
 // green
-$d1-green:         #00483a; // pri
-$d2-green:         #007242; // pri
-$d3-green:         #32a03e; // pri
-$d4-green:         #6ecc50; //       ext
-$d5-green:         #c8ebc3; //       ext
-$d6-green:         #ebf7eb; //       ext
-$e1-green:         #006400; //       ext
-$e2-green:         #2c8a1a; //       ext
-$e3-chartreuse:    #84c234; // pri
-$e4-point-reyes:   #b4dc55; // pri
-$e5-green:         #d7ebb2; //       ext
-$e6-green:         #f4f8ea; //       ext
+$color-d1-green:         #00483a; // pri
+$color-d2-green:         #007242; // pri
+$color-d3-green:         #32a03e; // pri
+$color-d4-green:         #6ecc50; //       ext
+$color-d5-green:         #c8ebc3; //       ext
+$color-d6-green:         #ebf7eb; //       ext
+$color-e1-green:         #006400; //       ext
+$color-e2-green:         #2c8a1a; //       ext
+$color-e3-chartreuse:    #84c234; // pri
+$color-e4-point-reyes:   #b4dc55; // pri
+$color-e5-green:         #d7ebb2; //       ext
+$color-e6-green:         #f4f8ea; //       ext
 
 // purple
-$f1-purple:        #2e2872; // pri
-$f2-purple:        #443e8c; // pri
-$f3-purple:        #6c62d0; // pri
-$f4-yosemite:      #8a8ce3; // pri
-$f5-purple:        #c0c0ea; // pri
-$f6-purple:        #f0f0f8; //       ext
+$color-f1-purple:        #2e2872; // pri
+$color-f2-purple:        #443e8c; // pri
+$color-f3-purple:        #6c62d0; // pri
+$color-f4-yosemite:      #8a8ce3; // pri
+$color-f5-purple:        #c0c0ea; // pri
+$color-f6-purple:        #f0f0f8; //       ext
 
 // violet
-$g1-violet:        #461850; // pri
-$g2-violet:        #6c247c; // pri
-$g3-violet:        #a238ba; // pri
-$g4-violet:        #c45ed8; // pri
-$g5-violet:        #eaccf0; // pri
-$g6-violet:        #f6f0f7; //       ext
+$color-g1-violet:        #461850; // pri
+$color-g2-violet:        #6c247c; // pri
+$color-g3-violet:        #a238ba; // pri
+$color-g4-violet:        #c45ed8; // pri
+$color-g5-violet:        #eaccf0; // pri
+$color-g6-violet:        #f6f0f7; //       ext
 
 // magenta
-$h1-magenta:       #561038; // pri
-$h2-magenta:       #821a56; // pri
-$h3-magenta:       #c42882; // pri
-$h4-magenta:       #e266ae; // pri
-$h5-magenta:       #f2c2de; // pri
-$h6-magenta:       #f7f0f4; //       ext
+$color-h1-magenta:       #561038; // pri
+$color-h2-magenta:       #821a56; // pri
+$color-h3-magenta:       #c42882; // pri
+$color-h4-magenta:       #e266ae; // pri
+$color-h5-magenta:       #f2c2de; // pri
+$color-h6-magenta:       #f7f0f4; //       ext
 
 // secondary
-$l1-yellow:        #aa6012; //       ext
-$l2-yellow:        #d68600; //       ext
-$l3-yellow:        #feb80a; // pri
-$l4-yellow:        #fed658; //       ext
-$l5-yellow:        #feec96; //       ext
-$l6-yellow:        #fef8e4; //       ext
+$color-l1-yellow:        #aa6012; //       ext
+$color-l2-yellow:        #d68600; //       ext
+$color-l3-yellow:        #feb80a; // pri
+$color-l4-yellow:        #fed658; //       ext
+$color-l5-yellow:        #feec96; //       ext
+$color-l6-yellow:        #fef8e4; //       ext
 
-$m1-orange:        #a0e01e; //       ext
-$m2-orange:        #c8421e; //       ext
-$m3-orange:        #fa6e1e; // pri
-$m4-orange:        #fe8638; //       ext
-$m5-orange:        #fecc94; //       ext
-$m6-orange:        #fcecdc; //       ext
+$color-m1-orange:        #a0e01e; //       ext
+$color-m2-orange:        #c8421e; //       ext
+$color-m3-orange:        #fa6e1e; // pri
+$color-m4-orange:        #fe8638; //       ext
+$color-m5-orange:        #fecc94; //       ext
+$color-m6-orange:        #fcecdc; //       ext
 
-$n1-red:           #720424; //       ext
-$n2-red:           #b20a34; //       ext
-$n3-red:           #e61048; // pri
-$n4-portola:       #eb5757; //       ext
-$n5-red:           #ffb0b0; //       ext
-$n6-red:           #fae8ec; //       ext
+$color-n1-red:           #720424; //       ext
+$color-n2-red:           #b20a34; //       ext
+$color-n3-red:           #e61048; // pri
+$color-n4-portola:       #eb5757; //       ext
+$color-n5-red:           #ffb0b0; //       ext
+$color-n6-red:           #fae8ec; //       ext
