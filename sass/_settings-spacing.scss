@@ -81,12 +81,6 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-title-group-and-body: var(--space-l);
   --space-between-blocks              : var(--space-m);
   --space-between-image-and-caption   : var(--space-xs);
-  @media all and (max-width: 500px){
-    --space-from-page-edge            : var(--space-m);
-  }
-  @media all and (min-width: 501px){
-    --space-from-page-edge            : var(--space-l);
-  }
   --space-between-text-and-link-underline: .0625em;
   --nav-tabs-margin-adjustment        : var(--space-m);
 

@@ -8,6 +8,7 @@ h1{
 }
 h2{
   margin-bottom: var(--space-s);
+  border: 1px solid purple;
 }
 h3,h4,h5,h6{
   margin-bottom: var(--space-xs);
@@ -45,4 +46,7 @@ h2+.laurel-side-by-side>div{
   &:last-child>*:last-child{
     margin-bottom: 0;
   }
+}
+h2.field__label{
+  font-weight: normal;
 }

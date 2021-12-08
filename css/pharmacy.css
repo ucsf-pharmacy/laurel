@@ -134,17 +134,28 @@ select {
 /* line 103, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 .node--unpublished:not(.node--view-mode-image-with-caption) {
   padding: 1em;
-  border: 20px dashed #fbcca7;
+  border: 20px dashed #fecc94;
 }
 
-/* line 108, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 106, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+.node--unpublished:not(.node--view-mode-image-with-caption):before {
+  content: "UNPUBLISHED";
+  color: #fa6e1e;
+  letter-spacing: 4px;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  display: block;
+}
+
+/* line 117, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 h2 {
   font-weight: normal;
 }
 
 /* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
 @media screen, print {
-  /* line 114, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 123, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     padding-left: 0.1em;
     font-style: normal;
@@ -153,11 +164,11 @@ h2 {
     letter-spacing: .05em;
     font-size: var(--s-2);
   }
-  /* line 122, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 131, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     overflow-wrap: break-word;
   }
-  /* line 125, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 134, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer #LinkList li {
     font-family: Helvetica,Arial,sans-serif;
     line-height: var(--s0);
@@ -165,7 +176,7 @@ h2 {
     font-size: var(--s-2);
     margin: var(--space-stack-xxs);
   }
-  /* line 132, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 141, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote,
   #LinkContainer {
     display: none;
@@ -173,18 +184,18 @@ h2 {
 }
 
 @media print {
-  /* line 139, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 148, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     display: block;
   }
-  /* line 142, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 151, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     display: inline;
   }
 }
 
 @media screen and (min-width: 68em), print and (min-width: 6in) {
-  /* line 147, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 156, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 2;
     column-gap: 4em;
@@ -192,7 +203,7 @@ h2 {
 }
 
 @media all and (min-width: 80em), print and (min-width: 9in) {
-  /* line 153, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 162, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 3;
     column-gap: 4em;
@@ -200,7 +211,7 @@ h2 {
 }
 
 /* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
-/* line 161, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 170, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 [id] {
   scroll-margin-top: 2ex;
 }
@@ -289,20 +300,6 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --paragraph-spacing-half: calc( var(--paragraph-spacing) * .5 );
   --paragraph-spacing-three-quarters: calc( var(--paragraph-spacing) * .75 );
   --list-item-spacing: calc( var(--paragraph-spacing) * .25 );
-}
-
-@media all and (max-width: 500px) {
-  /* line 21, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_settings-spacing.scss */
-  :root {
-    --space-from-page-edge: var(--space-m);
-  }
-}
-
-@media all and (min-width: 501px) {
-  /* line 21, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_settings-spacing.scss */
-  :root {
-    --space-from-page-edge: var(--space-l);
-  }
 }
 
 /*
@@ -818,43 +815,49 @@ h1 {
 /* line 9, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 {
   margin-bottom: var(--space-s);
+  border: 1px solid purple;
 }
 
-/* line 12, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h3, h4, h5, h6 {
   margin-bottom: var(--space-xs);
 }
 
 /*:not(.block) + .block > .field
 ,*/
-/* line 19, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 20, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 .layout__region--second > .block:first-child > .field:first-child > h2:first-child, .layout__region--second > .block:first-child > .field:first-child > h3:first-child, .layout__region--second > .block:first-child > .field:first-child > h4:first-child, .layout__region--second > .block:first-child > .field:first-child > h5:first-child, .layout__region--second > .block:first-child > .field:first-child > h6:first-child {
   margin-top: 0;
 }
 
-/* line 26, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 27, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + div.contextual + div.field {
   margin-top: var(--space-l);
 }
 
-/* line 31, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 32, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h3 {
   letter-spacing: .5px;
 }
 
-/* line 36, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 37, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   margin-top: var(--space-m);
 }
 
-/* line 42, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 43, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + .laurel-side-by-side > div > h3:first-child {
   margin-top: 0;
 }
 
-/* line 45, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 46, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + .laurel-side-by-side > div:last-child > *:last-child {
   margin-bottom: 0;
+}
+
+/* line 50, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+h2.field__label {
+  font-weight: normal;
 }
 
 /*
@@ -2007,6 +2010,32 @@ end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
 /* line 35, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-other.scss */
 article:not(.node--unpublished):not(.media):not(.node--view-mode-image-with-caption):not(.contextual-region) {
   padding: var(--space-l) var(--space-from-page-edge);
+}
+
+@media all and (max-width: 400px) {
+  /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
+  :root {
+    --space-from-page-edge: var(--space-s);
+  }
+}
+
+@media all and (min-width: 401px) {
+  /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
+  :root {
+    --space-from-page-edge: var(--space-m);
+  }
+}
+
+@media all and (min-width: 501px) {
+  /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
+  :root {
+    --space-from-page-edge: var(--space-l);
+  }
+}
+
+/* line 12, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
+body {
+  margin: 0 var(--space-from-page-edge);
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/every-layout/_grid.scss */

@@ -68,8 +68,8 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    {# Change label Body to About the event #}
-    <div{{ title_attributes.addClass(title_classes) }}>{{ "About the event"|t }}</div>
+    {# Change label Body to About the event and change div to h2 #}
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ "About the event"|t }}</h2>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
