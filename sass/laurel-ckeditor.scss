@@ -1,3 +1,8 @@
+@import "_design-tokens-color-2021.scss";
+@import "_design-tokens-color-definitions.scss";
+@import "_objects-links.scss";
+@import "_objects-links-icons-before-and-after.scss";
+
 :root{
   --space-default: 16px;
   --space-xxs    :  2px;

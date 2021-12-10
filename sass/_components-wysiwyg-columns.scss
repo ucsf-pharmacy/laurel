@@ -2,12 +2,15 @@
   column-gap: var(--space-between-content-multicolumns);
   column-width: 26ch;
   h2{
-    column-span: all;
+    // column-span: all;
     margin-top: var(--space-xl);
     max-width: var(--measure);
     &:first-child{
       margin-top: calc( var(--space-xl) - var(--space-between-blocks) );
     }
+  }
+  h2,h3,h4{
+    break-after: avoid-column;
   }
 }
 @media screen and (min-width: 640px){

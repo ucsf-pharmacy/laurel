@@ -97,23 +97,6 @@ select {
   }
 }
 
-.node--unpublished{
-  background-color: transparent;
-}
-.node--unpublished:not(.node--view-mode-image-with-caption){
-  padding: 1em;
-  border: 20px dashed $color-m5-orange;
-  &:before{
-    content:"UNPUBLISHED";
-    color: $color-m3-orange;
-    letter-spacing: 4px;
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-    display: block;
-  }
-}
-
 h2{
   font-weight: normal;
 }

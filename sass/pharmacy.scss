@@ -35,15 +35,20 @@ https://youtu.be/1OKZOV-iLj4
 @import "_elements-tables.scss";
 @import "_elements-other.scss";
 
-@import "_page-margins.scss";
 //------------------------------------- // below this line use only classes
+@import "_regions.scss"; // styling that applies to all of a region such as .node for the node body
+@import "_page-margins.scss";
+@import "_status.scss"; // published, draft, unpublished, etc.
 
 @import "_skeleton-every-layout.scss";  // layouts, wrappers, containers, grids
 
-@import "_objects.scss";                // things with classes that aren't full components
+// objects are things with classes that aren't full components
+@import "_objects-links.scss";
+@import "_objects-links-icons-before-and-after.scss";
+@import "_objects.scss";
 
+// components are things with classes that can be built from smaller objects
 @import "_components-layout-builder-blocks.scss";
-
 @import "_components-nav.scss";
 @import "_components-links.scss";
 

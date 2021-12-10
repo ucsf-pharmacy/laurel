@@ -1,0 +1,96 @@
+a[href^="http://"]:after
+,a[href^="https://"]:after
+,.edit-media-link:after
+,#edit-field-media-image-0-alt--description a:after
+{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background-image: url(../icons/external-link-square.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 3px 0;
+  // border: 1px solid green; // use this to test for visual confirmation of bounding box
+}
+a[href*="blogger.com"]:after ,a[href*="pharmdadmissions.ucsf.edu"]:after
+,a[href*="facebook.com"]:after
+,a[href*="instagram.com"]:after
+,a[href*="linkedin.com"]:after
+,a[href*="twitter.com"]:after
+,a[href*="youtube.com"]:after ,a[href*="youtu.be"]:after
+{
+  background-position: 3px 0;
+}
+a[href*="adobe.com"]:after{
+  width: 24px;
+  background-image: url(../icons/adobe.svg);
+}
+a[href*="blogger.com"]:after
+,a[href*="pharmdadmissions.ucsf.edu"]:after
+{
+  background-image: url(../icons/blogger.svg);
+}
+a[href*=".box.com"]:after{
+  width: 23px;
+  height: 9px;
+  background-image: url(../icons/box.svg);
+  background-position: 3px 0;
+}
+a[href*="dropbox.com"]:after{
+  width: 22px;
+  background-image: url(../icons/dropbox.svg);
+}
+a[href*="facebook.com"]:after{
+  background-image: url(../icons/facebook2.svg);
+}
+a[href*="flickr.com"]:after{
+  background-image: url(../icons/flickr.svg);
+}
+a[href*="github.com"]:after{
+  width: 21px;
+  background-image: url(../icons/github.svg);
+}
+a[href*="google.com"]:after{
+  background-image: url(../icons/google.svg);
+}
+a[href*="drive.google.com"]:after{ // this declaration must come after the one for google.com
+  width: 22px;
+  background-image: url(../icons/googledrive.svg);
+}
+a[href*="instagram.com"]:after{
+  background-image: url(../icons/instagram.svg);
+}
+a[href*="linkedin.com"]:after{
+  background-image: url(../icons/linkedin.svg);
+}
+a[href*="microsoft.com"]:after{
+  background-image: url(../icons/microsoft.svg);
+}
+a[href*="teams.microsoft.com"]:after{ // this declaration must come after the one for microsoft.com
+  width: 22px;
+  background-image: url(../icons/microsoftteams.svg);
+}
+a[href*="sharepoint.com"]:after{
+  width: 30px;
+  background-image: url(../icons/microsoftonedrive.svg);
+}
+a[href*="tiktok.com"]:after{
+  background-image: url(../icons/tiktok.svg);
+}
+a[href*="twitter.com"]:after{
+  width: 23px;
+  background-image: url(../icons/twitter.svg);
+}
+a[href*="youtube.com"]:after
+,a[href*="youtu.be"]:after
+{
+  width: 26px;
+  background-image: url(../icons/youtube.svg);
+}
+a[href*="zoom.com"]:after{
+  width: 40px;
+  height: 7px;
+  background-image: url(../icons/zoom1.svg);
+  background-position: 4px 0;
+}

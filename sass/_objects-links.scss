@@ -1,0 +1,71 @@
+/*
+Reminders:
+
+#43 in Typewolf’s Flawless Typography Checklist: Links within sentences should contrast sufficiently with the surrounding text
+
+Lord Vader’s Handle Formerly Anakin
+http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
+
+Not all link styles are defined in this file.
+
+----------------------------------------------------------------------
+*/
+.region-content
+,.cke_editable
+{
+  a{
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    padding-bottom: var(--space-between-text-and-link-underline);
+    &:link{
+      border-bottom: 1px solid $color-link-blue;
+    }
+    &:visited{
+      border-bottom: 1px solid $color-purple;
+    }
+    &:hover{
+      color: $color-dark-navy;
+      border-bottom: 1px solid $color-orange;
+    }
+    &:focus{
+      color: $color-white;
+      background-color: $color-link-blue;
+      outline: none;
+    }
+    &:active{
+      color: $color-white;
+      background-color: $color-orange;
+    }
+    &::selection{
+      background-color: $color-orange-40;
+    }
+  }
+}
+@mixin block-link(){
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid $color-link-blue;
+  &:link{
+    border-bottom: 1px solid $color-link-blue;
+  }
+  &:visited{
+    border-bottom: 1px solid $color-purple;
+  }
+  &:hover{
+    color: $color-dark-navy;
+    border-bottom: 1px solid $color-orange;
+  }
+  &:focus{
+    color: $color-white;
+    background-color: $color-link-blue;
+    border-bottom: 1px solid transparent;
+    outline: none;
+  }
+  &:active{
+    color: $color-white;
+    background-color: $color-orange;
+    border-bottom: 1px solid transparent;
+  }
+}
