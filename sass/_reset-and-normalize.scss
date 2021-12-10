@@ -46,6 +46,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection{
+  background-color: $color-l5-yellow;
+}
+
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {

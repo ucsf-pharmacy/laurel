@@ -20,26 +20,25 @@ Not all link styles are defined in this file.
     background-color: transparent;
     padding-bottom: var(--space-between-text-and-link-underline);
     &:link{
-      border-bottom: 1px solid $color-link-blue;
+      border-bottom: 1px solid $color-a3-cta-blue;
     }
     &:visited{
-      border-bottom: 1px solid $color-purple;
+      border-bottom: 1px solid $color-f3-purple;
     }
     &:hover{
       color: $color-dark-navy;
-      border-bottom: 1px solid $color-orange;
+      border-bottom: 1px solid $color-m3-orange;
     }
     &:focus{
-      color: $color-white;
-      background-color: $color-link-blue;
+      background-color: $color-l3-yellow;
       outline: none;
     }
     &:active{
       color: $color-white;
-      background-color: $color-orange;
+      background-color: $color-m3-orange;
     }
     &::selection{
-      background-color: $color-orange-40;
+      background-color: $color-l4-yellow;
     }
   }
 }
