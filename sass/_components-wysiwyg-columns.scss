@@ -1,4 +1,6 @@
 .laurel-columns{
+  orphans: 2;
+  widows: 2;
   column-gap: var(--space-between-content-multicolumns);
   column-width: 26ch;
   h2{
