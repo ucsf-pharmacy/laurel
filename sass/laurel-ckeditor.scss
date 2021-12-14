@@ -1,5 +1,5 @@
 @import "_design-tokens-color-2021.scss";
-@import "_design-tokens-color-definitions.scss";
+@import "_elements-tables.scss";
 @import "_objects-links.scss";
 @import "_objects-links-icons-before-and-after.scss";
 
@@ -13,11 +13,6 @@
   --space-xl     : 64px;
   --space-xxl    :128px;
 }
-
-$color-link-blue:                 #0071ad;
-$color-black-77:                  #3b3b3b;
-$color-gray-70:                   #dfe0e0;
-$color-green-70:                  #b1d16f;
 
 @font-face{
   font-family: 'Granjon';
@@ -44,7 +39,7 @@ $color-green-70:                  #b1d16f;
 body{
   font-size: 1.15em;
   line-height: 1.45;
-  color: $color-black-77;
+  color: $color-text;
 }
 h2{
   font-size: 2em;
@@ -59,7 +54,7 @@ h2,h3{
   font-weight: normal;
 }
 a{
-  color: $color-link-blue;
+  color: $color-link-unvisited;
 }
 
 *{
@@ -115,12 +110,12 @@ div.laurel-columns
   &:before{
     margin-top: var(--space-l);
     margin-bottom: var(--space-m);
-    border-bottom: 1px dotted $color-black-77;
+    border-bottom: 1px dotted $color-text;
   }
   &:after{
     margin-top: var(--space-m);
     margin-bottom: var(--space-l);
-    border-top: 1px dotted $color-black-77;
+    border-top: 1px dotted $color-text;
   }
 }
 .cke_combo *{
@@ -135,7 +130,7 @@ div.laurel-columns
 }
 // start - this doesn't work yet
 textarea.cke_source{
-  background: $color-black-77;
+  background: $color-text;
   color: yellow;
   font-family: Consolas,monospace,ui-monospace;
   font-size: 1.2em;

@@ -7,10 +7,9 @@ ul.menu{
 }
 header ul.menu a
 ,footer ul.menu a
-,.region-content nav.tabs a
+,.tabs a
 {
   text-decoration: none;
-  color: $color-black-77;
   background-color: transparent;
   padding: var(--inset-squish-m);
   line-height: calc( var(--line-spacing) + var(--space-m) );
@@ -18,20 +17,20 @@ header ul.menu a
   }
   &:focus{
     color: $color-white;
-    background-color: $color-link-blue;
+    background-color: $color-focus;
     outline: none;
   }
 }
 ul.menu a.is-active:focus{
   color: $color-white;
 }
-.region-content nav.tabs{
+.tabs{
   margin-bottom: var(--space-l);
   ul{
     @media all and (max-width: 500px){
       padding-bottom: var(--space-l);
     }
-    border-bottom: 1px solid $color-black-54;
+    border-bottom: 1px solid $color-text;
   }
   li:first-child{
     margin-left: var(--nav-tabs-margin-adjustment);
@@ -42,29 +41,44 @@ ul.menu a.is-active:focus{
   a{
     line-height: 1em;
     border: none;
-    border: 1px solid $color-black-54;
+    border: 1px solid $color-text;
     border-width: 1px 1px 0 1px;
     position: relative;
     top: 1px;
     padding-top: 9px;
+    background-color: transparent;
     &:not(.is-active):hover{
-      border-top: 5px solid $color-link-blue;
+      background-color: $color-m6-orange;
+      border-top: 5px solid $color-hover;
       padding-top: 5px;
     }
+    &:focus{
+      color: $color-text;
+      background-color: $color-l5-yellow;
+      border-top: 5px solid $color-focus;
+      padding-top: 5px;
+    }
+    &:active{
+    }
     &.is-active{
-      border-top: 5px solid $color-black-77;
+      font-weight: bold;
+      background-color: transparent;
+      border-top: 5px solid $color-text;
+      padding-top: 5px;
       @media all and (min-width: 501px){
         border-bottom: 1px solid $color-white;
       }
-      padding-top: 5px;
       &:hover{
         cursor: default;
+      }
+      &:focus{
+        border-top: 5px solid $color-focus;
       }
     }
   }
 }
 @media all and (max-width: 500px){
-  .region-content nav.tabs{
+  .tabs{
     li:first-child{
       margin-left: 0;
     }

@@ -5,6 +5,10 @@
 $color-white:            #ffffff; // pri
 $color-black:            #000000; // pri
 
+// special
+$color-black-65:         #595959; // not in UCSF palette, used for h4 because #4d4d4d was too dark and #999999 was too light, this is the lightest gray that meets a11y for AAA for normal text on a white background
+$color-black-54:         #767676; // not in UCSF palette, this is the lightest gray that meets a11y for AA for normal text on a white background, used for alt nav and image credits and for the footer disclaimer on calpoison, see http://uxmovement.com/content/why-your-gray-text-should-never-exceed-46-brightness/ and http://jxnblk.com/grays/
+
 // blue gray
 $color-i2-navy:          #2e405b; //       ext
 $color-i3-blue-gray:     #506380; // pri
@@ -109,3 +113,15 @@ $color-n3-red:           #e61048; // pri
 $color-n4-portola:       #eb5757; //       ext
 $color-n5-red:           #ffb0b0; //       ext
 $color-n6-red:           #fae8ec; //       ext
+
+$color-text:                      $color-j1-cool-gray;
+$color-border-dark:               $color-j2-cool-gray;
+$color-border-light:              $color-j5-cool-gray;
+$color-link-unvisited:            $color-a3-cta-blue;
+$color-link-visited:              $color-f3-purple;
+$color-hover:                     $color-m3-orange;
+$color-focus:                     $color-l3-yellow;
+$color-active:                    $color-m3-orange;
+$color-selection:                 $color-l4-yellow;
+$color-highlight:                 $color-l6-yellow;
+$color-bg-light-gray:             $color-k5-gray;

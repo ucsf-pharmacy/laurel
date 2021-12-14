@@ -1,15 +1,1083 @@
 @charset "UTF-8";
 /*
-Reminders:
+// reset borders
+table, thead, tbody, th, td{
+  border: none;
+}
+table caption{
+  text-align: left;
+  padding: 1em 0 .5em;
+}
+table{
+  display: inline-table; // 2018.0522 frankfarm - we need this otherwise tr borders can be a fraction of a pixel off - see https://stackoverflow.com/questions/39861687/how-to-prevent-fractional-pixels-in-an-element-with-width-set-to-auto
+  background-color: transparent;
+  width: 100%;
+  margin: 1rem 0;
+  tr:not(:nth-child(1)){
+    border-top: 1px solid $color-gray-40;
+  }
+  &.hide-row-lines tr:not(:nth-child(1)){
+    border-top: none;
+  }
+  tr.even
+  ,tr.odd{
+    border-bottom: none;
+    background-color: transparent;
+  }
+  tr:nth-child(odd)
+  ,tr.odd
+  {
+    background-color: inherit;
+  }
+  tr:hover
+  {
+    background-color: $color-blue-10;
+  }
+  thead {
+    tr {
+      background: transparent;
+      th{
+        vertical-align: bottom;
+      }
+      td{
+        vertical-align: top;
+      }
+      th, td {
+        text-align: left;
+        color: $color-black-70;
+      }
+    }
+  }
+  tbody{
+    border-top:2px solid $color-green-40;
+    div.media{
+      margin-bottom: 0; // if an image appears inside a table, remove the default bottom margin of 1 em
+    }
+  }
+  th,td{
+    p:last-child
+    ,ul:last-child
+    ,ol:last-child
+    {
+      margin-bottom: 0;
+    }
+  }
+  th, td {
+    padding: .5em 1em .5em 0;
+    text-align: left;
+    vertical-align: top;
+  }
+  th:last-child
+  ,td:last-child
+  {
+    padding-right: 0;
+  }
+  border-bottom:2px solid $color-green-40;
+}
+table.display-as-table{
+  display: table;
+}
+table.valign-baseline{
+  th, td {
+    vertical-align: baseline;
+  }
+}
 
-Avoid $color-black for text unless very small font size.
+// start - 2019.0419 and 2019.0726 people tables for pharm
 
-Prefer $color-black-77 for most text.
+$table-image-width-mobile-and-print : 33.333333333%;
+$table-image-width-quarter-desktop : 202px;
+$table-image-width-sixth-desktop : 155px;
 
-Prefer $color-gray over $color-grey. The former is lighter than the latter.
+#content-area{
+  table.people
+  ,table.image-columns-2
+  ,table.image-columns-3
+  {
+    @media screen{
+      div.media-element-container{
+        img{
+          width: 100%;
+        }
+      }
+    }
+    td{
+      // padding-bottom: 2em;
+    }
+  }
+}
+@media only print, screen and (max-width: 940px){
+  #content-area{
+    table.image-columns-2
+    ,table.image-columns-3
+    {
+      div.media-element-container{
+        min-width: $table-image-width-mobile-and-print;
+        @media only screen{
+          max-width: 100% !important;
+        }
+      }
+    }
+    table.image-columns-2{
+      &.image-left{
+        td:nth-child(1){
+          // width: $table-image-width-mobile-and-print;
+        }
+      }
+      &.image-right{
+        td:nth-child(2){
+          width: $table-image-width-mobile-and-print;
+        }
+      }
+    }
+    table.image-columns-3
+    {
+    }
+  }
 
-Prefer $color-gray-40 over $color-black-10.
+}
+@media screen and (min-width: 941px){
+  #content-area{
+    table.image-columns-2
+    {
+      &.image-left{
+        td:nth-child(2){
+          width: 100%;
+        }
+      }
+      &.image-right{
+        td:nth-child(1){
+          width: 100%;
+        }
+      }
+      div.media-element-container.media-quarter
+      ,div.media-element-container.media-square-quarter
+      {
+        width: $table-image-width-quarter-desktop;
+        min-width: $table-image-width-quarter-desktop;
+        &.image-left{
+          td:nth-child(1){
+            width: $table-image-width-quarter-desktop;
+          }
+        }
+        &.image-right{
+          td:nth-child(2){
+            width: $table-image-width-quarter-desktop;
+          }
+        }
+      }
+      div.media-element-container.media-sixth
+      ,div.media-element-container.media-square-sixth
+      {
+        width: $table-image-width-sixth-desktop;
+        min-width: $table-image-width-sixth-desktop;
+        &.image-left{
+          td:nth-child(1){
+            width: $table-image-width-sixth-desktop;
+          }
+        }
+        &.image-right{
+          td:nth-child(2){
+            width: $table-image-width-sixth-desktop;
+          }
+        }
+      }
+    }
+    table.image-columns-3
+    {
+
+      &.image-left{
+        td:nth-child(2)
+        ,td:nth-child(3)
+        {
+          width: 40.5%;
+        }
+      }
+      &.image-right{
+        td:nth-child(1)
+        ,td:nth-child(2)
+        {
+          width: 40.5%;
+        }
+      }
+      div.media-element-container{
+        max-width: 100% !important;
+      }
+      div.media-element-container.media-quarter
+      ,div.media-element-container.media-square-quarter
+      {
+        width: $table-image-width-quarter-desktop;
+        min-width: $table-image-width-quarter-desktop;
+        &.image-left{
+          td:nth-child(1){
+            width: $table-image-width-quarter-desktop;
+          }
+        }
+        &.image-right{
+          td:nth-child(3){
+            width: $table-image-width-quarter-desktop;
+          }
+        }
+      }
+      div.media-element-container.media-sixth
+      ,div.media-element-container.media-square-sixth
+      {
+        width: $table-image-width-sixth-desktop;
+        min-width: $table-image-width-sixth-desktop;
+        &.image-left{
+          td:nth-child(1){
+            width: $table-image-width-sixth-desktop;
+          }
+        }
+        &.image-right{
+          td:nth-child(3){
+            width: $table-image-width-sixth-desktop;
+          }
+        }
+      }
+    }
+    table.people
+    {
+      @media screen{
+        td:nth-child(2)
+        ,td:nth-child(3)
+        {
+          width: 40.5%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px){
+  #content-area table.people
+  ,#content-area table.image-columns-3
+  {
+    th
+    ,td
+    {
+      display: block;
+      padding-right: 0;
+      padding-left: 0;
+    }
+    td:nth-child(1):not([colspan]){
+      padding: 0;
+      img{
+        float: right;
+        max-width: $table-image-width-sixth-desktop;
+        margin: .5em 0 2em 1em;
+      }
+    }
+    td:nth-child(2)
+    ,td:nth-child(3)
+    {
+      // width: calc( 100% - $table-image-width-sixth-desktop - 1em ); // this doesn't validate
+      width: calc( 100% - 155px - 1em );
+    }
+    td:nth-child(3){
+      padding-top: 0;
+    }
+  }
+}
+// end - 2019.0419 and 2019.0726 people tables for pharm
+
+.field-item>table:nth-child(1)
+,.field-content>table:nth-child(1)
+,table.views-table
+{
+  margin-top: 0;
+}
+table.contact
+,table.views-table
+{
+  th, td {
+    vertical-align: top;
+  }
+  th[scope="col"] {
+    vertical-align: bottom;
+  }
+}
+table.tight{
+  th, td {
+    padding: .2em .2em .2em 0;
+  }
+  th:last-child, td:last-child {
+    padding: .2em 0;
+  }
+}
+table.collapse{
+  th[scope="row"] {
+    background-color: transparent;
+  }
+}
+table.contact
+{
+  th{
+    padding-right: 1em;
+  }
+}
+
+
+//*****************************************************************************
+// start - column widths
+table.equal
+{
+  table-layout: fixed;
+  th,td{
+    width: 2%;
+  }
+}
+table.contact
+,table.widthauto
+,table.not-100pc-wide
+{
+  width: auto;
+}
+table.mmmdd
+// good for dates like "Jan 26" on https://pharmd.ucsf.edu/admissions
+{
+  th:nth-child(1), td:nth-child(1) {
+    min-width: 4em;
+  }
+}
+table.laurel-hhmmampm
+// good for times like "8:00 am" on https://pharmacy.ucsf.edu/commencement
+{
+  th:nth-child(1), td:nth-child(1) {
+    min-width: 5.5em;
+  }
+}
+table.c1-7pc
+// good for percentages, e.g., https://pharmacy.ucsf.edu/news/2003/02/update-dean-february-2003
+{
+  th:nth-child(1), td:nth-child(1) {
+    width: 7%;
+  }
+}
+table.c1-12pc
+{
+  th:nth-child(1), td:nth-child(1) {
+    width: 12%;
+  }
+}
+table.c1-25pc
+// good for dates like "Tue Jul 18, 2017", e.g., https://pharmd.ucsf.edu/admissions/steps/apply/deadlines/2018
+,table.width-25-percent-in-col-1
+{
+  th:nth-child(1), td:nth-child(1) {
+    width: 25%;
+  }
+}
+table.c1-34pc
+// good for dates like "Jul 18, 2017", e.g., https://pharmacy.ucsf.edu/ucsf-school-pharmacy-bridge-funding-research
+{
+  th:nth-child(1), td:nth-child(1) {
+    width: 34%;
+  }
+}
+table.c1-45pc {
+// e.g., https://pharmd.ucsf.edu/admissions/reqs/academic/verify
+  th:nth-child(1), td:nth-child(1) {
+    width: 45%;
+  }
+}
+table.c2-10pc {
+// e.g., https://pharmd.ucsf.edu/admissions/reqs/academic/verify
+  th:nth-child(2), td:nth-child(2) {
+    width: 10%;
+  }
+}
+table.c2-25pc
+// used on https://pharm.ucsf.edu/tsinghua/tsinghua-faculty
+{
+  th:nth-child(2), td:nth-child(2) {
+    width: 25%;
+  }
+}
+table.c3-45pc {
+// e.g., https://pharmd.ucsf.edu/admissions/reqs/academic/verify
+  th:nth-child(3), td:nth-child(3) {
+    width: 45%;
+  }
+}
+table.c4-25pc
+// used on https://pharm.ucsf.edu/tsinghua/tsinghua-faculty
+{
+  th:nth-child(4), td:nth-child(4) {
+    width: 25%;
+  }
+}
+table.cols-4-16-28-28-28 {
+// used only for /pkcourse/schedule
+  th, td {
+    width: 28%;
+  }
+  th:nth-child(1), td:nth-child(1) {
+    width: 16%;
+  }
+}
+// end - column widths
+//*****************************************************************************
+
+
+//*****************************************************************************
+// start - specific pages
+div.ufd-honors-awards table { // 2016.0517 frankfarm - for UFD honors and awards
+  margin-bottom: 5em;
+  div.media-element-container{
+    width:80%;
+    img{
+      vertical-align: top;
+    }
+  }
+  tbody{
+    border:none;
+    tr{
+      border-bottom:none;
+    }
+    tr:nth-child(even)
+    ,tr:nth-child(odd)
+    {
+      background-color:transparent;
+    }
+  }
+  td:nth-child(1) {
+    width: 25%;
+  }
+  td:nth-child(2) {
+    width: 10%;
+  }
+  td:nth-child(3) {
+    width: 50%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+table.maps {
+  // for https://pharmacy.ucsf.edu/maps
+  td {
+    width: 50%;
+  }
+  td:nth-child(1), td:nth-child(4) {
+    width: 46%;
+  }
+  td:nth-child(2), td:nth-child(5) {
+    width: 100px;
+  }
+  td:nth-child(3) {
+    min-width: 40px;
+  }
+}
+table.grad-rate-headers-rotate{
+  thead th{
+    padding-left: 1em;
+    line-height: 110%;
+  }
+  th,td{
+    min-width:14.3%;
+    max-width:2em;
+  }
+  th{
+    vertical-align: bottom;
+  }
+  th:nth-child(1){
+    min-width: 2em;
+  }
+  tr:nth-child(1) th[scope="col"]{
+    -webkit-transition: -webkit-all 1s ease-in-out;
+    -moz-transition: -moz-all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+}
+table.alumni {
+  td:nth-child(1) {
+    min-width: 13em;
+  }
+  td:nth-child(2) {
+    min-width: 6em;
+  }
+}
+// end - specific pages
+//*****************************************************************************
+
+
+li table {
+  margin: .5em auto;
+  th, td {
+    font-size: inherit;
+  }
+}
+table td>ul:nth-child(1){
+  margin-top:1px;
+}
+.content
+, .view-content {
+  th p, td p, th li, td li {
+    font-size: inherit;
+  }
+  th .emphatic, td .emphatic {
+    font-size: 19px;
+    border: 0;
+    margin: 0;
+  }
+  th .emphatic:nth-child(1), td .emphatic:nth-child(1) {
+    padding-top: 0;
+  }
+}
+.is-dept-pharmchem
+,.is-dept-bts
+{
+  .view-people td:nth-child(4){
+    display: none; // people list: remove clinical specialty column from PC and BTS
+  }
+  #content-area #quicktabs-tabpage-people_faculty-0 table{
+    td:nth-child(2)
+    {
+      width: 44%;
+    }
+    td:nth-child(3)
+    {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width:640px), (min-width: 801px) and (max-width: 1229px) {
+  .not-logged-in table.collapse{
+    th,td{
+      display:block;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding-top: 0;
+      margin-left: 3rem;
+      width: calc( 100% - 3rem );
+    }
+    td:nth-child(1),th:nth-child(1){
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  .is-dept-pharmchem
+  ,.is-dept-bts
+  {
+    #content-area #quicktabs-tabpage-people_faculty-0 table{
+      td:nth-child(2)
+      {
+        width: calc( 100% - 140px - 2em );
+      }
+      td:nth-child(3){
+        display: none;
+      }
+      .views-field-nothing
+      {
+        padding-right: 0;
+      }
+    }
+    #quicktabs-people_faculty table div.item-list
+    {
+      margin-bottom: 0;
+    }
+    .views-field-nothing{
+      padding-bottom: 0;
+    }
+  }
+  // start - 2018.0827 frankfarm - don't collapse joint or affiliated faculty on dept sites within these screen widths
+  .is-dept-secondary{
+    #node-1676 // pc joint
+    ,#node-1681 // pc affiliated
+    ,#node-916 // bts joint
+    ,#node-921 // bts affiliated
+    {
+      table{
+        th,td{
+          display: table-cell;
+          width: initial;
+          width: 33.333333333%;
+        }
+      }
+    }
+  }
+  // end - 2018.0827 frankfarm - don't collapse joint or affiliated faculty on dept sites within these screen widths
+}
+
+#content-area {
+  .view-people table
+  {
+    th[scope="col"] {
+      vertical-align: bottom;
+    }
+    td {
+      vertical-align: top;
+    }
+    hr {
+      margin: 0 0 1em 0;
+    }
+  }
+  #quicktabs-tabpage-people_faculty-1 // joint
+  {
+    table{
+      td{
+        width: 33.333333333%;
+      }
+    }
+  }
+  #quicktabs-tabpage-people_faculty-2 // affiliated
+  {
+    h2:nth-child(1)+table{ // adjunct
+      td{
+        width: 33.333333333%;
+      }
+    }
+    h2:nth-child(1)+table+h2+table // affiliated emeritus on pc & bts
+    ,h2:nth-child(3)+table // affiliated emeritus on cp
+    {
+      tbody{
+        display: flex;
+        flex: 0 1 auto;
+        flex-wrap: wrap;
+        border-top: none;
+      }
+      tr{
+        flex: 0 1 33.333333333%;
+        @media screen and (max-width: 640px){
+          flex: 0 1 50%;
+        }
+        background-color: transparent;
+      }
+      tr:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+  @media screen and (max-width: 940px){
+    #quicktabs-tabpage-people_faculty-2 // affiliated
+    {
+      h2:nth-child(1)+table{ // adjunct
+        td{
+          width: 33.333333333%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px){
+    #quicktabs-tabpage-people_faculty-0 // primary
+    {
+      table {
+        td:nth-child(1) {
+          margin-bottom: .5em;
+        }
+        td:nth-child(1)
+        , td:nth-child(2) {
+          margin-top: .75em;
+        }
+        td:nth-child(3) {
+          margin-bottom: .75em;
+        }
+        th {
+          display: none;
+        }
+        td:nth-child(2) {
+          width: 40%;
+        }
+        td:nth-child(3)
+        ,td:nth-child(4)
+        {
+          width: 27%;
+        }
+        td p {
+          margin-right: 0;
+        }
+      }
+    }
+    #quicktabs-tabpage-people_faculty-1 // joint
+    {
+      table {
+        td{
+          float: none;
+          display: table-cell;
+          width: 33.333333333%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 640px){
+    table.collapse
+    ,#node-16946 h2+table // pspg seminar series
+    ,#node-16586 h2+table // bbc seminar series
+    {
+      th,td{
+        display:block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-top: 0;
+        margin-left: 3rem;
+        width: calc( 100% - 3rem );
+        text-align: left;
+        p{
+          text-align: left;
+        }
+      }
+      td:nth-child(1)
+      ,th:nth-child(1)
+      ,th+td
+      {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+.is-dept-clinicalpharmacy #quicktabs-tabpage-people-1 .views-field-field-person-research-area-1{
+  display: none; // hide research area on cp people staff
+}
+.is-dept-clinicalpharmacy #quicktabs-tabpage-people-0{
+  // set people faculty affiliated volunteer faculty in multiple columns to make reading easier at large screen widths
+  #quicktabs-tabpage-people_faculty-2 .field-item>h2:nth-child(1)+p{
+    column-count: 2;
+    column-gap: 40px;
+    @media screen and (max-width: 640px){
+      column-count: 1;
+    }
+  }
+}
+.is-pharmacy #content-area{
+  #quicktabs-tabpage-people_department_faculty-1
+  ,#quicktabs-tabpage-people_department_faculty-3
+  {
+    .views-field-field-research-area-1
+    {
+      width: auto;
+    }
+    .views-field-field-person-clinical-expertise-1
+    {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 800px){
+  .is-dept-clinicalpharmacy #content-area #quicktabs-tabpage-people_faculty-0{
+    table td:nth-child(2){
+      width: auto;
+    }
+    .views-field-field-person-research-area-1
+    ,.views-field-field-person-clinical-experise-1
+    {
+      display: none;
+    }
+  }
+  .is-pharmacy #content-area{
+    #quicktabs-tabpage-people_department_faculty-0
+    ,#quicktabs-tabpage-people_department_faculty-2
+    {
+      table td:nth-child(2){
+        width: auto;
+      }
+      .views-field-field-research-area-1
+      ,.views-field-field-person-clinical-expertise-1
+      {
+        display: none;
+      }
+    }
+  }
+}
+.pane-background-callout{
+  table tbody tr{
+    border-bottom: 1px solid $color-white;
+  }
+}
+body.node-type-ucsf-person .quicktabs-wrapper table tbody{
+  border-top: none;
+}
+table.grad-rate-headers-rotate
+,table.rotate-headers
+{
+  thead tr{
+    height:12em;
+  }
+  tr:nth-child(1){
+    th[scope="col"]{
+      p,div{
+        transform: rotate(-90deg) translate(-1em,0);
+        transform-origin: 0 0;
+        white-space: nowrap;
+        text-align: left;
+        position:relative;
+        left:48%;
+        -webkit-transition: -webkit-all 1s ease-in-out;
+        -moz-transition: -moz-all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+      }
+    }
+  }
+}
+h3+table{
+  margin-top: 0;
+}
+
+div.image-columns-4{
+  @media all{
+    div.cell{
+      word-wrap: break-word;
+      div.media{
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 1100px){
+    div.row.header{
+      left: -9999px;
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width: 1100px){
+    div.row:not(.header){
+      display: table;
+    }
+    div.cell{
+      &:empty{
+        display: none;
+      }
+      margin-bottom: 1em;
+      margin-left: 1em;
+      p:not(:empty){
+        display: inline;
+      }
+      &:nth-child(1){
+        img{
+          width: 100%;
+        }
+        width: 155px;
+        display: table-cell;
+        vertical-align: top;
+      }
+      &:nth-child(3)
+      ,&:nth-child(4)
+      {
+        &:before{
+          font-weight: bold;
+          color: $color-black-54;
+        }
+      }
+      &:nth-child(3){
+        &:before{
+          content: 'Research interests: ';
+        }
+      }
+      &:nth-child(4){
+        &:before{
+          content: 'Outside the lab: ';
+        }
+      }
+    }
+    div.row{
+      margin-bottom: 1em;
+    }
+  }
+  @media screen and (max-width: 400px){
+    div.cell{
+      margin-left: 0;
+    }
+    div.cell:nth-child(1){
+      float: right;
+      display: block;
+      img{
+        margin: 0 10px .5em 1em;
+      }
+    }
+  }
+  @media print,screen and (min-width: 1101px){
+    div.row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: .5em;
+      margin-bottom: .5em;
+    }
+    div.row:not(.header) {
+      border-bottom: 1px solid $color-gray-40;
+    }
+    div.row.header {
+      font-weight: bold;
+      border-bottom:2px solid $color-green-40;
+    }
+    div.row:last-child {
+      border-bottom:2px solid $color-green-40;
+    }
+    div.cell {
+      padding-right: 1em;
+      padding-bottom: .5em;
+      width: 155px;
+      p {
+        margin: 0;
+      }
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        flex-grow: 1;
+      }
+    }
+    div.cell:last-child
+    {
+      padding-right: 0;
+    }
+  }
+  @media print{
+    div.media{
+      width: unset;
+    }
+    div.cell:nth-child(1){
+      max-width: .85in;
+      max-width: .9in;
+      max-width: .86in;
+    }
+  }
+}
+table td h3:first-child
+,table td h4:first-child
+{
+  margin-top: 0;
+}
+
+
+
+
+
+
+
 */
+/* line 951, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+table {
+  margin: var(--paragraph-spacing) 0;
+}
+
+/* line 953, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+table .span-columns {
+  column-span: all;
+}
+
+/* line 957, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+tr:hover {
+  background-color: #fef8e4;
+}
+
+/* line 960, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+th, td {
+  text-align: left;
+  vertical-align: baseline;
+  padding: var(--inset-stretch-xs);
+}
+
+@media screen and (min-width: 401px) {
+  /* line 978, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-hhmmampm th:nth-child(1), table.laurel-c1w-hhmmampm td:nth-child(1) {
+    width: 10ch;
+  }
+  /* line 979, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-mmmyyyy th:nth-child(1), table.laurel-c1w-mmmyyyy td:nth-child(1) {
+    width: 13ch;
+  }
+  /* line 981, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-xxs th:nth-child(1), table.laurel-c1w-xxs td:nth-child(1) {
+    width: 5ch;
+  }
+  /* line 982, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-xs th:nth-child(1), table.laurel-c1w-xs td:nth-child(1) {
+    width: 10ch;
+  }
+  /* line 983, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-s th:nth-child(1), table.laurel-c1w-s td:nth-child(1) {
+    width: 15ch;
+  }
+  /* line 984, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-m th:nth-child(1), table.laurel-c1w-m td:nth-child(1) {
+    width: 20ch;
+  }
+  /* line 985, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-l th:nth-child(1), table.laurel-c1w-l td:nth-child(1) {
+    width: 25ch;
+  }
+  /* line 986, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-xl th:nth-child(1), table.laurel-c1w-xl td:nth-child(1) {
+    width: 30ch;
+  }
+  /* line 987, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-c1w-xxl th:nth-child(1), table.laurel-c1w-xxl td:nth-child(1) {
+    width: 35ch;
+  }
+  /* line 991, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  thead th:first-child, thead td:first-child, tbody th:first-child, tbody td:first-child {
+    padding-left: 0;
+  }
+  /* line 994, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  thead th:last-child, thead td:last-child, tbody th:last-child, tbody td:last-child {
+    padding-right: 0;
+  }
+  /* line 1000, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  thead th {
+    vertical-align: bottom;
+  }
+  /* line 1006, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  tbody th, tbody td {
+    border-top: 1px solid #d1d3d3;
+  }
+  /* line 1008, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  tbody th h2:first-child
+, tbody th h3:first-child
+, tbody th h4:first-child, tbody td h2:first-child
+, tbody td h3:first-child
+, tbody td h4:first-child {
+    margin-top: 0;
+  }
+  /* line 1014, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  tbody th h3:last-child, tbody td h3:last-child {
+    margin-bottom: 0;
+  }
+  /* line 1021, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  tbody tr:first-child th, tbody tr:first-child td {
+    border-top: 2px solid #84c234;
+  }
+  /* line 1026, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  tbody tr:last-child th, tbody tr:last-child td {
+    border-bottom: 2px solid #84c234;
+  }
+}
+
+/* line 1038, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+table.laurel-hide-borders tbody tr:first-child th, table.laurel-hide-borders tbody tr:first-child td, table.laurel-hide-borders tbody tr:last-child th, table.laurel-hide-borders tbody tr:last-child td {
+  border-top: none;
+  border-bottom: none;
+}
+
+/* line 1052, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+table.laurel-hide-row-lines tbody tr:not(:first-child) th, table.laurel-hide-row-lines tbody tr:not(:first-child) td, table.laurel-hide-row-lines tbody tr:last-child th, table.laurel-hide-row-lines tbody tr:last-child td {
+  border-top: none;
+}
+
+@media screen and (max-width: 400px) {
+  /* line 1063, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-collapse tbody th, table.laurel-collapse tbody td {
+    display: block;
+    padding: var(--space-m) 0;
+  }
+  /* line 1067, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-collapse tbody th:first-child {
+    border-top: none;
+    border-left: 2px solid #84c234;
+    background-color: #f4f8ea;
+    padding: var(--inset-squish-m);
+  }
+  /* line 1073, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-collapse tbody td:first-child {
+    background-color: #d1d3d3;
+  }
+  /* line 1076, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  table.laurel-collapse tbody td {
+    padding-bottom: var(--space-l);
+  }
+}
+
 /*
 Reminders:
 
@@ -22,9 +1090,8 @@ Not all link styles are defined in this file.
 
 ----------------------------------------------------------------------
 */
-/* line 16, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content
-a, .cke_editable a {
+/* line 18, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.node a {
   color: inherit;
   line-height: inherit;
   text-decoration: none;
@@ -32,42 +1099,36 @@ a, .cke_editable a {
   padding-bottom: var(--space-between-text-and-link-underline);
 }
 
-/* line 22, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content
-a:link, .cke_editable a:link {
+/* line 24, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.node a:link {
   border-bottom: 1px solid #006be9;
 }
 
-/* line 25, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content
-a:visited, .cke_editable a:visited {
+/* line 27, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.node a:visited {
   border-bottom: 1px solid #6c62d0;
 }
 
-/* line 28, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content
-a:hover, .cke_editable a:hover {
+/* line 30, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.node a:hover {
   color: #052049;
   border-bottom: 1px solid #fa6e1e;
 }
 
-/* line 32, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content
-a:focus, .cke_editable a:focus {
+/* line 34, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.node a:focus {
   background-color: #feb80a;
   outline: none;
 }
 
-/* line 36, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content
-a:active, .cke_editable a:active {
+/* line 38, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.node a:active {
   color: #ffffff;
   background-color: #fa6e1e;
 }
 
-/* line 40, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content
-a::selection, .cke_editable a::selection {
+/* line 42, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.node a::selection {
   background-color: #fed658;
 }
 
@@ -155,7 +1216,7 @@ a[href*="blogger.com"]:after
 }
 
 /* line 75, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
-a[href*=".box.com"]:after {
+a[href*=".box.com"]:hover:after {
   width: 23px;
   height: 9px;
   background-image: url(../icons/box.svg);
@@ -185,7 +1246,7 @@ a[href*="github.com"]:after {
 }
 
 /* line 95, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
-a[href*="google.com"]:after {
+a[href*="google.com"]:hover:after {
   background-image: url(../icons/google.svg);
 }
 
@@ -241,7 +1302,7 @@ a[href*="youtube.com"]:after
 }
 
 /* line 132, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
-a[href*="zoom.com"]:after {
+a[href*="zoom.com"]:hover:after {
   width: 40px;
   height: 7px;
   background-image: url(../icons/zoom1.svg);
@@ -272,7 +1333,7 @@ a[href*="zoom.com"]:after {
   src: url("../webfonts/helv-neue/32CEE0_1_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/helv-neue/32CEE0_1_0.woff2") format("woff2"), url("../webfonts/helv-neue/32CEE0_1_0.woff") format("woff"), url("../webfonts/helv-neue/32CEE0_1_0.ttf") format("truetype");
 }
 
-/* line 30, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 25, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 :root {
   --font-granjon: Granjon, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   --font-helv-neue-light: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelvNeue45LR", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
@@ -288,87 +1349,87 @@ a[href*="zoom.com"]:after {
   --space-xxl:128px;
 }
 
-/* line 44, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 39, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 body {
   font-size: 1.15em;
   line-height: 1.45;
-  color: #3b3b3b;
+  color: #21272a;
 }
 
-/* line 49, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 44, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h2 {
   font-size: 2em;
   font-family: var(--font-granjon);
 }
 
-/* line 53, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 48, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h3 {
   font-size: 1.3em;
   font-family: var(--font-helv-neue-light);
   letter-spacing: .5px;
 }
 
-/* line 58, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 53, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h2, h3 {
   font-weight: normal;
 }
 
-/* line 61, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 56, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 a {
-  color: #0071ad;
+  color: #006be9;
 }
 
-/* line 66, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 61, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h2 {
   margin-top: var(--space-l);
 }
 
-/* line 68, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 63, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h3 {
   margin-top: var(--space-m);
 }
 
-/* line 70, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 65, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h4 {
   margin-top: var(--space-s);
 }
 
-/* line 72, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 67, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h5 {
   margin-top: var(--space-xs);
 }
 
-/* line 74, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 69, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h6 {
   margin-top: var(--space-xs);
 }
 
-/* line 76, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 71, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 * + h2, * + h3, * + h4, * + h5, * + h6 {
   margin-bottom: var(--space-xs);
 }
 
-/* line 81, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 76, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   margin-top: var(--space-m);
 }
 
-/* line 86, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 81, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p {
   margin: 0;
 }
 
-/* line 88, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 83, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p + p {
   margin-top: var(--space-m);
 }
 
-/* line 96, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 91, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-hhmmampm th:nth-child(1), table.laurel-hhmmampm td:nth-child(1) {
   min-width: 5.5em;
 }
 
-/* line 103, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 98, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:before
 , div.laurel-columns:after
 , p.laurel-columns:before, p.laurel-columns:after {
@@ -378,103 +1439,103 @@ div.laurel-columns:before
   display: block;
 }
 
-/* line 115, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 110, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:before
 , p.laurel-columns:before {
   margin-top: var(--space-l);
   margin-bottom: var(--space-m);
-  border-bottom: 1px dotted #3b3b3b;
+  border-bottom: 1px dotted #21272a;
 }
 
-/* line 120, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 115, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:after
 , p.laurel-columns:after {
   margin-top: var(--space-m);
   margin-bottom: var(--space-l);
-  border-top: 1px dotted #3b3b3b;
+  border-top: 1px dotted #21272a;
 }
 
-/* line 127, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 122, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 .cke_combo *:before, .cke_combo *:after {
   content: none !important;
 }
 
-/* line 133, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 128, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 .cke_reset {
   width: auto !important;
 }
 
-/* line 137, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 132, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 textarea.cke_source {
-  background: #3b3b3b;
+  background: #21272a;
   color: yellow;
   font-family: Consolas,monospace,ui-monospace;
   font-size: 1.2em;
 }
 
-/* line 146, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 141, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:before {
   content: 'start multicolumns div';
 }
 
-/* line 149, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 144, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 div.laurel-columns:after {
   content: 'end multicolumns div';
 }
 
-/* line 155, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 150, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p.laurel-columns:before {
   content: 'start multicolumns p';
 }
 
-/* line 158, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 153, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 p.laurel-columns:after {
   content: 'end multicolumns p';
 }
 
-/* line 167, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 162, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 .cke_show_borders table.cke_show_border > tbody > tr > th
 , .cke_show_borders table.cke_show_border > tbody > tr > td {
   vertical-align: baseline;
   padding: 12px 8px;
 }
 
-/* line 179, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 174, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xxs th:nth-child(1), table.laurel-c1w-xxs td:nth-child(1) {
   width: 5ch;
 }
 
-/* line 180, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 175, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-hhmmampm th:nth-child(1), table.laurel-c1w-hhmmampm td:nth-child(1) {
   width: 9ch;
 }
 
-/* line 181, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 176, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xs th:nth-child(1), table.laurel-c1w-xs td:nth-child(1) {
   width: 10ch;
 }
 
-/* line 182, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 177, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-s th:nth-child(1), table.laurel-c1w-s td:nth-child(1) {
   width: 15ch;
 }
 
-/* line 183, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 178, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-m th:nth-child(1), table.laurel-c1w-m td:nth-child(1) {
   width: 20ch;
 }
 
-/* line 184, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 179, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-l th:nth-child(1), table.laurel-c1w-l td:nth-child(1) {
   width: 25ch;
 }
 
-/* line 185, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 180, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xl th:nth-child(1), table.laurel-c1w-xl td:nth-child(1) {
   width: 30ch;
 }
 
-/* line 186, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
+/* line 181, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 table.laurel-c1w-xxl th:nth-child(1), table.laurel-c1w-xxl td:nth-child(1) {
   width: 35ch;
 }

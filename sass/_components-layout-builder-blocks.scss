@@ -17,14 +17,18 @@
 .block-field-blocknodeexternal-postfield-post-type{
   margin-bottom: var(--space-l);
 }
-.block-field-blocknodeeventtitle:last-child
-,.block-field-blocknodeposttitle:last-child
+.block-field-blocknodeeventfield-subtitle{
+  // margin-bottom: calc( var(--space-between-title-group-and-body) - 2em );
+}
+.block-field-blocknodeposttitle:last-child
 ,.block-field-blocknodeexternal-posttitle:last-child
-,.block-field-blocknodeeventtitle+.block-field-blocknodeeventfield-subtitle
 ,.block-field-blocknodeposttitle+.block-field-blocknodepostfield-subtitle
 ,.block-field-blocknodeexternal-posttitle+.block-field-blocknodeexternal-postfield-subtitle
 {
   margin-bottom: var(--space-between-title-group-and-body);
+}
+.block-field-blocknodeeventtitle:last-child{
+  // border: 1px solid green;
 }
 #layout-builder:not(.layout-builder--content-preview-disabled){
   .layout-builder-block{

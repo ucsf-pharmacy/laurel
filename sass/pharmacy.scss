@@ -9,7 +9,7 @@ https://youtu.be/1OKZOV-iLj4
 */
 
 @import "_design-tokens-color-2021.scss";
-@import "_design-tokens-color-definitions.scss";
+// @import "_design-tokens-color-definitions.scss"; // old colors
 @import "_reset-and-normalize.scss";
 
 // the settings section contains anything that needs to be global.
@@ -19,7 +19,6 @@ https://youtu.be/1OKZOV-iLj4
 @import "_settings-fluid-modular-type-scales.scss";
 @import "_settings-other.scss";
 
-@import "_design-tokens-color-declarations.scss";
 @import "_design-tokens-font-and-line-height.scss";
 @import "_design-tokens-typography.scss";
 
@@ -51,8 +50,8 @@ https://youtu.be/1OKZOV-iLj4
 @import "_components-layout-builder-blocks.scss";
 @import "_components-nav.scss";
 @import "_components-links.scss";
+@import "_components-node.scss";
 
-@import "_content-type-image-credit-media-caption.scss";
 @import "_content-type-article.scss";
 @import "_content-type-event.scss";
 @import "_content-type-gallery.scss";

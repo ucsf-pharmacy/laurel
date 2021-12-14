@@ -3,6 +3,7 @@
 , .field--label-inline .field__items
 {
   padding-right: 0; // field.css sets this to .5em, but we don't need it, so override it
+  float: none; // field.css sets this to .5em, but we must not float left, so override it
 }
 .field--label-above{
   margin-bottom: var(--space-m);
@@ -124,7 +125,7 @@
 ,.field--type-uri a
 {
   word-break: break-word;
-  display: block;
+  // display: block; // remove because we don't want this for Where field on event pages like http://drupal8.docksal.site/node/1797
 }
 @media all and (min-width: 501px){
   .field--name-body{

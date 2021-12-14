@@ -91,7 +91,7 @@
 .layout--twocol-section{
   & > .layout__region{
     min-width: 250px;
-    margin-bottom: var(--space-between-layout-rows);
+    // margin-bottom: var(--space-between-layout-rows);
   }
 }
 body.toolbar-tray-open.toolbar-vertical{
@@ -101,5 +101,12 @@ body.toolbar-tray-open.toolbar-vertical{
 }
 
 .layout__region:empty{
-  display: none;
+  // display: none;
+}
+.layout__region--first{
+  // border: 1px solid orange;
+}
+
+.layout-builder__layout{
+  width: 100%; // without this, pages like http://drupal8.docksal.site/admin/structure/types/manage/event/display/default/layout can't show column regions correctly
 }

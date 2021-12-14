@@ -5,11 +5,12 @@ adapted from:
 https://hankchizljaw.com/wrote/a-modern-css-reset/
 */
 
-/* Box sizing rules */
+/* Box sizing and color rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  color: $color-text;
 }
 
 /* Remove default padding */

@@ -143,12 +143,12 @@ see also:
   .thumb-border{
     &.light-gray .field--name-field-gallery-items{
       img{
-        border: 1px solid $color-gray-40;
+        border: 1px solid $color-border-light;
       }
     }
     &.dark-gray .field--name-field-gallery-items{
       img{
-        border: 1px solid $color-gray-70;
+        border: 1px solid $color-border-dark;
       }
     }
   }

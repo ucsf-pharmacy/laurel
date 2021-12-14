@@ -10,8 +10,10 @@ Not all link styles are defined in this file.
 
 ----------------------------------------------------------------------
 */
-.region-content
-,.cke_editable
+// .region-content
+// ,.cke_editable
+// nav.tabs
+.node
 {
   a{
     color: inherit;
@@ -20,51 +22,52 @@ Not all link styles are defined in this file.
     background-color: transparent;
     padding-bottom: var(--space-between-text-and-link-underline);
     &:link{
-      border-bottom: 1px solid $color-a3-cta-blue;
+      border-bottom: 1px solid $color-link-unvisited;
     }
     &:visited{
-      border-bottom: 1px solid $color-f3-purple;
+      border-bottom: 1px solid $color-link-visited;
     }
     &:hover{
-      color: $color-dark-navy;
-      border-bottom: 1px solid $color-m3-orange;
+      color: $color-a1-navy;
+      border-bottom: 1px solid $color-hover;
     }
     &:focus{
-      background-color: $color-l3-yellow;
+      background-color: $color-focus;
       outline: none;
     }
     &:active{
       color: $color-white;
-      background-color: $color-m3-orange;
+      background-color: $color-active;
     }
     &::selection{
-      background-color: $color-l4-yellow;
+      background-color: $color-selection;
     }
   }
 }
+
 @mixin block-link(){
   display: block;
   text-decoration: none;
-  border-bottom: 1px solid $color-link-blue;
+  border-bottom: 1px solid $color-link-unvisited;
   &:link{
-    border-bottom: 1px solid $color-link-blue;
+    border-bottom: 1px solid $color-link-unvisited;
   }
   &:visited{
-    border-bottom: 1px solid $color-purple;
+    border-bottom: 1px solid $color-link-visited;
   }
   &:hover{
-    color: $color-dark-navy;
-    border-bottom: 1px solid $color-orange;
+    color: $color-a1-navy;
+    border-bottom: 1px solid $color-hover;
   }
   &:focus{
-    color: $color-white;
-    background-color: $color-link-blue;
+    color: $color-text;
+    background-color: $color-focus;
     border-bottom: 1px solid transparent;
     outline: none;
   }
   &:active{
     color: $color-white;
-    background-color: $color-orange;
+    background-color: $color-active;
     border-bottom: 1px solid transparent;
   }
 }

@@ -15,7 +15,7 @@
   }
 }
 .media--type-image{
-  background-color: $color-gray-40;
+  // background-color: $color-gray-40; // need to restrict this to only person headshots on people pages before you let it back in
 }
 .audiofield label{
   display: none; // hide the filename for Name Pronunciation

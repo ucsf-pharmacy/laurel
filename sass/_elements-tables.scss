@@ -954,6 +954,9 @@ table{
     column-span: all;
   }
 }
+tr:hover{
+  background-color: $color-highlight;
+}
 th,td{
   text-align: left;
   vertical-align: baseline;

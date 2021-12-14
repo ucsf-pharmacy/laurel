@@ -1,10 +1,9 @@
-// start - primary media with caption
 .node--view-mode-image-with-caption{
-  // padding-top: var(--space-xs);
+  margin-bottom: var(--space-l);
   .field--name-field-media
   ,.media
   {
-    margin-bottom: var(--space-between-image-and-caption);
+    margin-bottom: 0;
   }
   &.float-left
   ,&.float-none
@@ -71,16 +70,12 @@
       }
     }
   }
-  img{
-    width: 100%;
-  }
   & + .block-field-blocknodepostbody > div:first-child > :first-child{
     margin-top: 0;
   }
   .field--name-field-caption{
-    background-color: $color-gray-40;
+    background-color: $color-bg-light-gray;
     padding: .125em .25em;
     margin: 2px 0 0;
   }
 }
-// end - primary media with caption
