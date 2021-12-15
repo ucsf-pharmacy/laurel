@@ -1,4 +1,4 @@
-*+h2 { margin-top: var(--space-l); }
+*:not(span[id^="toc-"])+h2 { margin-top: var(--space-l); }
 *+h3 { margin-top: var(--space-l); }
 *+h4 { margin-top: var(--space-s); }
 *+h5,*+h6 { margin-top: var(--space-xs); }
@@ -48,4 +48,10 @@ h2+.laurel-side-by-side>div{
 }
 h2.field__label{
   font-weight: normal;
+}
+.block-entity-viewnode>span[id^="toc-"]+h2{
+  margin-top: 0;
+}
+.block+.block h2{
+  margin-top: var(--space-l);
 }

@@ -10,6 +10,7 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
 
 ----------------------------------------------------------------------
 */
+
 a{
   &:link{
   }
@@ -22,3 +23,16 @@ a{
   &:active{
   }
 }
+
+/* start - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
+/* based on https://css-tricks.com/on-target/ */
+body{
+  :target{
+    animation: highlight 3s ease-in-out;
+  }
+  @keyframes highlight{
+    0% { border-left: 50px solid $color-m3-orange; }
+    100% { border-left: 0px solid $color-m3-orange; }
+  }
+}
+/* end - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */

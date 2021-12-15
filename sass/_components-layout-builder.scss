@@ -59,6 +59,8 @@
 @media screen and (min-width: 641px) {
   .layout--twocol-section{
     column-gap: var(--space-between-layout-columns);
+    margin-bottom: var(--space-between-layout-rows);
+    width: 100%;
   }
   .node--type-article{
     .layout--twocol-section{

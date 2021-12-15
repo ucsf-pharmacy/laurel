@@ -54,7 +54,7 @@
 %}
 {#
 alter this field to only show
-label = Date
+label = When
 value = To be determined
 #}
 {% if label_hidden %}
@@ -71,7 +71,7 @@ value = To be determined
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ "Date"|t }}</div>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ "When"|t }}</div>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
