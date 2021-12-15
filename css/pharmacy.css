@@ -2035,7 +2035,10 @@ article:not(.node--unpublished):not(.media):not(.node--view-mode-image-with-capt
 
 /* line 12, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
 body {
-  margin: 0 var(--space-from-page-edge);
+  max-width: 1920px;
+  margin: 0 auto;
+  border-left: var(--space-from-page-edge) solid transparent;
+  border-right: var(--space-from-page-edge) solid transparent;
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_status.scss */
