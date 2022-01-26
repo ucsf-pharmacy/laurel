@@ -26,7 +26,7 @@ a{
 
 /* start - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
 /* based on https://css-tricks.com/on-target/ */
-body{
+.node__content{
   :target{
     animation: highlight 3s ease-in-out;
   }

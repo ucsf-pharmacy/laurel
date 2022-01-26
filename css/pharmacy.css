@@ -643,8 +643,7 @@ body {
 }
 
 /* line 56, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
-.tabular-figures
-, table {
+.tabular-figures {
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
   -webkit-font-feature-settings: "tnum";
@@ -847,7 +846,7 @@ http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
 /* start - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
 /* based on https://css-tricks.com/on-target/ */
 /* line 30, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-links.scss */
-body :target {
+.node__content :target {
   animation: highlight 3s ease-in-out;
 }
 
@@ -861,7 +860,7 @@ body :target {
 }
 
 /* line 37, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-links.scss */
-body a[id] {
+.node__content a[id] {
   position: relative;
   border-top: 102px solid transparent;
   margin: -30px 0 0;
@@ -869,7 +868,7 @@ body a[id] {
 }
 
 /* line 42, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-links.scss */
-body a[id]::before {
+.node__content a[id]::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -3565,7 +3564,7 @@ header ul.menu a
 , .tabs a {
   text-decoration: none;
   background-color: transparent;
-  padding: var(--inset-squish-m);
+  padding: 12px 16px 4px 16px;
   line-height: calc( var(--line-spacing) + var(--space-m));
 }
 
