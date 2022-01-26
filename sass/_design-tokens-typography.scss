@@ -54,7 +54,7 @@ body{
   font-feature-settings: "onum";
 }
 .tabular-figures
-,table
+// ,table // we remove this because it prevents other font-feature-settings from being applied to content within tables
 { // #40 in Typewolf’s Flawless Typography Checklist: Use tabular figures (or a monospaced font) with flush right alignment when setting numbers in tables
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
