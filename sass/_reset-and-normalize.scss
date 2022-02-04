@@ -16,7 +16,7 @@ https://hankchizljaw.com/wrote/a-modern-css-reset/
 /* Remove default padding */
 ul[class],
 ol[class] {
-  padding: 0;
+  // padding: 0; // 2022.0204 frankfarm: removed because it messes up tocbot
 }
 
 /* Remove default margin */
@@ -45,6 +45,7 @@ body {
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-display: optional; // https://font-display.glitch.me
 }
 
 ::selection{
