@@ -110,13 +110,31 @@
     margin-top: var(--space-between-title-group-and-body);
   }
   .field--name-field-event-datetime{
-    ul{
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 1em;
-      li{
-        @media screen and (min-width: 401px){
-          // width: 35ch;
+    .field__items{
+      // display: flex;
+      // flex-wrap: wrap;
+      // column-gap: 3em;
+      column-width: 37ch;
+      column-gap: 3em;
+      .field__item{
+        .smart-date--date{
+          min-width: 16ch;
+        }
+        @media screen and (max-width: 295px){
+          margin-bottom: 1em;
+          .smart-date--date
+          ,.smart-date--time
+          {
+            display: block;
+          }
+        }
+        @media screen and (min-width: 296px){
+          min-width: 37ch;
+          .smart-date--date
+          ,.smart-date--time
+          {
+            display: inline-block;
+          }
         }
       }
     }

@@ -17,7 +17,7 @@
       content: ''; // hide the colon following the field
     }
   }
-  .field__items{
+  &:not(.field--name-field-event-datetime) .field__items{
     .field__item{
       display: inline;
       &:not(:last-child):after{

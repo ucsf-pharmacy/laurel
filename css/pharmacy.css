@@ -255,7 +255,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-layout-rows: var(--space-m);
   --space-between-related-entities: var(--space-m);
   --space-between-separate-entities: var(--space-l);
-  --space-between-content-multicolumns: var(--space-m);
+  --space-between-content-multicolumns: var(--space-l);
   --space-between-title-group-and-body: var(--space-l);
   --space-between-blocks: var(--space-m);
   --space-between-image-and-caption: var(--space-xs);
@@ -2820,13 +2820,41 @@ body.page-type-node-article{
 }
 
 /* line 113, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-datetime ul {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 1em;
+.page-node-type-event .field--name-field-event-datetime .field__items {
+  column-width: 37ch;
+  column-gap: 3em;
 }
 
-/* line 124, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 120, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event .field--name-field-event-datetime .field__items .field__item .smart-date--date {
+  min-width: 16ch;
+}
+
+@media screen and (max-width: 295px) {
+  /* line 119, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  .page-node-type-event .field--name-field-event-datetime .field__items .field__item {
+    margin-bottom: 1em;
+  }
+  /* line 125, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  .page-node-type-event .field--name-field-event-datetime .field__items .field__item .smart-date--date
+, .page-node-type-event .field--name-field-event-datetime .field__items .field__item .smart-date--time {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 296px) {
+  /* line 119, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  .page-node-type-event .field--name-field-event-datetime .field__items .field__item {
+    min-width: 37ch;
+  }
+  /* line 133, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  .page-node-type-event .field--name-field-event-datetime .field__items .field__item .smart-date--date
+, .page-node-type-event .field--name-field-event-datetime .field__items .field__item .smart-date--time {
+    display: inline-block;
+  }
+}
+
+/* line 142, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field--name-field-event-moreinfo a {
   display: block;
   text-decoration: none;
@@ -2865,7 +2893,7 @@ body.page-type-node-article{
   border-bottom: 1px solid transparent;
 }
 
-/* line 127, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 145, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field--name-field-event-moreinfo a:not(.last-child) {
   margin-bottom: 1em;
 }
@@ -3016,12 +3044,12 @@ body.page-type-node-article{
 }
 
 /* line 21, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--label-inline .field__items .field__item {
+.field--label-inline:not(.field--name-field-event-datetime) .field__items .field__item {
   display: inline;
 }
 
 /* line 23, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--label-inline .field__items .field__item:not(:last-child):after {
+.field--label-inline:not(.field--name-field-event-datetime) .field__items .field__item:not(:last-child):after {
   content: ',';
 }
 
@@ -3101,7 +3129,7 @@ body.page-type-node-article{
   orphans: 2;
   widows: 2;
   column-gap: var(--space-between-content-multicolumns);
-  column-width: 26ch;
+  column-width: 27ch;
 }
 
 /* line 6, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-wysiwyg-columns.scss */
