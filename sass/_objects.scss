@@ -1,11 +1,11 @@
 .node li:not(:last-child){
   margin-bottom: var(--list-item-spacing);
 }
-.messages{
-  background-position-y: center;
-}
 .content-type-explanation{
   margin-bottom: 1em;
+}
+.messages{
+  background-position-y: center;
 }
 .simple-styleguide{
   & > div {

@@ -161,3 +161,14 @@
 }
 // end - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
 
+.block-field-blocknodepostfield-keywords{
+  ul{
+    padding-left: 0;
+    li{
+      display: inline;
+      &:not(:last-child):after{
+        content: ', ';
+      }
+    }
+  }
+}

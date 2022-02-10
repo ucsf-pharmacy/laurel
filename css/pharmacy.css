@@ -692,9 +692,8 @@ h1
   max-width: none;
 }
 
-/* line 105, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
-h1, h2, h3, h4, h5, h6
-, .field--name-field-event-audience .field__items
+/* line 106, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-typography.scss */
+.field--name-field-event-audience .field__items
 , .field--name-field-event-moreinfo
 , .field--name-field-subtitle
 , .laurel-max-width-measure {
@@ -2370,13 +2369,13 @@ a[href*="zoom.com"]:hover:after {
 }
 
 /* line 4, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects.scss */
-.messages {
-  background-position-y: center;
+.content-type-explanation {
+  margin-bottom: 1em;
 }
 
 /* line 7, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects.scss */
-.content-type-explanation {
-  margin-bottom: 1em;
+.messages {
+  background-position-y: center;
 }
 
 /* line 11, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_objects.scss */
@@ -2445,13 +2444,6 @@ table.no-span {
 /* line 2, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-nav.scss */
 .action-links {
   margin: var(--space-l) 0;
-}
-
-@media screen and (max-width: 40em) {
-  /* line 2, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-toc.scss */
-  .block-tocbot {
-    display: none;
-  }
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-node.scss */
@@ -3139,6 +3131,21 @@ body.page-type-node-article{
 /* line 159, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-event-series {
   margin-top: -6px;
+}
+
+/* line 165, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.block-field-blocknodepostfield-keywords ul {
+  padding-left: 0;
+}
+
+/* line 167, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.block-field-blocknodepostfield-keywords ul li {
+  display: inline;
+}
+
+/* line 169, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.block-field-blocknodepostfield-keywords ul li:not(:last-child):after {
+  content: ', ';
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-wysiwyg-columns.scss */
