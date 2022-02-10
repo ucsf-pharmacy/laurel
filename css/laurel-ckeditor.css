@@ -958,71 +958,73 @@ table .span-columns {
 }
 
 /* line 957, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
-tr:hover {
+table tr:hover {
   background-color: #fef8e4;
 }
 
 /* line 960, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
-th, td {
+table tr th, table tr td {
   text-align: left;
   vertical-align: baseline;
   padding: var(--inset-stretch-xs);
 }
 
+/* line 968, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+table thead th:first-child, table thead td:first-child, table tbody th:first-child, table tbody td:first-child {
+  padding-left: 0;
+}
+
+/* line 971, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+table thead th:last-child, table thead td:last-child, table tbody th:last-child, table tbody td:last-child {
+  padding-right: 0;
+}
+
 @media screen and (min-width: 401px) {
-  /* line 978, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 980, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-hhmmampm th:nth-child(1), table.laurel-c1w-hhmmampm td:nth-child(1) {
     width: 10ch;
   }
-  /* line 979, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 981, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-mmmyyyy th:nth-child(1), table.laurel-c1w-mmmyyyy td:nth-child(1) {
     width: 13ch;
   }
-  /* line 981, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 983, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xxs th:nth-child(1), table.laurel-c1w-xxs td:nth-child(1) {
     width: 5ch;
   }
-  /* line 982, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 984, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xs th:nth-child(1), table.laurel-c1w-xs td:nth-child(1) {
     width: 10ch;
   }
-  /* line 983, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 985, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-s th:nth-child(1), table.laurel-c1w-s td:nth-child(1) {
     width: 15ch;
   }
-  /* line 984, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 986, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-m th:nth-child(1), table.laurel-c1w-m td:nth-child(1) {
     width: 20ch;
   }
-  /* line 985, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 987, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-l th:nth-child(1), table.laurel-c1w-l td:nth-child(1) {
     width: 25ch;
   }
-  /* line 986, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 988, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xl th:nth-child(1), table.laurel-c1w-xl td:nth-child(1) {
     width: 30ch;
   }
-  /* line 987, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 989, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xxl th:nth-child(1), table.laurel-c1w-xxl td:nth-child(1) {
     width: 35ch;
   }
-  /* line 991, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
-  thead th:first-child, thead td:first-child, tbody th:first-child, tbody td:first-child {
-    padding-left: 0;
-  }
-  /* line 994, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
-  thead th:last-child, thead td:last-child, tbody th:last-child, tbody td:last-child {
-    padding-right: 0;
-  }
-  /* line 1000, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 992, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   thead th {
     vertical-align: bottom;
   }
-  /* line 1006, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 998, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody th, tbody td {
     border-top: 1px solid #d1d3d3;
   }
-  /* line 1008, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1000, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody th h2:first-child
 , tbody th h3:first-child
 , tbody th h4:first-child, tbody td h2:first-child
@@ -1030,49 +1032,49 @@ th, td {
 , tbody td h4:first-child {
     margin-top: 0;
   }
-  /* line 1014, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1006, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody th h3:last-child, tbody td h3:last-child {
     margin-bottom: 0;
   }
-  /* line 1021, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1013, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody tr:first-child th, tbody tr:first-child td {
     border-top: 2px solid #84c234;
   }
-  /* line 1026, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1018, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody tr:last-child th, tbody tr:last-child td {
     border-bottom: 2px solid #84c234;
   }
 }
 
-/* line 1038, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 1030, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table.laurel-hide-borders tbody tr:first-child th, table.laurel-hide-borders tbody tr:first-child td, table.laurel-hide-borders tbody tr:last-child th, table.laurel-hide-borders tbody tr:last-child td {
   border-top: none;
   border-bottom: none;
 }
 
-/* line 1052, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 1044, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table.laurel-hide-row-lines tbody tr:not(:first-child) th, table.laurel-hide-row-lines tbody tr:not(:first-child) td, table.laurel-hide-row-lines tbody tr:last-child th, table.laurel-hide-row-lines tbody tr:last-child td {
   border-top: none;
 }
 
 @media screen and (max-width: 400px) {
-  /* line 1063, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1055, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody th, table.laurel-collapse tbody td {
     display: block;
     padding: var(--space-m) 0;
   }
-  /* line 1067, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1059, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody th:first-child {
     border-top: none;
     border-left: 2px solid #84c234;
     background-color: #f4f8ea;
     padding: var(--inset-squish-m);
   }
-  /* line 1073, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1065, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody td:first-child {
     background-color: #d1d3d3;
   }
-  /* line 1076, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1068, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody td {
     padding-bottom: var(--space-l);
   }

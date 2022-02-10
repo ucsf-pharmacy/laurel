@@ -57,42 +57,46 @@
   row-gap: 0; // row-gap doesn't seem to work at very small browser widths, e.g., < 400px
 }
 @media screen and (min-width: 641px) {
-  .layout--twocol-section{
+  .layout--twocol-section
+  ,.layout--threecol-section
+  {
     column-gap: var(--space-between-layout-columns);
     margin-bottom: var(--space-between-layout-rows);
     width: 100%;
   }
-  .node--type-article{
-    .layout--twocol-section{
-      column-gap: var(--space-between-related-entities);
-    }
-  }
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
   .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
-    flex: 1 1 calc( 50% - var(--space-between-layout-columns) );
+    flex: 1 0 calc( 50% - var(--space-between-layout-columns) );
   }
   .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first,
   .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
-    flex: 1 1 calc( 33% - var(--space-between-layout-columns) );
+    flex: 1 0 calc( 33% - var(--space-between-layout-columns) );
   }
   .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--second,
   .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--first {
-    flex: 1 1 calc( 67% - var(--space-between-layout-columns) );
+    flex: 1 0 calc( 67% - var(--space-between-layout-columns) );
   }
   .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--first,
   .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--second {
-    flex: 1 1 calc( 25% - var(--space-between-layout-columns) );
+    flex: 1 0 calc( 25% - var(--space-between-layout-columns) );
   }
   .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--second,
   .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--first {
-    flex: 1 1 calc( 75% - var(--space-between-layout-columns) );
+    flex: 1 0 calc( 75% - var(--space-between-layout-columns) );
+  }
+  .layout--threecol-section > .layout__region--first,
+  .layout--threecol-section > .layout__region--third {
+    flex: 1 0 calc( 33% - var(--space-between-layout-columns) );
+  }
+  .layout--threecol-section > .layout__region--second {
+    flex: 1 0 calc( 34% - var(--space-between-layout-columns) );
   }
 }
 // end - default styles don't provide enough space between layout columns, so override it
 
 .layout--twocol-section{
   & > .layout__region{
-    min-width: 250px;
+    // min-width: 250px;
     // margin-bottom: var(--space-between-layout-rows);
   }
 }

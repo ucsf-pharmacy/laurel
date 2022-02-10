@@ -953,23 +953,25 @@ table{
   .span-columns{
     column-span: all;
   }
-}
-tr:hover{
-  background-color: $color-highlight;
-}
-th,td{
-  text-align: left;
-  vertical-align: baseline;
-  padding: var(--inset-stretch-xs);
-}
-thead{
-}
-tbody{
-  th{
-    // border-top: 2px solid $color-green-70;
+  tr{
+    &:hover{
+      background-color: $color-highlight;
+    }
+    th,td{
+      text-align: left;
+      vertical-align: baseline;
+      padding: var(--inset-stretch-xs);
+    }
   }
-  td{
-    // padding-bottom: var(--space-l);
+  thead,tbody{
+    th,td{
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+    }
   }
 }
 //--------------------------------------------------------------------
@@ -985,16 +987,6 @@ tbody{
     &.laurel-c1w-l       { th,td { &:nth-child(1) { width: 25ch; } } }
     &.laurel-c1w-xl      { th,td { &:nth-child(1) { width: 30ch; } } }
     &.laurel-c1w-xxl     { th,td { &:nth-child(1) { width: 35ch; } } }
-  }
-  thead,tbody{
-    th,td{
-      &:first-child{
-        padding-left: 0;
-      }
-      &:last-child{
-        padding-right: 0;
-      }
-    }
   }
   thead{
     th{

@@ -73,9 +73,18 @@
   & + .block-field-blocknodepostbody > div:first-child > :first-child{
     margin-top: 0;
   }
+  .field--name-field-media-image{
+    img{
+      // width: auto;
+      // max-height: 50vh;
+      // margin-left: auto;
+    }
+  }
   .field--name-field-caption{
     background-color: $color-bg-light-gray;
     padding: .125em .25em;
-    margin: 2px 0 0;
+    margin: 4px 0 0;
+    font-size: .9em;
+    line-height: 1.2;
   }
 }
