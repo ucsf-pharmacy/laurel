@@ -4,7 +4,6 @@
   column-gap: var(--space-between-content-multicolumns);
   column-width: 27ch;
   h2{
-    // column-span: all;
     margin-top: var(--space-xl);
     max-width: var(--measure);
     &:first-child{

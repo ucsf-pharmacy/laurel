@@ -73,11 +73,15 @@
     {% endif %}
     {% for item in items %}
       {% set url = element['#object'].field_url.value.0.uri %}
+      {#
+      // we don't want the link, so remove it
       {% if url %}
         <div{{ item.attributes.addClass('field__item') }}><a href="{{ url }}">{{ item.content }}</a></div>
       {% else %}
         <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endif %}
+      #}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

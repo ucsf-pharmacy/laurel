@@ -111,9 +111,6 @@
   }
   .field--name-field-event-datetime{
     .field__items{
-      // display: flex;
-      // flex-wrap: wrap;
-      // column-gap: 3em;
       column-width: 37ch;
       column-gap: 3em;
       .field__item{
@@ -145,6 +142,13 @@
     &:not(.last-child){
       margin-bottom: 1em;
     }
+  }
+}
+.simple-gmap-address{
+  margin-bottom: .5em;
+  &+iframe{
+    border: 1px solid $color-border-dark !important;
+    max-width: 100%;
   }
 }
 
