@@ -1,3 +1,28 @@
+body{
+  background-color: $color-i6-navy;
+}
+.page-node-type-post{
+  main{
+    max-width: var(--content-outer-width);
+    margin: 0 auto;
+    div.region{
+      max-width: var(--content-inner-width);
+      margin: 0 auto;
+      padding: 2em 6em;
+      background-color: $color-white;
+    }
+  }
+}
+.page-node-type-event{
+  main{
+    margin: 0 auto;
+    div.region{
+      margin: 0 auto;
+      padding: 4em 3em;
+      background-color: $color-white;
+    }
+  }
+}
 .node{
   line-height: var(--line-spacing);
 }

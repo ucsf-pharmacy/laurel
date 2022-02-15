@@ -1,5 +1,5 @@
-.block-field-blocknodepostfield-post-type{ // breadcrumbs for post
-  margin-bottom: var(--space-l);
+.field--name-field-post-type{ // breadcrumbs for post
+  margin-bottom: 4em;
   .field__item{
     display: inline;
     &:after{
@@ -10,3 +10,7 @@
     }
   }
 }
+.field--name-field-author{ // post byline
+  margin-bottom: 4em;
+}
+

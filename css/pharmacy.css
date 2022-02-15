@@ -247,6 +247,8 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --line-height-s: calc(0.95 * var(--ratio));
   --line-height-m: calc(1.05 * var(--ratio));
   --line-height-l: calc(1.1 * var(--ratio));
+  --content-outer-width: 1440px;
+  --content-inner-width: 1000px;
   --measure: 50ch;
   --gutter: var(--space-l);
   --space-around-floated-images: var(--space-l);
@@ -283,7 +285,7 @@ p { font-size: var(--s0); }
 */
 /* line 12, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_settings-fixed-type-scales.scss */
 :root {
-  --ratio: 1.2;
+  --ratio: 1.18;
   --s-5: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
   --s-4: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
   --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));
@@ -549,30 +551,36 @@ h1, h2 {
 }
 
 /* line 152, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+.field--name-field-post-type
+, .field--name-field-author {
+  font-size: var(--s-3);
+}
+
+/* line 157, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
   line-height: var(--line-height-m);
 }
 
 @media screen and (max-width: 500px) {
-  /* line 152, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+  /* line 157, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
   .field--name-field-subtitle {
     font-size: 1.3em;
   }
 }
 
-/* line 159, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 164, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 sub
 , sup {
   line-height: 0;
 }
 
-/* line 164, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 169, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 code, kbd, pre, samp, tt {
   font-size: 1em;
 }
 
-/* line 167, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 172, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .block-field-blocknodepostfield-subtitle {
   line-height: var(--line-height-m);
 }
@@ -2021,6 +2029,37 @@ article:not(.node--unpublished):not(.media):not(.node--view-mode-image-with-capt
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+body {
+  background-color: #f2f3f4;
+}
+
+/* line 5, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+.page-node-type-post main {
+  max-width: var(--content-outer-width);
+  margin: 0 auto;
+}
+
+/* line 8, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+.page-node-type-post main div.region {
+  max-width: var(--content-inner-width);
+  margin: 0 auto;
+  padding: 2em 6em;
+  background-color: #ffffff;
+}
+
+/* line 17, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+.page-node-type-event main {
+  margin: 0 auto;
+}
+
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+.page-node-type-event main div.region {
+  margin: 0 auto;
+  padding: 4em 3em;
+  background-color: #ffffff;
+}
+
+/* line 26, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
 .node {
   line-height: var(--line-spacing);
 }
@@ -2948,23 +2987,28 @@ body.page-type-node-article{
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.block-field-blocknodepostfield-post-type {
-  margin-bottom: var(--space-l);
+.field--name-field-post-type {
+  margin-bottom: 4em;
 }
 
 /* line 3, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.block-field-blocknodepostfield-post-type .field__item {
+.field--name-field-post-type .field__item {
   display: inline;
 }
 
 /* line 5, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.block-field-blocknodepostfield-post-type .field__item:after {
+.field--name-field-post-type .field__item:after {
   content: ' \2192 ';
 }
 
 /* line 8, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.block-field-blocknodepostfield-post-type .field__item:last-child:after {
+.field--name-field-post-type .field__item:last-child:after {
   content: '';
+}
+
+/* line 13, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.field--name-field-author {
+  margin-bottom: 4em;
 }
 
 /* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
