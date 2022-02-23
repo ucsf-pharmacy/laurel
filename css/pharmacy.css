@@ -552,35 +552,36 @@ h1, h2 {
 
 /* line 152, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .field--name-field-post-type
-, .field--name-field-author {
+, .field--name-field-author
+, .field--name-created {
   font-size: var(--s-3);
 }
 
-/* line 157, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 158, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
   line-height: var(--line-height-m);
 }
 
 @media screen and (max-width: 500px) {
-  /* line 157, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+  /* line 158, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
   .field--name-field-subtitle {
     font-size: 1.3em;
   }
 }
 
-/* line 164, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 165, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 sub
 , sup {
   line-height: 0;
 }
 
-/* line 169, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 170, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 code, kbd, pre, samp, tt {
   font-size: 1em;
 }
 
-/* line 172, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
+/* line 173, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-font-and-line-height.scss */
 .block-field-blocknodepostfield-subtitle {
   line-height: var(--line-height-m);
 }
@@ -2986,28 +2987,34 @@ body.page-type-node-article{
   margin-bottom: var(--space-between-title-group-and-body);
 }
 
-/* line 1, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.field--name-field-post-type {
+/* line 2, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.page-node-type-post .field--name-field-post-type {
   margin-bottom: 4em;
 }
 
-/* line 3, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.field--name-field-post-type .field__item {
+/* line 4, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.page-node-type-post .field--name-field-post-type .field__item {
   display: inline;
 }
 
-/* line 5, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.field--name-field-post-type .field__item:after {
+/* line 6, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.page-node-type-post .field--name-field-post-type .field__item:after {
   content: ' \2192 ';
 }
 
-/* line 8, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.field--name-field-post-type .field__item:last-child:after {
+/* line 9, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.page-node-type-post .field--name-field-post-type .field__item:last-child:after {
   content: '';
 }
 
-/* line 13, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
-.field--name-field-author {
+/* line 14, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.page-node-type-post .block-field-blocknodepostfield-author
+, .page-node-type-post .block-field-blocknodepostcreated {
+  display: inline;
+}
+
+/* line 19, ../../../../../Users/frankfarm/Documents/Git/drupal8/docroot/themes/contrib/laurel/sass/_content-type-post.scss */
+.page-node-type-post .node--view-mode-authors-and-authored-on-date {
   margin-bottom: 4em;
 }
 

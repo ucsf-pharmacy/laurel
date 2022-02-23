@@ -149,8 +149,9 @@ h3{
 h1,h2{
   line-height: var(--line-height-xs); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
 }
-.field--name-field-post-type // post type (aka breadcrumbs)
-,.field--name-field-author // post byline
+.field--name-field-post-type // post: type (aka breadcrumbs)
+,.field--name-field-author // post: byline
+,.field--name-created // post: authored on date
 {
   font-size: var(--s-3);
 }

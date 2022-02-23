@@ -1,16 +1,22 @@
-.field--name-field-post-type{ // breadcrumbs for post
-  margin-bottom: 4em;
-  .field__item{
-    display: inline;
-    &:after{
-      content: ' \2192 '; // right arrow
-    }
-    &:last-child:after{
-      content: '';
+.page-node-type-post{
+  .field--name-field-post-type{ // breadcrumbs for post
+    margin-bottom: 4em;
+    .field__item{
+      display: inline;
+      &:after{
+        content: ' \2192 '; // right arrow
+      }
+      &:last-child:after{
+        content: '';
+      }
     }
   }
+  .block-field-blocknodepostfield-author
+  ,.block-field-blocknodepostcreated
+  {
+    display: inline;
+  }
+  .node--view-mode-authors-and-authored-on-date{
+    margin-bottom: 4em;
+  }
 }
-.field--name-field-author{ // post byline
-  margin-bottom: 4em;
-}
-
