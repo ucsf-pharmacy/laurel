@@ -4,4 +4,5 @@ global-styling:
       css/pharmacy.css: {}
 global-js:
   js:
+    js/container-query-polyfill/cqfill.iife.min.js: {}
     js/pharmacy.js: {}
