@@ -26,7 +26,7 @@ function laurel_preprocess_time(array &$variables) {
     $find
     ,$replace
     // ,$variables['text']['time']['#markup']
-    ,$variables['text']['#markup']
+    ,$variables['text']['#markup'] ?? ''
   );
 }
 
@@ -37,8 +37,8 @@ function laurel_preprocess_field__field_event_datetime(array &$variables) {
   // kint( $variables['items']);
   $count = count( $variables['items']);
   for ( $i = 0 ; $i < $count ; $i++ ){
-    $start_time = $variables['items'][$i]['content']['start']['time']['#text']['#markup'];
-    $end_time = $variables['items'][$i]['content']['end']['time']['#text']['#markup'];
+    $start_time = $variables['items'][$i]['content']['start']['time']['#text']['#markup'] ?? '';
+    $end_time = $variables['items'][$i]['content']['end']['time']['#text']['#markup'] ?? '';
     if ( $start_time == '12:00' ){
       if ( strstr( $end_time , 'am' ) ){
         $variables['items'][$i]['content']['start']['time']['#text']['#markup'] = 'midnight';
