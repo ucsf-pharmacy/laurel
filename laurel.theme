@@ -22,6 +22,11 @@ function laurel_preprocess_time(array &$variables) {
     ,$replace
     ,$variables['text']['#markup'] ?? ''
   );
+  $variables['text']['time']['#markup'] = preg_replace(
+    $find
+    ,$replace
+    ,$variables['text']['time']['#markup'] ?? ''
+  );
 }
 
 /**
