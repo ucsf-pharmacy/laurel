@@ -94,7 +94,7 @@
     }
   }
   .block-field-blocknodeeventfield-location-name {
-    max-width: var(--measure);
+    // max-width: var(--measure);
     // margin-bottom: var(--space-between-blocks);
   }
   .field--name-field-organization{
@@ -110,9 +110,6 @@
       column-width: 37ch;
       column-gap: 3em;
       .field__item{
-        .smart-date--date{
-          min-width: 16ch;
-        }
         @media screen and (max-width: 295px){
           margin-bottom: 1em;
           .smart-date--date
