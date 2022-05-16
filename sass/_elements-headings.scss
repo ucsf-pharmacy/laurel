@@ -12,8 +12,7 @@ h2{
 h3,h4,h5,h6{
   margin-bottom: var(--space-xs);
 }
-/*:not(.block) + .block > .field
-,*/.layout__region--second > .block:first-child > .field:first-child
+.layout__region--second > .block:first-child > .field:first-child
 {
   & > h2,& > h3,& > h4,& > h5,& > h6{
     &:first-child{
@@ -53,5 +52,5 @@ h2.field__label{
   margin-top: 0;
 }
 .block+.block h2{
-  margin-top: var(--space-l);
+  margin-top: var(--space-xl);
 }

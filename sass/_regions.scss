@@ -1,5 +1,5 @@
 :root{
-  --region-margin-block             : 0;
+  --region-margin-block             : 1em;
   --region-margin-inline            : var(--space-s);
   @media all and (min-width: 400px){
     --region-margin-block             : 2em;
@@ -31,11 +31,13 @@ main
   }
 }
 .page-node-type-post{
+  nav.tabs{
+    max-width: var(--content-inner-width);
+    margin: 0 auto;
+  }
   main{
-    max-width: var(--content-outer-width);
     div.region{
       max-width: var(--content-inner-width);
-      background-color: $color-white;
     }
   }
 }

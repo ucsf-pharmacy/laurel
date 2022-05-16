@@ -1,3 +1,6 @@
+tabs.li{ // from tabs.css
+  margin-top: 0.9em;
+}
 .menu-item{
   display: inline;
   padding: 0;
@@ -25,7 +28,6 @@ ul.menu a.is-active:focus{
   color: $color-white;
 }
 .tabs{
-  margin-bottom: var(--space-l);
   ul{
     @media all and (max-width: 500px){
       padding-bottom: var(--space-l);
@@ -43,10 +45,9 @@ ul.menu a.is-active:focus{
     border: none;
     border: 1px solid $color-text;
     border-width: 1px 1px 0 1px;
-    position: relative;
-    top: 1px;
     padding-top: 9px;
-    background-color: transparent;
+    padding-bottom: 9px;
+    background-color: $color-white;
     &:not(.is-active):hover{
       background-color: $color-m6-orange;
       border-top: 5px solid $color-hover;
@@ -61,8 +62,11 @@ ul.menu a.is-active:focus{
     &:active{
     }
     &.is-active{
+      position: relative;
+      top: 1px;
       font-weight: bold;
-      background-color: transparent;
+      background-color: $color-white;
+      border-bottom: 1px solid $color-white;
       border-top: 5px solid $color-text;
       padding-top: 5px;
       @media all and (min-width: 501px){
@@ -86,6 +90,9 @@ ul.menu a.is-active:focus{
       border-width: 1px;
       display: inline-block;
       margin: .9em 1em;
+    }
+    a.is-active{
+      border-bottom: 1px solid $color-text;
     }
   }
 }
