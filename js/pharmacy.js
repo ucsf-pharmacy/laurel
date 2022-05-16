@@ -1,3 +1,12 @@
+// start - container queries polyfill
+/*
+const supportsContainerQueries = "container" in document.documentElement.style;
+if (!supportsContainerQueries) {
+  import("https://cdn.skypack.dev/container-query-polyfill");
+}
+*/
+// end - container queries polyfill
+
 // start - apply automatic columns when there is at least 600 characters
 // frankfarm - this was an experiment to see if i could automatically set multicolumns based on the length of the content. it does not work because not everything is large blocks of headings and text. tabled for now.
 /*

@@ -111,19 +111,19 @@
       column-gap: 3em;
       .field__item{
         @media screen and (max-width: 295px){
-          margin-bottom: 1em;
+          // margin-bottom: 1em;
           .smart-date--date
           ,.smart-date--time
           {
-            display: block;
+            // display: block;
           }
         }
         @media screen and (min-width: 296px){
-          min-width: 37ch;
+          // min-width: 37ch;
           .smart-date--date
           ,.smart-date--time
           {
-            display: inline-block;
+            // display: inline-block;
           }
         }
       }

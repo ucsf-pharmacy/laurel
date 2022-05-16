@@ -1,24 +1,40 @@
+:root{
+  --region-margin-block             : 0;
+  --region-margin-inline            : var(--space-s);
+  @media all and (min-width: 400px){
+    --region-margin-block             : 2em;
+    --region-margin-inline            : var(--space-m);
+  }
+  @media all and (min-width: 1024px){
+    --region-margin-block             : 4em;
+    --region-margin-inline            : var(--space-l);
+  }
+}
 body{
   background-color: $color-i6-navy;
+}
+main{
+}
+main
+,div.region
+{
+  margin: 0 auto;
+}
+[class*=page-node-type-]{
+  main div.region{
+    background-color: $color-white;
+    // for some reason the padding shortcut doesn't work here
+    padding-top: var(--region-margin-block);
+    padding-right: var(--region-margin-inline);
+    padding-bottom: var(--region-margin-block);
+    padding-left: var(--region-margin-inline);
+  }
 }
 .page-node-type-post{
   main{
     max-width: var(--content-outer-width);
-    margin: 0 auto;
     div.region{
       max-width: var(--content-inner-width);
-      margin: 0 auto;
-      padding: 2em 6em;
-      background-color: $color-white;
-    }
-  }
-}
-.page-node-type-event{
-  main{
-    margin: 0 auto;
-    div.region{
-      margin: 0 auto;
-      padding: 4em 3em;
       background-color: $color-white;
     }
   }

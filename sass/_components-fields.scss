@@ -8,23 +8,31 @@
 .field--label-above{
   margin-bottom: var(--space-m);
 }
+// @container(min-width: 400px;){
 .field--label-inline{
-  display: grid;
-  grid-template-columns: 12ch auto;
-  gap: .5em 1em;
-  .field__label{
-    &:after{
-      content: ''; // hide the colon following the field
+    display: grid;
+    grid-template-columns: 12ch auto;
+    gap: .5em 1em;
+    .field__label
+    ,.field__items
+    ,.field__item
+    {
+      margin-bottom: var(--space-s);
     }
-  }
-  &:not(.field--name-field-event-datetime) .field__items{
-    .field__item{
-      display: inline;
-      &:not(:last-child):after{
-        content: ',';
+    .field__label{
+      &:after{
+        content: ''; // hide the colon following the field
       }
     }
-  }
+    &:not(.field--name-field-event-datetime) .field__items{
+      .field__item{
+        display: inline;
+        &:not(:last-child):after{
+          content: ',';
+        }
+      }
+    }
+// }
 
   /*
   display: table-row;
@@ -92,7 +100,7 @@
 @media all and (max-width: 400px){
   .field--label-inline{
     display: block;
-    padding-bottom: var(--space-s);
+    padding-bottom: var(--space-m);
     .field__label
     ,.field__items
     ,.field__item
@@ -100,11 +108,13 @@
       float: none;
       display: block;
     }
+/*
     &>.field__item
     ,&>.field__items
     {
       margin-left: 2em;
     }
+*/
   }
 }
 
