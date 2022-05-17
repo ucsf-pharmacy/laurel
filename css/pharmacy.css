@@ -247,8 +247,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --line-height-s: calc(0.95 * var(--ratio));
   --line-height-m: calc(1.05 * var(--ratio));
   --line-height-l: calc(1.1 * var(--ratio));
-  --content-outer-width: 1440px;
-  --content-inner-width: 1000px;
+  --content-narrow-width: 1000px;
   --measure: 50ch;
   --gutter: var(--space-l);
   --space-around-floated-images: var(--space-l);
@@ -2068,18 +2067,20 @@ main
   padding-left: var(--region-margin-inline);
 }
 
-/* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-.page-node-type-post nav.tabs {
-  max-width: var(--content-inner-width);
+/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+.page-node-type-post
+nav.tabs, .page-node-type-ucsfpharmacy-person nav.tabs {
+  max-width: var(--content-narrow-width);
   margin: 0 auto;
 }
 
-/* line 39, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-.page-node-type-post main div.region {
-  max-width: var(--content-inner-width);
+/* line 41, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+.page-node-type-post
+main div.region, .page-node-type-ucsfpharmacy-person main div.region {
+  max-width: var(--content-narrow-width);
 }
 
-/* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+/* line 46, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
 .node {
   line-height: var(--line-spacing);
 }
@@ -2110,7 +2111,7 @@ main
   }
 }
 
-/* line 13, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
+/* line 14, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
 body {
   max-width: 1920px;
   margin: 0 auto;

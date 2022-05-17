@@ -1,5 +1,6 @@
 :root{
-  --space-from-page-edge            : 0;
+  --space-from-page-edge              : 0;
+
   @media all and (min-width: 400px){
     --space-from-page-edge            : var(--space-s);
   }
