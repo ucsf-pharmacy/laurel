@@ -83,12 +83,18 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-{# {{ devel_dump(content) }} #}
-{# add heading #}
-<h1>UCSF School of Pharmacy Person</h1>
+{# output the correct h1 #}
+{% if content['field_ucsfphps_fullname'][0]['#context']['value'] %}
+  <h1>{{ content['field_ucsfphps_fullname'][0]['#context']['value'] }}</h1>
+{% elseif label[0]['#context']['value'] %}
+  <h1>{{ label[0]['#context']['value'] }}</h1>
+{% else %}
+  <h1>(node title missing · this error should never happen)</h1>
+{% endif %}
+
 <div class="content-type-explanation">
 <p>
-This contains:
+This UCSF School of Pharmacy Person page contains:
 </p>
 <ul>
 <li>data stored specifically for School of Pharmacy</li>
@@ -117,6 +123,13 @@ This contains:
 
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
+{# {{ devel_dump(content) }} #}
+{# {{ dump(_context|keys) }} #}
+{# {{ dump(author_name) }} #}
+{# {{ kint(label[0]['#context']['value']) }} #}
+{# {{ kint(content['field_ucsfphps_fullname'][0]['#context']['value']) }} #}
+{# {{ vardumper(label) }} #}
+{# {{ kint(content) }} #}
   </div>
 
 </article>
