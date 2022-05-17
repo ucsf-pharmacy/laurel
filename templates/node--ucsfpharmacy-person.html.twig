@@ -83,9 +83,19 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
+{# {{ devel_dump(content) }} #}
 {# add heading #}
 <h1>UCSF School of Pharmacy Person</h1>
-<p class="content-type-explanation">This contains data stored specifically for School of Pharmacy and data values in the Enterprise Directory Service (EDS) and Profiles systems that we want to override.</p>
+<div class="content-type-explanation">
+<p>
+This contains:
+</p>
+<ul>
+<li>data stored specifically for School of Pharmacy</li>
+<li>data values in the Enterprise Directory Service (EDS) and Profiles systems that we want to override.
+</li>
+</ul>
+</div>
 
   {{ title_prefix }}
   {% if label and not page %}
