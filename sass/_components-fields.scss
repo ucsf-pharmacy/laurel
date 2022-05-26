@@ -24,7 +24,7 @@
         content: ''; // hide the colon following the field
       }
     }
-    &:not(.field--name-field-event-datetime) .field__items{
+    &:not(.field--name-field-event-datetime):not(.field--name-field-ucsfphps-degrees) .field__items{
       .field__item{
         display: inline;
         &:not(:last-child):after{
@@ -154,8 +154,7 @@
     }
   }
 }
-.field--name-field-ucsfphps-degrees
-,.field--name-field-ucsfphps-affiliations
+.field--name-field-ucsfphps-affiliations
 {
   display: block;
   .field__items{
@@ -165,6 +164,23 @@
     }
   }
 }
+.field--name-field-ucsfphps-degrees{
+  .field
+  ,article
+  {
+    display: inline;
+  }
+}
+.js{
+  .paragraphs-description{
+    .paragraphs-content-wrapper{
+      line-height: var(--line-height);
+      height: auto;
+      word-break: initial;
+    }
+  }
+}
+
 // start - slug margin adjustments · these alter margins so that text lines up horizontally with adjacent images
 .field--name-field-event-series{
   margin-top: -6px;

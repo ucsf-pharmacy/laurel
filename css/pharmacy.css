@@ -16,25 +16,23 @@ https://hankchizljaw.com/wrote/a-modern-css-reset/
 */
 /* Box sizing and color rules */
 /* line 9, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-*,
-*::before,
-*::after {
+*
+, *::before
+, *::after
+, .js .paragraphs-description .summary-content {
   box-sizing: border-box;
   color: #21272a;
 }
 
 /* Remove default padding */
 /* Remove default margin */
-/* line 23, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 25, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 body,
 h1,
 h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
-li,
 figure,
 figcaption,
 blockquote,
@@ -44,7 +42,7 @@ dd {
 }
 
 /* Set core body defaults */
-/* line 41, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 body {
   font-size: 1em;
   min-height: 100vh;
@@ -55,26 +53,20 @@ body {
   font-display: optional;
 }
 
-/* line 51, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 53, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 ::selection {
   background-color: #feec96;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-/* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
 /* A elements that don't have a class get default styles */
-/* line 62, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 64, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
 /* Make images and video easier to work with */
-/* line 67, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 69, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 img, video {
   max-width: 100%;
   height: auto;
@@ -82,7 +74,7 @@ img, video {
 }
 
 /* Natural flow and rhythm in articles by default */
-/* line 75, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 77, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 article > *:not(.contextual):not(h2):not(h3):not(h4) + *
 , *:not(h2):not(h3):not(h4) + p {
   margin-top: var(--paragraph-spacing);
@@ -90,14 +82,14 @@ article > *:not(.contextual):not(h2):not(h3):not(h4) + *
 
 /* Special for multicol followed by anything */
 @media all and (min-width: 501px) {
-  /* line 83, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 85, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   .laurel-columns + * {
     margin-top: var(--space-between-content-multicolumns);
   }
 }
 
 /* Inherit fonts for inputs and buttons */
-/* line 89, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 91, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 input,
 button,
 textarea,
@@ -105,9 +97,15 @@ select {
   font: inherit;
 }
 
+/* line 97, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+input,
+textarea {
+  background-color: #f2f3f4;
+}
+
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  /* line 98, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 104, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -116,14 +114,14 @@ select {
   }
 }
 
-/* line 106, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 112, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 h2 {
   font-weight: normal;
 }
 
 /* start: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
 @media screen, print {
-  /* line 112, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 118, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     padding-left: 0.1em;
     font-style: normal;
@@ -132,11 +130,11 @@ h2 {
     letter-spacing: .05em;
     font-size: var(--s-2);
   }
-  /* line 120, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 126, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     overflow-wrap: break-word;
   }
-  /* line 123, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 129, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer #LinkList li {
     font-family: Helvetica,Arial,sans-serif;
     line-height: var(--s0);
@@ -144,7 +142,7 @@ h2 {
     font-size: var(--s-2);
     margin: var(--space-stack-xxs);
   }
-  /* line 130, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 136, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote,
   #LinkContainer {
     display: none;
@@ -152,18 +150,18 @@ h2 {
 }
 
 @media print {
-  /* line 137, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 143, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer {
     display: block;
   }
-  /* line 140, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 146, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   sup.footnote {
     display: inline;
   }
 }
 
 @media screen and (min-width: 68em), print and (min-width: 6in) {
-  /* line 145, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 151, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 2;
     column-gap: 4em;
@@ -171,7 +169,7 @@ h2 {
 }
 
 @media all and (min-width: 80em), print and (min-width: 9in) {
-  /* line 151, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+  /* line 157, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
   #LinkContainer ol {
     column-count: 3;
     column-gap: 4em;
@@ -179,7 +177,7 @@ h2 {
 }
 
 /* end: http://adrianroselli.com/2018/09/links-list-for-print-styles.html */
-/* line 159, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
+/* line 165, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 [id] {
   scroll-margin-top: 2ex;
 }
@@ -895,14 +893,26 @@ ul {
   list-style-type: square;
 }
 
-/* line 20, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-lists.scss */
+/* line 19, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-lists.scss */
+ul .paragraph-formatter {
+  display: block;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-lists.scss */
 ol {
   padding: 0 0 0 2.25em;
 }
 
-/* line 24, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-lists.scss */
+/* line 32, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-lists.scss */
 ul ul, ul ol, ol ul, ol ol {
   margin-top: .5em;
+}
+
+/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-lists.scss */
+li {
+  display: list-item;
 }
 
 /*
@@ -2049,7 +2059,7 @@ article:not(.node--unpublished):not(.media):not(.node--view-mode-image-with-capt
 
 /* line 13, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
 body {
-  background-color: #f2f3f4;
+  background-color: #e1e3e5;
 }
 
 /* line 18, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
@@ -2060,7 +2070,7 @@ main
 
 /* line 24, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
 [class*=page-node-type-] main div.region {
-  background-color: #ffffff;
+  background-color: #f2f3f4;
   padding-top: var(--region-margin-block);
   padding-right: var(--region-margin-inline);
   padding-bottom: var(--region-margin-block);
@@ -2288,12 +2298,12 @@ a[href^="http://"]:after
 , #edit-field-media-image-0-alt--description a:after {
   content: '';
   display: inline-block;
-  width: 20px;
+  margin-left: 6px;
+  width: 14px;
   height: 14px;
   background-image: url(../icons/external-link-square.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: 3px 0;
 }
 
 /* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
@@ -2301,42 +2311,41 @@ a[href^="http://"]:hover:after
 , a[href^="https://"]:hover:after
 , .edit-media-link:hover:after
 , #edit-field-media-image-0-alt--description a:hover:after {
-  width: 20px;
+  width: 14px;
   height: 14px;
   background-image: url(../icons/external-link-square-hover.svg);
-  background-position: 3px 0;
 }
 
-/* line 63, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 62, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[target]:after {
   background-image: url(../icons/external-link-in-new-tab.svg);
   width: 47px;
 }
 
-/* line 67, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 66, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[target]:hover:after {
   background-image: url(../icons/external-link-in-new-tab-hover.svg);
   width: 47px;
 }
 
-/* line 72, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 71, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="apple.com"]:after {
   background-image: url(../icons/appleinc.svg);
 }
 
-/* line 75, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 74, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="adobe.com"]:after {
   width: 24px;
   background-image: url(../icons/adobe.svg);
 }
 
-/* line 79, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 78, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="blogger.com"]:after
 , a[href*="pharmdadmissions.ucsf.edu"]:after {
   background-image: url(../icons/blogger.svg);
 }
 
-/* line 84, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 83, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*=".box.com"]:hover:after {
   width: 23px;
   height: 9px;
@@ -2344,85 +2353,85 @@ a[href*=".box.com"]:hover:after {
   background-position: 3px 0;
 }
 
-/* line 90, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 89, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="dropbox.com"]:after {
   width: 22px;
   background-image: url(../icons/dropbox.svg);
 }
 
-/* line 94, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 93, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="facebook.com"]:after {
   background-image: url(../icons/facebook2.svg);
 }
 
-/* line 97, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 96, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="flickr.com"]:after {
   background-image: url(../icons/flickr.svg);
 }
 
-/* line 100, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 99, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="github.com"]:after {
   width: 21px;
   background-image: url(../icons/github.svg);
 }
 
-/* line 104, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 103, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="google.com"]:hover:after {
   background-image: url(../icons/google.svg);
 }
 
-/* line 107, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 106, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="drive.google.com"]:after {
   width: 22px;
   background-image: url(../icons/googledrive.svg);
 }
 
-/* line 111, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 110, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="instagram.com"]:after {
   background-image: url(../icons/instagram.svg);
 }
 
-/* line 114, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 113, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="linkedin.com"]:after {
   background-image: url(../icons/linkedin.svg);
 }
 
-/* line 117, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 116, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="microsoft.com"]:after {
   background-image: url(../icons/microsoft.svg);
 }
 
-/* line 120, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 119, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="teams.microsoft.com"]:after {
   width: 22px;
   background-image: url(../icons/microsoftteams.svg);
 }
 
-/* line 124, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 123, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="sharepoint.com"]:after {
   width: 30px;
   background-image: url(../icons/microsoftonedrive.svg);
 }
 
-/* line 128, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 127, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="tiktok.com"]:after {
   background-image: url(../icons/tiktok.svg);
 }
 
-/* line 131, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 130, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="twitter.com"]:after {
   width: 23px;
   background-image: url(../icons/twitter.svg);
 }
 
-/* line 135, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 134, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="youtube.com"]:after
 , a[href*="youtu.be"]:after {
   width: 26px;
   background-image: url(../icons/youtube.svg);
 }
 
-/* line 141, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 140, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="zoom.com"]:hover:after {
   width: 40px;
   height: 7px;
@@ -3104,12 +3113,12 @@ body.page-type-node-article{
 }
 
 /* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--label-inline:not(.field--name-field-event-datetime) .field__items .field__item {
+.field--label-inline:not(.field--name-field-event-datetime):not(.field--name-field-ucsfphps-degrees) .field__items .field__item {
   display: inline;
 }
 
 /* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--label-inline:not(.field--name-field-event-datetime) .field__items .field__item:not(:last-child):after {
+.field--label-inline:not(.field--name-field-event-datetime):not(.field--name-field-ucsfphps-degrees) .field__items .field__item:not(:last-child):after {
   content: ',';
 }
 
@@ -3164,39 +3173,49 @@ body.page-type-node-article{
 }
 
 /* line 157, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--name-field-ucsfphps-degrees
-, .field--name-field-ucsfphps-affiliations {
+.field--name-field-ucsfphps-affiliations {
   display: block;
 }
 
-/* line 161, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--name-field-ucsfphps-degrees
-.field__items, .field--name-field-ucsfphps-affiliations .field__items {
+/* line 160, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.field--name-field-ucsfphps-affiliations .field__items {
   margin-left: calc( 25ch + var(--space-l));
 }
 
-/* line 163, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--name-field-ucsfphps-degrees
-.field__items .field__item, .field--name-field-ucsfphps-affiliations .field__items .field__item {
+/* line 162, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.field--name-field-ucsfphps-affiliations .field__items .field__item {
   display: block;
 }
 
-/* line 169, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 168, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.field--name-field-ucsfphps-degrees .field
+, .field--name-field-ucsfphps-degrees article {
+  display: inline;
+}
+
+/* line 176, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+.js .paragraphs-description .paragraphs-content-wrapper {
+  line-height: var(--line-height);
+  height: auto;
+  word-break: initial;
+}
+
+/* line 185, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-event-series {
   margin-top: -6px;
 }
 
-/* line 175, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 191, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul {
   padding-left: 0;
 }
 
-/* line 177, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 193, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul li {
   display: inline;
 }
 
-/* line 179, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 195, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul li:not(:last-child):after {
   content: ', ';
 }
@@ -3698,29 +3717,34 @@ ul.menu a.is-active:focus {
   color: #ffffff;
 }
 
-/* line 31, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+ul.tabs {
+  margin-bottom: 0;
+}
+
+/* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs ul {
   border-bottom: 1px solid #21272a;
 }
 
 @media all and (max-width: 500px) {
-  /* line 31, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  /* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
   .tabs ul {
     padding-bottom: var(--space-l);
   }
 }
 
-/* line 37, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 40, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs li:first-child {
   margin-left: var(--nav-tabs-margin-adjustment);
 }
 
-/* line 40, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs li:last-child {
   margin-right: var(--nav-tabs-margin-adjustment);
 }
 
-/* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 46, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs a {
   line-height: 1em;
   border: none;
@@ -3728,17 +3752,17 @@ ul.menu a.is-active:focus {
   border-width: 1px 1px 0 1px;
   padding-top: 9px;
   padding-bottom: 9px;
-  background-color: #ffffff;
+  background-color: #f2f3f4;
 }
 
-/* line 51, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs a:not(.is-active):hover {
   background-color: #fcecdc;
   border-top: 5px solid #fa6e1e;
   padding-top: 5px;
 }
 
-/* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 59, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs a:focus {
   color: #21272a;
   background-color: #feec96;
@@ -3746,46 +3770,46 @@ ul.menu a.is-active:focus {
   padding-top: 5px;
 }
 
-/* line 64, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 67, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs a.is-active {
   position: relative;
   top: 1px;
   font-weight: bold;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  background-color: #f2f3f4;
+  border-bottom: 1px solid #f2f3f4;
   border-top: 5px solid #21272a;
   padding-top: 5px;
 }
 
 @media all and (min-width: 501px) {
-  /* line 64, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  /* line 67, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
   .tabs a.is-active {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #f2f3f4;
   }
 }
 
-/* line 75, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 78, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs a.is-active:hover {
   cursor: default;
 }
 
-/* line 78, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+/* line 81, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
 .tabs a.is-active:focus {
   border-top: 5px solid #feb80a;
 }
 
 @media all and (max-width: 500px) {
-  /* line 86, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  /* line 89, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
   .tabs li:first-child {
     margin-left: 0;
   }
-  /* line 89, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  /* line 92, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
   .tabs a {
     border-width: 1px;
     display: inline-block;
     margin: .9em 1em;
   }
-  /* line 94, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
+  /* line 97, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-menu-tabs.scss */
   .tabs a.is-active {
     border-bottom: 1px solid #21272a;
   }

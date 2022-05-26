@@ -11,7 +11,7 @@
   }
 }
 body{
-  background-color: $color-i6-navy;
+  background-color: $color-body;
 }
 main{
 }
@@ -22,7 +22,7 @@ main
 }
 [class*=page-node-type-]{
   main div.region{
-    background-color: $color-white;
+    background-color: $color-region;
     // for some reason the padding shortcut doesn't work here
     padding-top: var(--region-margin-block);
     padding-right: var(--region-margin-inline);

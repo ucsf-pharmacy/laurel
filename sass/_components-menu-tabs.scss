@@ -27,6 +27,9 @@ header ul.menu a
 ul.menu a.is-active:focus{
   color: $color-white;
 }
+ul.tabs{
+  margin-bottom: 0;
+}
 .tabs{
   ul{
     @media all and (max-width: 500px){
@@ -47,7 +50,7 @@ ul.menu a.is-active:focus{
     border-width: 1px 1px 0 1px;
     padding-top: 9px;
     padding-bottom: 9px;
-    background-color: $color-white;
+    background-color: $color-region;
     &:not(.is-active):hover{
       background-color: $color-m6-orange;
       border-top: 5px solid $color-hover;
@@ -65,12 +68,12 @@ ul.menu a.is-active:focus{
       position: relative;
       top: 1px;
       font-weight: bold;
-      background-color: $color-white;
-      border-bottom: 1px solid $color-white;
+      background-color: $color-region;
+      border-bottom: 1px solid $color-region;
       border-top: 5px solid $color-text;
       padding-top: 5px;
       @media all and (min-width: 501px){
-        border-bottom: 1px solid $color-white;
+        border-bottom: 1px solid $color-region;
       }
       &:hover{
         cursor: default;

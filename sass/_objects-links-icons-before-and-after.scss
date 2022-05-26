@@ -44,19 +44,18 @@ a[href^="http://"]
   &:after{
     content: '';
     display: inline-block;
-    width: 20px;
+    margin-left: 6px;
+    width: 14px;
     height: 14px;
     background-image: url(../icons/external-link-square.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: 3px 0;
     // border: 1px solid green; // use this to test for visual confirmation of bounding box
   }
   &:hover:after{
-    width: 20px;
+    width: 14px;
     height: 14px;
     background-image: url(../icons/external-link-square-hover.svg);
-    background-position: 3px 0;
   }
 }
 

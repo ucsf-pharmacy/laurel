@@ -6,9 +6,11 @@ https://hankchizljaw.com/wrote/a-modern-css-reset/
 */
 
 /* Box sizing and color rules */
-*,
-*::before,
-*::after {
+*
+,*::before
+,*::after
+,.js .paragraphs-description .summary-content
+{
   box-sizing: border-box;
   color: $color-text;
 }
@@ -26,9 +28,9 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
-li,
+// ul[class],
+// ol[class],
+// li,
 figure,
 figcaption,
 blockquote,
@@ -55,7 +57,7 @@ body {
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
-  list-style: none;
+  // list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -91,6 +93,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+input,
+textarea{
+  background-color: $color-region;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
