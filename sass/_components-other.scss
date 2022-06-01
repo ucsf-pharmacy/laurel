@@ -17,6 +17,18 @@
 .media--type-image{
   // background-color: $color-gray-40; // need to restrict this to only person headshots on people pages before you let it back in
 }
-.audiofield label{
-  display: none; // hide the filename for Name Pronunciation
+.field--name-field-ucsfphps-nameaudio{
+  audio{
+    width: 200px;
+    &::-webkit-media-controls-panel{
+      background-color: $color-white;
+    }
+  }
+  // audio::-webkit-media-controls-timeline
+  audio::-webkit-media-controls-current-time-display
+  ,audio::-webkit-media-controls-time-remaining-display
+  ,label
+  {
+    display: none; // hide the filename for Name Pronunciation
+  }
 }

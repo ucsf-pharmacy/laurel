@@ -43,7 +43,18 @@ Not all link styles are defined in this file.
       background-color: $color-selection;
     }
   }
+  audio{
+    &:focus-visible{
+      // outline: none;
+    }
+    &::-webkit-media-controls-play-button
+    ,&::-webkit-media-controls-mute-button
+    {
+      // background-color: $color-white;
+    }
+  }
 }
+
 
 @mixin block-link(){
   display: block;

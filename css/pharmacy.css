@@ -2630,26 +2630,26 @@ h2 a, .field--name-field-articles.field--type-entity-reference h2 a {
   border-bottom: 1px solid #006be9;
 }
 
-/* line 52, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 63, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:link, .field--name-field-articles.field--type-entity-reference h2 a:link {
   border-bottom: 1px solid #006be9;
 }
 
-/* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 66, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:visited, .field--name-field-articles.field--type-entity-reference h2 a:visited {
   border-bottom: 1px solid #6c62d0;
 }
 
-/* line 58, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 69, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:hover, .field--name-field-articles.field--type-entity-reference h2 a:hover {
   color: #052049;
   border-bottom: 1px solid #fa6e1e;
 }
 
-/* line 62, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 73, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:focus, .field--name-field-articles.field--type-entity-reference h2 a:focus {
   color: #21272a;
@@ -2658,7 +2658,7 @@ h2 a:focus, .field--name-field-articles.field--type-entity-reference h2 a:focus 
   outline: none;
 }
 
-/* line 68, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 79, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .field--name-field-article.field--type-entity-reference
 h2 a:active, .field--name-field-articles.field--type-entity-reference h2 a:active {
   color: #ffffff;
@@ -2902,23 +2902,23 @@ body.page-type-node-article{
   display: inline-block;
 }
 
-/* line 52, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 63, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .page-node-type-event .field--name-field-event-moreinfo a:link {
   border-bottom: 1px solid #006be9;
 }
 
-/* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 66, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .page-node-type-event .field--name-field-event-moreinfo a:visited {
   border-bottom: 1px solid #6c62d0;
 }
 
-/* line 58, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 69, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .page-node-type-event .field--name-field-event-moreinfo a:hover {
   color: #052049;
   border-bottom: 1px solid #fa6e1e;
 }
 
-/* line 62, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 73, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .page-node-type-event .field--name-field-event-moreinfo a:focus {
   color: #21272a;
   background-color: #feb80a;
@@ -2926,7 +2926,7 @@ body.page-type-node-article{
   outline: none;
 }
 
-/* line 68, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 79, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .page-node-type-event .field--name-field-event-moreinfo a:active {
   color: #ffffff;
   background-color: #fa6e1e;
@@ -3831,8 +3831,20 @@ ul.tabs {
   transform: unset;
 }
 
-/* line 20, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-other.scss */
-.audiofield label {
+/* line 21, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.field--name-field-ucsfphps-nameaudio audio {
+  width: 200px;
+}
+
+/* line 23, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.field--name-field-ucsfphps-nameaudio audio::-webkit-media-controls-panel {
+  background-color: #ffffff;
+}
+
+/* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-other.scss */
+.field--name-field-ucsfphps-nameaudio audio::-webkit-media-controls-current-time-display
+, .field--name-field-ucsfphps-nameaudio audio::-webkit-media-controls-time-remaining-display
+, .field--name-field-ucsfphps-nameaudio label {
   display: none;
 }
 
