@@ -21,7 +21,9 @@ Not all link styles are defined in this file.
     text-decoration: none;
     background-color: transparent;
     padding-bottom: var(--space-between-text-and-link-underline);
-    &:link{
+    &
+    ,&:link
+    {
       border-bottom: 1px solid $color-link-unvisited;
     }
     &:visited{
