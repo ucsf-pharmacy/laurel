@@ -3,8 +3,8 @@ Reminders:
 
 #43 in Typewolf’s Flawless Typography Checklist: Links within sentences should contrast sufficiently with the surrounding text
 
-Lord Vader’s Handle Formerly Anakin
-http://www.mezzoblue.com/archives/2003/11/25/css_crib_she/#c018081
+we use LVFHA:
+https://twitter.com/meyerweb/status/1279053893440282625
 
 Not all link styles are defined in this file.
 
@@ -29,13 +29,13 @@ Not all link styles are defined in this file.
     &:visited{
       border-bottom: 1px solid $color-link-visited;
     }
+    &:focus{
+      border-bottom: 1px solid $color-focus-light-mode-dark;
+      outline: none;
+    }
     &:hover{
       color: $color-a1-navy;
-      border-bottom: 1px solid $color-hover;
-    }
-    &:focus{
-      background-color: $color-focus;
-      outline: none;
+      border-bottom: 1px solid $color-hover-light-mode-medium;
     }
     &:active{
       color: $color-white;
@@ -43,16 +43,6 @@ Not all link styles are defined in this file.
     }
     &::selection{
       background-color: $color-selection;
-    }
-  }
-  audio{
-    &:focus-visible{
-      // outline: none;
-    }
-    &::-webkit-media-controls-play-button
-    ,&::-webkit-media-controls-mute-button
-    {
-      // background-color: $color-white;
     }
   }
 }
@@ -68,15 +58,15 @@ Not all link styles are defined in this file.
   &:visited{
     border-bottom: 1px solid $color-link-visited;
   }
-  &:hover{
-    color: $color-a1-navy;
-    border-bottom: 1px solid $color-hover;
-  }
   &:focus{
     color: $color-text;
-    background-color: $color-focus;
+    background-color: $color-focus-light-mode-dark;
     border-bottom: 1px solid transparent;
     outline: none;
+  }
+  &:hover{
+    color: $color-a1-navy;
+    border-bottom: 1px solid $color-hover-light-mode-medium;
   }
   &:active{
     color: $color-white;

@@ -27,6 +27,17 @@ a.laurel-action
     background-image: url(../icons/arrow-right-hover.svg);
   }
 }
+.node a{
+  &:focus:before{
+    content: '';
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background-image: url(../icons/you-are-here-pin.svg);
+    background-repeat: no-repeat;
+    margin-right: 6px;
+  }
+}
 li a.laurel-action
 ,li.laurel-action a
 ,li p.laurel-action a
