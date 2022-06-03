@@ -24,25 +24,25 @@ Not all link styles are defined in this file.
     &
     ,&:link
     {
-      border-bottom: 1px solid $color-link-unvisited;
+      border-bottom: 1px solid var(--color-link-unvisited);
     }
     &:visited{
-      border-bottom: 1px solid $color-link-visited;
+      border-bottom: 1px solid var(--color-link-visited);
     }
     &:focus{
-      border-bottom: 1px solid $color-focus-light-mode-dark;
+      border-bottom: 1px solid var(--color-focus-light-mode-dark);
       outline: none;
     }
     &:hover{
-      color: $color-a1-navy;
-      border-bottom: 1px solid $color-hover-light-mode-medium;
+      color: var(--color-a1-navy);
+      border-bottom: 1px solid var(--color-hover-light-mode-medium);
     }
     &:active{
-      color: $color-white;
-      background-color: $color-active;
+      color: var(--color-white);
+      background-color: var(--color-active);
     }
     &::selection{
-      background-color: $color-selection;
+      background-color: var(--color-selection);
     }
   }
 }
@@ -51,26 +51,26 @@ Not all link styles are defined in this file.
 @mixin block-link(){
   display: block;
   text-decoration: none;
-  border-bottom: 1px solid $color-link-unvisited;
+  border-bottom: 1px solid var(--color-link-unvisited);
   &:link{
-    border-bottom: 1px solid $color-link-unvisited;
+    border-bottom: 1px solid var(--color-link-unvisited);
   }
   &:visited{
-    border-bottom: 1px solid $color-link-visited;
+    border-bottom: 1px solid var(--color-link-visited);
   }
   &:focus{
-    color: $color-text;
-    background-color: $color-focus-light-mode-dark;
+    color: var(--color-text);
+    background-color: var(--color-focus-light-mode-dark);
     border-bottom: 1px solid transparent;
     outline: none;
   }
   &:hover{
-    color: $color-a1-navy;
-    border-bottom: 1px solid $color-hover-light-mode-medium;
+    color: var(--color-a1-navy);
+    border-bottom: 1px solid var(--color-hover-light-mode-medium);
   }
   &:active{
-    color: $color-white;
-    background-color: $color-active;
+    color: var(--color-white);
+    background-color: var(--color-active);
     border-bottom: 1px solid transparent;
   }
 }

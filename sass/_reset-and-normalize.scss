@@ -12,13 +12,13 @@ https://hankchizljaw.com/wrote/a-modern-css-reset/
 ,.js .paragraphs-description .summary-content
 {
   box-sizing: border-box;
-  color: $color-text;
+  color: var(--color-text);
 }
 
 /* Remove default padding */
 ul[class],
 ol[class] {
-  // padding: 0; // 2022.0204 frankfarm: removed because it messes up tocbot
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -51,7 +51,8 @@ body {
 }
 
 ::selection{
-  background-color: $color-l5-yellow;
+  color: var(--color-selection-text);
+  background-color: var(--color-selection-bg);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -96,7 +97,7 @@ select {
 }
 input,
 textarea{
-  background-color: $color-region;
+  background-color: var(--color-input-textarea-bg);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

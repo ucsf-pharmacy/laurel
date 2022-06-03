@@ -11,11 +11,11 @@
   }
 }
 body{
-  background-color: $color-body;
+  background-color: var(--color-region-outer-bg);
 }
 [class*=page-node-type-]{
   main div.region{
-    background-color: $color-region;
+    background-color: var(--color-region-inner-bg);
     // for some reason the padding shortcut doesn't work here
     padding-top: var(--region-margin-block);
     padding-right: var(--region-margin-inline);

@@ -17,13 +17,13 @@ header ul.menu a
   padding: 12px 16px 4px 16px;
   line-height: calc( var(--line-spacing) + var(--space-m) );
   &:focus{
-    color: $color-white;
-    background-color: $color-focus-light-mode-dark;
+    color: var(--color-white);
+    background-color: var(--color-focus-light);
     outline: none;
   }
 }
 ul.menu a.is-active:focus{
-  color: $color-white;
+  color: var(--color-white);
 }
 ul.tabs{
   margin-bottom: 0;
@@ -33,7 +33,7 @@ ul.tabs{
     @media all and (max-width: 500px){
       padding-bottom: var(--space-l);
     }
-    border-bottom: 1px solid $color-text;
+    border-bottom: 1px solid var(--color-text);
   }
   li:first-child{
     margin-left: var(--nav-tabs-margin-adjustment);
@@ -44,20 +44,20 @@ ul.tabs{
   a{
     line-height: 1em;
     border: none;
-    border: 1px solid $color-text;
+    border: 1px solid var(--color-text);
     border-width: 1px 1px 0 1px;
     padding-top: 9px;
     padding-bottom: 9px;
-    background-color: $color-region;
+    background-color: var(--color-region-inner-bg);
     &:focus{
-      color: $color-text;
-      background-color: $color-focus-light-mode-light;
-      border-top: 5px solid $color-focus-light-mode-dark;
+      color: var(--color-text);
+      background-color: var(--color-focus-light);
+      border-top: 5px solid var(--color-focus-accent);
       padding-top: 5px;
     }
     &:not(.is-active):hover{
-      background-color: $color-m6-orange;
-      border-top: 5px solid $color-hover-light-mode-medium;
+      background-color: var(--color-hover-light);
+      border-top: 5px solid var(--color-hover-accent);
       padding-top: 5px;
     }
     &:active{
@@ -66,15 +66,15 @@ ul.tabs{
       position: relative;
       top: 1px;
       font-weight: bold;
-      background-color: $color-region;
-      border-bottom: 1px solid $color-region;
-      border-top: 5px solid $color-text;
+      background-color: var(--color-region-inner-bg);
+      border-bottom: 1px solid var(--color-region-inner-bg);
+      border-top: 5px solid var(--color-text);
       padding-top: 5px;
       @media all and (min-width: 501px){
-        border-bottom: 1px solid $color-region;
+        border-bottom: 1px solid var(--color-region-inner-bg);
       }
       &:focus{
-        border-top: 5px solid $color-focus-light-mode-dark;
+        border-top: 5px solid var(--color-focus-accent);
       }
       &:hover{
         cursor: default;
@@ -93,7 +93,7 @@ ul.tabs{
       margin: .9em 1em;
     }
     a.is-active{
-      border-bottom: 1px solid $color-text;
+      border-bottom: 1px solid var(--color-text);
     }
   }
 }
