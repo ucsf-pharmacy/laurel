@@ -1,5 +1,16 @@
 // before
 // ------------------------------------------------------------------------------------------
+.node a{
+  &:focus:before{
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../icons/you-are-here-pin.svg);
+    background-repeat: no-repeat;
+    margin-right: 6px;
+  }
+}
 a.laurel-action
 ,p.laurel-action a
 {
@@ -26,17 +37,6 @@ a.laurel-action
   }
   &:hover:before{
     background-image: url(../icons/arrow-right-hover.svg);
-  }
-}
-.node a{
-  &:focus:before{
-    content: '';
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-image: url(../icons/you-are-here-pin.svg);
-    background-repeat: no-repeat;
-    margin-right: 6px;
   }
 }
 li a.laurel-action
