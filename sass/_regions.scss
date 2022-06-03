@@ -30,9 +30,9 @@ main
     padding-left: var(--region-margin-inline);
   }
 }
-.page-node-type-post
-,.page-node-type-ucsfpharmacy-person
-{
+// .page-node-type-post
+// ,.page-node-type-ucsfpharmacy-person
+// {
   nav.tabs{
     max-width: var(--content-narrow-width);
     margin: 0 auto;
@@ -42,7 +42,7 @@ main
       max-width: var(--content-narrow-width);
     }
   }
-}
+// }
 .node{
   line-height: var(--line-spacing);
 }
