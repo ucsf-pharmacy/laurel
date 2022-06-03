@@ -2062,13 +2062,7 @@ body {
   background-color: #e1e3e5;
 }
 
-/* line 18, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-main
-, div.region {
-  margin: 0 auto;
-}
-
-/* line 24, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+/* line 17, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
 [class*=page-node-type-] main div.region {
   background-color: #f2f3f4;
   padding-top: var(--region-margin-block);
@@ -2077,18 +2071,14 @@ main
   padding-left: var(--region-margin-inline);
 }
 
-/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-nav.tabs {
+/* line 26, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+main div.region
+, nav.tabs {
   max-width: var(--content-narrow-width);
   margin: 0 auto;
 }
 
-/* line 41, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-main div.region {
-  max-width: var(--content-narrow-width);
-}
-
-/* line 46, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+/* line 32, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
 .node {
   line-height: var(--line-spacing);
 }

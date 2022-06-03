@@ -13,13 +13,6 @@
 body{
   background-color: $color-body;
 }
-main{
-}
-main
-,div.region
-{
-  margin: 0 auto;
-}
 [class*=page-node-type-]{
   main div.region{
     background-color: $color-region;
@@ -30,19 +23,12 @@ main
     padding-left: var(--region-margin-inline);
   }
 }
-// .page-node-type-post
-// ,.page-node-type-ucsfpharmacy-person
-// {
-  nav.tabs{
-    max-width: var(--content-narrow-width);
-    margin: 0 auto;
-  }
-  main{
-    div.region{
-      max-width: var(--content-narrow-width);
-    }
-  }
-// }
+main div.region
+,nav.tabs
+{
+  max-width: var(--content-narrow-width);
+  margin: 0 auto;
+}
 .node{
   line-height: var(--line-spacing);
 }
