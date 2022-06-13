@@ -64,6 +64,9 @@ a[href^="http://"]
     background-size: 100% 100%;
     // border: 1px solid green; // use this to test for visual confirmation of bounding box
   }
+  &:focus:after{
+    background-image: url(../icons/external-link-square-focus.svg);
+  }
   &:hover:after{
     width: 14px;
     height: 14px;

@@ -50,9 +50,11 @@ body {
   font-display: optional; // https://font-display.glitch.me
 }
 
-::selection{
-  color: var(--color-selection-text);
-  background-color: var(--color-selection-bg);
+.node{
+  ::selection{
+    color: var(--color-selection-text);
+    background-color: var(--color-selection-bg);
+  }
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

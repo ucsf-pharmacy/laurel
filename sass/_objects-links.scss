@@ -3,18 +3,14 @@ Reminders:
 
 #43 in Typewolf’s Flawless Typography Checklist: Links within sentences should contrast sufficiently with the surrounding text
 
-we use LVFHA:
+order: we use LVFHA:
 https://twitter.com/meyerweb/status/1279053893440282625
 
 Not all link styles are defined in this file.
 
 ----------------------------------------------------------------------
 */
-// .region-content
-// ,.cke_editable
-// nav.tabs
-.node
-{
+.node{
   a{
     color: inherit;
     line-height: inherit;
@@ -24,25 +20,25 @@ Not all link styles are defined in this file.
     &
     ,&:link
     {
-      border-bottom: 1px solid var(--color-link-unvisited);
+      border-bottom: 1px solid var(--color-link-border-link);
     }
     &:visited{
-      border-bottom: 1px solid var(--color-link-visited);
+      border-bottom: 1px solid var(--color-link-border-visited);
     }
     &:focus{
-      border-bottom: 1px solid var(--color-focus-light-mode-dark);
+      border-bottom: 1px solid var(--color-link-border-focus);
       outline: none;
     }
     &:hover{
       color: var(--color-a1-navy);
-      border-bottom: 1px solid var(--color-hover-light-mode-medium);
+      border-bottom: 1px solid var(--color-link-border-hover);
     }
     &:active{
-      color: var(--color-white);
-      background-color: var(--color-active);
+      color: var(--color-link-fg-active);
+      background-color: var(--color-link-bg-active);
     }
     &::selection{
-      background-color: var(--color-selection);
+      background-color: var(--color-link-bg-selection);
     }
   }
 }
@@ -51,12 +47,12 @@ Not all link styles are defined in this file.
 @mixin block-link(){
   display: block;
   text-decoration: none;
-  border-bottom: 1px solid var(--color-link-unvisited);
+  border-bottom: 1px solid var(--color-link-border-link);
   &:link{
-    border-bottom: 1px solid var(--color-link-unvisited);
+    border-bottom: 1px solid var(--color-link-border-link);
   }
   &:visited{
-    border-bottom: 1px solid var(--color-link-visited);
+    border-bottom: 1px solid var(--color-link-border-visited);
   }
   &:focus{
     color: var(--color-text);

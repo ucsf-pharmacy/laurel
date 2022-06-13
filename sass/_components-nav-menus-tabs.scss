@@ -1,0 +1,150 @@
+/*
+.action-links{
+  margin: var(--space-l) 0;
+}
+tabs.li{ // from tabs.css
+  margin-top: 0.9em;
+}
+.menu-item{
+  display: inline;
+  padding: 0;
+}
+ul.menu{
+  margin: 0;
+}
+*/
+
+/*
+header ul.menu a
+,footer ul.menu a
+,.tabs a
+{
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px 16px;
+  line-height: calc( var(--line-spacing) + var(--space-m) );
+  &:focus{
+    color: var(--color-white);
+    background-color: var(--color-focus-light);
+    outline: none;
+  }
+}
+*/
+ul.menu a.is-active:focus{
+  color: var(--color-white);
+}
+
+
+
+// start - superfish - main menu - primary menu
+ul[id^="superfish-"][id$="-main"]{
+  margin: 1em 0;
+  &:after{
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  a,a:link{
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    line-height: calc( var(--line-spacing) + var(--space-m) );
+    .sf-sub-indicator{
+      overflow: initial;
+      top: 33%;
+      right: 16px;
+      &:after{
+        color: var(--color-sfmenu-sub-indicator);
+      }
+    }
+    &.sf-with-ul{
+      padding-right: 1.9em;
+    }
+  }
+  &>li{
+    a{ // levels 2 and below
+      padding: .5em;
+    }
+    &>a{ // level 1
+      padding: .2em 1em .2em .6875em;
+    }
+    &:not(:last-child)>a{
+      margin-right: 1em;
+    }
+  }
+  a:focus{
+    outline: none;
+    color: var(--color-sfmenu-focus-fg);
+    background-color: var(--color-sfmenu-focus-bg);
+    .sf-sub-indicator{
+      &:after{
+        color: var(--color-sfmenu-sub-indicator-focus);
+      }
+    }
+  }
+  a:hover{
+    color: var(--color-text);
+    background-color: var(--color-sfmenu-hover-bg);
+    .sf-sub-indicator{
+      &:after{
+        color: var(--color-sfmenu-sub-indicator-hover);
+      }
+    }
+  }
+  ul{
+    background-color: var(--color-region-inner-bg);
+    a,a:link{
+      .sf-sub-indicator{
+        top: 43%;
+      }
+    }
+  }
+}
+// end - superfish - main menu - primary menu
+
+// start - local tasks tabs
+nav.tabs{
+  ul.tabs{
+    margin-bottom: 0;
+    a{
+      border-left: 5px solid transparent;
+      &.is-active{
+        background-color: var(--color-region-inner-bg);
+        border-left: 5px solid var(--color-text);
+      }
+      &:focus{
+        outline: none;
+        background-color: var(--color-local-tasks-tabs-focus-bg);
+        border-left: 5px solid var(--color-local-tasks-tabs-focus-accent);
+      }
+      &.is-active:hover{
+        cursor: default;
+      }
+      &:not(.is-active):hover{
+        background-color: var(--color-local-tasks-tabs-hover-bg);
+        border-left: 5px solid var(--color-local-tasks-tabs-hover-accent);
+      }
+    }
+  }
+}
+// end - local tasks tabs
+
+
+
+@media all and (max-width: 500px){
+  .tabs{
+    li:first-child{
+      margin-left: 0;
+    }
+    a{
+      border-width: 1px;
+      display: inline-block;
+      margin: .9em 1em;
+    }
+    a.is-active{
+      border-bottom: 1px solid var(--color-text);
+    }
+  }
+}

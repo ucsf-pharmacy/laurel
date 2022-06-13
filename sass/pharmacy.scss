@@ -48,7 +48,6 @@ https://youtu.be/1OKZOV-iLj4
 
 // components are things with classes that can be built from smaller objects
 @import "_components-layout-builder-blocks.scss";
-@import "_components-nav.scss";
 @import "_components-toc.scss";
 @import "_components-links.scss";
 @import "_components-node.scss";
@@ -65,7 +64,7 @@ https://youtu.be/1OKZOV-iLj4
 @import "_components-wysiwyg-other.scss"; // this must come before _components-layout-builder-block-styles
 @import "_components-layout-builder.scss";
 @import "_components-layout-builder-block-styles.scss";
-@import "_components-menu-tabs.scss";
+@import "_components-nav-menus-tabs.scss";
 @import "_components-other.scss";
 
 @import "_overrides.scss";
