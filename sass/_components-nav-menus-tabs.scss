@@ -122,7 +122,7 @@ ul[id^="superfish-"][id$="-main"]{
     }
   }
   ul{
-    background-color: var(--color-region-inner-bg);
+    background-color: var(--color-i6-navy);
     a,a:link{
       .sf-sub-indicator{
         top: 43%;
@@ -158,7 +158,7 @@ nav.tabs{
     a{
       border-left: 5px solid transparent;
       &.is-active{
-        background-color: var(--color-region-inner-bg);
+        background-color: var(--color-i6-navy);
         border-left: 5px solid var(--color-text);
       }
       &:focus{

@@ -248,8 +248,6 @@ $color-bg-light-gray:             $color-k5-gray;
 // start - assignments: light mode
 :root{
   --color-text:                            var(--color-j1-cool-gray);
-  --color-region-outer-bg:                 var(--color-j5-cool-gray);
-  --color-region-inner-bg:                 var(--color-i6-navy);
   --color-input-textarea-bg:               var(--color-j6-cool-gray);
 
   --color-link-border-link:                var(--color-a3-cta-blue);
@@ -258,18 +256,11 @@ $color-bg-light-gray:             $color-k5-gray;
   --color-link-border-hover:               var(--color-m4-orange);
   --color-link-fg-active:                  var(--color-white);
   --color-link-bg-active:                  var(--color-m3-orange);
+  --color-link-block-focus-bg:             var(--color-l2-yellow);
+  --color-link-block-border-hover:         var(--color-m4-orange);
 
   --color-border-dark:                     var(--color-j2-cool-gray);
   --color-border-light:                    var(--color-j5-cool-gray);
-  --color-hover-light-mode-dark:           var(--color-m2-orange);
-  --color-hover-light-mode-medium:         var(--color-m4-orange);
-  --color-hover-light-mode-light:          var(--color-m6-orange);
-  --color-focus-light-mode-dark:           var(--color-l2-yellow);
-  --color-focus-light-mode-medium:         var(--color-l4-yellow);
-  --color-focus-light-mode-light:          var(--color-l6-yellow);
-  --color-active:                          var(--color-m3-orange);
-  --color-highlight:                       var(--color-l6-yellow);
-  --color-bg-light-gray:                   var(--color-k5-gray);
 }
 // end - assignments: light mode
 
@@ -277,8 +268,6 @@ $color-bg-light-gray:             $color-k5-gray;
 @media (prefers-color-scheme: dark) {
   :root{
     --color-text:                            var(--color-j5-cool-gray);
-    --color-region-outer-bg:                 var(--color-a1-navy);
-    --color-region-inner-bg:                 var(--color-b1-blue);
     --color-input-textarea-bg:               var(--color-j1-cool-gray);
 
     --color-link-border-link:                var(--color-b4-blue);
@@ -287,7 +276,11 @@ $color-bg-light-gray:             $color-k5-gray;
     --color-link-border-hover:               var(--color-m4-orange);
     --color-link-fg-active:                  var(--color-white);
     --color-link-bg-active:                  var(--color-m3-orange);
+    --color-link-block-focus-bg:             var(--color-l4-yellow);
+    --color-link-block-border-hover:         var(--color-m4-orange);
 
+    --color-border-dark:                     var(--color-j5-cool-gray);
+    --color-border-light:                    var(--color-j2-cool-gray);
   }
 }
 // end - assignments: dark mode

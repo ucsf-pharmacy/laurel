@@ -950,11 +950,19 @@ table td h3:first-child
 // new in 2021
 
 :root{
-  --color-table-highlight: var(--color-l6-yellow);
+  --color-table-highlight:              var(--color-l6-yellow);
+  --color-table-border-between-rows:    var(--color-k3-gray);
+  --color-table-border:                 var(--color-e3-chartreuse);
+  --color-table-mobile-th-bg:           var(--color-e6-green);
+  --color-table-mobile-td-bg:           var(--color-k3-gray);
 }
 @media (prefers-color-scheme: dark) {
   :root{
-    --color-table-highlight: var(--color-l1-yellow);
+    --color-table-highlight:              var(--color-l1-yellow);
+    --color-table-border-between-rows:    var(--color-k4-gray);
+    --color-table-border:                 var(--color-e4-point-reyes);
+    --color-table-mobile-th-bg:           var(--color-e1-green);
+    --color-table-mobile-td-bg:           var(--color-k4-gray);
   }
 }
 
@@ -1006,7 +1014,7 @@ table{
   }
   tbody{
     th,td{
-      border-top: 1px solid $color-k3-gray;
+      border-top: 1px solid var(--color-table-border-between-rows);
       h2:first-child
       ,h3:first-child
       ,h4:first-child
@@ -1021,12 +1029,12 @@ table{
     }
     tr:first-child{
       th,td{
-        border-top: 2px solid $color-e3-chartreuse;
+        border-top: 2px solid var(--color-table-border);
       }
     }
     tr:last-child{
       th,td{
-        border-bottom: 2px solid $color-e3-chartreuse;
+        border-bottom: 2px solid var(--color-table-border);
       }
     }
   }
@@ -1068,12 +1076,12 @@ table.laurel-hide-row-lines{
       }
       th:first-child{
         border-top: none;
-        border-left: 2px solid $color-e3-chartreuse;
-        background-color: $color-e6-green;
+        border-left: 2px solid var(--color-table-border);
+        background-color: var(--color-mobile-th-bg);
         padding: var(--inset-squish-m);
       }
       td:first-child{
-        background-color: $color-k3-gray;
+        background-color: var(--color-mobile-td-bg);
       }
       td{
         padding-bottom: var(--space-l);

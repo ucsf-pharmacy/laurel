@@ -9,7 +9,17 @@
     --region-margin-block             : 4em;
     --region-margin-inline            : var(--space-l);
   }
+  --color-region-outer-bg:                 var(--color-j5-cool-gray);
+  --color-region-inner-bg:                 var(--color-i6-navy);
 }
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-region-outer-bg:                 var(--color-a1-navy);
+    --color-region-inner-bg:                 var(--color-b1-blue);
+  }
+}
+
+
 body{
   background-color: var(--color-region-outer-bg);
 }
