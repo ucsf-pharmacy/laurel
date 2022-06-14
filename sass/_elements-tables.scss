@@ -948,6 +948,16 @@ table td h3:first-child
 */
 
 // new in 2021
+
+:root{
+  --color-table-highlight: var(--color-l6-yellow);
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-table-highlight: var(--color-l1-yellow);
+  }
+}
+
 table{
   margin: var(--paragraph-spacing) 0;
   .span-columns{
@@ -955,7 +965,7 @@ table{
   }
   tr{
     &:hover{
-      background-color: $color-highlight;
+      background-color: var(--color-table-highlight);
     }
     th,td{
       text-align: left;

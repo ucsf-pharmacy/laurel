@@ -30,6 +30,15 @@ header ul.menu a
   }
 }
 */
+
+:root{
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+  }
+}
+
+
 ul.menu a.is-active:focus{
   color: var(--color-white);
 }
@@ -37,6 +46,25 @@ ul.menu a.is-active:focus{
 
 
 // start - superfish - main menu - primary menu
+:root{
+  --color-sfmenu-focus-fg:                 var(--color-white);
+  --color-sfmenu-focus-bg:                 var(--color-b2-blue);
+  --color-sfmenu-hover-bg:                 var(--color-white);
+  --color-sfmenu-sub-indicator:            var(--color-j2-cool-gray);
+  --color-sfmenu-sub-indicator-focus:      var(--color-white);
+  --color-sfmenu-sub-indicator-hover:      var(--color-j4-cool-gray);
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-sfmenu-focus-fg:                 var(--color-b6-blue);
+    --color-sfmenu-focus-bg:                 var(--color-b2-blue);
+    --color-sfmenu-hover-bg:                 var(--color-k1-gray);
+    --color-sfmenu-sub-indicator:            var(--color-j2-cool-gray);
+    --color-sfmenu-sub-indicator-focus:      var(--color-b5-blue);
+    --color-sfmenu-sub-indicator-hover:      var(--color-j4-cool-gray);
+  }
+}
+
 ul[id^="superfish-"][id$="-main"]{
   margin: 1em 0;
   &:after{
@@ -50,7 +78,7 @@ ul[id^="superfish-"][id$="-main"]{
     text-decoration: none;
     background-color: transparent;
     border: 1px solid transparent;
-    line-height: calc( var(--line-spacing) + var(--space-m) );
+    line-height: var(--menu-item-line-height);
     .sf-sub-indicator{
       overflow: initial;
       top: 33%;
@@ -105,6 +133,25 @@ ul[id^="superfish-"][id$="-main"]{
 // end - superfish - main menu - primary menu
 
 // start - local tasks tabs
+:root{
+  --color-local-tasks-tabs-focus-fg:       var(--color-j1-cool-gray);
+  --color-local-tasks-tabs-focus-bg:       var(--color-l6-yellow);
+  --color-local-tasks-tabs-focus-accent:   var(--color-l2-yellow);
+  --color-local-tasks-tabs-hover-fg:       var(--color-j1-cool-gray);
+  --color-local-tasks-tabs-hover-bg:       var(--color-m6-orange);
+  --color-local-tasks-tabs-hover-accent:   var(--color-m2-orange);
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-local-tasks-tabs-focus-fg:       var(--color-l6-yellow);
+    --color-local-tasks-tabs-focus-bg:       var(--color-l1-yellow);
+    --color-local-tasks-tabs-focus-accent:   var(--color-l4-yellow);
+    --color-local-tasks-tabs-hover-fg:       var(--color-m6-orange);
+    --color-local-tasks-tabs-hover-bg:       var(--color-m1-orange);
+    --color-local-tasks-tabs-hover-accent:   var(--color-m4-orange);
+  }
+}
+
 nav.tabs{
   ul.tabs{
     margin-bottom: 0;
@@ -116,6 +163,7 @@ nav.tabs{
       }
       &:focus{
         outline: none;
+        color: var(--color-local-tasks-tabs-focus-fg);
         background-color: var(--color-local-tasks-tabs-focus-bg);
         border-left: 5px solid var(--color-local-tasks-tabs-focus-accent);
       }
@@ -123,6 +171,7 @@ nav.tabs{
         cursor: default;
       }
       &:not(.is-active):hover{
+        color: var(--color-local-tasks-tabs-hover-fg);
         background-color: var(--color-local-tasks-tabs-hover-bg);
         border-left: 5px solid var(--color-local-tasks-tabs-hover-accent);
       }

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 134, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-color-2021.scss */
+/* line 133, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-color-2021.scss */
 :root {
   --color-white:            #ffffff;
   --color-black:            #000000;
@@ -90,13 +90,11 @@
   --color-n6-red:           #fae8ec;
 }
 
-/* line 250, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-color-2021.scss */
+/* line 249, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-color-2021.scss */
 :root {
   --color-text:                            var(--color-j1-cool-gray);
   --color-region-outer-bg:                 var(--color-j5-cool-gray);
   --color-region-inner-bg:                 var(--color-i6-navy);
-  --color-selection-text:                  var(--color-j1-cool-gray);
-  --color-selection-bg:                    var(--color-l5-yellow);
   --color-input-textarea-bg:               var(--color-j6-cool-gray);
   --color-link-border-link:                var(--color-a3-cta-blue);
   --color-link-border-visited:             var(--color-f3-purple);
@@ -104,40 +102,32 @@
   --color-link-border-hover:               var(--color-m4-orange);
   --color-link-fg-active:                  var(--color-white);
   --color-link-bg-active:                  var(--color-m3-orange);
-  --color-link-bg-selection:               var(--color-l4-yellow);
-  --color-sfmenu-focus-fg:                 var(--color-white);
-  --color-sfmenu-focus-bg:                 var(--color-b2-blue);
-  --color-sfmenu-sub-indicator-focus:      var(--color-white);
-  --color-sfmenu-hover-bg:                 var(--color-white);
-  --color-sfmenu-sub-indicator:            var(--color-j2-cool-gray);
-  --color-sfmenu-sub-indicator-hover:      var(--color-j4-cool-gray);
-  --color-local-tasks-tabs-focus-bg:       var(--color-l6-yellow);
-  --color-local-tasks-tabs-focus-accent:   var(--color-l2-yellow);
-  --color-local-tasks-tabs-hover-bg:       var(--color-m6-orange);
-  --color-local-tasks-tabs-hover-accent:   var(--color-m2-orange);
-  --color-border-dark:              var(--color-j2-cool-gray);
-  --color-border-light:             var(--color-j5-cool-gray);
-  --color-hover-light-mode-dark:    var(--color-m2-orange);
-  --color-hover-light-mode-medium:  var(--color-m4-orange);
-  --color-hover-light-mode-light:   var(--color-m6-orange);
-  --color-focus-light-mode-dark:    var(--color-l2-yellow);
-  --color-focus-light-mode-medium:  var(--color-l4-yellow);
-  --color-focus-light-mode-light:   var(--color-l6-yellow);
-  --color-active:                   var(--color-m3-orange);
-  --color-selection:                var(--color-l4-yellow);
-  --color-highlight:                var(--color-l6-yellow);
-  --color-bg-light-gray:            var(--color-k5-gray);
+  --color-border-dark:                     var(--color-j2-cool-gray);
+  --color-border-light:                    var(--color-j5-cool-gray);
+  --color-hover-light-mode-dark:           var(--color-m2-orange);
+  --color-hover-light-mode-medium:         var(--color-m4-orange);
+  --color-hover-light-mode-light:          var(--color-m6-orange);
+  --color-focus-light-mode-dark:           var(--color-l2-yellow);
+  --color-focus-light-mode-medium:         var(--color-l4-yellow);
+  --color-focus-light-mode-light:          var(--color-l6-yellow);
+  --color-active:                          var(--color-m3-orange);
+  --color-highlight:                       var(--color-l6-yellow);
+  --color-bg-light-gray:                   var(--color-k5-gray);
 }
 
 @media (prefers-color-scheme: dark) {
-  /* line 295, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-color-2021.scss */
+  /* line 278, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-tokens-color-2021.scss */
   :root {
-    --color-text:                     var(--color-j5-cool-gray);
-    --color-region-outer-bg:          var(--color-a1-navy);
-    --color-region-inner-bg:          var(--color-b1-blue);
-    --color-selection-text:           var(--color-j5-cool-gray);
-    --color-selection-bg:             var(--color-l1-yellow);
-    --color-input-textarea-bg:        var(--color-j1-cool-gray);
+    --color-text:                            var(--color-j5-cool-gray);
+    --color-region-outer-bg:                 var(--color-a1-navy);
+    --color-region-inner-bg:                 var(--color-b1-blue);
+    --color-input-textarea-bg:               var(--color-j1-cool-gray);
+    --color-link-border-link:                var(--color-b4-blue);
+    --color-link-border-visited:             var(--color-f4-yosemite);
+    --color-link-border-focus:               var(--color-l2-yellow);
+    --color-link-border-hover:               var(--color-m4-orange);
+    --color-link-fg-active:                  var(--color-white);
+    --color-link-bg-active:                  var(--color-m3-orange);
   }
 }
 
@@ -1089,84 +1079,96 @@ table td h3:first-child
 
 
 */
-/* line 951, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 952, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+:root {
+  --color-table-highlight: var(--color-l6-yellow);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* line 956, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  :root {
+    --color-table-highlight: var(--color-l1-yellow);
+  }
+}
+
+/* line 961, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table {
   margin: var(--paragraph-spacing) 0;
 }
 
-/* line 953, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 963, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table .span-columns {
   column-span: all;
 }
 
-/* line 957, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 967, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table tr:hover {
-  background-color: #fef8e4;
+  background-color: var(--color-table-highlight);
 }
 
-/* line 960, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 970, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table tr th, table tr td {
   text-align: left;
   vertical-align: baseline;
   padding: var(--inset-stretch-xs);
 }
 
-/* line 968, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 978, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table thead th:first-child, table thead td:first-child, table tbody th:first-child, table tbody td:first-child {
   padding-left: 0;
 }
 
-/* line 971, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 981, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table thead th:last-child, table thead td:last-child, table tbody th:last-child, table tbody td:last-child {
   padding-right: 0;
 }
 
 @media screen and (min-width: 401px) {
-  /* line 980, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 990, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-hhmmampm th:nth-child(1), table.laurel-c1w-hhmmampm td:nth-child(1) {
     width: 10ch;
   }
-  /* line 981, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 991, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-mmmyyyy th:nth-child(1), table.laurel-c1w-mmmyyyy td:nth-child(1) {
     width: 13ch;
   }
-  /* line 983, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 993, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xxs th:nth-child(1), table.laurel-c1w-xxs td:nth-child(1) {
     width: 5ch;
   }
-  /* line 984, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 994, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xs th:nth-child(1), table.laurel-c1w-xs td:nth-child(1) {
     width: 10ch;
   }
-  /* line 985, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 995, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-s th:nth-child(1), table.laurel-c1w-s td:nth-child(1) {
     width: 15ch;
   }
-  /* line 986, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 996, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-m th:nth-child(1), table.laurel-c1w-m td:nth-child(1) {
     width: 20ch;
   }
-  /* line 987, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 997, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-l th:nth-child(1), table.laurel-c1w-l td:nth-child(1) {
     width: 25ch;
   }
-  /* line 988, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 998, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xl th:nth-child(1), table.laurel-c1w-xl td:nth-child(1) {
     width: 30ch;
   }
-  /* line 989, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 999, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-c1w-xxl th:nth-child(1), table.laurel-c1w-xxl td:nth-child(1) {
     width: 35ch;
   }
-  /* line 992, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1002, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   thead th {
     vertical-align: bottom;
   }
-  /* line 998, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1008, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody th, tbody td {
     border-top: 1px solid #d1d3d3;
   }
-  /* line 1000, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1010, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody th h2:first-child
 , tbody th h3:first-child
 , tbody th h4:first-child, tbody td h2:first-child
@@ -1174,49 +1176,49 @@ table thead th:last-child, table thead td:last-child, table tbody th:last-child,
 , tbody td h4:first-child {
     margin-top: 0;
   }
-  /* line 1006, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1016, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody th h3:last-child, tbody td h3:last-child {
     margin-bottom: 0;
   }
-  /* line 1013, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1023, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody tr:first-child th, tbody tr:first-child td {
     border-top: 2px solid #84c234;
   }
-  /* line 1018, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1028, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   tbody tr:last-child th, tbody tr:last-child td {
     border-bottom: 2px solid #84c234;
   }
 }
 
-/* line 1030, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 1040, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table.laurel-hide-borders tbody tr:first-child th, table.laurel-hide-borders tbody tr:first-child td, table.laurel-hide-borders tbody tr:last-child th, table.laurel-hide-borders tbody tr:last-child td {
   border-top: none;
   border-bottom: none;
 }
 
-/* line 1044, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+/* line 1054, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
 table.laurel-hide-row-lines tbody tr:not(:first-child) th, table.laurel-hide-row-lines tbody tr:not(:first-child) td, table.laurel-hide-row-lines tbody tr:last-child th, table.laurel-hide-row-lines tbody tr:last-child td {
   border-top: none;
 }
 
 @media screen and (max-width: 400px) {
-  /* line 1055, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1065, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody th, table.laurel-collapse tbody td {
     display: block;
     padding: var(--space-m) 0;
   }
-  /* line 1059, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1069, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody th:first-child {
     border-top: none;
     border-left: 2px solid #84c234;
     background-color: #f4f8ea;
     padding: var(--inset-squish-m);
   }
-  /* line 1065, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1075, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody td:first-child {
     background-color: #d1d3d3;
   }
-  /* line 1068, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
+  /* line 1078, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-tables.scss */
   table.laurel-collapse tbody td {
     padding-bottom: var(--space-l);
   }
@@ -1227,7 +1229,7 @@ Reminders:
 
 #43 in Typewolf’s Flawless Typography Checklist: Links within sentences should contrast sufficiently with the surrounding text
 
-order: we use LVFHA:
+pseudo order: we use LVFHA:
 https://twitter.com/meyerweb/status/1279053893440282625
 
 Not all link styles are defined in this file.
@@ -1261,7 +1263,7 @@ Not all link styles are defined in this file.
 
 /* line 32, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .node a:hover {
-  color: var(--color-a1-navy);
+  color: var(--color-text);
   border-bottom: 1px solid var(--color-link-border-hover);
 }
 
@@ -1269,11 +1271,6 @@ Not all link styles are defined in this file.
 .node a:active {
   color: var(--color-link-fg-active);
   background-color: var(--color-link-bg-active);
-}
-
-/* line 40, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a::selection {
-  background-color: var(--color-link-bg-selection);
 }
 
 /* line 4, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */

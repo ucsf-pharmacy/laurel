@@ -126,7 +126,6 @@ $color-focus-light-mode-dark:     $color-l2-yellow;
 $color-focus-light-mode-medium:   $color-l4-yellow;
 $color-focus-light-mode-light:    $color-l6-yellow;
 $color-active:                    $color-m3-orange;
-$color-selection:                 $color-l4-yellow;
 $color-highlight:                 $color-l6-yellow;
 $color-bg-light-gray:             $color-k5-gray;
 
@@ -251,8 +250,6 @@ $color-bg-light-gray:             $color-k5-gray;
   --color-text:                            var(--color-j1-cool-gray);
   --color-region-outer-bg:                 var(--color-j5-cool-gray);
   --color-region-inner-bg:                 var(--color-i6-navy);
-  --color-selection-text:                  var(--color-j1-cool-gray);
-  --color-selection-bg:                    var(--color-l5-yellow);
   --color-input-textarea-bg:               var(--color-j6-cool-gray);
 
   --color-link-border-link:                var(--color-a3-cta-blue);
@@ -261,44 +258,35 @@ $color-bg-light-gray:             $color-k5-gray;
   --color-link-border-hover:               var(--color-m4-orange);
   --color-link-fg-active:                  var(--color-white);
   --color-link-bg-active:                  var(--color-m3-orange);
-  --color-link-bg-selection:               var(--color-l4-yellow);
 
-  --color-sfmenu-focus-fg:                 var(--color-white);
-  --color-sfmenu-focus-bg:                 var(--color-b2-blue);
-  --color-sfmenu-sub-indicator-focus:      var(--color-white);
-  --color-sfmenu-hover-bg:                 var(--color-white);
-  --color-sfmenu-sub-indicator:            var(--color-j2-cool-gray);
-  --color-sfmenu-sub-indicator-hover:      var(--color-j4-cool-gray);
-
-  --color-local-tasks-tabs-focus-bg:       var(--color-l6-yellow);
-  --color-local-tasks-tabs-focus-accent:   var(--color-l2-yellow);
-  --color-local-tasks-tabs-hover-bg:       var(--color-m6-orange);
-  --color-local-tasks-tabs-hover-accent:   var(--color-m2-orange);
-
-  --color-border-dark:              var(--color-j2-cool-gray);
-  --color-border-light:             var(--color-j5-cool-gray);
-  --color-hover-light-mode-dark:    var(--color-m2-orange);
-  --color-hover-light-mode-medium:  var(--color-m4-orange);
-  --color-hover-light-mode-light:   var(--color-m6-orange);
-  --color-focus-light-mode-dark:    var(--color-l2-yellow);
-  --color-focus-light-mode-medium:  var(--color-l4-yellow);
-  --color-focus-light-mode-light:   var(--color-l6-yellow);
-  --color-active:                   var(--color-m3-orange);
-  --color-selection:                var(--color-l4-yellow);
-  --color-highlight:                var(--color-l6-yellow);
-  --color-bg-light-gray:            var(--color-k5-gray);
+  --color-border-dark:                     var(--color-j2-cool-gray);
+  --color-border-light:                    var(--color-j5-cool-gray);
+  --color-hover-light-mode-dark:           var(--color-m2-orange);
+  --color-hover-light-mode-medium:         var(--color-m4-orange);
+  --color-hover-light-mode-light:          var(--color-m6-orange);
+  --color-focus-light-mode-dark:           var(--color-l2-yellow);
+  --color-focus-light-mode-medium:         var(--color-l4-yellow);
+  --color-focus-light-mode-light:          var(--color-l6-yellow);
+  --color-active:                          var(--color-m3-orange);
+  --color-highlight:                       var(--color-l6-yellow);
+  --color-bg-light-gray:                   var(--color-k5-gray);
 }
 // end - assignments: light mode
 
 // start - assignments: dark mode
 @media (prefers-color-scheme: dark) {
   :root{
-    --color-text:                     var(--color-j5-cool-gray);
-    --color-region-outer-bg:          var(--color-a1-navy);
-    --color-region-inner-bg:          var(--color-b1-blue);
-    --color-selection-text:           var(--color-j5-cool-gray);
-    --color-selection-bg:             var(--color-l1-yellow);
-    --color-input-textarea-bg:        var(--color-j1-cool-gray);
+    --color-text:                            var(--color-j5-cool-gray);
+    --color-region-outer-bg:                 var(--color-a1-navy);
+    --color-region-inner-bg:                 var(--color-b1-blue);
+    --color-input-textarea-bg:               var(--color-j1-cool-gray);
+
+    --color-link-border-link:                var(--color-b4-blue);
+    --color-link-border-visited:             var(--color-f4-yosemite);
+    --color-link-border-focus:               var(--color-l2-yellow);
+    --color-link-border-hover:               var(--color-m4-orange);
+    --color-link-fg-active:                  var(--color-white);
+    --color-link-bg-active:                  var(--color-m3-orange);
 
   }
 }

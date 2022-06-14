@@ -3,7 +3,7 @@ Reminders:
 
 #43 in Typewolf’s Flawless Typography Checklist: Links within sentences should contrast sufficiently with the surrounding text
 
-order: we use LVFHA:
+pseudo order: we use LVFHA:
 https://twitter.com/meyerweb/status/1279053893440282625
 
 Not all link styles are defined in this file.
@@ -30,15 +30,12 @@ Not all link styles are defined in this file.
       outline: none;
     }
     &:hover{
-      color: var(--color-a1-navy);
+      color: var(--color-text);
       border-bottom: 1px solid var(--color-link-border-hover);
     }
     &:active{
       color: var(--color-link-fg-active);
       background-color: var(--color-link-bg-active);
-    }
-    &::selection{
-      background-color: var(--color-link-bg-selection);
     }
   }
 }

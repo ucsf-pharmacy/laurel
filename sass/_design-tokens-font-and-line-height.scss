@@ -89,6 +89,8 @@ webfont definitions
   // --font-helv-neue-bold: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelvNeue75RR", HelveticaNeue, "Helvetica Neue", HelveticaNeueRoman, "HelveticaNeue-Roman", "Helvetica Neue Roman", HelveticaNeue-regular, TeXGyreHerosRegular, Helvetica, Arial, Geneva, sans-serif;
 
   font-family: var(--font-system); // fallback
+
+  --menu-item-line-height: 1.2;
 }
 /*
 
