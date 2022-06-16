@@ -16,7 +16,7 @@ How this works:
     line-height: var(--fluid1); // this is set below
   }
 
-2. Then, when setting font-size or line-height for any other element -- see _design-tokens-font-and-line-height.scss -- we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value. 
+2. Then, when setting font-size or line-height for any other element -- see _design-font-and-line-height.scss -- we simply use a value specifying em as the unit. This automatically gives us a fluidly scaled value.
 
 */
 :root{

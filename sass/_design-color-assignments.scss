@@ -1,0 +1,47 @@
+@import "_design-color-2021.scss";
+
+// start - assignments: light mode
+:root{
+  --color-text:                            #{$color-j1-cool-gray};
+  --color-input-textarea-bg:               #{$color-j6-cool-gray};
+
+  --color-link-border-link:                #{$color-a3-cta-blue};
+  --color-link-border-visited:             #{$color-f3-purple};
+  --color-link-border-focus:               #{$color-l2-yellow};
+  --color-link-border-hover:               #{$color-m4-orange};
+  --color-link-fg-active:                  #{$color-white};
+  --color-link-bg-active:                  #{$color-m3-orange};
+  --color-link-block-focus-bg:             #{$color-l2-yellow};
+  --color-link-block-border-hover:         #{$color-m4-orange};
+  --color-link-you-are-here-pin:           #{$color-m3-orange};
+  --color-link-icon-after:                 #{$color-k2-gray};
+  --color-link-icon-hover-after:           #{$color-b2-blue};
+
+  --color-border-dark:                     #{$color-j2-cool-gray};
+  --color-border-light:                    #{$color-j5-cool-gray};
+}
+// end - assignments: light mode
+
+// start - assignments: dark mode
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-text:                            #{$color-j5-cool-gray};
+    --color-input-textarea-bg:               #{$color-j1-cool-gray};
+
+    --color-link-border-link:                #{$color-b4-blue};
+    --color-link-border-visited:             #{$color-f4-yosemite};
+    --color-link-border-focus:               #{$color-l2-yellow};
+    --color-link-border-hover:               #{$color-m4-orange};
+    --color-link-fg-active:                  #{$color-white};
+    --color-link-bg-active:                  #{$color-m3-orange};
+    --color-link-block-focus-bg:             #{$color-l4-yellow};
+    --color-link-block-border-hover:         #{$color-m4-orange};
+    --color-link-you-are-here-pin:           #{$color-l2-yellow};
+    --color-link-icon-after:                 #{$color-j5-cool-gray};
+    --color-link-icon-hover-after:           #{$color-b5-blue};
+
+    --color-border-dark:                     #{$color-j5-cool-gray};
+    --color-border-light:                    #{$color-j2-cool-gray};
+  }
+}
+// end - assignments: dark mode

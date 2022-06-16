@@ -1,3 +1,5 @@
+@import "_design-color-2021.scss";
+
 :root{
   --region-margin-block             : 1em;
   --region-margin-inline            : var(--space-s);
@@ -7,15 +9,15 @@
   }
   @media all and (min-width: 1024px){
     --region-margin-block             : 4em;
-    --region-margin-inline            : var(--space-l);
+    --region-margin-inline            : var(--space-xl);
   }
-  --color-region-outer-bg:                 var(--color-j5-cool-gray);
-  --color-region-inner-bg:                 var(--color-i6-navy);
+  --color-region-outer-bg:                 #{$color-j5-cool-gray};
+  --color-region-inner-bg:                 #{$color-i6-navy};
 }
 @media (prefers-color-scheme: dark) {
   :root{
-    --color-region-outer-bg:                 var(--color-a1-navy);
-    --color-region-inner-bg:                 var(--color-b1-blue);
+    --color-region-outer-bg:                 #{$color-a1-navy};
+    --color-region-inner-bg:                 #{$color-b1-blue};
   }
 }
 

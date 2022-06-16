@@ -8,8 +8,15 @@ See also:
 https://youtu.be/1OKZOV-iLj4
 */
 
-@import "_design-tokens-color-2021.scss";
-// @import "_design-tokens-color-definitions.scss"; // old colors
+/*
+within each css file that relies on sass variable definitions in _design-color-2021.scss you must import them:
+
+@import "_design-color-2021.scss";
+
+see _regions.scss for a simple example.
+*/
+
+@import "_design-color-assignments.scss";
 @import "_reset-and-normalize.scss";
 
 // the settings section contains anything that needs to be global.
@@ -19,8 +26,8 @@ https://youtu.be/1OKZOV-iLj4
 @import "_settings-fluid-modular-type-scales.scss";
 @import "_settings-other.scss";
 
-@import "_design-tokens-font-and-line-height.scss";
-@import "_design-tokens-typography.scss";
+@import "_design-font-and-line-height.scss";
+@import "_design-typography.scss";
 
 // sass functions and mixins
 @import "_tools-box-shadows.scss";

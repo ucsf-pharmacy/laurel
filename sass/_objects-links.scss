@@ -58,11 +58,11 @@ Not all link styles are defined in this file.
     outline: none;
   }
   &:hover{
-    color: var(--color-a1-navy);
+    color: $color-a1-navy;
     border-bottom: 1px solid var(--color-link-block-border-hover);
   }
   &:active{
-    color: var(--color-white);
+    color: $color-white;
     background-color: var(--color-link-bg-active);
     border-bottom: 1px solid transparent;
   }

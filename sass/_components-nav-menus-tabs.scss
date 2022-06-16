@@ -31,6 +31,8 @@ header ul.menu a
 }
 */
 
+@import "_design-color-2021.scss";
+
 :root{
 }
 @media (prefers-color-scheme: dark) {
@@ -47,21 +49,21 @@ ul.menu a.is-active:focus{
 
 // start - superfish - main menu - primary menu
 :root{
-  --color-sfmenu-focus-fg:                 var(--color-white);
-  --color-sfmenu-focus-bg:                 var(--color-b2-blue);
-  --color-sfmenu-hover-bg:                 var(--color-white);
-  --color-sfmenu-sub-indicator:            var(--color-j2-cool-gray);
-  --color-sfmenu-sub-indicator-focus:      var(--color-white);
-  --color-sfmenu-sub-indicator-hover:      var(--color-j4-cool-gray);
+  --color-sfmenu-focus-fg:                 #{$color-white};
+  --color-sfmenu-focus-bg:                 #{$color-b2-blue};
+  --color-sfmenu-hover-bg:                 #{$color-white};
+  --color-sfmenu-sub-indicator:            #{$color-j2-cool-gray};
+  --color-sfmenu-sub-indicator-focus:      #{$color-white};
+  --color-sfmenu-sub-indicator-hover:      #{$color-j4-cool-gray};
 }
 @media (prefers-color-scheme: dark) {
   :root{
-    --color-sfmenu-focus-fg:                 var(--color-b6-blue);
-    --color-sfmenu-focus-bg:                 var(--color-b2-blue);
-    --color-sfmenu-hover-bg:                 var(--color-k1-gray);
-    --color-sfmenu-sub-indicator:            var(--color-j2-cool-gray);
-    --color-sfmenu-sub-indicator-focus:      var(--color-b5-blue);
-    --color-sfmenu-sub-indicator-hover:      var(--color-j4-cool-gray);
+    --color-sfmenu-focus-fg:                 #{$color-b6-blue};
+    --color-sfmenu-focus-bg:                 #{$color-b2-blue};
+    --color-sfmenu-hover-bg:                 #{$color-k1-gray};
+    --color-sfmenu-sub-indicator:            #{$color-j2-cool-gray};
+    --color-sfmenu-sub-indicator-focus:      #{$color-b5-blue};
+    --color-sfmenu-sub-indicator-hover:      #{$color-j4-cool-gray};
   }
 }
 
@@ -76,6 +78,7 @@ ul[id^="superfish-"][id$="-main"]{
   }
   a,a:link{
     text-decoration: none;
+    color: var(--color-text);
     background-color: transparent;
     border: 1px solid transparent;
     line-height: var(--menu-item-line-height);
@@ -96,7 +99,7 @@ ul[id^="superfish-"][id$="-main"]{
       padding: .5em;
     }
     &>a{ // level 1
-      padding: .2em 1em .2em .6875em;
+      padding: .2em 1em .16em .6875em;
     }
     &:not(:last-child)>a{
       margin-right: 1em;
@@ -122,7 +125,7 @@ ul[id^="superfish-"][id$="-main"]{
     }
   }
   ul{
-    background-color: var(--color-i6-navy);
+    background-color: var(--color-local-tasks-tabs-ul-bg);
     a,a:link{
       .sf-sub-indicator{
         top: 43%;
@@ -134,21 +137,25 @@ ul[id^="superfish-"][id$="-main"]{
 
 // start - local tasks tabs
 :root{
-  --color-local-tasks-tabs-focus-fg:       var(--color-j1-cool-gray);
-  --color-local-tasks-tabs-focus-bg:       var(--color-l6-yellow);
-  --color-local-tasks-tabs-focus-accent:   var(--color-l2-yellow);
-  --color-local-tasks-tabs-hover-fg:       var(--color-j1-cool-gray);
-  --color-local-tasks-tabs-hover-bg:       var(--color-m6-orange);
-  --color-local-tasks-tabs-hover-accent:   var(--color-m2-orange);
+  --color-local-tasks-tabs-ul-bg:          #{$color-i6-navy};
+  --color-local-tasks-tabs-focus-fg:       #{$color-j1-cool-gray};
+  --color-local-tasks-tabs-focus-bg:       #{$color-l6-yellow};
+  --color-local-tasks-tabs-focus-accent:   #{$color-l2-yellow};
+  --color-local-tasks-tabs-hover-fg:       #{$color-j1-cool-gray};
+  --color-local-tasks-tabs-hover-bg:       #{$color-m6-orange};
+  --color-local-tasks-tabs-hover-accent:   #{$color-m2-orange};
+  --color-local-tasks-tabs-active-bg:      #{$color-i6-navy};
 }
 @media (prefers-color-scheme: dark) {
   :root{
-    --color-local-tasks-tabs-focus-fg:       var(--color-l6-yellow);
-    --color-local-tasks-tabs-focus-bg:       var(--color-l1-yellow);
-    --color-local-tasks-tabs-focus-accent:   var(--color-l4-yellow);
-    --color-local-tasks-tabs-hover-fg:       var(--color-m6-orange);
-    --color-local-tasks-tabs-hover-bg:       var(--color-m1-orange);
-    --color-local-tasks-tabs-hover-accent:   var(--color-m4-orange);
+    --color-local-tasks-tabs-ul-bg:          #{$color-i2-navy};
+    --color-local-tasks-tabs-focus-fg:       #{$color-l6-yellow};
+    --color-local-tasks-tabs-focus-bg:       #{$color-l1-yellow};
+    --color-local-tasks-tabs-focus-accent:   #{$color-l4-yellow};
+    --color-local-tasks-tabs-hover-fg:       #{$color-m6-orange};
+    --color-local-tasks-tabs-hover-bg:       #{$color-m1-orange};
+    --color-local-tasks-tabs-hover-accent:   #{$color-m4-orange};
+    --color-local-tasks-tabs-active-bg:      #{$color-b1-blue};
   }
 }
 
@@ -158,7 +165,7 @@ nav.tabs{
     a{
       border-left: 5px solid transparent;
       &.is-active{
-        background-color: var(--color-i6-navy);
+        background-color: var(--color-local-tasks-tabs-active-bg);
         border-left: 5px solid var(--color-text);
       }
       &:focus{
