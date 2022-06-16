@@ -1,3 +1,5 @@
+@import "_design-color-2021.scss";
+
 // start - local tasks tabs
 :root{
   --color-local-tasks-tabs-focus-fg:       #{$color-j1-cool-gray};
@@ -7,6 +9,7 @@
   --color-local-tasks-tabs-hover-bg:       #{$color-m6-orange};
   --color-local-tasks-tabs-hover-accent:   #{$color-m2-orange};
   --color-local-tasks-tabs-active-bg:      #{$color-i6-navy};
+  --color-local-tasks-tabs-mobile-bg:      #{$color-i6-navy};
 }
 @media (prefers-color-scheme: dark) {
   :root{
@@ -17,6 +20,7 @@
     --color-local-tasks-tabs-hover-bg:       #{$color-m1-orange};
     --color-local-tasks-tabs-hover-accent:   #{$color-m4-orange};
     --color-local-tasks-tabs-active-bg:      #{$color-b1-blue};
+    --color-local-tasks-tabs-mobile-bg:      #{$color-i2-navy};
   }
 }
 
@@ -70,7 +74,7 @@ nav.tabs{
       display: inline-block;
       padding: .5em 2em;
       margin: 0 0 4px 0;
-      background-color: #fffffe;
+      background-color: var(--color-local-tasks-tabs-mobile-bg);
       &.is-active{
         font-weight: bold;
         border-left: 5px solid var(--color-text);
