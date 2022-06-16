@@ -130,7 +130,6 @@
     }
   }
   .field--name-field-event-moreinfo a{
-    @include block-link;
     display: inline-block;
     &:not(.last-child){
       margin-bottom: 1em;

@@ -8,14 +8,6 @@ See also:
 https://youtu.be/1OKZOV-iLj4
 */
 
-/*
-within each css file that relies on sass variable definitions in _design-color-2021.scss you must import them:
-
-@import "_design-color-2021.scss";
-
-see _regions.scss for a simple example.
-*/
-
 @import "_design-color-assignments.scss";
 @import "_reset-and-normalize.scss";
 
