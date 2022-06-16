@@ -10,6 +10,50 @@ see _regions.scss or _design-color-assignments for examples.
 put only sass variable definitions in this file. do not put custom properties in this file.
 
 */
+/* line 4, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+:root {
+  --color-text:                            #21272a;
+  --color-input-textarea-bg:               #f8f8f9;
+  --color-link-border-link:                #006be9;
+  --color-link-border-visited:             #6c62d0;
+  --color-link-border-focus:               #d68600;
+  --color-link-bg-focus:                   #fed658;
+  --color-link-border-hover:               #fe8638;
+  --color-link-fg-active:                  #ffffff;
+  --color-link-bg-active:                  #fa6e1e;
+  --color-link-block-focus-bg:             #d68600;
+  --color-link-block-border-hover:         #fe8638;
+  --color-link-you-are-here-pin:           #fa6e1e;
+  --color-link-icon-after:                 #808285;
+  --color-link-icon-hover-after:           #086290;
+  --color-image-caption-bg:                #ededed;
+  --color-border-dark:                     #878d96;
+  --color-border-light:                    #e1e3e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+  :root {
+    --color-text:                            #e1e3e5;
+    --color-input-textarea-bg:               #21272a;
+    --color-link-border-link:                #3cb9f0;
+    --color-link-border-visited:             #8a8ce3;
+    --color-link-border-focus:               #d68600;
+    --color-link-bg-focus:                   #aa6012;
+    --color-link-border-hover:               #fe8638;
+    --color-link-fg-active:                  #ffffff;
+    --color-link-bg-active:                  #fa6e1e;
+    --color-link-block-focus-bg:             #fed658;
+    --color-link-block-border-hover:         #fe8638;
+    --color-link-you-are-here-pin:           #d68600;
+    --color-link-icon-after:                 #e1e3e5;
+    --color-link-icon-hover-after:           #b8e6fa;
+    --color-image-caption-bg:                #4d4d4d;
+    --color-border-dark:                     #e1e3e5;
+    --color-border-light:                    #878d96;
+  }
+}
+
 /*
 // reset borders
 table, thead, tbody, th, td{
@@ -1144,17 +1188,18 @@ Not all link styles are defined in this file.
 
 /* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .node a:focus {
+  background-color: var(--color-link-bg-focus);
   border-bottom: 1px solid var(--color-link-border-focus);
   outline: none;
 }
 
-/* line 32, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 33, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .node a:hover {
   color: var(--color-text);
   border-bottom: 1px solid var(--color-link-border-hover);
 }
 
-/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+/* line 37, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
 .node a:active {
   color: var(--color-link-fg-active);
   background-color: var(--color-link-bg-active);
@@ -1187,25 +1232,62 @@ Not all link styles are defined in this file.
   }
 }
 */
-/* line 3, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
-.node a {
-  /*  &:focus:before{
-    content: '';
-    -webkit-mask: url(../icons/you-are-here-pin.svg) no-repeat;
-    background-color: var(--color-link-you-are-here-pin);
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-right: 6px;
-  }*/
+/*
+
+within each css file that relies on sass variable definitions in _design-color-2021.scss you must import them:
+
+@import "_design-color-2021.scss";
+
+see _regions.scss or _design-color-assignments for examples.
+
+put only sass variable definitions in this file. do not put custom properties in this file.
+
+*/
+/* line 4, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+:root {
+  --color-text:                            #21272a;
+  --color-input-textarea-bg:               #f8f8f9;
+  --color-link-border-link:                #006be9;
+  --color-link-border-visited:             #6c62d0;
+  --color-link-border-focus:               #d68600;
+  --color-link-bg-focus:                   #fed658;
+  --color-link-border-hover:               #fe8638;
+  --color-link-fg-active:                  #ffffff;
+  --color-link-bg-active:                  #fa6e1e;
+  --color-link-block-focus-bg:             #d68600;
+  --color-link-block-border-hover:         #fe8638;
+  --color-link-you-are-here-pin:           #fa6e1e;
+  --color-link-icon-after:                 #808285;
+  --color-link-icon-hover-after:           #086290;
+  --color-image-caption-bg:                #ededed;
+  --color-border-dark:                     #878d96;
+  --color-border-light:                    #e1e3e5;
 }
 
-/* line 4, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
-.node a:focus {
-  background-color: var(--color-link-bg-focus);
+@media (prefers-color-scheme: dark) {
+  /* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+  :root {
+    --color-text:                            #e1e3e5;
+    --color-input-textarea-bg:               #21272a;
+    --color-link-border-link:                #3cb9f0;
+    --color-link-border-visited:             #8a8ce3;
+    --color-link-border-focus:               #d68600;
+    --color-link-bg-focus:                   #aa6012;
+    --color-link-border-hover:               #fe8638;
+    --color-link-fg-active:                  #ffffff;
+    --color-link-bg-active:                  #fa6e1e;
+    --color-link-block-focus-bg:             #fed658;
+    --color-link-block-border-hover:         #fe8638;
+    --color-link-you-are-here-pin:           #d68600;
+    --color-link-icon-after:                 #e1e3e5;
+    --color-link-icon-hover-after:           #b8e6fa;
+    --color-image-caption-bg:                #4d4d4d;
+    --color-border-dark:                     #e1e3e5;
+    --color-border-light:                    #878d96;
+  }
 }
 
-/* line 17, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 5, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a.laurel-action
 , p.laurel-action a {
   font-size: 2rem;
@@ -1215,7 +1297,7 @@ a.laurel-action
   margin: .1em 0 .5em;
 }
 
-/* line 25, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 13, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a.laurel-action:before
 , p.laurel-action a:before {
   content: '';
@@ -1224,23 +1306,25 @@ a.laurel-action:before
   display: inline-block;
   width: 50px;
   height: 50px;
-  margin-right: 6px;
+  margin-right: 16px;
+  position: relative;
+  top: 10px;
 }
 
-/* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 24, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a.laurel-action:hover:before
 , p.laurel-action a:hover:before {
   background-color: var(--color-link-border-hover);
 }
 
-/* line 38, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 li a.laurel-action
 , li.laurel-action a
 , li p.laurel-action a {
   display: inline;
 }
 
-/* line 52, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 42, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href^="http://"]:after
 , a[href^="https://"]:after
 , .edit-media-link:after
@@ -1256,7 +1340,7 @@ a[href^="http://"]:after
 }
 
 @media (prefers-color-scheme: dark) {
-  /* line 64, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+  /* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
   a[href^="http://"]:after
 , a[href^="https://"]:after
 , .edit-media-link:after
@@ -1265,26 +1349,26 @@ a[href^="http://"]:after
   }
 }
 
-/* line 69, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 59, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[target]:after {
   width: 41px;
   -webkit-mask: url(../icons/external-link-in-new-tab.svg) no-repeat;
 }
 
-/* line 73, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 63, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="apple.com"]:after {
   width: 12px;
   -webkit-mask: url(../icons/appleinc.svg) no-repeat;
 }
 
-/* line 77, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 67, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="adobe.com"]:after {
   width: 17px;
   -webkit-mask: url(../icons/adobe.svg) no-repeat;
   background-color: #ff0000;
 }
 
-/* line 82, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 72, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="blogger.com"]:after
 , a[href*="pharmdadmissions.ucsf.edu"]:after {
   width: 14px;
@@ -1292,7 +1376,7 @@ a[href*="blogger.com"]:after
   background-color: #ff5722;
 }
 
-/* line 89, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 79, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*=".box.com"]:after {
   width: 23px;
   height: 13px;
@@ -1300,88 +1384,88 @@ a[href*=".box.com"]:after {
   background-color: #0061d5;
 }
 
-/* line 95, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 85, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="dropbox.com"]:after {
   width: 17px;
   -webkit-mask: url(../icons/dropbox.svg) no-repeat;
   background-color: #0061ff;
 }
 
-/* line 100, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 90, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="facebook.com"]:after {
   -webkit-mask: url(../icons/facebook2.svg) no-repeat;
   background-color: #1877f2;
 }
 
-/* line 104, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 94, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="flickr.com"]:after {
   -webkit-mask: url(../icons/flickr.svg) no-repeat;
 }
 
-/* line 107, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 97, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="github.com"]:after {
   width: 15px;
   -webkit-mask: url(../icons/github.svg) no-repeat;
 }
 
-/* line 111, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 101, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="google.com"]:after {
   -webkit-mask: url(../icons/google.svg) no-repeat;
   background-color: #4285f4;
 }
 
-/* line 115, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 105, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="drive.google.com"]:after {
   width: 16px;
   -webkit-mask: url(../icons/googledrive.svg) no-repeat;
   background-color: #4285f4;
 }
 
-/* line 120, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 110, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="instagram.com"]:after {
   -webkit-mask: url(../icons/instagram.svg) no-repeat;
   background-color: #e4405f;
 }
 
-/* line 124, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 114, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="linkedin.com"]:after {
   -webkit-mask: url(../icons/linkedin.svg) no-repeat;
   background-color: #0077b5;
 }
 
-/* line 128, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 118, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="microsoft.com"]:after {
   -webkit-mask: url(../icons/microsoft.svg) no-repeat;
 }
 
-/* line 131, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 121, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="teams.microsoft.com"]:after {
   width: 16px;
   -webkit-mask: url(../icons/microsoftteams.svg) no-repeat;
   background-color: #6264a7;
 }
 
-/* line 136, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 126, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="sharepoint.com"]:after {
   width: 24px;
   -webkit-mask: url(../icons/microsoftonedrive.svg) no-repeat;
   background-color: #094ab2;
 }
 
-/* line 141, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 131, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="tiktok.com"]:after {
   width: 12px;
   -webkit-mask: url(../icons/tiktok.svg) no-repeat;
 }
 
-/* line 145, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 135, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="twitter.com"]:after {
   width: 17px;
   -webkit-mask: url(../icons/twitter.svg) no-repeat;
   background-color: #1da1f2;
 }
 
-/* line 150, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 140, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="youtube.com"]:after
 , a[href*="youtu.be"]:after {
   width: 20px;
@@ -1389,7 +1473,7 @@ a[href*="youtube.com"]:after
   background-color: #ff0000;
 }
 
-/* line 157, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
+/* line 147, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss */
 a[href*="zoom.com"]:after {
   width: 45px;
   -webkit-mask: url(../icons/zoom1.svg) no-repeat;
@@ -1440,7 +1524,7 @@ a[href*="zoom.com"]:after {
 /* line 39, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 body {
   line-height: 1.45;
-  color: #21272a;
+  color: var(--color-text);
 }
 
 /* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
@@ -1463,7 +1547,7 @@ h2, h3 {
 
 /* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 a {
-  color: #006be9;
+  color: var(--color-link-border-link);
 }
 
 /* line 60, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
@@ -1531,7 +1615,7 @@ div.laurel-columns:before
 , p.laurel-columns:before {
   margin-top: var(--space-l);
   margin-bottom: var(--space-m);
-  border-bottom: 1px dotted #21272a;
+  border-bottom: 1px dotted var(--color-text);
 }
 
 /* line 114, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
@@ -1539,7 +1623,7 @@ div.laurel-columns:after
 , p.laurel-columns:after {
   margin-top: var(--space-m);
   margin-bottom: var(--space-l);
-  border-top: 1px dotted #21272a;
+  border-top: 1px dotted var(--color-text);
 }
 
 /* line 121, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
@@ -1554,7 +1638,7 @@ div.laurel-columns:after
 
 /* line 131, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss */
 textarea.cke_source {
-  background: #21272a;
+  background: var(--color-text);
   color: yellow;
   font-family: Consolas,monospace,ui-monospace;
   font-size: 1.2em;

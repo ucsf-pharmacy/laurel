@@ -5,7 +5,7 @@
     &.field__item
     ,& > .field__item
     {
-      border: 1px solid $color-text;
+      border: 1px solid var(--color-text);
       padding: var(--space-around-embedded-entities);
     }
     & > .field__item:not(:first-child){
@@ -58,7 +58,7 @@
   &.field__item
   ,& > .field__item
   {
-    border: 1px solid $color-text;
+    border: 1px solid var(--color-text);
     padding: var(--space-around-embedded-entities);
   }
   .node--type-article{

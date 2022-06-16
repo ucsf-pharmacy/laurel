@@ -1,19 +1,7 @@
+@import "_design-color-assignments.scss";
+
 // icons before
 // ------------------------------------------------------------------------------------------
-.node a{
-  &:focus{
-    background-color: var(--color-link-bg-focus);
-  }
-/*  &:focus:before{
-    content: '';
-    -webkit-mask: url(../icons/you-are-here-pin.svg) no-repeat;
-    background-color: var(--color-link-you-are-here-pin);
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-right: 6px;
-  }*/
-}
 a.laurel-action
 ,p.laurel-action a
 {
@@ -29,7 +17,9 @@ a.laurel-action
     display: inline-block;
     width: 50px;
     height: 50px;
-    margin-right: 6px;
+    margin-right: 16px;
+    position: relative;
+    top: 10px;
   }
   &:hover:before{
     background-color: var(--color-link-border-hover);

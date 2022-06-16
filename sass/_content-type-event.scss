@@ -1,3 +1,5 @@
+@import "_design-color-2021.scss";
+
 .page-node-type-event{
   fieldset{
     border: none;
@@ -139,7 +141,7 @@
 .simple-gmap-address{
   margin-bottom: .5em;
   &+iframe{
-    border: 1px solid var(--color-border-dark) !important;
+    border: 1px solid #{$color-j2-cool-gray} !important;
     max-width: 100%;
   }
 }

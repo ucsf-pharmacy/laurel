@@ -26,6 +26,7 @@ Not all link styles are defined in this file.
       border-bottom: 1px solid var(--color-link-border-visited);
     }
     &:focus{
+      background-color: var(--color-link-bg-focus);
       border-bottom: 1px solid var(--color-link-border-focus);
       outline: none;
     }

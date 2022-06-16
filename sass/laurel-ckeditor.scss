@@ -1,4 +1,4 @@
-@import "_design-color-2021.scss";
+@import "_design-color-assignments.scss";
 @import "_elements-tables.scss";
 @import "_objects-links.scss";
 @import "_objects-links-icons-before-and-after.scss";
@@ -38,7 +38,7 @@
 }
 body{
   line-height: 1.45;
-  color: $color-text;
+  color: var(--color-text);
 }
 h2{
   font-size: 2em;
@@ -53,7 +53,7 @@ h2,h3{
   font-weight: normal;
 }
 a{
-  color: $color-link-unvisited;
+  color: var(--color-link-border-link);
 }
 
 *{
@@ -109,12 +109,12 @@ div.laurel-columns
   &:before{
     margin-top: var(--space-l);
     margin-bottom: var(--space-m);
-    border-bottom: 1px dotted $color-text;
+    border-bottom: 1px dotted var(--color-text);
   }
   &:after{
     margin-top: var(--space-m);
     margin-bottom: var(--space-l);
-    border-top: 1px dotted $color-text;
+    border-top: 1px dotted var(--color-text);
   }
 }
 .cke_combo *{
@@ -129,7 +129,7 @@ div.laurel-columns
 }
 // start - this doesn't work yet
 textarea.cke_source{
-  background: $color-text;
+  background: var(--color-text);
   color: yellow;
   font-family: Consolas,monospace,ui-monospace;
   font-size: 1.2em;

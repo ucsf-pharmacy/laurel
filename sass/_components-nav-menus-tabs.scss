@@ -85,10 +85,13 @@ ul[id^="superfish-"][id$="-main"]{
     border: 1px solid transparent;
     line-height: var(--menu-item-line-height);
     .sf-sub-indicator{
-      top: 33%;
-      right: 16px;
+      width: 16px;
+      height: 16px;
+      top:  60%;
+      right: 12px;
       &:after{
         color: var(--color-sfmenu-sub-indicator);
+        font-size: .7em;
       }
     }
     &.sf-with-ul{
@@ -129,7 +132,7 @@ ul[id^="superfish-"][id$="-main"]{
     background-color: var(--color-sfmenu-ul-bg);
     a,a:link{
       .sf-sub-indicator{
-        top: 43%;
+        top: 53%;
       }
     }
   }
