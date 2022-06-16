@@ -1,16 +1,18 @@
 // icons before
 // ------------------------------------------------------------------------------------------
 .node a{
-  &:focus:before{
+  &:focus{
+    background-color: var(--color-link-bg-focus);
+  }
+/*  &:focus:before{
     content: '';
-    -webkit-mask: url(../icons/you-are-here-pin.svg);
+    -webkit-mask: url(../icons/you-are-here-pin.svg) no-repeat;
     background-color: var(--color-link-you-are-here-pin);
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-repeat: no-repeat;
     margin-right: 6px;
-  }
+  }*/
 }
 a.laurel-action
 ,p.laurel-action a
@@ -22,12 +24,11 @@ a.laurel-action
   margin: .1em 0 .5em;
   &:before{
     content: '';
-    -webkit-mask: url(../icons/arrow-right-link.svg);
+    -webkit-mask: url(../icons/arrow-right-link.svg) no-repeat;
     background-color: var(--color-link-border-link);
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-repeat: no-repeat;
     margin-right: 6px;
   }
   &:hover:before{
@@ -50,102 +51,112 @@ a[href^="http://"]
 {
   &:after{
     content: '';
-    -webkit-mask: url(../icons/external-link-link.svg);
+    -webkit-mask: url(../icons/external-link-link.svg) no-repeat;
     background-color: var(--color-link-icon-after);
     display: inline-block;
     margin-left: 6px;
     width: 14px;
     height: 14px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    mask-repeat: no-repeat;
     // border: 1px solid green; // use this to test for visual confirmation of bounding box
   }
-  &:hover:after{
-    background-color: var(--color-link-icon-hover-after);
+  @media (prefers-color-scheme: dark) {
+    &:after{
+      background-color: var(--color-link-icon-after) !important;
+    }
   }
 }
-
 a[target]:after{
-  -webkit-mask: url(../icons/external-link-in-new-tab.svg);
-  width: 47px;
+  width: 41px;
+  -webkit-mask: url(../icons/external-link-in-new-tab.svg) no-repeat;
 }
-a[target]:hover:after{
-  -webkit-mask: url(../icons/external-link-in-new-tab-hover.svg);
-  width: 47px;
-}
-
 a[href*="apple.com"]:after{
-  -webkit-mask: url(../icons/appleinc.svg);
+  width: 12px;
+  -webkit-mask: url(../icons/appleinc.svg) no-repeat;
 }
 a[href*="adobe.com"]:after{
-  width: 24px;
-  -webkit-mask: url(../icons/adobe.svg);
+  width: 17px;
+  -webkit-mask: url(../icons/adobe.svg) no-repeat;
+  background-color: #ff0000;
 }
 a[href*="blogger.com"]:after
 ,a[href*="pharmdadmissions.ucsf.edu"]:after
 {
-  -webkit-mask: url(../icons/blogger.svg);
+  width: 14px;
+  -webkit-mask: url(../icons/blogger.svg) no-repeat;
+  background-color: #ff5722;
 }
-a[href*=".box.com"]:hover:after{
+a[href*=".box.com"]:after{
   width: 23px;
-  height: 9px;
-  -webkit-mask: url(../icons/box.svg);
-  background-position: 3px 0;
+  height: 13px;
+  -webkit-mask: url(../icons/box.svg) no-repeat;
+  background-color: #0061d5;
 }
 a[href*="dropbox.com"]:after{
-  width: 22px;
-  -webkit-mask: url(../icons/dropbox.svg);
+  width: 17px;
+  -webkit-mask: url(../icons/dropbox.svg) no-repeat;
+  background-color: #0061ff;
 }
 a[href*="facebook.com"]:after{
-  -webkit-mask: url(../icons/facebook2.svg);
+  -webkit-mask: url(../icons/facebook2.svg) no-repeat;
+  background-color: #1877f2;
 }
 a[href*="flickr.com"]:after{
-  -webkit-mask: url(../icons/flickr.svg);
+  -webkit-mask: url(../icons/flickr.svg) no-repeat;
 }
 a[href*="github.com"]:after{
-  width: 21px;
-  -webkit-mask: url(../icons/github.svg);
+  width: 15px;
+  -webkit-mask: url(../icons/github.svg) no-repeat;
 }
-a[href*="google.com"]:hover:after{
-  -webkit-mask: url(../icons/google.svg);
+a[href*="google.com"]:after{
+  -webkit-mask: url(../icons/google.svg) no-repeat;
+  background-color: #4285f4;
 }
 a[href*="drive.google.com"]:after{ // this declaration must come after the one for google.com
-  width: 22px;
-  -webkit-mask: url(../icons/googledrive.svg);
+  width: 16px;
+  -webkit-mask: url(../icons/googledrive.svg) no-repeat;
+  background-color: #4285f4;
 }
 a[href*="instagram.com"]:after{
-  -webkit-mask: url(../icons/instagram.svg);
+  -webkit-mask: url(../icons/instagram.svg) no-repeat;
+  background-color: #e4405f;
 }
 a[href*="linkedin.com"]:after{
-  -webkit-mask: url(../icons/linkedin.svg);
+  -webkit-mask: url(../icons/linkedin.svg) no-repeat;
+  background-color: #0077b5;
 }
 a[href*="microsoft.com"]:after{
-  -webkit-mask: url(../icons/microsoft.svg);
+  -webkit-mask: url(../icons/microsoft.svg) no-repeat;
 }
 a[href*="teams.microsoft.com"]:after{ // this declaration must come after the one for microsoft.com
-  width: 22px;
-  -webkit-mask: url(../icons/microsoftteams.svg);
+  width: 16px;
+  -webkit-mask: url(../icons/microsoftteams.svg) no-repeat;
+  background-color: #6264a7;
 }
 a[href*="sharepoint.com"]:after{
-  width: 30px;
-  -webkit-mask: url(../icons/microsoftonedrive.svg);
+  width: 24px;
+  -webkit-mask: url(../icons/microsoftonedrive.svg) no-repeat;
+  background-color: #094ab2;
 }
 a[href*="tiktok.com"]:after{
-  -webkit-mask: url(../icons/tiktok.svg);
+  width: 12px;
+  -webkit-mask: url(../icons/tiktok.svg) no-repeat;
 }
 a[href*="twitter.com"]:after{
-  width: 23px;
-  -webkit-mask: url(../icons/twitter.svg);
+  width: 17px;
+  -webkit-mask: url(../icons/twitter.svg) no-repeat;
+  background-color: #1da1f2;
 }
 a[href*="youtube.com"]:after
 ,a[href*="youtu.be"]:after
 {
-  width: 26px;
-  -webkit-mask: url(../icons/youtube.svg);
+  width: 20px;
+  -webkit-mask: url(../icons/youtube.svg) no-repeat;
+  background-color: #ff0000;
 }
-a[href*="zoom.com"]:hover:after{
-  width: 40px;
-  height: 7px;
-  -webkit-mask: url(../icons/zoom1.svg);
-  background-position: 4px 0;
+a[href*="zoom.com"]:after{
+  width: 45px;
+  -webkit-mask: url(../icons/zoom1.svg) no-repeat;
+  -webkit-mask-position-y: bottom;
+  background-color: #2d8cff;
 }
