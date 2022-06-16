@@ -1,0 +1,81 @@
+// start - local tasks tabs
+:root{
+  --color-local-tasks-tabs-focus-fg:       #{$color-j1-cool-gray};
+  --color-local-tasks-tabs-focus-bg:       #{$color-l6-yellow};
+  --color-local-tasks-tabs-focus-accent:   #{$color-l2-yellow};
+  --color-local-tasks-tabs-hover-fg:       #{$color-j1-cool-gray};
+  --color-local-tasks-tabs-hover-bg:       #{$color-m6-orange};
+  --color-local-tasks-tabs-hover-accent:   #{$color-m2-orange};
+  --color-local-tasks-tabs-active-bg:      #{$color-i6-navy};
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-local-tasks-tabs-focus-fg:       #{$color-l6-yellow};
+    --color-local-tasks-tabs-focus-bg:       #{$color-l1-yellow};
+    --color-local-tasks-tabs-focus-accent:   #{$color-l4-yellow};
+    --color-local-tasks-tabs-hover-fg:       #{$color-m6-orange};
+    --color-local-tasks-tabs-hover-bg:       #{$color-m1-orange};
+    --color-local-tasks-tabs-hover-accent:   #{$color-m4-orange};
+    --color-local-tasks-tabs-active-bg:      #{$color-b1-blue};
+  }
+}
+
+nav.tabs{
+  ul.tabs{
+    margin-bottom: 0;
+    a{
+      @media all and (min-width: 501px){
+        &:not(.is-active){
+          border-left: 5px solid transparent;
+        }
+      }
+      &.is-active{
+        background-color: var(--color-local-tasks-tabs-active-bg);
+      }
+      &:focus{
+        outline: none;
+        background-color: var(--color-local-tasks-tabs-focus-bg);
+      }
+      &:not(.is-active):focus{
+        outline: none;
+        color: var(--color-local-tasks-tabs-focus-fg);
+        background-color: var(--color-local-tasks-tabs-focus-bg);
+        @media all and (min-width: 501px){
+          border-left: 5px solid var(--color-local-tasks-tabs-focus-accent);
+        }
+      }
+      &.is-active:hover{
+        cursor: default;
+      }
+      &:not(.is-active):hover{
+        color: var(--color-local-tasks-tabs-hover-fg);
+        background-color: var(--color-local-tasks-tabs-hover-bg);
+        @media all and (min-width: 501px){
+          border-left: 5px solid var(--color-local-tasks-tabs-hover-accent);
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px){
+  ul.tabs{
+    margin: 0 3px;
+  }
+  .tabs{
+    li{
+      margin: 0;
+    }
+    a{
+      display: inline-block;
+      padding: .5em 2em;
+      margin: 0 0 4px 0;
+      background-color: #fffffe;
+      &.is-active{
+        font-weight: bold;
+        border-left: 5px solid var(--color-text);
+      }
+    }
+  }
+}
+// end - local tasks tabs

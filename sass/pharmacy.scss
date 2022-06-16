@@ -63,7 +63,8 @@ https://youtu.be/1OKZOV-iLj4
 @import "_components-wysiwyg-other.scss"; // this must come before _components-layout-builder-block-styles
 @import "_components-layout-builder.scss";
 @import "_components-layout-builder-block-styles.scss";
-@import "_components-nav-menus-tabs.scss";
+@import "_components-nav-main-menu.scss";
+@import "_components-nav-local-tasks-tabs.scss";
 @import "_components-other.scss";
 
 @import "_overrides.scss";

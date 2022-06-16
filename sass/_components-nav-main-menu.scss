@@ -33,18 +33,20 @@ header ul.menu a
 
 @import "_design-color-2021.scss";
 
+/*
 :root{
 }
 @media (prefers-color-scheme: dark) {
   :root{
   }
 }
+*/
 
-
+/*
 ul.menu a.is-active:focus{
   color: var(--color-white);
 }
-
+*/
 
 
 // start - superfish - main menu - primary menu
@@ -139,70 +141,3 @@ ul[id^="superfish-"][id$="-main"]{
 }
 // end - superfish - main menu - primary menu
 
-// start - local tasks tabs
-:root{
-  --color-local-tasks-tabs-focus-fg:       #{$color-j1-cool-gray};
-  --color-local-tasks-tabs-focus-bg:       #{$color-l6-yellow};
-  --color-local-tasks-tabs-focus-accent:   #{$color-l2-yellow};
-  --color-local-tasks-tabs-hover-fg:       #{$color-j1-cool-gray};
-  --color-local-tasks-tabs-hover-bg:       #{$color-m6-orange};
-  --color-local-tasks-tabs-hover-accent:   #{$color-m2-orange};
-  --color-local-tasks-tabs-active-bg:      #{$color-i6-navy};
-}
-@media (prefers-color-scheme: dark) {
-  :root{
-    --color-local-tasks-tabs-focus-fg:       #{$color-l6-yellow};
-    --color-local-tasks-tabs-focus-bg:       #{$color-l1-yellow};
-    --color-local-tasks-tabs-focus-accent:   #{$color-l4-yellow};
-    --color-local-tasks-tabs-hover-fg:       #{$color-m6-orange};
-    --color-local-tasks-tabs-hover-bg:       #{$color-m1-orange};
-    --color-local-tasks-tabs-hover-accent:   #{$color-m4-orange};
-    --color-local-tasks-tabs-active-bg:      #{$color-b1-blue};
-  }
-}
-
-nav.tabs{
-  ul.tabs{
-    margin-bottom: 0;
-    a{
-      border-left: 5px solid transparent;
-      &.is-active{
-        background-color: var(--color-local-tasks-tabs-active-bg);
-        border-left: 5px solid var(--color-text);
-      }
-      &:focus{
-        outline: none;
-        color: var(--color-local-tasks-tabs-focus-fg);
-        background-color: var(--color-local-tasks-tabs-focus-bg);
-        border-left: 5px solid var(--color-local-tasks-tabs-focus-accent);
-      }
-      &.is-active:hover{
-        cursor: default;
-      }
-      &:not(.is-active):hover{
-        color: var(--color-local-tasks-tabs-hover-fg);
-        background-color: var(--color-local-tasks-tabs-hover-bg);
-        border-left: 5px solid var(--color-local-tasks-tabs-hover-accent);
-      }
-    }
-  }
-}
-// end - local tasks tabs
-
-
-
-@media all and (max-width: 500px){
-  .tabs{
-    li:first-child{
-      margin-left: 0;
-    }
-    a{
-      border-width: 1px;
-      display: inline-block;
-      margin: .9em 1em;
-    }
-    a.is-active{
-      border-bottom: 1px solid var(--color-text);
-    }
-  }
-}
