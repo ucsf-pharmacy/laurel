@@ -111,7 +111,9 @@ ul[id^="superfish-"][id$="-main"]{
       margin-right: 1em;
     }
   }
-  a:focus{
+  a:focus
+  ,a.sf-clicked:link
+  {
     outline: none;
     color: var(--color-sfmenu-focus-fg);
     background-color: var(--color-sfmenu-focus-bg);

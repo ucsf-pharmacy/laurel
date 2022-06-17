@@ -3899,34 +3899,36 @@ ul[id^="superfish-"][id$="-main"] > li:not(:last-child) > a {
 }
 
 /* line 114, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
-ul[id^="superfish-"][id$="-main"] a:focus {
+ul[id^="superfish-"][id$="-main"] a:focus
+, ul[id^="superfish-"][id$="-main"] a.sf-clicked:link {
   outline: none;
   color: var(--color-sfmenu-focus-fg);
   background-color: var(--color-sfmenu-focus-bg);
 }
 
-/* line 119, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
-ul[id^="superfish-"][id$="-main"] a:focus .sf-sub-indicator:after {
+/* line 121, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+ul[id^="superfish-"][id$="-main"] a:focus
+.sf-sub-indicator:after, ul[id^="superfish-"][id$="-main"] a.sf-clicked:link .sf-sub-indicator:after {
   color: var(--color-sfmenu-sub-indicator-focus);
 }
 
-/* line 124, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 126, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 ul[id^="superfish-"][id$="-main"] a:hover {
   color: var(--color-text);
   background-color: var(--color-sfmenu-hover-bg);
 }
 
-/* line 128, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 130, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 ul[id^="superfish-"][id$="-main"] a:hover .sf-sub-indicator:after {
   color: var(--color-sfmenu-sub-indicator-hover);
 }
 
-/* line 133, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 135, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 ul[id^="superfish-"][id$="-main"] ul {
   background-color: var(--color-sfmenu-ul-bg);
 }
 
-/* line 136, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 138, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 ul[id^="superfish-"][id$="-main"] ul a .sf-sub-indicator, ul[id^="superfish-"][id$="-main"] ul a:link .sf-sub-indicator {
   top: 53%;
 }
