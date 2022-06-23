@@ -1,3 +1,289 @@
+@import "_design-color-2021.scss";
+
+// start - superfish - main menu - primary menu
+:root{
+  --color-sfmenu-focus-fg:                 #{$color-white};
+  --color-sfmenu-focus-bg:                 #{$color-b2-blue};
+  --color-sfmenu-hover-bg:                 #{$color-white};
+  --color-sfmenu-active-bg:                #{$color-l6-yellow};
+  --color-sfmenu-sub-indicator:            #{$color-j2-cool-gray};
+  --color-sfmenu-sub-indicator-focus:      #{$color-white};
+  --color-sfmenu-sub-indicator-hover:      #{$color-j4-cool-gray};
+  --color-sfmenu-ul-bg:                    #{$color-i5-navy};
+  --color-sfmenu-mobile-bg:                #{$color-i5-navy};
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --color-sfmenu-focus-fg:                 #{$color-b6-blue};
+    --color-sfmenu-focus-bg:                 #{$color-b2-blue};
+    --color-sfmenu-hover-bg:                 #{$color-k1-gray};
+    --color-sfmenu-active-bg:                #{$color-l1-yellow};
+    --color-sfmenu-sub-indicator:            #{$color-j2-cool-gray};
+    --color-sfmenu-sub-indicator-focus:      #{$color-b5-blue};
+    --color-sfmenu-sub-indicator-hover:      #{$color-j4-cool-gray};
+    --color-sfmenu-ul-bg:                    #{$color-i2-navy};
+  }
+}
+// end - superfish - main menu - primary menu
+
+$superfish-1-background-color-level-first: var(--color-sfmenu-mobile-bg);
+$superfish-1-background-color-level-second: #{$color-b4-blue};
+$superfish-1-background-color-level-third: #{$color-b5-blue};
+$superfish-1-background-color-level-fourth: #{$color-b6-blue};
+
+#block-domainmenusactivedomainmenu-2{
+  &:after{ // this section is needed when you want the menu to appear on its own line on desktop
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  .sf-style-none{
+    float: left;
+    margin: 0;
+    padding: 0;
+    &.sf-navbar{
+      width: 100%;
+      background-color: $superfish-1-background-color-level-first;
+    }
+    ul{
+      padding-left: 0;
+      &.sf-multicolumn li{
+        &.sf-multicolumn-wrapper{
+          background-color: $superfish-1-background-color-level-fourth;
+          li{
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    a{
+      text-decoration: none;
+      line-height: var(--menu-item-line-height);
+      padding: .5em;
+      &:not(.sf-depth-1).sf-with-ul{ // :not(.sf-depth-1) = don't have subindicator padding for top level since we hide the subindicator for only the top level
+        padding-right: 2.25em;
+      }
+      &:focus{
+        font-weight: bold;
+        // background-color: var(--color-sfmenu-focus-bg);
+      }
+      &:hover{
+        background-color: var(--color-sfmenu-hover-bg);
+      }
+      &:active{
+        background-color: var(--color-sfmenu-active-bg);
+      }
+    }
+    a:focus
+    ,a.sf-clicked:link{
+      outline: none;
+
+    }
+    span{
+      &.nolink{
+        padding: 0.75em 1em;
+        &.sf-with-ul{
+          padding-right: 2.25em;
+        }
+        &:hover{
+          background-color: var(--color-sfmenu-hover-bg);
+        }
+      }
+      &.sf-description{
+        display: block;
+        font-size: 0.833em;
+        line-height: 1.5;
+        margin: 5px 0 0 5px;
+        padding: 0;
+      }
+    }
+    &.rtl{
+      span{
+        &.sf-description{
+          margin: 5px 5px 0 0;
+        }
+        &.nolink.sf-with-ul{
+          padding-left: 2.25em;
+          padding-right: 1em;
+        }
+      }
+      a.sf-with-ul{
+        padding-left: 2.25em;
+        padding-right: 1em;
+      }
+    }
+    li{
+      background-color: var(--color-sfmenu-ul-bg);
+      &:hover{
+        background-color: var(--color-sfmenu-hover-bg);
+        > ul{
+          top: 40px;
+        }
+      }
+      &.sfHover{
+        background-color: var(--color-sfmenu-hover-bg);
+        > ul{
+          top: 40px;
+        }
+      }
+    }
+    .sf-sub-indicator{
+      background-image: url('../images/dropdown-arrows.png');
+    }
+    a.sf-depth-1{ // top level
+      padding: .2em 1em .16em;
+      &.menuparent{
+        &>.sf-sub-indicator{ // hide subindicator for only the top level
+          display: none;
+        }
+      }
+    }
+  }
+  div.sf-accordion-toggle{
+    &.sf-style-none a{
+      background-color: $superfish-1-background-color-level-first;
+      padding: 1em;
+      &.sf-expanded{
+        background-color: $superfish-1-background-color-level-fourth;
+        font-weight: bold;
+      }
+    }
+  }
+  .sf-menu.sf-style-none{
+    &.rtl{
+      &.sf-accordion li{
+        li{
+          a{
+            padding-left: auto;
+            padding-right: 2em;
+          }
+          li{
+            a{
+              padding-left: auto;
+              padding-right: 3em;
+            }
+            li{
+              a{
+                padding-left: auto;
+                padding-right: 4em;
+              }
+              li{
+                a{
+                  padding-left: auto;
+                  padding-right: 5em;
+                }
+                span.nolink{
+                  padding-left: auto;
+                  padding-right: 5em;
+                }
+              }
+              span.nolink{
+                padding-left: auto;
+                padding-right: 4em;
+              }
+            }
+            span.nolink{
+              padding-left: auto;
+              padding-right: 3em;
+            }
+          }
+          span.nolink{
+            padding-left: auto;
+            padding-right: 2em;
+          }
+        }
+      }
+      ul.sf-multicolumn{
+        li.sf-multicolumn-wrapper{
+          ol li{
+            &.sf-multicolumn-column{
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    &.sf-accordion li{
+      &.sf-expanded{
+        background-color: $superfish-1-background-color-level-fourth;
+        >{
+          a{
+            font-weight: bold;
+          }
+          span.nolink{
+            font-weight: bold;
+          }
+        }
+      }
+      li{
+        a{
+          padding-left: 2em;
+        }
+        li{
+          a{
+            padding-left: 3em;
+          }
+          li{
+            a{
+              padding-left: 4em;
+            }
+            li{
+              a{
+                padding-left: 5em;
+              }
+              span.nolink{
+                padding-left: 5em;
+              }
+            }
+            span.nolink{
+              padding-left: 4em;
+            }
+          }
+          span.nolink{
+            padding-left: 3em;
+          }
+        }
+        span.nolink{
+          padding-left: 2em;
+        }
+      }
+      a.sf-accordion-button{
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 499;
+      }
+    }
+    ul.sf-multicolumn{
+      li.sf-multicolumn-wrapper{
+        ol{
+          margin: 0;
+          padding: 0;
+          li{
+            margin: 0;
+            padding: 0;
+            &.sf-multicolumn-column{
+              display: inline;
+              float: left;
+            }
+          }
+        }
+        a.menuparent{
+          font-weight: bold;
+        }
+        span.nolink{
+          &.menuparent{
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
 /*
 .action-links{
   margin: var(--space-l) 0;
@@ -11,6 +297,22 @@ tabs.li{ // from tabs.css
 }
 ul.menu{
   margin: 0;
+}
+*/
+
+
+/*
+:root{
+}
+@media (prefers-color-scheme: dark){
+  :root{
+  }
+}
+*/
+
+/*
+ul.menu a.is-active:focus{
+  color: var(--color-white);
 }
 */
 
@@ -31,46 +333,7 @@ header ul.menu a
 }
 */
 
-@import "_design-color-2021.scss";
-
 /*
-:root{
-}
-@media (prefers-color-scheme: dark) {
-  :root{
-  }
-}
-*/
-
-/*
-ul.menu a.is-active:focus{
-  color: var(--color-white);
-}
-*/
-
-
-// start - superfish - main menu - primary menu
-:root{
-  --color-sfmenu-focus-fg:                 #{$color-white};
-  --color-sfmenu-focus-bg:                 #{$color-b2-blue};
-  --color-sfmenu-hover-bg:                 #{$color-white};
-  --color-sfmenu-sub-indicator:            #{$color-j2-cool-gray};
-  --color-sfmenu-sub-indicator-focus:      #{$color-white};
-  --color-sfmenu-sub-indicator-hover:      #{$color-j4-cool-gray};
-  --color-sfmenu-ul-bg:                    #{$color-i5-navy};
-}
-@media (prefers-color-scheme: dark) {
-  :root{
-    --color-sfmenu-focus-fg:                 #{$color-b6-blue};
-    --color-sfmenu-focus-bg:                 #{$color-b2-blue};
-    --color-sfmenu-hover-bg:                 #{$color-k1-gray};
-    --color-sfmenu-sub-indicator:            #{$color-j2-cool-gray};
-    --color-sfmenu-sub-indicator-focus:      #{$color-b5-blue};
-    --color-sfmenu-sub-indicator-hover:      #{$color-j4-cool-gray};
-    --color-sfmenu-ul-bg:                    #{$color-i2-navy};
-  }
-}
-
 ul[id^="superfish-"][id$="-main"]{
   margin: 1em 0;
   &:after{
@@ -113,7 +376,7 @@ ul[id^="superfish-"][id$="-main"]{
   }
   a:focus
   ,a.sf-clicked:link
-  {
+{
     outline: none;
     color: var(--color-sfmenu-focus-fg);
     background-color: var(--color-sfmenu-focus-bg);
@@ -141,5 +404,23 @@ ul[id^="superfish-"][id$="-main"]{
     }
   }
 }
-// end - superfish - main menu - primary menu
 
+@media screen and (max-width: 767px){
+  .sf-depth-1{
+
+  }
+}
+*/
+/*
+@media screen and (max-width: 767px){
+  #block-domainmenusactivedomainmenu-2{
+    position: fixed;
+    left: calc( 50% - 3em );
+    // width: 100%;
+    bottom: 0;
+    background-color: #{$color-l1-yellow};
+    z-index: 1;
+    padding: 1em 2em;
+  }
+}
+*/
