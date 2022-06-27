@@ -1,0 +1,47 @@
+/*
+start - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
+*/
+
+pre[class*='language-'] {
+  color: var(--color-light);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  overflow-x: auto;
+}
+/*
+end - based on a11y-dark theme for JavaScript, CSS, and HTML by Eric Bailey
+*/
+
+.node li:not(:last-child){
+  margin-bottom: var(--list-item-spacing);
+}
+.content-type-explanation{
+  margin-bottom: 1em;
+}
+.messages{
+  background-position-y: center;
+}
+.simple-styleguide{
+  & > div {
+    margin-top: 3em;
+  }
+}
+table.span
+{
+  column-span: all;
+}
+table.no-span
+{
+  column-span: none;
+}

@@ -10,6 +10,34 @@ Not all link styles are defined in this file.
 
 ----------------------------------------------------------------------
 */
+
+/* start - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting an anchor */
+/* based on https://css-tricks.com/on-target/ */
+.node__content{
+  :target{
+    animation: highlight 3s ease-in-out;
+  }
+  @keyframes highlight{
+    0% { border-left: 50px solid $color-m3-orange; }
+    100% { border-left: 0px solid $color-m3-orange; }
+  }
+  a[id]{
+    position: relative;
+    border-top: 102px solid transparent;
+    margin: -30px 0 0;
+    background-clip: padding-box;
+    &::before{
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      right: 0;
+      border-top: 52px solid transparent;
+    }
+  }
+}
+/* end - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
+
 .node{
   a{
     color: inherit;

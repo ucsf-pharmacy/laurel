@@ -1,3 +1,5 @@
+// unclassed html elements only
+
 *:not(span[id^="toc-"])+h2 { margin-top: var(--space-l); }
 *+h3 { margin-top: var(--space-l); }
 *+h4 { margin-top: var(--space-s); }

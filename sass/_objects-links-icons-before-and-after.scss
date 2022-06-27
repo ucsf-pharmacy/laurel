@@ -76,7 +76,9 @@ a[href*="blogger.com"]:after
   -webkit-mask: url(../icons/blogger.svg) no-repeat;
   background-color: #ff5722;
 }
-a[href*=".box.com"]:after{
+a[href*=".box.com"]:focus:after
+,a[href*=".box.com"]:hover:after
+{
   width: 23px;
   height: 13px;
   -webkit-mask: url(../icons/box.svg) no-repeat;
@@ -98,7 +100,9 @@ a[href*="github.com"]:after{
   width: 15px;
   -webkit-mask: url(../icons/github.svg) no-repeat;
 }
-a[href*="google.com"]:after{
+a[href*="google.com"]:focus:after
+,a[href*="google.com"]:hover:after
+{
   -webkit-mask: url(../icons/google.svg) no-repeat;
   background-color: #4285f4;
 }
@@ -144,7 +148,9 @@ a[href*="youtube.com"]:after
   -webkit-mask: url(../icons/youtube.svg) no-repeat;
   background-color: #ff0000;
 }
-a[href*="zoom.com"]:after{
+a[href*="zoom.com"]:focus:after
+,a[href*="zoom.com"]:hover:after
+{
   width: 45px;
   -webkit-mask: url(../icons/zoom1.svg) no-repeat;
   -webkit-mask-position-y: bottom;
