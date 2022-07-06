@@ -10,7 +10,11 @@ see _regions.scss or _design-color-assignments for examples.
 put only sass variable definitions in this file. do not put custom properties in this file.
 
 */
-/* line 4, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+/*
+hover tends to be orange
+focus tends to be yellow
+*/
+/* line 9, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
 :root {
   --color-text:                            #21272a;
   --color-input-textarea-bg:               #f8f8f9;
@@ -23,7 +27,6 @@ put only sass variable definitions in this file. do not put custom properties in
   --color-link-bg-active:                  #fa6e1e;
   --color-link-block-focus-bg:             #d68600;
   --color-link-block-border-hover:         #fe8638;
-  --color-link-you-are-here-pin:           #fa6e1e;
   --color-link-icon-after:                 #808285;
   --color-link-icon-hover-after:           #086290;
   --color-image-caption-bg:                #ededed;
@@ -32,7 +35,7 @@ put only sass variable definitions in this file. do not put custom properties in
 }
 
 @media (prefers-color-scheme: dark) {
-  /* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+  /* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
   :root {
     --color-text:                            #e1e3e5;
     --color-input-textarea-bg:               #21272a;
@@ -45,7 +48,6 @@ put only sass variable definitions in this file. do not put custom properties in
     --color-link-bg-active:                  #fa6e1e;
     --color-link-block-focus-bg:             #fed658;
     --color-link-block-border-hover:         #fe8638;
-    --color-link-you-are-here-pin:           #d68600;
     --color-link-icon-after:                 #e1e3e5;
     --color-link-icon-hover-after:           #b8e6fa;
     --color-image-caption-bg:                #4d4d4d;
@@ -1278,7 +1280,11 @@ see _regions.scss or _design-color-assignments for examples.
 put only sass variable definitions in this file. do not put custom properties in this file.
 
 */
-/* line 4, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+/*
+hover tends to be orange
+focus tends to be yellow
+*/
+/* line 9, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
 :root {
   --color-text:                            #21272a;
   --color-input-textarea-bg:               #f8f8f9;
@@ -1291,7 +1297,6 @@ put only sass variable definitions in this file. do not put custom properties in
   --color-link-bg-active:                  #fa6e1e;
   --color-link-block-focus-bg:             #d68600;
   --color-link-block-border-hover:         #fe8638;
-  --color-link-you-are-here-pin:           #fa6e1e;
   --color-link-icon-after:                 #808285;
   --color-link-icon-hover-after:           #086290;
   --color-image-caption-bg:                #ededed;
@@ -1300,7 +1305,7 @@ put only sass variable definitions in this file. do not put custom properties in
 }
 
 @media (prefers-color-scheme: dark) {
-  /* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+  /* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
   :root {
     --color-text:                            #e1e3e5;
     --color-input-textarea-bg:               #21272a;
@@ -1313,7 +1318,6 @@ put only sass variable definitions in this file. do not put custom properties in
     --color-link-bg-active:                  #fa6e1e;
     --color-link-block-focus-bg:             #fed658;
     --color-link-block-border-hover:         #fe8638;
-    --color-link-you-are-here-pin:           #d68600;
     --color-link-icon-after:                 #e1e3e5;
     --color-link-icon-hover-after:           #b8e6fa;
     --color-image-caption-bg:                #4d4d4d;

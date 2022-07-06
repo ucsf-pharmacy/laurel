@@ -1,5 +1,10 @@
 @import "_design-color-2021.scss";
 
+/*
+hover tends to be orange
+focus tends to be yellow
+*/
+
 // start - assignments: light mode
 :root{
   --color-text:                            #{$color-j1-cool-gray};
@@ -14,7 +19,6 @@
   --color-link-bg-active:                  #{$color-m3-orange};
   --color-link-block-focus-bg:             #{$color-l2-yellow};
   --color-link-block-border-hover:         #{$color-m4-orange};
-  --color-link-you-are-here-pin:           #{$color-m3-orange};
   --color-link-icon-after:                 #{$color-k2-gray};
   --color-link-icon-hover-after:           #{$color-b2-blue};
 
@@ -40,7 +44,6 @@
     --color-link-bg-active:                  #{$color-m3-orange};
     --color-link-block-focus-bg:             #{$color-l4-yellow};
     --color-link-block-border-hover:         #{$color-m4-orange};
-    --color-link-you-are-here-pin:           #{$color-l2-yellow};
     --color-link-icon-after:                 #{$color-j5-cool-gray};
     --color-link-icon-hover-after:           #{$color-b5-blue};
 
