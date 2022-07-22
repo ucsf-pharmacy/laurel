@@ -1205,7 +1205,7 @@ Not all link styles are defined in this file.
 
 /* end - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
 /* line 42, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a {
+.region-content a {
   color: inherit;
   line-height: inherit;
   text-decoration: none;
@@ -1214,30 +1214,30 @@ Not all link styles are defined in this file.
 }
 
 /* line 48, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a, .node a:link {
+.region-content a, .region-content a:link {
   border-bottom: 1px solid var(--color-link-border-link);
 }
 
 /* line 53, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:visited {
+.region-content a:visited {
   border-bottom: 1px solid var(--color-link-border-visited);
 }
 
 /* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:focus {
+.region-content a:focus {
   background-color: var(--color-link-bg-focus);
   border-bottom: 1px solid var(--color-link-border-focus);
   outline: none;
 }
 
 /* line 61, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:hover {
+.region-content a:hover {
   color: var(--color-text);
   border-bottom: 1px solid var(--color-link-border-hover);
 }
 
 /* line 65, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:active {
+.region-content a:active {
   color: var(--color-link-fg-active);
   background-color: var(--color-link-bg-active);
 }

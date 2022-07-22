@@ -145,7 +145,26 @@
     max-width: 100%;
   }
 }
-
+.view-events{
+  .view-content{
+    display: grid;
+    gap: var(--space-between-grid-items);
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    .views-field-field-event-series
+    ,.views-field-title
+    ,.views-field-field-subtitle
+    {
+      margin-bottom: var(--space-m);
+    }
+  }
+  @media screen and (min-width: 376px){
+    img{
+      margin-bottom: var(--space-around-floated-images);
+      margin-left: var(--space-around-floated-images);
+      float: right;
+    }
+  }
+}
 /*  .layout__region--first{
     // margin-bottom: var(--space-between-blocks);
   }

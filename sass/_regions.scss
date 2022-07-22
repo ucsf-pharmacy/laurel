@@ -25,15 +25,13 @@
 body{
   background-color: var(--color-region-outer-bg);
 }
-[class*=page-node-type-]{
-  main div.region{
-    background-color: var(--color-region-inner-bg);
-    // for some reason the padding shortcut doesn't work here
-    padding-top: var(--region-margin-block);
-    padding-right: var(--region-margin-inline);
-    padding-bottom: var(--region-margin-block);
-    padding-left: var(--region-margin-inline);
-  }
+div.region-content{
+  background-color: var(--color-region-inner-bg);
+  // for some reason the padding shortcut doesn't work here
+  padding-top: var(--region-margin-block);
+  padding-right: var(--region-margin-inline);
+  padding-bottom: var(--region-margin-block);
+  padding-left: var(--region-margin-inline);
 }
 main div.region
 ,nav.tabs

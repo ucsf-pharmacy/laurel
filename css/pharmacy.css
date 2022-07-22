@@ -302,6 +302,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --gutter: var(--space-l);
   --space-around-floated-images: var(--space-l);
   --space-around-embedded-entities: var(--space-m) var(--space-m) 0 var(--space-m);
+  --space-between-grid-items: var(--space-xl);
   --space-between-layout-columns: var(--space-l);
   --space-between-layout-rows: var(--space-m);
   --space-between-related-entities: var(--space-m);
@@ -517,22 +518,24 @@ body {
 }
 
 /* line 107, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-h1, h2 {
+h1, h2
+, .views-field-title {
   font-family: var(--font-granjon);
 }
 
-/* line 112, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 113, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h3
-, .field--name-field-subtitle {
+, .field--name-field-subtitle
+, .views-field-field-subtitle {
   font-family: var(--font-helv-neue-light);
 }
 
-/* line 117, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 119, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 code, kbd, pre, samp, tt {
   font-family: var(--font-mono);
 }
 
-/* line 120, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 122, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 input, button, textarea, select {
   font-family: inherit;
 }
@@ -545,81 +548,86 @@ input, button, textarea, select {
 font sizes and line-heights
 
 */
-/* line 131, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 133, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h1 {
   font-size: 2.41em;
   font-weight: normal;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 131, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+  /* line 133, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
   h1 {
     font-size: 1.8em;
   }
 }
 
-/* line 138, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-h2 {
+/* line 140, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+h2
+, .views-field-title {
   font-size: 2.005em;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 138, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-  h2 {
+  /* line 140, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+  h2
+, .views-field-title {
     font-size: 1.5em;
   }
 }
 
-/* line 144, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-h3 {
+/* line 148, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+h3
+, .views-field-field-subtitle {
   font-weight: normal;
   font-size: 1.3em;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 144, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-  h3 {
+  /* line 148, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+  h3
+, .views-field-field-subtitle {
     font-size: 1.2em;
   }
 }
 
-/* line 151, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-h1, h2 {
+/* line 157, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+h1, h2
+, .views-field-title {
   line-height: var(--line-height-xs);
 }
 
-/* line 154, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 162, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 .field--name-field-post-type
 , .field--name-field-author
 , .field--name-created {
   font-size: var(--s-3);
 }
 
-/* line 160, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 168, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
   line-height: var(--line-height-m);
 }
 
 @media screen and (max-width: 500px) {
-  /* line 160, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+  /* line 168, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
   .field--name-field-subtitle {
     font-size: 1.3em;
   }
 }
 
-/* line 167, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 175, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 sub
 , sup {
   line-height: 0;
 }
 
-/* line 172, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 180, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 code, kbd, pre, samp, tt {
   font-size: 1em;
 }
 
-/* line 175, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 183, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 .block-field-blocknodepostfield-subtitle {
   line-height: var(--line-height-m);
 }
@@ -2091,8 +2099,8 @@ body {
   background-color: var(--color-region-outer-bg);
 }
 
-/* line 29, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-[class*=page-node-type-] main div.region {
+/* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+div.region-content {
   background-color: var(--color-region-inner-bg);
   padding-top: var(--region-margin-block);
   padding-right: var(--region-margin-inline);
@@ -2100,7 +2108,7 @@ body {
   padding-left: var(--region-margin-inline);
 }
 
-/* line 38, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
 main div.region
 , nav.tabs {
   max-width: var(--content-narrow-width);
@@ -2257,7 +2265,7 @@ Not all link styles are defined in this file.
 
 /* end - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
 /* line 42, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a {
+.region-content a {
   color: inherit;
   line-height: inherit;
   text-decoration: none;
@@ -2266,30 +2274,30 @@ Not all link styles are defined in this file.
 }
 
 /* line 48, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a, .node a:link {
+.region-content a, .region-content a:link {
   border-bottom: 1px solid var(--color-link-border-link);
 }
 
 /* line 53, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:visited {
+.region-content a:visited {
   border-bottom: 1px solid var(--color-link-border-visited);
 }
 
 /* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:focus {
+.region-content a:focus {
   background-color: var(--color-link-bg-focus);
   border-bottom: 1px solid var(--color-link-border-focus);
   outline: none;
 }
 
 /* line 61, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:hover {
+.region-content a:hover {
   color: var(--color-text);
   border-bottom: 1px solid var(--color-link-border-hover);
 }
 
 /* line 65, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.node a:active {
+.region-content a:active {
   color: var(--color-link-fg-active);
   background-color: var(--color-link-bg-active);
 }
@@ -2628,6 +2636,11 @@ table.span {
 /* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-other.scss */
 table.no-span {
   column-span: none;
+}
+
+/* line 50, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-other.scss */
+.views-field-title a {
+  display: block;
 }
 
 /* line 1, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-layout-builder-blocks.scss */
@@ -3036,6 +3049,29 @@ put only sass variable definitions in this file. do not put custom properties in
 .simple-gmap-address + iframe {
   border: 1px solid #878d96 !important;
   max-width: 100%;
+}
+
+/* line 149, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.view-events .view-content {
+  display: grid;
+  gap: var(--space-between-grid-items);
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+
+/* line 153, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.view-events .view-content .views-field-field-event-series
+, .view-events .view-content .views-field-title
+, .view-events .view-content .views-field-field-subtitle {
+  margin-bottom: var(--space-m);
+}
+
+@media screen and (min-width: 376px) {
+  /* line 161, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  .view-events img {
+    margin-bottom: var(--space-around-floated-images);
+    margin-left: var(--space-around-floated-images);
+    float: right;
+  }
 }
 
 /*  .layout__region--first{

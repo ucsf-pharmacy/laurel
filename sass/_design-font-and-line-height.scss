@@ -105,12 +105,14 @@ body{
   font-family: var(--font-helv-neue-roman);
 }
 h1,h2
+,.views-field-title
 // ,.field--name-title
 {
   font-family: var(--font-granjon);
 }
 h3
 ,.field--name-field-subtitle
+,.views-field-field-subtitle
 {
   font-family: var(--font-helv-neue-light);
 }
@@ -135,20 +137,26 @@ h1{
   }
   font-weight: normal;
 }
-h2{
+h2
+,.views-field-title
+{
   font-size: 2.005em;
   @media screen and (max-width: 500px){
     font-size: 1.5em;
   }
 }
-h3{
+h3
+,.views-field-field-subtitle
+{
   font-weight: normal;
   font-size: 1.3em;
   @media screen and (max-width: 500px){
     font-size: 1.2em;
   }
 }
-h1,h2{
+h1,h2
+,.views-field-title
+{
   line-height: var(--line-height-xs); // #92 in Typewolf’s Flawless Typography Checklist: Tighten your line height and letterspacing in large headlines
 }
 .field--name-field-post-type // post: type (aka breadcrumbs)
