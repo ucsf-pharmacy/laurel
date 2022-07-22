@@ -32,6 +32,7 @@ $superfish-1-background-color-level-third: #{$color-b5-blue};
 $superfish-1-background-color-level-fourth: #{$color-b6-blue};
 
 #block-domainmenusactivedomainmenu-2{
+  margin: 1em 0;
   &:after{ // this section is needed when you want the menu to appear on its own line on desktop
     content: ".";
     visibility: hidden;
@@ -61,10 +62,10 @@ $superfish-1-background-color-level-fourth: #{$color-b6-blue};
     a{
       text-decoration: none;
       line-height: var(--menu-item-line-height);
-      @media screen and (min-width: 641){
-        padding: .5em 1em;
+      @media screen and (min-width: 641px){
+        padding: .5em 1em .32em;
       }
-      @media screen and (max-width: 640){
+      @media screen and (max-width: 640px){
         padding: 1em;
       }
       &.sf-with-ul{

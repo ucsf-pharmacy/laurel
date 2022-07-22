@@ -82,12 +82,6 @@ https://hankchizljaw.com/wrote/a-modern-css-reset/
 }
 
 /* Remove default padding */
-/* line 19, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
 /* Remove default margin */
 /* line 25, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_reset-and-normalize.scss */
 body,
@@ -2113,11 +2107,6 @@ main div.region
   margin: 0 auto;
 }
 
-/* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-.node {
-  line-height: var(--line-spacing);
-}
-
 /* line 1, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
 :root {
   --space-from-page-edge: 0;
@@ -3222,8 +3211,15 @@ put only sass variable definitions in this file. do not put custom properties in
   content: ',';
 }
 
+@media all and (min-width: 401px) {
+  /* line 103, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  .field--name-field-ucsfphps-degrees.field--label-inline .field__items {
+    padding-left: 0;
+  }
+}
+
 @media all and (max-width: 400px) {
-  /* line 101, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 110, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--label-inline {
     display: block;
     padding-bottom: var(--space-m);
@@ -3235,87 +3231,91 @@ put only sass variable definitions in this file. do not put custom properties in
     }
 */
   }
-  /* line 104, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 113, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--label-inline .field__label
 , .field--label-inline .field__items
 , .field--label-inline .field__item {
     float: none;
     display: block;
   }
+  /* line 120, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  .field--label-inline li.field__item {
+    display: list-item;
+  }
 }
 
-/* line 130, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 142, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-event-moreinfo .field__label {
   font-weight: normal;
 }
 
-/* line 134, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 146, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-location-name .field__item a
 , .field--type-uri a {
   word-break: break-word;
 }
 
 @media all and (min-width: 501px) {
-  /* line 141, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 153, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--name-body {
     margin-top: var(--space-between-title-group-and-body);
   }
 }
 
-/* line 150, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 162, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-post-type .field__item {
   display: inline;
 }
 
-/* line 152, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 164, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-post-type .field__item:not(:last-child):after {
   content: ' → ';
 }
 
-/* line 157, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 169, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-affiliations {
   display: block;
 }
 
-/* line 160, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 172, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-affiliations .field__items {
   margin-left: calc( 25ch + var(--space-l));
 }
 
-/* line 162, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 174, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-affiliations .field__items .field__item {
   display: block;
 }
 
-/* line 168, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 180, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-degrees .field
 , .field--name-field-ucsfphps-degrees article {
   display: inline;
 }
 
-/* line 176, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 188, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .js .paragraphs-description .paragraphs-content-wrapper {
   line-height: var(--line-height);
   height: auto;
   word-break: initial;
 }
 
-/* line 185, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 197, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-event-series {
   margin-top: -6px;
 }
 
-/* line 191, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 203, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul {
   padding-left: 0;
 }
 
-/* line 193, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 205, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul li {
   display: inline;
 }
 
-/* line 195, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 207, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul li:not(:last-child):after {
   content: ', ';
 }
@@ -3815,7 +3815,12 @@ put only sass variable definitions in this file. do not put custom properties in
   }
 }
 
-/* line 35, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+#block-domainmenusactivedomainmenu-2 {
+  margin: 1em 0;
+}
+
+/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2:after {
   content: ".";
   visibility: hidden;
@@ -3824,91 +3829,91 @@ put only sass variable definitions in this file. do not put custom properties in
   clear: both;
 }
 
-/* line 42, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none {
   float: left;
   margin: 0;
   padding: 0;
 }
 
-/* line 46, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 47, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none.sf-navbar {
   width: 100%;
   background-color: var(--color-sfmenu-mobile-bg);
 }
 
-/* line 50, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 51, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none ul {
   padding-left: 0;
 }
 
-/* line 53, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none ul.sf-multicolumn li.sf-multicolumn-wrapper {
   background-color: #e2f4fc;
 }
 
-/* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none ul.sf-multicolumn li.sf-multicolumn-wrapper li {
   background-color: transparent;
 }
 
-/* line 61, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 62, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none a {
   text-decoration: none;
   line-height: var(--menu-item-line-height);
 }
 
-@media screen and (min-width: 641) {
-  /* line 61, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+@media screen and (min-width: 641px) {
+  /* line 62, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
   #block-domainmenusactivedomainmenu-2 .sf-style-none a {
-    padding: .5em 1em;
+    padding: .5em 1em .32em;
   }
 }
 
-@media screen and (max-width: 640) {
-  /* line 61, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+@media screen and (max-width: 640px) {
+  /* line 62, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
   #block-domainmenusactivedomainmenu-2 .sf-style-none a {
     padding: 1em;
   }
 }
 
-/* line 70, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 71, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none a.sf-with-ul {
   padding-right: 1.75em;
 }
 
-/* line 77, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 78, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none a:hover {
   background-color: var(--color-sfmenu-hover-bg);
 }
 
-/* line 80, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 81, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none a:active {
   background-color: var(--color-sfmenu-active-bg);
 }
 
-/* line 84, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 85, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none a:focus
 , #block-domainmenusactivedomainmenu-2 .sf-style-none a.sf-clicked:link {
   outline: none;
 }
 
-/* line 90, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 91, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none span.nolink {
   padding: 0.75em 1em;
 }
 
-/* line 92, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 93, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none span.nolink.sf-with-ul {
   padding-right: 2.25em;
 }
 
-/* line 95, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 96, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none span.nolink:hover {
   background-color: var(--color-sfmenu-hover-bg);
 }
 
-/* line 99, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 100, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none span.sf-description {
   display: block;
   font-size: 0.833em;
@@ -3917,49 +3922,49 @@ put only sass variable definitions in this file. do not put custom properties in
   padding: 0;
 }
 
-/* line 109, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 110, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none.rtl span.sf-description {
   margin: 5px 5px 0 0;
 }
 
-/* line 112, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 113, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none.rtl span.nolink.sf-with-ul {
   padding-left: 2.25em;
   padding-right: 1em;
 }
 
-/* line 117, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 118, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none.rtl a.sf-with-ul {
   padding-left: 2.25em;
   padding-right: 1em;
 }
 
-/* line 122, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 123, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none li {
   background-color: var(--color-sfmenu-ul-bg);
 }
 
-/* line 124, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 125, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none li:hover {
   background-color: var(--color-sfmenu-hover-bg);
 }
 
-/* line 126, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 127, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none li:hover > ul {
   top: 40px;
 }
 
-/* line 130, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 131, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none li.sfHover {
   background-color: var(--color-sfmenu-hover-bg);
 }
 
-/* line 132, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 133, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none li.sfHover > ul {
   top: 40px;
 }
 
-/* line 137, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 138, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none .sf-sub-indicator {
   /*      margin-left: 0;
       // display: none;
@@ -3974,7 +3979,7 @@ put only sass variable definitions in this file. do not put custom properties in
 */
 }
 
-/* line 154, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 155, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-style-none .sf-sub-indicator:after {
   font-size: .7em;
   /*
@@ -3982,127 +3987,127 @@ put only sass variable definitions in this file. do not put custom properties in
 */
 }
 
-/* line 170, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 171, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 div.sf-accordion-toggle.sf-style-none a {
   background-color: var(--color-sfmenu-mobile-bg);
   padding: 1em;
 }
 
-/* line 173, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 174, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 div.sf-accordion-toggle.sf-style-none a.sf-expanded {
   background-color: #e2f4fc;
   font-weight: bold;
 }
 
-/* line 183, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 184, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li a {
   padding-left: auto;
   padding-right: 2em;
 }
 
-/* line 188, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 189, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li li a {
   padding-left: auto;
   padding-right: 3em;
 }
 
-/* line 193, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 194, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li li li a {
   padding-left: auto;
   padding-right: 4em;
 }
 
-/* line 198, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 199, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li li li li a {
   padding-left: auto;
   padding-right: 5em;
 }
 
-/* line 202, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 203, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li li li li span.nolink {
   padding-left: auto;
   padding-right: 5em;
 }
 
-/* line 207, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 208, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li li li span.nolink {
   padding-left: auto;
   padding-right: 4em;
 }
 
-/* line 212, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 213, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li li span.nolink {
   padding-left: auto;
   padding-right: 3em;
 }
 
-/* line 217, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 218, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl.sf-accordion li li span.nolink {
   padding-left: auto;
   padding-right: 2em;
 }
 
-/* line 226, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 227, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.rtl ul.sf-multicolumn li.sf-multicolumn-wrapper ol li.sf-multicolumn-column {
   float: right;
 }
 
-/* line 234, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 235, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li.sf-expanded {
   background-color: #e2f4fc;
 }
 
-/* line 237, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 238, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li.sf-expanded > a {
   font-weight: bold;
 }
 
-/* line 240, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 241, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li.sf-expanded > span.nolink {
   font-weight: bold;
 }
 
-/* line 246, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 247, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li a {
   padding-left: 2em;
 }
 
-/* line 250, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 251, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li li a {
   padding-left: 3em;
 }
 
-/* line 254, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 255, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li li li a {
   padding-left: 4em;
 }
 
-/* line 258, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 259, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li li li li a {
   padding-left: 5em;
 }
 
-/* line 261, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 262, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li li li li span.nolink {
   padding-left: 5em;
 }
 
-/* line 265, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 266, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li li li span.nolink {
   padding-left: 4em;
 }
 
-/* line 269, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 270, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li li span.nolink {
   padding-left: 3em;
 }
 
-/* line 273, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 274, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li li span.nolink {
   padding-left: 2em;
 }
 
-/* line 277, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 278, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none.sf-accordion li a.sf-accordion-button {
   font-weight: bold;
   position: absolute;
@@ -4111,30 +4116,30 @@ put only sass variable definitions in this file. do not put custom properties in
   z-index: 499;
 }
 
-/* line 287, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 288, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none ul.sf-multicolumn li.sf-multicolumn-wrapper ol {
   margin: 0;
   padding: 0;
 }
 
-/* line 290, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 291, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none ul.sf-multicolumn li.sf-multicolumn-wrapper ol li {
   margin: 0;
   padding: 0;
 }
 
-/* line 293, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 294, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none ul.sf-multicolumn li.sf-multicolumn-wrapper ol li.sf-multicolumn-column {
   display: inline;
   float: left;
 }
 
-/* line 299, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 300, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none ul.sf-multicolumn li.sf-multicolumn-wrapper a.menuparent {
   font-weight: bold;
 }
 
-/* line 303, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
+/* line 304, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-main-menu.scss */
 #block-domainmenusactivedomainmenu-2 .sf-menu.sf-style-none ul.sf-multicolumn li.sf-multicolumn-wrapper span.nolink.menuparent {
   font-weight: bold;
 }

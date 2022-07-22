@@ -97,6 +97,15 @@
   }
 */
 }
+@media all and (min-width: 401px){
+  .field--name-field-ucsfphps-degrees{
+    &.field--label-inline{
+      .field__items{
+        padding-left: 0;
+      }
+    }
+  }
+}
 @media all and (max-width: 400px){
   .field--label-inline{
     display: block;
@@ -107,6 +116,9 @@
     {
       float: none;
       display: block;
+    }
+    li.field__item{
+      display: list-item;
     }
 /*
     &>.field__item
