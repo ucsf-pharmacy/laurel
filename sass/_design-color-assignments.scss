@@ -26,6 +26,8 @@ focus tends to be yellow
 
   --color-border-dark:                     #{$color-j2-cool-gray};
   --color-border-light:                    #{$color-j5-cool-gray};
+
+  --color-list-marker-subtle:              #{$color-j4-cool-gray};
 }
 // end - assignments: light mode
 
@@ -51,6 +53,8 @@ focus tends to be yellow
 
     --color-border-dark:                     #{$color-j5-cool-gray};
     --color-border-light:                    #{$color-j2-cool-gray};
+
+    --color-list-marker-subtle:              #{$color-j4-cool-gray};
   }
 }
 // end - assignments: dark mode

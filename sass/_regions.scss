@@ -33,8 +33,9 @@ div.region-content{
   padding-bottom: var(--region-margin-block);
   padding-left: var(--region-margin-inline);
 }
-main div.region
-,nav.tabs
+// main div.region
+// ,nav.tabs
+.path-node
 {
   max-width: var(--content-narrow-width);
   margin: 0 auto;

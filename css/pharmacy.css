@@ -41,10 +41,11 @@ focus tends to be yellow
   --color-image-caption-bg:                #ededed;
   --color-border-dark:                     #878d96;
   --color-border-light:                    #e1e3e5;
+  --color-list-marker-subtle:              #caced2;
 }
 
 @media (prefers-color-scheme: dark) {
-  /* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+  /* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
   :root {
     --color-text:                            #e1e3e5;
     --color-input-textarea-bg:               #21272a;
@@ -62,6 +63,7 @@ focus tends to be yellow
     --color-image-caption-bg:                #4d4d4d;
     --color-border-dark:                     #e1e3e5;
     --color-border-light:                    #878d96;
+    --color-list-marker-subtle:              #caced2;
   }
 }
 
@@ -2108,9 +2110,8 @@ div.region-content {
   padding-left: var(--region-margin-inline);
 }
 
-/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
-main div.region
-, nav.tabs {
+/* line 38, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_regions.scss */
+.path-node {
   max-width: var(--content-narrow-width);
   margin: 0 auto;
 }
@@ -2143,7 +2144,6 @@ main div.region
 
 /* line 14, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_page-margins.scss */
 body {
-  max-width: 1920px;
   margin: 0 auto;
   border-left: var(--space-from-page-edge) solid transparent;
   border-right: var(--space-from-page-edge) solid transparent;
@@ -2362,10 +2362,11 @@ focus tends to be yellow
   --color-image-caption-bg:                #ededed;
   --color-border-dark:                     #878d96;
   --color-border-light:                    #e1e3e5;
+  --color-list-marker-subtle:              #caced2;
 }
 
 @media (prefers-color-scheme: dark) {
-  /* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
+  /* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-color-assignments.scss */
   :root {
     --color-text:                            #e1e3e5;
     --color-input-textarea-bg:               #21272a;
@@ -2383,6 +2384,7 @@ focus tends to be yellow
     --color-image-caption-bg:                #4d4d4d;
     --color-border-dark:                     #e1e3e5;
     --color-border-light:                    #878d96;
+    --color-list-marker-subtle:              #caced2;
   }
 }
 
@@ -3060,15 +3062,40 @@ put only sass variable definitions in this file. do not put custom properties in
 
 /* line 153, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .view-events .view-content .views-field-field-event-series
-, .view-events .view-content .views-field-title
 , .view-events .view-content .views-field-field-subtitle {
   margin-bottom: var(--space-m);
 }
 
+/* line 157, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.view-events .view-content .views-field-field-event-series
+.field-content:empty, .view-events .view-content .views-field-field-subtitle .field-content:empty {
+  border: 5px solid red;
+}
+
+/* line 161, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.view-events .view-content .views-field-title {
+  margin-bottom: var(--space-s);
+}
+
+/* line 163, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.view-events .view-content .views-field-title a {
+  padding-bottom: var(--space-s);
+}
+
+/* line 168, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.view-events .view-content .views-field-field-date-tbd .item-list {
+  margin-left: -1.5em;
+}
+
+/* line 170, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.view-events .view-content .views-field-field-date-tbd .item-list li::marker {
+  color: var(--color-list-marker-subtle);
+}
+
 @media screen and (min-width: 376px) {
-  /* line 161, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+  /* line 176, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
   .view-events img {
-    margin-bottom: var(--space-around-floated-images);
+    max-width: 33.333%;
     margin-left: var(--space-around-floated-images);
     float: right;
   }

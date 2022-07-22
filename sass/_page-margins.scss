@@ -12,7 +12,7 @@
   }
 }
 body{
-  max-width: 1920px; // as of 2021.1215 the most popular screen size is 1920×1080: https://web.archive.org/web/20211215220415/https://www.browserstack.com/guide/ideal-screen-sizes-for-responsive-design
+  // max-width: 1920px; // as of 2021.1215 the most popular screen size is 1920×1080: https://web.archive.org/web/20211215220415/https://www.browserstack.com/guide/ideal-screen-sizes-for-responsive-design
   margin: 0 auto; // center horizontally
   // start - use borders to provide left and right margin since we need margin: 0 auto to center
   border-left: var(--space-from-page-edge) solid transparent;

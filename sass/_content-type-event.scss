@@ -151,15 +151,30 @@
     gap: var(--space-between-grid-items);
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     .views-field-field-event-series
-    ,.views-field-title
     ,.views-field-field-subtitle
     {
       margin-bottom: var(--space-m);
+      .field-content:empty{
+        border: 5px solid red;
+      }
+    }
+    .views-field-title
+    {
+      a{
+        padding-bottom: var(--space-s);
+      }
+      margin-bottom: var(--space-s);
+    }
+    .views-field-field-date-tbd .item-list{
+      margin-left: -1.5em;
+      li::marker{
+        color: var(--color-list-marker-subtle);
+      }
     }
   }
   @media screen and (min-width: 376px){
     img{
-      margin-bottom: var(--space-around-floated-images);
+      max-width: 33.333%;
       margin-left: var(--space-around-floated-images);
       float: right;
     }
