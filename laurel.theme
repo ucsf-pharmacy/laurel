@@ -13,20 +13,31 @@ function laurel_preprocess_block(array &$variables) {
  * Implements hook_preprocess_time() to follow our desired time format.
  */
 function laurel_preprocess_time(array &$variables) {
-  // kint($variables['text']['time']['#markup']);
+  // kint($variables);
   // kint($variables['text']);
-  $find = array('/12:00 am/','/12:00 pm/','/am/','/pm/');
-  $replace = array('midnight','noon','a.m.','p.m.');
-  $variables['text']['#markup'] = preg_replace(
-    $find
-    ,$replace
-    ,$variables['text']['#markup'] ?? ''
-  );
-  $variables['text']['time']['#markup'] = preg_replace(
-    $find
-    ,$replace
-    ,$variables['text']['time']['#markup'] ?? ''
-  );
+  // kint($variables['text']['time']['#markup']);
+  if ( array_key_exists( 'text' , $variables ) ){
+    $find = array('/12:00 am/','/12:00 pm/','/am/','/pm/');
+    $replace = array('midnight','noon','a.m.','p.m.');
+    if ( is_array( $variables['text'] ) && array_key_exists( '#markup' , $variables['text'] ) ){
+      $variables['text']['#markup'] = preg_replace(
+        $find
+        ,$replace
+        ,$variables['text']['#markup'] ?? ''
+      );
+    }
+    if ( is_array( $variables['text'] ) && array_key_exists( 'time' , $variables['text'] ) ){
+      if ( is_array( $variables['text']['time'] ) && array_key_exists( '#markup' , $variables['text']['time'] ) ){
+        if ( $variables['text']['time']['#markup'] ){
+          $variables['text']['time']['#markup'] = preg_replace(
+            $find
+            ,$replace
+            ,$variables['text']['time']['#markup'] ?? ''
+          );
+        }
+      }
+    }
+  }
 }
 
 /**
