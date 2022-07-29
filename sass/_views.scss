@@ -1,0 +1,30 @@
+.view-events
+{
+  .view-content{
+    display: grid;
+    gap: var(--space-between-grid-items);
+    grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+    .views-field-title{
+      a{
+        padding-bottom: var(--space-s);
+      }
+      margin-bottom: var(--space-s);
+    }
+    .views-field-field-media{
+      a{
+        &:focus img{
+          border: 5px solid var(--color-link-bg-focus);
+        }
+        img:hover{
+          border: 5px solid var(--color-link-border-hover);
+        }
+      }
+    }
+    img{
+      max-width: 33.333333%;
+      margin-bottom: var(--space-m);
+      margin-left: var(--space-around-floated-images);
+      float: right;
+    }
+  }
+}

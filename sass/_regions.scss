@@ -23,7 +23,10 @@
 
 
 body{
-  background-color: var(--color-region-outer-bg);
+  background-color: var(--color-region-inner-bg);
+  @media all and (min-width: 1024px){
+    background-color: var(--color-region-outer-bg);
+  }
 }
 div.region-content{
   background-color: var(--color-region-inner-bg);

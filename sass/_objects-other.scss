@@ -51,3 +51,10 @@ table.no-span
     display: block;
   }
 }
+.simple-gmap-address{
+  margin-bottom: .5em;
+  &+iframe{
+    border: 1px solid #{$color-j2-cool-gray} !important;
+    max-width: 100%;
+  }
+}
