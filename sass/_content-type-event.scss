@@ -84,7 +84,12 @@
   }
   .block-field-blocknodeeventfield-subtitle{
     max-width: calc( var(--measure) * 1.5 );
-    margin-bottom: calc( var(--space-between-title-group-and-body) - .4em ); // .4em is offset to make baseline line up with the bottom of the image or image+caption
+    // margin-bottom: calc( var(--space-between-title-group-and-body) - .4em ); // .4em is offset to make baseline line up with the bottom of the image or image+caption
+  }
+  .block-field-blocknodeeventfield-date-tbd
+  ,.block-field-blocknodeeventfield-event-datetime
+  {
+    margin-top: var(--space-xl);
   }
   .field.field--name-field-event-series{
     margin-bottom: var(--space-between-separate-entities);
