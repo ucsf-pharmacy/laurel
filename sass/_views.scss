@@ -28,3 +28,11 @@
     }
   }
 }
+nav.pager{
+  margin-top: var(--space-xl);
+  .pager__item{
+    &.is-active{
+      font-weight: normal;
+    }
+  }
+}

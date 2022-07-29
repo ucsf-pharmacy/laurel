@@ -38,7 +38,9 @@ Not all link styles are defined in this file.
 }
 /* end - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
 
-.region-content{
+.region-content
+,.nav-pager
+{
   a{
     color: inherit;
     line-height: inherit;
@@ -69,6 +71,40 @@ Not all link styles are defined in this file.
   }
 }
 
+nav.pager{
+  .pager__item
+  ,.pager__item a
+  {
+    padding: var(--space-pager-item-padding);
+  }
+  .pager__item{
+    a{
+      &
+      ,&:link
+      {
+        border: 1px solid var(--color-link-border-link);
+      }
+      &:visited{
+        border: 1px solid var(--color-link-border-visited);
+      }
+      &:focus{
+        background-color: var(--color-link-bg-focus);
+        border: 1px solid var(--color-link-border-focus);
+        outline: none;
+      }
+      &:hover{
+        color: var(--color-text);
+        border: 1px solid var(--color-link-border-hover);
+      }
+      &:active{
+        background-color: var(--color-link-bg-active);
+        span{
+          color: var(--color-link-fg-active);
+        }
+      }
+    }
+  }
+}
 
 /*
 @mixin block-link(){

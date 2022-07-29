@@ -324,6 +324,20 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --list-item-spacing: calc( var(--paragraph-spacing) * .25 );
 }
 
+@media screen and (max-width: 400px) {
+  /* line 100, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_settings-spacing.scss */
+  :root {
+    --space-pager-item-padding: var(--space-m);
+  }
+}
+
+@media screen and (min-width: 401px) {
+  /* line 105, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_settings-spacing.scss */
+  :root {
+    --space-pager-item-padding: var(--space-l);
+  }
+}
+
 /*
 Fixed type scales
 
@@ -2276,8 +2290,9 @@ Not all link styles are defined in this file.
 }
 
 /* end - 2021.1215 frankfarm - briefly provides an orange visual cue for anchors when selecting the link to an anchor */
-/* line 42, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content a {
+/* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.region-content
+a, .nav-pager a {
   color: inherit;
   line-height: inherit;
   text-decoration: none;
@@ -2285,33 +2300,78 @@ Not all link styles are defined in this file.
   padding-bottom: var(--space-between-text-and-link-underline);
 }
 
-/* line 48, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content a, .region-content a:link {
+/* line 50, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.region-content
+a, .region-content
+a:link, .nav-pager a, .nav-pager a:link {
   border-bottom: 1px solid var(--color-link-border-link);
 }
 
-/* line 53, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content a:visited {
+/* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.region-content
+a:visited, .nav-pager a:visited {
   border-bottom: 1px solid var(--color-link-border-visited);
 }
 
-/* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content a:focus {
+/* line 58, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.region-content
+a:focus, .nav-pager a:focus {
   background-color: var(--color-link-bg-focus);
   border-bottom: 1px solid var(--color-link-border-focus);
   outline: none;
 }
 
-/* line 61, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content a:hover {
+/* line 63, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.region-content
+a:hover, .nav-pager a:hover {
   color: var(--color-text);
   border-bottom: 1px solid var(--color-link-border-hover);
 }
 
-/* line 65, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
-.region-content a:active {
+/* line 67, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+.region-content
+a:active, .nav-pager a:active {
   color: var(--color-link-fg-active);
   background-color: var(--color-link-bg-active);
+}
+
+/* line 75, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+nav.pager .pager__item
+, nav.pager .pager__item a {
+  padding: var(--space-pager-item-padding);
+}
+
+/* line 82, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+nav.pager .pager__item a, nav.pager .pager__item a:link {
+  border: 1px solid var(--color-link-border-link);
+}
+
+/* line 87, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+nav.pager .pager__item a:visited {
+  border: 1px solid var(--color-link-border-visited);
+}
+
+/* line 90, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+nav.pager .pager__item a:focus {
+  background-color: var(--color-link-bg-focus);
+  border: 1px solid var(--color-link-border-focus);
+  outline: none;
+}
+
+/* line 95, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+nav.pager .pager__item a:hover {
+  color: var(--color-text);
+  border: 1px solid var(--color-link-border-hover);
+}
+
+/* line 99, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+nav.pager .pager__item a:active {
+  background-color: var(--color-link-bg-active);
+}
+
+/* line 101, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_objects-links.scss */
+nav.pager .pager__item a:active span {
+  color: var(--color-link-fg-active);
 }
 
 /*
@@ -2826,6 +2886,16 @@ table.no-span {
   margin-bottom: var(--space-m);
   margin-left: var(--space-around-floated-images);
   float: right;
+}
+
+/* line 31, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+nav.pager {
+  margin-top: var(--space-xl);
+}
+
+/* line 34, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+nav.pager .pager__item.is-active {
+  font-weight: normal;
 }
 
 /* line 5, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-article.scss */
