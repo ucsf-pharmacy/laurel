@@ -79,6 +79,7 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --space-between-layout-columns      : var(--space-l);
   --space-between-layout-rows         : var(--space-m);
   --space-between-related-entities    : var(--space-m);
+  --space-pager-item-padding          : var(--inset-squish-m);
   --space-between-separate-entities   : var(--space-l);
   --space-between-content-multicolumns: var(--space-l);
   --space-between-title-group-and-body: var(--space-l);
@@ -95,14 +96,4 @@ You never or rarely need to set margin-top or margin-left. Instead of margin-top
   --paragraph-spacing-half: calc( var(--paragraph-spacing) * .5 );
   --paragraph-spacing-three-quarters: calc( var(--paragraph-spacing) * .75 );
   --list-item-spacing: calc( var(--paragraph-spacing) * .25 );
-}
-@media screen and (max-width: 400px){
-  :root{
-    --space-pager-item-padding : var(--space-m);
-  }
-}
-@media screen and (min-width: 401px){
-  :root{
-    --space-pager-item-padding : var(--space-l);
-  }
 }

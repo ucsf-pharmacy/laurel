@@ -967,7 +967,10 @@ table td h3:first-child
 }
 
 table{
-  margin: var(--paragraph-spacing) 0;
+  display: inline-table; // 2018.0522 frankfarm - we need this otherwise tr borders can be a fraction of a pixel off - see https://stackoverflow.com/questions/39861687/how-to-prevent-fractional-pixels-in-an-element-with-width-set-to-auto
+  background-color: transparent;
+  width: 100%;
+  margin: calc( var(--paragraph-spacing) * 2 ) 0;
   .span-columns{
     column-span: all;
   }
@@ -990,6 +993,10 @@ table{
         padding-right: 0;
       }
     }
+  }
+  tbody{
+    border-top: 2px solid var(--color-border-light);
+    border-bottom: 2px solid var(--color-border-light);
   }
 }
 //--------------------------------------------------------------------
