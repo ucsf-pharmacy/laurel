@@ -4460,73 +4460,73 @@ nav.tabs ul.tabs {
   margin-bottom: 0;
 }
 
+/* line 31, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+nav.tabs ul.tabs li.is-active {
+  background-color: var(--color-local-tasks-tabs-active-bg);
+}
+
 @media all and (min-width: 501px) {
-  /* line 32, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-  nav.tabs ul.tabs a:not(.is-active) {
+  /* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+  nav.tabs ul.tabs li a:not(.is-active) {
     border-left: 5px solid transparent;
   }
 }
 
-/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-nav.tabs ul.tabs a.is-active {
-  background-color: var(--color-local-tasks-tabs-active-bg);
-}
-
-/* line 39, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-nav.tabs ul.tabs a:focus {
+/* line 40, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+nav.tabs ul.tabs li a:focus {
   outline: none;
   background-color: var(--color-local-tasks-tabs-focus-bg);
 }
 
-/* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-nav.tabs ul.tabs a:not(.is-active):focus {
+/* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+nav.tabs ul.tabs li a:not(.is-active):focus {
   outline: none;
   color: var(--color-local-tasks-tabs-focus-fg);
   background-color: var(--color-local-tasks-tabs-focus-bg);
 }
 
 @media all and (min-width: 501px) {
-  /* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-  nav.tabs ul.tabs a:not(.is-active):focus {
+  /* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+  nav.tabs ul.tabs li a:not(.is-active):focus {
     border-left: 5px solid var(--color-local-tasks-tabs-focus-accent);
   }
 }
 
-/* line 51, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-nav.tabs ul.tabs a.is-active:hover {
+/* line 52, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+nav.tabs ul.tabs li a.is-active:hover {
   cursor: default;
 }
 
-/* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-nav.tabs ul.tabs a:not(.is-active):hover {
+/* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+nav.tabs ul.tabs li a:not(.is-active):hover {
   color: var(--color-local-tasks-tabs-hover-fg);
   background-color: var(--color-local-tasks-tabs-hover-bg);
 }
 
 @media all and (min-width: 501px) {
-  /* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
-  nav.tabs ul.tabs a:not(.is-active):hover {
+  /* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+  nav.tabs ul.tabs li a:not(.is-active):hover {
     border-left: 5px solid var(--color-local-tasks-tabs-hover-accent);
   }
 }
 
 @media all and (max-width: 500px) {
-  /* line 66, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+  /* line 68, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
   ul.tabs {
     margin: 0 3px;
   }
-  /* line 70, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+  /* line 72, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
   .tabs li {
     margin: 0;
   }
-  /* line 73, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+  /* line 75, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
   .tabs a {
     display: inline-block;
     padding: .5em 2em .4em;
     margin: 0 0 4px 0;
     background-color: var(--color-local-tasks-tabs-mobile-bg);
   }
-  /* line 78, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
+  /* line 80, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-nav-local-tasks-tabs.scss */
   .tabs a.is-active {
     font-weight: bold;
     border-left: 5px solid var(--color-text);
@@ -4600,6 +4600,12 @@ https://twitter.com/justmarkup/status/974573989497593856
 /* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_overrides.scss */
 .keep-together {
   white-space: nowrap;
+}
+
+/* line 31, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_overrides.scss */
+.tabs a:focus, .tabs a:hover
+, .tabs a.is-active {
+  background-color: transparent;
 }
 
 /*
