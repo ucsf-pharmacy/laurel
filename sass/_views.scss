@@ -2,7 +2,7 @@
 {
   .view-content{
     display: grid;
-    gap: var(--space-between-grid-items);
+    gap: var(--space-between-grid-item-rows) var(--space-between-grid-item-columns);
     grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
     .views-field-title{
       a{
