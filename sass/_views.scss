@@ -1,4 +1,5 @@
 .view-events
+,.view-news
 {
   .view-content{
     display: grid;
@@ -26,6 +27,11 @@
       margin-left: var(--space-around-floated-images);
       float: right;
     }
+  }
+}
+.view-news{
+  .views-field-created{
+    margin-bottom: var(--space-between-blocks);
   }
 }
 nav.pager{

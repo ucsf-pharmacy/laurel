@@ -89,12 +89,18 @@ main{
 other declarations related to typography
 */
 
-// limit line length to a reasonable value, adjust slug height
 h1
 ,.field--name-field-subtitle
-{ 
-  margin-top: -4px;
+{
+  margin-top: -4px; // adjust slug height
   hyphens: none;
+}
+.layout-builder{
+  h1
+  ,.field--name-field-subtitle
+  {
+    margin-top: 0; // reset slug height in layout builder
+  }
 }
 .layout-builder{
   h1{

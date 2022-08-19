@@ -101,7 +101,9 @@ font family declarations
 
 see also: _design-tokens-typography.scss
 */
-body{
+body
+,.view-news .views-field-created
+{
   font-family: var(--font-helv-neue-roman);
 }
 h1,h2
@@ -154,6 +156,12 @@ h3
     font-size: 1.2em;
   }
 }
+.view-news .views-field-created
+{
+  font-size: .8em;
+}
+
+
 h1,h2
 ,.views-field-title
 {
