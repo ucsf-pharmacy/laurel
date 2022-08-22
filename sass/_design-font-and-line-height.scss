@@ -97,7 +97,7 @@ webfont definitions
 
 
 ----------------------------------------------------------------------
-font family declarations
+font families
 
 see also: _design-tokens-typography.scss
 */
@@ -115,6 +115,7 @@ h1,h2
 h3
 ,.field--name-field-subtitle
 ,.views-field-field-subtitle
+,.view-news .item-list .views-summary li a // special for news archive years
 {
   font-family: var(--font-helv-neue-light);
 }
@@ -129,7 +130,7 @@ input,button,textarea,select{
 
 
 ----------------------------------------------------------------------
-font sizes and line-heights
+font sizes
 
 */
 h1{
@@ -137,10 +138,10 @@ h1{
   @media screen and (max-width: 500px){
     font-size: 1.8em;
   }
-  font-weight: normal;
 }
 h2
 ,.views-field-title
+,.view-news .item-list .views-summary li a // special for news archive years
 {
   font-size: 2.005em;
   @media screen and (max-width: 500px){
@@ -150,18 +151,25 @@ h2
 h3
 ,.views-field-field-subtitle
 {
-  font-weight: normal;
   font-size: 1.3em;
   @media screen and (max-width: 500px){
     font-size: 1.2em;
   }
 }
-.view-news .views-field-created
-{
+code,kbd,pre,samp,tt{
+  font-size: 1em;
+}
+.view-news .views-field-created{
   font-size: .8em;
 }
+/*
 
 
+
+----------------------------------------------------------------------
+line-heights
+
+*/
 h1,h2
 ,.views-field-title
 {
@@ -185,9 +193,24 @@ sub
 {
   line-height: 0;
 }
-code,kbd,pre,samp,tt{
-  font-size: 1em;
-}
 .block-field-blocknodepostfield-subtitle{
   line-height: var(--line-height-m);
+}
+/*
+
+
+
+----------------------------------------------------------------------
+font weights
+
+*/
+h1
+,h3
+,.views-field-field-subtitle
+{
+  font-weight: normal;
+}
+.view-news .item-list .views-summary li a // special for news archive years
+{
+  font-weight: 300;
 }

@@ -60,9 +60,6 @@ body{
   -webkit-font-feature-settings: "tnum";
   font-feature-settings: "tnum";
 }
-h1{
-  letter-spacing: -.5px;
-}
 h1
 ,.headline
 { // #91 in Typewolf’s Flawless Typography Checklist: Use discretionary ligatures and swashes in headlines
@@ -78,9 +75,24 @@ code,kbd,pre,samp,tt{
   -webkit-font-feature-settings: initial;
   font-feature-settings: initial;
 }
+
+/*
+
+
+
+----------------------------------------------------------------------
+hyphenation
+*/
 main{
   hyphens: auto;
 }
+h1
+,.field--name-field-subtitle
+,.views-field-title
+{
+  hyphens: none;
+}
+
 /*
 
 
@@ -89,11 +101,13 @@ main{
 other declarations related to typography
 */
 
+h1{
+  letter-spacing: -.5px;
+}
 h1
 ,.field--name-field-subtitle
 {
   margin-top: -4px; // adjust slug height
-  hyphens: none;
 }
 .layout-builder{
   h1

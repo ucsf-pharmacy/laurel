@@ -520,7 +520,7 @@ webfont definitions
 
 
 ----------------------------------------------------------------------
-font family declarations
+font families
 
 see also: _design-tokens-typography.scss
 */
@@ -539,16 +539,17 @@ h1, h2
 /* line 115, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h3
 , .field--name-field-subtitle
-, .views-field-field-subtitle {
+, .views-field-field-subtitle
+, .view-news .item-list .views-summary li a {
   font-family: var(--font-helv-neue-light);
 }
 
-/* line 121, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 122, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 code, kbd, pre, samp, tt {
   font-family: var(--font-mono);
 }
 
-/* line 124, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 125, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 input, button, textarea, select {
   font-family: inherit;
 }
@@ -558,17 +559,16 @@ input, button, textarea, select {
 
 
 ----------------------------------------------------------------------
-font sizes and line-heights
+font sizes
 
 */
-/* line 135, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 136, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h1 {
   font-size: 2.41em;
-  font-weight: normal;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 135, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+  /* line 136, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
   h1 {
     font-size: 1.8em;
   }
@@ -576,27 +576,28 @@ h1 {
 
 /* line 142, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h2
-, .views-field-title {
+, .views-field-title
+, .view-news .item-list .views-summary li a {
   font-size: 2.005em;
 }
 
 @media screen and (max-width: 500px) {
   /* line 142, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
   h2
-, .views-field-title {
+, .views-field-title
+, .view-news .item-list .views-summary li a {
     font-size: 1.5em;
   }
 }
 
-/* line 150, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 151, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h3
 , .views-field-field-subtitle {
-  font-weight: normal;
   font-size: 1.3em;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 150, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+  /* line 151, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
   h3
 , .views-field-field-subtitle {
     font-size: 1.2em;
@@ -604,50 +605,78 @@ h3
 }
 
 /* line 159, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+code, kbd, pre, samp, tt {
+  font-size: 1em;
+}
+
+/* line 162, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 .view-news .views-field-created {
   font-size: .8em;
 }
 
-/* line 165, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/*
+
+
+
+----------------------------------------------------------------------
+line-heights
+
+*/
+/* line 173, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h1, h2
 , .views-field-title {
   line-height: var(--line-height-xs);
 }
 
-/* line 170, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 178, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 .field--name-field-post-type
 , .field--name-field-author
 , .field--name-created {
   font-size: var(--s-3);
 }
 
-/* line 176, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 184, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 .field--name-field-subtitle {
   font-size: 1.5em;
   line-height: var(--line-height-m);
 }
 
 @media screen and (max-width: 500px) {
-  /* line 176, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+  /* line 184, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
   .field--name-field-subtitle {
     font-size: 1.3em;
   }
 }
 
-/* line 183, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 191, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 sub
 , sup {
   line-height: 0;
 }
 
-/* line 188, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-code, kbd, pre, samp, tt {
-  font-size: 1em;
-}
-
-/* line 191, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+/* line 196, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 .block-field-blocknodepostfield-subtitle {
   line-height: var(--line-height-m);
+}
+
+/*
+
+
+
+----------------------------------------------------------------------
+font weights
+
+*/
+/* line 207, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+h1
+, h3
+, .views-field-field-subtitle {
+  font-weight: normal;
+}
+
+/* line 213, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
+.view-news .item-list .views-summary li a {
+  font-weight: 300;
 }
 
 /*
@@ -718,11 +747,6 @@ body {
 }
 
 /* line 63, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
-h1 {
-  letter-spacing: -.5px;
-}
-
-/* line 66, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
 h1
 , .headline {
   font-kerning: normal;
@@ -732,7 +756,7 @@ h1
   font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
 }
 
-/* line 75, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+/* line 72, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
 code, kbd, pre, samp, tt {
   -moz-font-feature-settings: initial;
   -ms-font-feature-settings: initial;
@@ -740,9 +764,23 @@ code, kbd, pre, samp, tt {
   font-feature-settings: initial;
 }
 
-/* line 81, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+/*
+
+
+
+----------------------------------------------------------------------
+hyphenation
+*/
+/* line 86, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
 main {
   hyphens: auto;
+}
+
+/* line 89, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+h1
+, .field--name-field-subtitle
+, .views-field-title {
+  hyphens: none;
 }
 
 /*
@@ -752,25 +790,29 @@ main {
 ----------------------------------------------------------------------
 other declarations related to typography
 */
-/* line 92, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+/* line 104, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+h1 {
+  letter-spacing: -.5px;
+}
+
+/* line 107, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
 h1
 , .field--name-field-subtitle {
   margin-top: -4px;
-  hyphens: none;
 }
 
-/* line 99, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+/* line 113, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
 .layout-builder h1
 , .layout-builder .field--name-field-subtitle {
   margin-top: 0;
 }
 
-/* line 106, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+/* line 120, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
 .layout-builder h1 {
   max-width: none;
 }
 
-/* line 111, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
+/* line 125, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-typography.scss */
 .field--name-field-event-audience .field__items
 , .field--name-field-subtitle
 , .laurel-max-width-measure {
@@ -842,60 +884,60 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 
 /* line 8, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h1 {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-l);
 }
 
-/* line 12, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 11, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 {
   margin-bottom: var(--space-s);
 }
 
-/* line 15, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 14, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h3, h4, h5, h6 {
   margin-bottom: var(--space-xs);
 }
 
-/* line 21, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 20, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 .layout__region--second > .block:first-child > .field:first-child > h2:first-child, .layout__region--second > .block:first-child > .field:first-child > h3:first-child, .layout__region--second > .block:first-child > .field:first-child > h4:first-child, .layout__region--second > .block:first-child > .field:first-child > h5:first-child, .layout__region--second > .block:first-child > .field:first-child > h6:first-child {
   margin-top: 0;
 }
 
-/* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 27, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + div.contextual + div.field {
   margin-top: var(--space-l);
 }
 
-/* line 33, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 32, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h3 {
   letter-spacing: .5px;
 }
 
-/* line 38, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 37, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   margin-top: var(--space-m);
 }
 
-/* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + .laurel-side-by-side > div > h3:first-child {
   margin-top: 0;
 }
 
-/* line 47, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 46, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + .laurel-side-by-side > div:last-child > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 51, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 50, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2.field__label {
   font-weight: normal;
 }
 
-/* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 53, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 .block-entity-viewnode > span[id^="toc-"] + h2 {
   margin-top: 0;
 }
 
-/* line 57, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 .block + .block h2 {
   margin-top: var(--space-xl);
 }
@@ -2865,7 +2907,12 @@ table.no-span {
   line-height: 1.2;
 }
 
-/* line 4, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 1, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+.view-header {
+  margin-bottom: var(--space-xl);
+}
+
+/* line 7, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 .view-events
 .view-content, .view-news .view-content {
   display: grid;
@@ -2873,50 +2920,69 @@ table.no-span {
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
 }
 
-/* line 8, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 11, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 .view-events
 .view-content .views-field-title, .view-news .view-content .views-field-title {
   margin-bottom: var(--space-s);
 }
 
-/* line 9, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 12, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 .view-events
 .view-content .views-field-title a, .view-news .view-content .views-field-title a {
   padding-bottom: var(--space-s);
 }
 
-/* line 16, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 19, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 .view-events
 .view-content .views-field-field-media a:focus img, .view-news .view-content .views-field-field-media a:focus img {
   border: 5px solid var(--color-link-bg-focus);
 }
 
-/* line 19, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 22, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 .view-events
 .view-content .views-field-field-media a img:hover, .view-news .view-content .views-field-field-media a img:hover {
   border: 5px solid var(--color-link-border-hover);
 }
 
-/* line 24, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 27, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 .view-events
-.view-content img, .view-news .view-content img {
+.view-content img
+, .view-events
+.view-content .media, .view-news .view-content img
+, .view-news .view-content .media {
   max-width: 33.333333%;
   margin-bottom: var(--space-m);
   margin-left: var(--space-around-floated-images);
   float: right;
 }
 
-/* line 33, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 39, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+.view-news .item-list .views-summary {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16ch, 1fr));
+  gap: .25ch;
+  margin-bottom: 0;
+}
+
+/* line 47, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+.view-news .item-list .views-summary li {
+  margin-left: 0;
+  margin-bottom: 5ch;
+  display: inline-block;
+}
+
+/* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 .view-news .views-field-created {
   margin-bottom: var(--space-between-blocks);
 }
 
-/* line 37, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 58, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 nav.pager {
   margin-top: var(--space-xl);
 }
 
-/* line 40, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
+/* line 61, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
 nav.pager .pager__item.is-active {
   font-weight: normal;
 }
