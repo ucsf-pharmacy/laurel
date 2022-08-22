@@ -842,65 +842,60 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 
 /* line 8, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h1 {
-  margin-bottom: var(--space-m);
-}
-
-/* line 11, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
-.view-header h1 {
   margin-bottom: var(--space-xl);
 }
 
-/* line 14, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 12, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 {
   margin-bottom: var(--space-s);
 }
 
-/* line 17, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 15, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h3, h4, h5, h6 {
   margin-bottom: var(--space-xs);
 }
 
-/* line 23, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 21, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 .layout__region--second > .block:first-child > .field:first-child > h2:first-child, .layout__region--second > .block:first-child > .field:first-child > h3:first-child, .layout__region--second > .block:first-child > .field:first-child > h4:first-child, .layout__region--second > .block:first-child > .field:first-child > h5:first-child, .layout__region--second > .block:first-child > .field:first-child > h6:first-child {
   margin-top: 0;
 }
 
-/* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 28, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + div.contextual + div.field {
   margin-top: var(--space-l);
 }
 
-/* line 35, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 33, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h3 {
   letter-spacing: .5px;
 }
 
-/* line 40, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 38, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   margin-top: var(--space-m);
 }
 
-/* line 46, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 44, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + .laurel-side-by-side > div > h3:first-child {
   margin-top: 0;
 }
 
-/* line 49, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 47, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2 + .laurel-side-by-side > div:last-child > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 53, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 51, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 h2.field__label {
   font-weight: normal;
 }
 
-/* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 54, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 .block-entity-viewnode > span[id^="toc-"] + h2 {
   margin-top: 0;
 }
 
-/* line 59, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
+/* line 57, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_elements-headings.scss */
 .block + .block h2 {
   margin-top: var(--space-xl);
 }
