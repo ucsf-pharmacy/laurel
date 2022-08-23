@@ -540,7 +540,7 @@ h1, h2
 h3
 , .field--name-field-subtitle
 , .views-field-field-subtitle
-, .large-years a {
+, .large-years-summary .views-summary a {
   font-family: var(--font-helv-neue-light);
 }
 
@@ -577,7 +577,7 @@ h1 {
 /* line 142, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
 h2
 , .views-field-title
-, .large-years a {
+, .large-years-summary .views-summary a {
   font-size: 2.005em;
 }
 
@@ -585,7 +585,7 @@ h2
   /* line 142, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
   h2
 , .views-field-title
-, .large-years a {
+, .large-years-summary .views-summary a {
     font-size: 1.5em;
   }
 }
@@ -675,7 +675,7 @@ h1
 }
 
 /* line 213, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_design-font-and-line-height.scss */
-.large-years a {
+.large-years-summary .views-summary a {
   font-weight: 300;
 }
 
@@ -2947,7 +2947,7 @@ table.no-span {
 }
 
 /* line 39, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
-.large-years .item-list .views-summary {
+.large-years-summary .item-list .views-summary {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13ch, 1fr));
@@ -2957,19 +2957,19 @@ table.no-span {
 
 @media screen and (max-width: 400px) {
   /* line 39, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
-  .large-years .item-list .views-summary {
+  .large-years-summary .item-list .views-summary {
     grid-template-columns: repeat(auto-fit, minmax(8ch, 1fr));
   }
 }
 
 /* line 48, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
-.large-years .item-list .views-summary li {
+.large-years-summary .item-list .views-summary li {
   margin-bottom: 0;
   margin-left: 0;
 }
 
 /* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_views.scss */
-.large-years .views-field-created {
+.large-years-summary .views-field-created {
   margin-bottom: var(--space-between-blocks);
 }
 
