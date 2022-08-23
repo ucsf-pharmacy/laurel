@@ -162,7 +162,9 @@
   .field__item{
     display: inline;
     &:not(:last-child):after{
-      content: ' → ';
+      content: '→';
+      margin-left: .7em;
+      margin-right: .4em;
     }
   }
 }

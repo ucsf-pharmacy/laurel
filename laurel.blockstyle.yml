@@ -1,6 +1,6 @@
 # config:
 # see https://www.drupal.org/docs/8/modules/block-style-plugins/setup-and-usage
-# and _components-columns.scss
+# and _components-wysiwyg-columns.scss
 # and _components-layout-builder-block-styles.scss
 # and function laurel_preprocess_block() in laurel.theme
 columns:
@@ -103,6 +103,8 @@ corner_style:
         'corner rounded-2': 'Rounded 2'
         'corner rounded-4': 'Rounded 4'
         'corner beveled': 'Beveled'
+date:
+  label: 'Date'
 width:
   label: 'Width'
   include:

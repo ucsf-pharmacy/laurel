@@ -32,9 +32,8 @@
     display: none;
   }
 }
-
-// date displays
-.view-news .views-field-created{
+.date{
   text-transform: uppercase;
   letter-spacing: .05em;
+  margin: var(--space-s) 0;
 }
