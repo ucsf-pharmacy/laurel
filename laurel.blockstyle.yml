@@ -103,8 +103,6 @@ corner_style:
         'corner rounded-2': 'Rounded 2'
         'corner rounded-4': 'Rounded 4'
         'corner beveled': 'Beveled'
-date:
-  label: 'Date'
 width:
   label: 'Width'
   include:
