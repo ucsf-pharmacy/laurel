@@ -34,20 +34,21 @@
     }
   }
 }
-.view-news{
+.large-years{ // for things like news archive years
   .item-list{
     .views-summary{
       list-style-type: none;
-      // column-width: 12ch;
-      // column-gap: 5ch;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(16ch, 1fr));
-      gap: .25ch;
+      grid-template-columns: repeat(auto-fit, minmax(13ch, 1fr));
+      @media screen and (max-width: 400px){
+        grid-template-columns: repeat(auto-fit, minmax(8ch, 1fr));
+      }
+      gap: 5ch;
       margin-bottom: 0;
       li{
+        margin-bottom: 0;
         margin-left: 0;
-        margin-bottom: 5ch;
-        display: inline-block;
+        // display: inline-block;
       }
     }
   }

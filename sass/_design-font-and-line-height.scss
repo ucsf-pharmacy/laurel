@@ -115,7 +115,7 @@ h1,h2
 h3
 ,.field--name-field-subtitle
 ,.views-field-field-subtitle
-,.view-news .item-list .views-summary li a // special for news archive years
+,.large-years a // for things like news archive years
 {
   font-family: var(--font-helv-neue-light);
 }
@@ -141,7 +141,7 @@ h1{
 }
 h2
 ,.views-field-title
-,.view-news .item-list .views-summary li a // special for news archive years
+,.large-years a // for things like news archive years
 {
   font-size: 2.005em;
   @media screen and (max-width: 500px){
@@ -210,7 +210,7 @@ h1
 {
   font-weight: normal;
 }
-.view-news .item-list .views-summary li a // special for news archive years
+.large-years a // for things like news archive years
 {
   font-weight: 300;
 }
