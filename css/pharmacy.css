@@ -3152,121 +3152,103 @@ put only sass variable definitions in this file. do not put custom properties in
   }
 }
 
-/* line 15, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-event-moreinfo
-.field__items, .page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__items {
+/* line 14, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__items {
   padding: 0 0 0 1.05em;
   list-style-type: square;
 }
 
-/* line 19, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-event-moreinfo
-.field__item, .page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__item {
+/* line 18, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__item {
   display: list-item;
 }
 
-/* line 22, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-event-moreinfo
-.field__item:not(:last-child), .page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__item:not(:last-child) {
+/* line 21, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+.page-node-type-event fieldset.wrapper .fieldset-wrapper .field--name-field-organization .field__item:not(:last-child) {
   margin-bottom: var(--list-item-spacing);
 }
 
-/* line 27, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 26, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:first-child > * {
   margin-left: var(--gutter);
 }
 
-/* line 31, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 30, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:first-child
 , .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:last-child {
   flex: 0 0 26%;
 }
 
-/* line 36, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 35, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:first-child
 , .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:nth-child(2) {
   margin-right: var(--gutter);
 }
 
-/* line 43, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 42, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:nth-child(2) .fieldset-wrapper div * {
   max-width: 66ch;
 }
 
-/* line 46, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 45, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:nth-child(2) .fieldset-wrapper div table {
   max-width: 100%;
 }
 
-/* line 52, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 51, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper fieldset:last-child > *:not(.field--name-field-featured-media) {
   margin-right: var(--gutter);
 }
 
-/* line 56, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 55, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event fieldset.wrapper .fieldset-wrapper div {
   display: block;
 }
 
-/* line 65, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 64, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .block-field-blocknodeeventfield-subtitle {
   max-width: calc( var(--measure) * 1.5);
 }
 
-/* line 68, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 67, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .block-field-blocknodeeventfield-date-tbd
 , .page-node-type-event .block-field-blocknodeeventfield-event-datetime {
   margin-top: var(--space-xl);
 }
 
-/* line 73, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 72, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field.field--name-field-event-series {
   margin-bottom: var(--space-between-separate-entities);
 }
 
-/* line 77, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-moreinfo h2 {
-  font-weight: normal;
-}
-
-/* line 82, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 76, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field--name-field-organization a {
   display: inline-block;
 }
 
-/* line 86, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 80, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .block-field-blocknodeeventbody {
   margin-top: var(--space-between-title-group-and-body);
 }
 
-/* line 90, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 84, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .page-node-type-event .field--name-field-event-datetime .field__items {
   column-width: 37ch;
   column-gap: 3em;
 }
 
-/* line 95, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-moreinfo a {
-  display: inline-block;
-}
-
-/* line 97, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
-.page-node-type-event .field--name-field-event-moreinfo a:not(.last-child) {
-  margin-bottom: 1em;
-}
-
-/* line 104, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 92, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .view-events .view-content .views-field-field-event-series
 , .view-events .view-content .views-field-field-subtitle {
   margin-bottom: var(--space-m);
 }
 
-/* line 109, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 97, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .view-events .view-content .views-field-field-date-tbd .item-list {
   margin-left: -1.5em;
 }
 
-/* line 111, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
+/* line 99, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_content-type-event.scss */
 .view-events .view-content .views-field-field-date-tbd .item-list li::marker {
   color: var(--color-list-marker-subtle);
 }
@@ -3463,80 +3445,75 @@ put only sass variable definitions in this file. do not put custom properties in
   }
 }
 
-/* line 142, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
-.field--name-field-event-moreinfo .field__label {
-  font-weight: normal;
-}
-
-/* line 146, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 141, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-location-name .field__item a
 , .field--type-uri a {
   word-break: break-word;
 }
 
 @media all and (min-width: 501px) {
-  /* line 153, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+  /* line 148, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
   .field--name-body {
     margin-top: var(--space-between-title-group-and-body);
   }
 }
 
-/* line 162, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 157, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-post-type .field__item {
   display: inline;
 }
 
-/* line 164, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 159, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-post-type .field__item:not(:last-child):after {
   content: '→';
   margin-left: .7em;
   margin-right: .4em;
 }
 
-/* line 171, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 166, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-affiliations {
   display: block;
 }
 
-/* line 174, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 169, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-affiliations .field__items {
   margin-left: calc( 25ch + var(--space-l));
 }
 
-/* line 176, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 171, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-affiliations .field__items .field__item {
   display: block;
 }
 
-/* line 182, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 177, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-ucsfphps-degrees .field
 , .field--name-field-ucsfphps-degrees article {
   display: inline;
 }
 
-/* line 190, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 185, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .js .paragraphs-description .paragraphs-content-wrapper {
   line-height: var(--line-height);
   height: auto;
   word-break: initial;
 }
 
-/* line 199, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 194, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .field--name-field-event-series {
   margin-top: -6px;
 }
 
-/* line 205, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 200, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul {
   padding-left: 0;
 }
 
-/* line 207, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 202, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul li {
   display: inline;
 }
 
-/* line 209, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
+/* line 204, ../../../../../Users/frankfarm/drupal8/docroot/themes/contrib/laurel/sass/_components-fields.scss */
 .block-field-blocknodepostfield-keywords ul li:not(:last-child):after {
   content: ', ';
 }
