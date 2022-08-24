@@ -9,8 +9,7 @@
       @media screen and (min-width: 100ch){
         display: flex;
       }
-      .field--name-field-event-moreinfo
-      ,.field--name-field-organization
+      .field--name-field-organization
       {
         .field__items{
           padding: 0 0 0 1.05em;
@@ -73,11 +72,6 @@
   .field.field--name-field-event-series{
     margin-bottom: var(--space-between-separate-entities);
   }
-  .field--name-field-event-moreinfo{
-    h2{
-      font-weight: normal;
-    }
-  }
   .field--name-field-organization{
     a{
       display: inline-block;
@@ -90,12 +84,6 @@
     .field__items{
       column-width: 37ch;
       column-gap: 3em;
-    }
-  }
-  .field--name-field-event-moreinfo a{
-    display: inline-block;
-    &:not(.last-child){
-      margin-bottom: 1em;
     }
   }
 } // end .page-node-type-event
