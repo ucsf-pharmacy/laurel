@@ -56,16 +56,16 @@
 {% if label_hidden %}
   {% if multiple %}
     {# change div to span #}
-    <span{{ attributes.addClass(classes, 'field__items') }}>By {# add By #}
+    <span{{ attributes.addClass(classes, 'field__items') }}><span class="separator">&#8203; · &#8203;</span> By {# add By #}
       {% for item in items %}
         {# change div to span #}
-        <span{{ item.attributes.addClass('field__item') }}>{{ item.content }} <span class="separator">&#8203; · &#8203;</span> </span> {# add separator #}
+        <span{{ item.attributes.addClass('field__item') }}>{{ item.content }}</span> {# add separator #}
       {% endfor %}
     </span>
   {% else %}
     {% for item in items %}
         {# change div to span #}
-      <span{{ attributes.addClass(classes, 'field__item') }}>By {{ item.content }} <span class="separator">&#8203; · &#8203;</span> </span> {# add By and separator#}
+      <span{{ attributes.addClass(classes, 'field__item') }}><span class="separator">&#8203; · &#8203;</span> By {{ item.content }}</span> {# add By and separator#}
     {% endfor %}
   {% endif %}
 {% else %}
