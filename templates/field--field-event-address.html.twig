@@ -72,7 +72,7 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      {% set url = element['#object'].field_url.value.0.uri %}
+      {% set url = element['#object'].field_location_url.value.0.uri %}
       {#
       // we don't want the link, so remove it
       {% if url %}
