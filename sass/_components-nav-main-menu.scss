@@ -42,7 +42,7 @@ $superfish-1-background-color-level-fourth: #{$color-b6-blue};
   }
   .sf-style-none{
     float: left;
-    margin: 0;
+    margin: 0 0 1em 0;
     padding: 0;
     &.sf-navbar{
       width: 100%;
