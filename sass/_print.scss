@@ -16,4 +16,18 @@
   // ul{
   //   margin-left: 1.2em;
   // }
+  a[href*=".box.com"]:after{
+    width: 25px;
+    -webkit-mask: url(../icons/box.svg) no-repeat;
+    background-color: #0061d5;
+  }
+  a[href*="zoom.com"]:after{
+    width: 45px;
+    -webkit-mask: url(../icons/zoom1.svg) no-repeat;
+    -webkit-mask-position-y: bottom;
+    background-color: #2d8cff;
+  }
+  a:after{
+    max-height: 8px;
+  }
 }

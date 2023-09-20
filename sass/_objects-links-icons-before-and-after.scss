@@ -1,3 +1,44 @@
+/*
+icon files live at
+docroot/themes/contrib/laurel/icons
+and
+docroot/themes/contrib/walnut/icons
+
+walnut doesn't need the icons folder to display icons within the wysiwyg, but we do occasionally need icons to display in the admin interface, such as the external window icon for "edit media."
+
+icon css is specified at
+docroot/themes/contrib/laurel/sass/_objects-links-icons-before-and-after.scss
+and this file is imported by
+docroot/themes/contrib/laurel/sass/laurel-ckeditor.scss
+
+RATIONALE FOR ICONS IMPLEMENTATION DECISIONS
+
+our vast majority of icon use is in html or css to provide interface elements or to clarify where a link is going or to present a large pointing arrow or hand for a call to action.
+
+fontawesome has too many icons we aren't ever going to use.
+
+at icomoon.io i identified about 70 icons we might possibly use.
+
+i took the svg images generated from icomoon, copied them to the theme folder, and am referencing them in css.
+
+we cannot do multicolored icons due to how we are using -webkit-mask. all icons are single colors, and in dark mode they are all white.
+
+TO CREATE NEW ICONS
+visit
+https://icomoon.io/app/#/select
+scroll to bottom
+add icons from library
+choose from free libraries
+OR
+you can also duplicate existing icons, then edit and rename them
+OR
+create any icon in SVG and scale it to 32pt wide
+
+TO CHANGE ICON COLORS
+use background-color with a -webkit-mask property.
+
+*/
+
 @import "_design-color-assignments.scss";
 
 // icons before
@@ -8,7 +49,7 @@ a.laurel-action
   font-size: 2rem;
   font-family: var(--font-helv-neue-light);
   display: inline-block;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: .1em 0 .5em;
   &:before{
     content: '';
@@ -17,9 +58,8 @@ a.laurel-action
     display: inline-block;
     width: 50px;
     height: 50px;
-    margin-right: 16px;
+    margin-right: 20px;
     position: relative;
-    top: 10px;
   }
   &:hover:before{
     background-color: var(--color-link-border-hover);
@@ -50,6 +90,9 @@ a[href^="http://"]
     mask-repeat: no-repeat;
     // border: 1px solid green; // use this to test for visual confirmation of bounding box
   }
+  &.laurel-action:after{
+    margin-left: 20px;
+  }
   @media (prefers-color-scheme: dark) {
     &:after{
       background-color: var(--color-link-icon-after) !important;
@@ -57,8 +100,10 @@ a[href^="http://"]
   }
 }
 a[target]:after{
-  width: 41px;
-  -webkit-mask: url(../icons/external-link-in-new-tab.svg) no-repeat;
+  // -webkit-mask: url(../icons/external-link-in-new-tab-2.svg) no-repeat;
+
+  // width: 38px;
+  // -webkit-mask: url(../icons/external-link-in-new-tab-3.svg) no-repeat;
 }
 a[href*="apple.com"]:after{
   width: 12px;
@@ -76,6 +121,13 @@ a[href*="blogger.com"]:after
   -webkit-mask: url(../icons/blogger.svg) no-repeat;
   background-color: #ff5722;
 }
+a[href*="twitter.com"]:after
+,a[href*="/x.com"]:after
+{
+  width: 16px;
+  -webkit-mask: url(../icons/x.svg) no-repeat;
+  background-color: #000000;
+}
 a[href*=".box.com"]:focus:after
 ,a[href*=".box.com"]:hover:after
 {
@@ -85,7 +137,7 @@ a[href*=".box.com"]:focus:after
   background-color: #0061d5;
 }
 a[href*="dropbox.com"]:after{
-  width: 17px;
+  width: 18px;
   -webkit-mask: url(../icons/dropbox.svg) no-repeat;
   background-color: #0061ff;
 }
@@ -100,9 +152,9 @@ a[href*="github.com"]:after{
   width: 15px;
   -webkit-mask: url(../icons/github.svg) no-repeat;
 }
-a[href*="google.com"]:focus:after
-,a[href*="google.com"]:hover:after
+a[href*="google.com"]:after
 {
+  width: 18px;
   -webkit-mask: url(../icons/google.svg) no-repeat;
   background-color: #4285f4;
 }
@@ -122,6 +174,14 @@ a[href*="linkedin.com"]:after{
 a[href*="microsoft.com"]:after{
   -webkit-mask: url(../icons/microsoft.svg) no-repeat;
 }
+a[href*="qualtrics.com"]:focus:after
+,a[href*="qualtrics.com"]:hover:after
+{
+  -webkit-mask: url(../icons/qualtrics.svg) no-repeat;
+  width: 21px;
+  height: 11px;
+  background-color: #3b98e6;
+}
 a[href*="teams.microsoft.com"]:after{ // this declaration must come after the one for microsoft.com
   width: 16px;
   -webkit-mask: url(../icons/microsoftteams.svg) no-repeat;
@@ -132,14 +192,15 @@ a[href*="sharepoint.com"]:after{
   -webkit-mask: url(../icons/microsoftonedrive.svg) no-repeat;
   background-color: #094ab2;
 }
-a[href*="tiktok.com"]:after{
+a[href*="smartsheet.com"]:after{
   width: 12px;
-  -webkit-mask: url(../icons/tiktok.svg) no-repeat;
+  -webkit-mask: url(../icons/smartsheet.svg) no-repeat;
+  background-color: #0e2947;
 }
-a[href*="twitter.com"]:after{
-  width: 17px;
-  -webkit-mask: url(../icons/twitter.svg) no-repeat;
-  background-color: #1da1f2;
+a[href*="tiktok.com"]:after{
+  width: 13px;
+  height: 14px;
+  -webkit-mask: url(../icons/tiktok.svg) no-repeat;
 }
 a[href*="youtube.com"]:after
 ,a[href*="youtu.be"]:after
@@ -150,6 +211,8 @@ a[href*="youtube.com"]:after
 }
 a[href*="zoom.com"]:focus:after
 ,a[href*="zoom.com"]:hover:after
+,a[href*="zoom.us"]:focus:after
+,a[href*="zoom.us"]:hover:after
 {
   width: 45px;
   -webkit-mask: url(../icons/zoom1.svg) no-repeat;
